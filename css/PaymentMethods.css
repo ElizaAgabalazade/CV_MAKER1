@@ -1,0 +1,1559 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+}
+header {
+    display: flex;
+    width: 100%;
+    background-color: #F3F3F3;
+    position: fixed;
+    z-index: 1111;
+    top: 0;
+    left: 0;
+
+}
+
+.header_left {
+    width: 15%;
+    /* background: red; */
+    position: relative;
+}
+
+
+.site_name  {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    font-weight: 900;
+    font-size: 22px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+.header_middle {
+    width: 60%;
+    padding-left: 1rem;
+    /* background: violet; */
+}
+
+.header_middle ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 2rem;
+    gap: 1rem;
+
+
+}
+
+.header_middle ul li {
+    font-size: 18px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.header_middle ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    /* background: blue; */
+}
+
+.header_right a {
+    font-weight: 700;
+    margin-left: 15px;
+    text-decoration: none;
+
+}
+
+.sign_part {
+    color: #4b2cff;
+
+}
+
+.log_in {
+    background: #4b2cff;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+
+}
+
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section_1 {
+    width: 100%;
+}
+
+.section_1 ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.section_1 ul li {
+    font-size: 26px;
+    margin-left: 3rem;
+}
+
+.section_1 ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    position: relative;
+
+}
+
+.section_1 ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* Alt xəttin yerdəyişməsi */
+    width: 0;
+    height: 2px;
+    /* Xəttin qalınlığı */
+    background-color: #5C17FC;
+    transition: width 0.3s ease;
+    /* Animasiya zamanı */
+}
+
+.section_1 ul li a:hover::after {
+    width: 100%;
+    right: 0;
+    /* Sağ tərəfdən başlayır */
+}
+
+.section_2 {
+    display: flex;
+    margin-top: 3rem;
+    width: 100%;
+    justify-content: center;
+
+
+}
+
+.section_2 img {
+    margin-left: 2rem;
+    cursor: pointer;
+    width: 10%;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+
+}
+
+.paypal {
+    margin-top: 4px;
+    width: 150px;
+    height: 135px;
+
+}
+
+.apple {
+    margin-top: 6px;
+    width: 140px;
+    height: 134px;
+
+}
+
+.google {
+    margin-top: 6px;
+    width: 140px;
+    height: 135px;
+}
+
+.klarna {
+    margin-top: 6px;
+    width: 135px;
+    height: 135px;
+}
+
+.bank {
+    margin-top: 6px;
+    width: 135px;
+    height: 135px;
+}
+
+.section_3 {
+    width: 44%;
+    padding-left: 5rem;
+}
+
+.section_3 img {
+    width: 78%;
+    margin-left: 5rem;
+}
+
+.section_4 {
+    /* background: blue; */
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+
+.pay_with_card {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.pay_with_card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Label-lərin şəkildəki kimi kiçik və boz olması */
+.pay_with_card label {
+    color: #b1b1bc;
+    font-size: 14px; /* Şəkildəki kimi kiçik */
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* İnput və Stripe elementlərinin yerləşdiyi sahə */
+.pay_with_card input, 
+#card-number, 
+#card-expiry-month, 
+#card-expiry-year, 
+#card-cvc {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 0;
+    background: transparent;
+}
+
+/* Alt xətlər (hr) */
+.pay_with_card hr {
+    border: none;
+    border-bottom: 1px solid #333; /* Şəkildəki kimi tünd incə xətt */
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* Alt qrup (Expiry və CVV yan-yana) */
+.pay_with_card_bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end; /* Elementləri alt xəttə görə hizalayır */
+    gap: 15px;
+    margin-top: 2rem;
+}
+.expiry-group input{
+    padding-top: 1rem;
+}
+.expiry-group, .cvv-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.expiry-group label, .cvv-group label {
+    font-size: 14px;
+    color: #868693;
+    transition: all 0.3s ease;
+    margin-bottom: 5px; /* Label ilə input arasındakı məsafə */
+}
+
+/* Stripe xanasının daxilindəki " / YY" hissəsini vizual gizlətmək üçün fənd */
+#card-expiry-element {
+    overflow: hidden;
+   width: 60px;
+    padding: 10px 0;
+}
+
+#card-cvc-element {
+    padding: 10px 0;
+}
+input#fake-year:focus + hr {
+    border-bottom: 1px solid #6772e5;
+}
+input#fake-year {
+    background: transparent;
+    border: none;
+    width: 100%;
+    color: #000;
+    font-size: 16px;
+    padding: 10px 0;
+    outline: none;
+    cursor: text; /* Ox işarəsi yox, yazı kursoru görünsün */
+}
+
+
+.pay_with_card label {
+    color: #868693;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.pay_with_card hr {
+    border: none;
+    border-bottom: 1px solid #333;
+    margin-top: 5px;
+}
+/* Pay düyməsinin şəkildəki kimi düzgün mövqeyi */
+#pay_btn {
+    display: block;
+    margin: 3rem auto 0; /* Mərkəzləmək üçün */
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 60px;
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(13, 94, 255, 0.3);
+    transition: transform 0.2s;
+}
+
+#pay_btn:hover {
+    transform: scale(1.05);
+}
+
+
+
+.pay_with_paypal {
+    display: none;
+}
+
+.pay_with_paypal {
+    position: relative;
+}
+
+.pay_with_paypal a {
+    position: absolute;
+    left: 0.5rem;
+    top: 22rem;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 5rem;
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+    border-radius: 40px;
+}
+
+.confirmed {
+    display: none;
+}
+
+.input-result {
+    margin-top: 2rem;
+    font-size: 16px;
+}
+
+.paypal-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.64);
+    z-index: 999;
+}
+
+.paypal-overlay.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_section {
+    width: 30%;
+    background-color: #fff;
+    display: flex;
+    border-radius: 45px;
+    overflow: hidden;
+}
+
+body.paypal-active {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.64),
+            rgba(0, 0, 0, 0.64));
+}
+
+.header {
+    background-color: #003087;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header img {
+    width: 50%;
+
+}
+
+.header .cansel {
+    width: 30px;
+    position: absolute;
+    right: 3rem;
+    top: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.inside_main_scetion_middle h3 {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.inside_main_scetion_middle p {
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+.inside_main_scetion_middle form {
+    margin: 2rem 4rem;
+}
+
+.inside_main_scetion_middle input {
+    width: 90%;
+
+}
+
+.password {
+    margin-top: 1.5rem;
+}
+
+.email,
+.password {
+    padding: 0.8rem;
+    border-radius: 45px;
+    border: 1px solid #000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.email::placeholder,
+.password::placeholder {
+    color: #868693;
+    padding-left: 0.5rem;
+}
+
+
+button {
+    padding: 0.8rem;
+    border-radius: 45px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-pay {
+    background: #003087;
+    color: #fff;
+    font-weight: 700;
+    width: 90%;
+}
+
+.card-pay {
+    background: #fff;
+    border: 1px solid #003087;
+    color: #003087;
+    font-weight: 700;
+    width: 90%;
+
+}
+
+
+
+.inside_main_bottom {
+
+    background-color: #F9FAFB;
+}
+
+.inside_main_bottom p {
+    font-size: 16px;
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+.pay_with_apple,
+.pay_with_klarna,
+.pay_with_google,
+.pay_with_bank {
+    display: none;
+    margin: 0;
+}
+.pay_with_paypal img,
+.pay_with_apple img,
+.pay_with_klarna img,
+.pay_with_google img,
+.pay_with_bank img {
+    width: 60%;
+    margin: 0;
+}
+
+.pay_with_apple {
+    position: relative;
+}
+
+.pay_with_apple a {
+    position: absolute;
+    left: 0.5rem;
+    top: 22rem;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 5rem;
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+    border-radius: 40px;
+}
+.pay_with_apple_overlay{
+  position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.64);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.pay_with_apple_overlay.active{
+    display: flex;
+}
+.pay_with_apple_card {
+    width: 30%;
+    background: #fff;
+    border-radius: 45px;
+    box-shadow: 1px 8px 24px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+.apple_transfer_header{
+    display: flex;
+    background: #ffff;
+    width: 100%;
+    position: relative;
+    border-radius: 45px;
+}
+.apple_transfer_header img{
+    width: 100%;
+    height: auto;
+}
+.apple_transfer_header h2{
+    width: 80%;
+    margin-top: 1rem;
+
+}
+ .apple_transfer_header .close_black_google{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 2rem;
+    top: 1.6rem;
+}
+.pay_with_apple_middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pay_wiht_apple_middle_2{
+    display: flex;
+    width: 90%;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    background: #EFF6FF;
+    border-radius: 45px;
+    gap: 10px;
+     box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.pay_wiht_apple_middle_2 button{
+    background: #000;
+    color: #fff;
+    padding: 1rem 4rem;
+    border-radius: 45px;
+    margin:0 auto;
+    margin-top: 1rem;
+}
+
+
+
+
+.pay_with_google {
+    position: relative;
+}
+
+.pay_with_google a {
+    position: absolute;
+    left: 0.5rem;
+    top: 22rem;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 5rem;
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+    border-radius: 40px;
+}
+
+.pay_with_klarna {
+    position: relative;
+}
+
+.pay_with_klarna a {
+    position: absolute;
+    left: 0.5rem;
+    top: 22rem;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 5rem;
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+    border-radius: 40px;
+}
+
+.pay_with_klarna_overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.64);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.pay_with_klarna_overlay.active {
+    display: flex;
+}
+
+.pay_with_klarna_header {
+    background: #FFB3C7;
+    width: 30%;
+    position: relative;
+    border-radius: 45px;
+
+
+}
+
+.pay_with_klarna_header img {
+    margin: 1rem 3rem;
+}
+
+.klarna_close {
+    position: absolute;
+    width: 15px;
+    top: 8px;
+    right: 3rem;
+    cursor: pointer;
+}
+
+.pay_with_klarna_middle {
+    background: #f5f3f3;
+    border-radius: 45px;
+    width: 100%;
+}
+
+.pay_with_klarna_middle p {
+    padding: 1rem 3rem;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.payment-plans {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.plan-option {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 80%;
+    padding: 1rem 1.2rem;
+    border: 1px solid #0000;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: border 0.2s ease;
+}
+
+.plan-option input {
+    margin-top: 0.3rem;
+    accent-color: #003087;
+    border: 1px solid #0000;
+
+}
+
+.plan-option strong {
+    font-size: 14px;
+}
+
+.plan-option h3 {
+    font-size: 10px;
+    color: #6b7280;
+}
+
+.plan-option:has(input:checked) {
+    border: 2px solid #003087;
+    background: #f5f8ff;
+}
+
+.login-pay {
+    color: #ffff;
+    background-color: #000;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 45px;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* google-pay */
+.pay_with_google_overlay{
+  position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.64);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.pay_with_google_overlay.active{
+    display: flex;
+}
+.pay_with_google_card {
+    width: 30%;
+    background: #fff;
+    border-radius: 45px;
+    box-shadow: 1px 8px 24px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+.google_transfer_header{
+    display: flex;
+    background: #ffff;
+    width: 100%;
+    position: relative;
+    border-radius: 45px;
+}
+.google_transfer_header img{
+    width: 66px;
+    height: 34px;
+    margin: 1rem;
+}
+.google_transfer_header h2{
+    width: 80%;
+    margin-top: 1rem;
+
+}
+ .google_transfer_header .close_black_google{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 2rem;
+    top: 1.5rem;
+    cursor: pointer;
+}
+.pay_with_google_middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pay_wiht_google_middle_2{
+    display: flex;
+    width: 90%;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    background: #EFF6FF;
+    border-radius: 45px;
+    gap: 10px;
+     box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.08);
+
+}
+.pay_wiht_google_middle_2 input{
+    border: none;
+    outline: none;
+    background: #EFF6FF;
+    margin-left: 1rem;
+    width: 40%;
+}
+
+.pay_wiht_google_middle_2 button{
+    background: #000;
+    color: #fff;
+    padding: 1rem 4rem;
+    border-radius: 45px;
+    margin:0 auto;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+.pay_with_bank {
+    position: relative;
+}
+
+.pay_with_bank a {
+    position: absolute;
+    left: 0.5rem;
+    top: 22rem;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+    border-radius: 40px;
+}
+
+.pay_with_bank_overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.64);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    
+}
+
+.pay_with_bank_overlay.active {
+    display: flex;
+}
+
+.pay_with_bank_card {
+    width: 30%;
+    background: #fff;
+    border-radius: 45px;
+    box-shadow: 1px 8px 24px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+.bank_transfer_header {
+    display: flex;
+    background: #F9FAFB;
+    width: 100%;
+    position: relative;
+    border-radius: 45px;
+}
+
+.bank_transfer_header img {
+    width: 20%;
+    margin-left: 2rem;
+}
+
+.bank_transfer_header h2 {
+    width: 80%;
+    margin-top: 1rem;
+}
+
+.bank_transfer_header .close_black {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 2rem;
+    top: 1.5rem;
+    cursor: pointer;
+}
+
+.pay_with_bank_middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pay_with_bank_middle_1 {
+    font-size: 14px;
+    padding: 2rem 1rem;
+    
+}
+
+.pay_with_bank_middle_1 span {
+    font-weight: 700;
+}
+
+.pay_wiht_bank_middle_2 {
+    display: flex;
+    width: 95%;
+    height: auto;
+    flex-wrap: wrap;
+    background: #EFF6FF;
+    border-radius: 45px;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.08);
+}
+.pay_wiht_bank_middle_2 form{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1rem 2rem;
+
+}
+.pay_wiht_bank_middle_2 input {
+    border: none;
+    outline: none;
+    background: #EFF6FF;
+    margin-left: 1rem;
+    width: 40%;
+}
+
+.right_side_middle_2 {
+    text-align: right;
+    margin-left: 1rem;
+}
+
+.pay_wiht_bank_middle_2 p {
+    background: #fff;
+    padding: 1rem 2rem;
+    width: 100%;
+    border-radius: 45px;
+    box-shadow: 1px 8px 24px rgba(0, 0, 0, 0.08);
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-size: 12px;
+}
+.pay_with_bank_middle_3 button{
+background: #4338CA;
+color: #fff;
+font-weight: 700;
+padding: 1rem 4rem;
+border-radius: 45px;
+}
+
+.pay_with_bank_footer_side{
+    font-size: 10px;
+    margin-top: 1rem;
+    color:#868693;
+}
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+footer img {
+    margin-bottom: 1rem;
+    margin-right: 0.2rem;
+    width: 12px;
+
+
+}
+
+footer p {
+    font-size: 16px;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    color: #868693;
+}
+.pay_with_paypal,
+    .pay_with_apple,
+    .pay_with_google,
+    .pay_with_klarna,
+    .pay_with_bank{
+        width: 100%;
+        margin-top: 0;
+    }
+
+/* =========================
+   1024px (Tablet / Small Laptop)
+   ========================= */
+@media (max-width: 1024px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 40%;
+    }
+
+    nav {
+        width: 60%;
+        margin-left: 0;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    nav ul li {
+        font-size: 18px;
+        margin-left: 1.5rem;
+    }
+
+    .section_1 ul li {
+        font-size: 22px;
+        margin-left: 2rem;
+    }
+
+    .section_2 {
+        flex-wrap: wrap;
+    }
+
+    .section_2 img {
+        margin: 1rem;
+    }
+
+    .section_3 {
+        width: 50%;
+        padding-left: 2rem;
+        margin-top: 2rem;
+    }
+
+    .section_4 {
+        width: 40%;
+        margin-top: 6rem;
+        padding: 0 2rem;
+    }
+
+    .section_4 .pay_with_card h3 {
+        font-size: 24px;
+    }
+
+    .section_4 .pay_with_card label {
+        font-size: 18px;
+    }
+
+    .pay_with_card_bottom {
+        justify-content: space-between;
+    }
+
+    .expiry-month,
+    .expiry-year,
+    .cvv {
+        width: 28%;
+        margin-left: 0;
+    }
+
+    .pay_with_card .confirmed {
+        display: none;
+    }
+
+    /* Button-lar */
+    .section_4 a,
+    .pay_with_paypal a,
+    .pay_with_apple a,
+    .pay_with_google a,
+    .pay_with_klarna a,
+    .pay_with_bank a {
+        position: static;
+        display: inline-block;
+        margin-top: 2rem;
+        font-size: 20px;
+        padding: 0.8rem 3rem;
+    }
+
+    .pay_with_paypal img,
+    .pay_with_apple img,
+    .pay_with_klarna img,
+    .pay_with_google img,
+    .pay_with_bank img {
+        width: 100%;
+        margin-top: 2rem;
+        height: auto;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+    footer p {
+        font-size: 22px;
+        margin-right: 1rem;
+    }
+}
+
+@media(max-width:768px) {
+    .section_3 {
+        width: 40%;
+        margin-top: 6rem;
+    }
+
+    .section_3 img {
+        width: 90%;
+    }
+
+    .section_4 {
+        width: 60%;
+    }
+
+    .section_4 h3 {
+        font-size: 18px;
+
+    }
+
+    .pay_with_card {
+        width: 100%;
+    }
+
+    .pay_with_card_bottom {
+        display: flex;
+        width: 100%;
+    }
+
+    .cvv {
+        padding: 5px;
+    }
+
+    .pay_with_card .pay_with_card_bottom .cvv label,
+    .pay_with_card .pay_with_card_bottom .expiry-month label,
+    .pay_with_card .pay_with_card_bottom .expiry-year label {
+        font-size: 10px;
+    }
+
+    .cvv::placeholder,
+    .expiry-month::placeholder,
+    .expiry-year::placeholder {
+        font-size: 10px;
+    }
+
+    .confirmed {
+        top: 1rem;
+    }
+
+    .cvv input {
+        margin-bottom: 1rem;
+    }
+
+    .pay_with_card .pay_with_card_bottom .cvv,
+    .expiry-month,
+    .expiry-year {
+        width: 25%;
+        margin-left: 1rem;
+    }
+
+    .pay_with_paypal,
+    .pay_with_apple,
+    .pay_with_google,
+    .pay_with_klarna,
+    .pay_with_bank {
+        width: 100%;
+    }
+}
+
+
+
+@media(max-width:600px) {
+
+    /* =========================
+   600px – Mobile
+   ========================= */
+    @media (max-width: 600px) {
+
+        section {
+            flex-direction: column;
+        }
+
+        .section_3 {
+            width: 100%;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .section_3 img {
+            width: 80%;
+        }
+
+        .section_4 {
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .section_4 h3 {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .pay_with_card {
+            width: 100%;
+        }
+
+        .pay_with_card_bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+            width: 100%;
+        }
+
+        .pay_with_card_bottom label {
+            font-size: 9px;
+        }
+
+        .pay_with_card input {
+            font-size: 12px;
+        }
+
+        .pay_with_card input::placeholder {
+            font-size: 10px;
+        }
+
+        .expiry-month,
+        .expiry-year,
+        .cvv {
+            width: 30%;
+            margin-left: 0;
+            padding: 4px;
+        }
+
+        .cvv input {
+            margin-bottom: 0.5rem;
+        }
+
+        .confirmed {
+            top: 0.5rem;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .pay_with_paypal,
+        .pay_with_apple,
+        .pay_with_google,
+        .pay_with_klarna,
+        .pay_with_bank {
+            width: 100%;
+        }
+
+    }
+}
+
+@media(max-width:480px) {
+
+    /* =========================
+   480px – Small Mobile
+   ========================= */
+    @media (max-width: 480px) {
+
+        section {
+            flex-direction: column;
+        }
+
+        .section_3 {
+            width: 100%;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .section_3 img {
+            width: 75%;
+        }
+
+        .section_4 {
+            width: 100%;
+            margin-top: 1.5rem;
+            padding: 0 1rem;
+        }
+
+        .section_4 h3 {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .pay_with_card {
+            width: 100%;
+        }
+
+        .pay_with_card_bottom {
+            display: flex;
+            gap: 0.3rem;
+            width: 100%;
+        }
+
+        .pay_with_card_bottom label {
+            font-size: 8px;
+        }
+
+        .pay_with_card input {
+            font-size: 11px;
+        }
+
+        .pay_with_card input::placeholder {
+            font-size: 9px;
+        }
+
+        .expiry-month,
+        .expiry-year,
+        .cvv {
+            width: 32%;
+            padding: 3px;
+        }
+
+        .cvv input {
+            margin-bottom: 0.3rem;
+        }
+
+        .confirmed {
+            top: 0.3rem;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .pay_with_paypal,
+        .pay_with_apple,
+        .pay_with_google,
+        .pay_with_klarna,
+        .pay_with_bank {
+            width: 100%;
+        }
+
+        .section_4 a,
+        .pay_with_paypal a,
+        .pay_with_apple a,
+        .pay_with_google a,
+        .pay_with_klarna a,
+        .pay_with_bank a {
+            left: 2rem;
+        }
+    }
+}
+
+@media(max-width:420px) {
+    .logo {
+        width: 145px;
+    }
+
+    .logo img {
+        width: 140px;
+        margin: 0;
+
+    }
+
+    nav ul {
+        margin: 0;
+    }
+
+    nav ul li {
+        font-size: 12px;
+    }
+
+    .section_1 ul li {
+        font-size: 16px;
+    }
+
+    .section_2 img {
+        width: 25%;
+    }
+
+    .section_3 {
+        width: 100%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .section_3 img {
+        width: 75%;
+    }
+
+    .section_4 {
+        width: 100%;
+        margin-top: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .section_4 h3 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .pay_with_card {
+        width: 100%;
+    }
+
+    .pay_with_card_bottom {
+        display: flex;
+        gap: 0.3rem;
+        width: 100%;
+    }
+
+    .pay_with_card_bottom label {
+        font-size: 8px;
+    }
+
+    .pay_with_card input {
+        font-size: 11px;
+    }
+
+    .pay_with_card input::placeholder {
+        font-size: 9px;
+    }
+
+    .expiry-month,
+    .expiry-year,
+    .cvv {
+        width: 32%;
+        padding: 3px;
+    }
+
+    .cvv input {
+        margin-bottom: 0.3rem;
+    }
+
+    .confirmed {
+        top: 0.3rem;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .pay_with_paypal,
+    .pay_with_apple,
+    .pay_with_google,
+    .pay_with_klarna,
+    .pay_with_bank {
+        width: 100%;
+    }
+
+}
+
+/* =========================
+   360px – Ultra Small Mobile
+   ========================= */
+@media (max-width: 360px) {
+
+    .logo {
+        width: 120px;
+    }
+
+    .logo img {
+        width: 115px;
+        margin: 0;
+    }
+
+    nav ul li {
+        font-size: 10px;
+        margin-left: 0.5rem;
+    }
+
+    .section_1 ul li {
+        font-size: 14px;
+        margin-left: 1rem;
+    }
+
+    .section_2 img {
+        width: 80px;
+        height: 80px;
+        margin: 0.3rem;
+    }
+
+    .section_3 {
+        width: 100%;
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    .section_3 img {
+        width: 70%;
+    }
+
+    .section_4 {
+        width: 100%;
+        margin-top: 1.2rem;
+        padding: 0 0.8rem;
+    }
+
+    .section_4 h3 {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .section_4::placeholder {
+        font-size: 12px;
+    }
+
+    .pay_with_card {
+        width: 100%;
+    }
+
+    .pay_with_card_bottom {
+        display: flex;
+        gap: 0.2rem;
+        width: 100%;
+    }
+
+    .pay_with_card_bottom label {
+        font-size: 7px;
+    }
+
+    .pay_with_card input {
+        font-size: 10px;
+    }
+
+    .pay_with_card input::placeholder {
+        font-size: 8px;
+    }
+
+    .expiry-month,
+    .expiry-year,
+    .cvv {
+        width: 33%;
+        padding: 2px;
+    }
+
+    .cvv input {
+        margin-bottom: 0.2rem;
+    }
+
+    .confirmed {
+        top: 0.2rem;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .pay_with_paypal,
+    .pay_with_apple,
+    .pay_with_google,
+    .pay_with_klarna,
+    .pay_with_bank {
+        width: 100%;
+    }
+
+}

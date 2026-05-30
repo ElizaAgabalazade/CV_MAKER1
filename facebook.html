@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facebook Login</title>
+<link rel="stylesheet" href="facebook.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- LEFT -->
+    <div class="left">
+        <div class="logo">
+            <div class="circle"></div>
+            <span>MERGEN.IO</span>
+        </div>
+
+        <div class="left-content">
+            <h1>Hello,<br>Friend !</h1>
+            <p>Join<br>over 100k+<br>professional candidates</p>
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+        <a href="register.html" class="nav-back">← Back to <b>Sign in</b></a>
+
+        <div class="form-area">
+            <h2>Log Into <span class="facebook">Facebook</span></h2>
+
+            <input type="text" id="email" placeholder="Email or Phone number" class="input">
+<input type="password" id="password" placeholder="Password" class="input">
+
+<button class="btn facebook-btn" id="loginBtn">Log In</button>
+
+            <p class="links">
+                <span>Forgot account?</span>
+                <span>Sign up for Facebook</span>
+            </p>
+
+            <p class="not-now">Not now</p>
+
+            <p class="bottom-text">
+                Already Registered? <span>Sign In</span>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    background:#f2f2f2;
+}
+
+.wrapper{
+    display:flex;
+    height:100vh;
+}
+
+/* LEFT */
+.left{
+    width:50%;
+    background:#eeeeee;
+    padding:60px;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    position:absolute;
+    top:40px;
+    left:60px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.circle{
+    width:50px;
+    height:50px;
+    background:black;
+    border-radius:50%;
+}
+
+.logo span{
+    font-weight:600;
+    font-size:22px;
+    color:#3c5bff;
+}
+
+.left-content h1{
+    font-size:60px;
+    color:#b8b8b8;
+    line-height:1.1;
+}
+
+.left-content p{
+    margin-top:30px;
+    font-size:22px;
+    color:#b8b8b8;
+}
+
+/* RIGHT */
+.right{
+    width:50%;
+    background:#e6edf6;
+    padding:80px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.nav-back{
+    position:absolute;
+    top:40px;
+    left:60px;
+    font-size:15px;
+    color:#555;
+    text-decoration:none;
+}
+
+.form-area{
+    width:100%;
+    max-width:460px;
+}
+
+.form-area h2{
+    margin-bottom:5px;
+}
+
+.sub{
+    color:#777;
+    margin-bottom:30px;
+}
+
+/* ACCOUNT CARDS */
+
+.account{
+    margin-bottom:20px;
+}
+
+.account input{
+    display:none;
+}
+
+.account-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    border-radius:25px;
+    background:white;
+    cursor:pointer;
+    box-shadow:0 8px 15px rgba(0,0,0,0.15);
+    border:2px solid transparent;
+    transition:0.3s;
+}
+
+.account input:checked + .account-card{
+    border:2px solid #6c4cff;
+}
+
+.account-info{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.avatar{
+    width:45px;
+    height:45px;
+    background:#ccc;
+    border-radius:50%;
+}
+
+.avatar.small{
+    background:#999;
+}
+
+.account-card h3{
+    font-size:16px;
+}
+
+.account-card p{
+    font-size:13px;
+    color:#777;
+}
+
+.arrow{
+    font-size:24px;
+    color:#555;
+}
+
+.use-other{
+    text-align:center;
+    margin:25px 0;
+    color:#777;
+    cursor:pointer;
+}
+
+.bottom-text{
+    text-align:center;
+    font-size:14px;
+    color:#999;
+}
+
+.bottom-text span{
+    color:black;
+    font-weight:500;
+}
+</style>
+
+
+
+
+<script>
+    const loginBtn = document.getElementById("loginBtn");
+
+loginBtn.addEventListener("click", function() {
+
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+
+    if(email === "" || password === ""){
+        alert("Please fill in all fields!");
+        return;
+    }
+
+  
+    if(!email.match(emailPattern)){
+        alert("Please enter a valid email address!");
+        return;
+    }
+
+   
+    if(password.length < 6){
+        alert("Password must be at least 6 characters!");
+        return;
+    }
+
+    
+    alert("Login Successful!");
+    window.location.href = "index.html";
+});
+</script>
+
+</body>
+</html>

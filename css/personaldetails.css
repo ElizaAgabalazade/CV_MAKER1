@@ -1,0 +1,984 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w0aXpsog.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w9aXpsog.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w2aXpsog.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w3aXpsog.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aXo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw0aXpsog.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw9aXpsog.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw2aXpsog.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw3aXpsog.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w0aXpsog.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w9aXpsog.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w2aXpsog.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w3aXpsog.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Hw0aXpsog.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Hw9aXpsog.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Hw2aXpsog.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Hw3aXpsog.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Hw5aXo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  min-width: 100%;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.text-node { background-clip: text !important; -webkit-background-clip: text !important; }
+
+/* Profile */
+.profile-d65b296c165d {
+  position: relative;
+  width: 1440px;
+  height: 1046px;
+  background: #FFFFFFFF;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Rectangle */
+.rectangle-d65b296c1682 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px,0px);
+}
+.rectangle-d65b296c1682 {
+  position: absolute;
+  left: 363.43px;
+  top: 508.21px;
+  width: 452px;
+  height: 810px;
+}
+
+/* Rectangle */
+.rectangle-d65b296c1681 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px,0px);
+}
+.rectangle-d65b296c1681 {
+  position: absolute;
+  left: -406.3px;
+  top: -189.53px;
+  width: 820px;
+  height: 713px;
+}
+
+/* Joined in April 2026 */
+.joined-in-d65b296c1677 {
+  position: absolute;
+  left: 1101px;
+  top: 282px;
+  height: 15px;
+}
+.joined-in-d65b296c1677 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.joined-in-d65b296c1677 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.joined-in-d65b296c1677 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.joined-in-d65b296c1677 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(5, 24, 224, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 12px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(5, 24, 224, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Professional Member */
+.profession-d65b296c1676 {
+  position: absolute;
+  left: 917px;
+  top: 282px;
+  height: 15px;
+}
+.profession-d65b296c1676 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.profession-d65b296c1676 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.profession-d65b296c1676 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.profession-d65b296c1676 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(20, 196, 93, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 12px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(20, 196, 93, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Rectangle */
+.rectangle-d65b296c1675 {
+  position: absolute;
+  left: 903px;
+  top: 274px;
+  width: 163px;
+  height: 30px;
+  background: #73aff321;
+  border-start-start-radius: 20px;
+  border-start-end-radius: 20px;
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
+}
+
+/* Rectangle */
+.rectangle-d65b296c1674 {
+  position: absolute;
+  left: 1079px;
+  top: 274px;
+  width: 163px;
+  height: 30px;
+  background: #73aff321;
+  border-start-start-radius: 20px;
+  border-start-end-radius: 20px;
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
+}
+
+/* laviniavicolvioni555@gmail.com */
+.laviniavic-d65b296c1673 {
+  position: absolute;
+  left: 360px;
+  top: 288px;
+  height: 22px;
+}
+.laviniavic-d65b296c1673 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.laviniavic-d65b296c1673 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.laviniavic-d65b296c1673 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.laviniavic-d65b296c1673 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(177, 178, 183, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(177, 178, 183, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* blob */
+.blob-d65b296c1672 {
+  position: absolute;
+  left: 331px;
+  top: 286px;
+  width: 23px;
+  height: 23px;
+  background: url(data:image/png;base64,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) no-repeat center center / cover;
+}
+
+/* image */
+.image-d65b296c1671 {
+  position: absolute;
+  left: 272px;
+  top: 307px;
+  width: 28px;
+  height: 28px;
+  background: url(data:image/png;base64,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) no-repeat center center / cover;
+}
+
+/* Ellipse */
+.ellipse-d65b296c1670 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-32px,-32px);
+}
+.ellipse-d65b296c1670 {
+  position: absolute;
+  left: 267px;
+  top: 301px;
+  width: 38px;
+  height: 39px;
+}
+
+/* Lavinia Vicolvioni */
+.lavinia-vi-d65b296c166f {
+  position: absolute;
+  left: 331px;
+  top: 237px;
+  height: 42px;
+}
+.lavinia-vi-d65b296c166f .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.lavinia-vi-d65b296c166f .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.lavinia-vi-d65b296c166f .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.lavinia-vi-d65b296c166f .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(0, 0, 0, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 35px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Rectangle */
+.rectangle-d65b296c166e > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-16px,-16px);
+}
+.rectangle-d65b296c166e {
+  position: absolute;
+  left: 138px;
+  top: 190px;
+  width: 1169px;
+  height: 170px;
+}
+
+/* Rectangle */
+.rectangle-d65b296c166c {
+  position: absolute;
+  left: 114px;
+  top: 172px;
+  width: 1216px;
+  height: 207px;
+  background: linear-gradient(to bottom, rgba(219, 235, 251, 1) 63%,rgba(255, 255, 255, 0) 100%);
+  border-start-start-radius: 20px;
+  border-start-end-radius: 20px;
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
+  box-shadow: 0px 0px 4px 4px #72aff31A;
+  filter: blur(4px);
+}
+
+/* +0123456789 */
+.c-012345678-d65b296c166b {
+  position: absolute;
+  left: 416px;
+  top: 766px;
+  height: 22px;
+}
+.c-012345678-d65b296c166b .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.c-012345678-d65b296c166b .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.c-012345678-d65b296c166b .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.c-012345678-d65b296c166b .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(177, 178, 183, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(177, 178, 183, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Lavinia Vicolvioni */
+.lavinia-vi-d65b296c166a {
+  position: absolute;
+  left: 418px;
+  top: 645px;
+  height: 22px;
+}
+.lavinia-vi-d65b296c166a .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.lavinia-vi-d65b296c166a .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.lavinia-vi-d65b296c166a .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.lavinia-vi-d65b296c166a .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(177, 178, 183, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(177, 178, 183, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Edit Profile */
+.edit-profi-d65b296c1669 {
+  position: absolute;
+  left: 931px;
+  top: 517px;
+  height: 18px;
+}
+.edit-profi-d65b296c1669 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.edit-profi-d65b296c1669 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.edit-profi-d65b296c1669 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.edit-profi-d65b296c1669 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(255, 255, 255, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 15px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Rectangle */
+.rectangle-d65b296c1668 {
+  position: absolute;
+  left: 899px;
+  top: 508px;
+  width: 143px;
+  height: 36px;
+  background: linear-gradient(to bottom, rgba(92, 23, 252, 1) 0%,rgba(13, 94, 255, 1) 100%);
+  border-start-start-radius: 20px;
+  border-start-end-radius: 20px;
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
+  box-shadow: 4px 4px 4px 0px #00000033;
+}
+
+/* Personal Details */
+.personal-d-d65b296c1667 {
+  position: absolute;
+  left: 406px;
+  top: 508px;
+  width: 320px;
+}
+.personal-d-d65b296c1667 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.personal-d-d65b296c1667 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  min-width: 100%;
+  margin-right: 1px;
+  vertical-align: top;
+}
+.personal-d-d65b296c1667 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.personal-d-d65b296c1667 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(0, 0, 0, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: break-spaces;
+  font-size: 30px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Full Name */
+.full-name-d65b296c1666 {
+  position: absolute;
+  left: 402px;
+  top: 592px;
+  height: 27px;
+}
+.full-name-d65b296c1666 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.full-name-d65b296c1666 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.full-name-d65b296c1666 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.full-name-d65b296c1666 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(0, 0, 0, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 22px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Email Address */
+.email-addr-d65b296c1665 {
+  position: absolute;
+  left: 402px;
+  top: 837px;
+  height: 27px;
+}
+.email-addr-d65b296c1665 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.email-addr-d65b296c1665 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.email-addr-d65b296c1665 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.email-addr-d65b296c1665 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(0, 0, 0, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 22px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Rectangle */
+.rectangle-d65b296c1664 {
+  position: absolute;
+  left: 400px;
+  top: 628px;
+  width: 642px;
+  height: 56px;
+  background: #ffffff21;
+  border: 1px solid #1f4efeFF;
+  border-start-start-radius: 15px;
+  border-start-end-radius: 15px;
+  border-end-start-radius: 15px;
+  border-end-end-radius: 15px;
+}
+
+/* Phone Number */
+.phone-numb-d65b296c1663 {
+  position: absolute;
+  left: 403px;
+  top: 715px;
+  height: 27px;
+}
+.phone-numb-d65b296c1663 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.phone-numb-d65b296c1663 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.phone-numb-d65b296c1663 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.phone-numb-d65b296c1663 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(0, 0, 0, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 22px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Rectangle */
+.rectangle-d65b296c1662 {
+  position: absolute;
+  left: 402px;
+  top: 749px;
+  width: 640px;
+  height: 56px;
+  background: #ffffff21;
+  border: 1px solid #1f4efeFF;
+  border-start-start-radius: 15px;
+  border-start-end-radius: 15px;
+  border-end-start-radius: 15px;
+  border-end-end-radius: 15px;
+}
+
+/* Rectangle */
+.rectangle-d65b296c1661 {
+  position: absolute;
+  left: 400px;
+  top: 871px;
+  width: 642px;
+  height: 56px;
+  background: #ffffff21;
+  border: 1px solid #1f4efeFF;
+  border-start-start-radius: 15px;
+  border-start-end-radius: 15px;
+  border-end-start-radius: 15px;
+  border-end-end-radius: 15px;
+}
+
+/* laviniavicolvioni555@gmail.com */
+.laviniavic-d65b296c1660 {
+  position: absolute;
+  left: 416px;
+  top: 890px;
+  height: 22px;
+}
+.laviniavic-d65b296c1660 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.laviniavic-d65b296c1660 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.laviniavic-d65b296c1660 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.laviniavic-d65b296c1660 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(177, 178, 183, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(177, 178, 183, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Rectangle */
+.rectangle-d65b296c165f {
+  position: absolute;
+  left: 366px;
+  top: 472px;
+  width: 705px;
+  height: 498px;
+  background: #ffffffFF;
+  border-start-start-radius: 20px;
+  border-start-end-radius: 20px;
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
+  box-shadow: 4px 4px 4px 5px #b5d0efFF;
+}
+
+/* Rectangle */
+.rectangle-d65b296c165e > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-16px,-16px);
+}
+.rectangle-d65b296c165e {
+  position: absolute;
+  left: 1689.31px;
+  top: 381.87px;
+  width: 1169px;
+  height: 178px;
+}
+
+/* Rectangle */
+.rectangle-d65b296c166d > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px,0px);
+}
+.rectangle-d65b296c166d {
+  position: absolute;
+  left: 1077.86px;
+  top: 111.23px;
+  width: 572px;
+  height: 732px;
+}

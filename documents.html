@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Documents</title>
+<link rel="stylesheet" href="./css/documents.css">
+</head>
+
+<body>
+<div class="personaldetail">
+
+    <div class="name">Lavinia Vicolvioni</div><br>
+    <div class="email">laviniavicolvioni555@gmail.com</div>
+
+    <div class="profile-box">
+  <div class="badge">Professional Member</div>
+  <div class="joined">Joined in April 2026</div>
+</div>
+<div id="threeDotDiv">⋮</div>
+
+<div id="dropdownMenu" class="dropdown hidden">
+    <div class="item"><a href="documents.html">Documents</a></div>
+    <div class="item"><a href="password.html">Password</a></div>
+    <div class="item"><a href="settings.html">Settings</a></div>
+    <div class="item"><a href="bilings.html">Billings</a></div>
+</div>
+</div>
+<div id="documents">
+
+    <label for="fileInput" class="upload-btn">
+        Choose Files
+    </label>
+
+    <input type="file" id="fileInput" multiple>
+
+    <div id="previewBox"></div>
+
+</div>
+<style>
+  body {
+    font-family: Arial;
+}
+
+
+ .personaldetail{
+        width: 900px;
+        height: 130px;
+         padding: 15px 20px;
+        margin-bottom: 30px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 20px 20px 30px rgba(26, 84, 117, 0.1);
+        margin-left: 340px;
+        margin-top: 50px;
+    }
+
+
+
+
+.name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #222;
+    
+}
+
+.email {
+    font-size: 14px;
+    color: gray;
+}
+
+
+.profile-box {
+    display: flex;
+    gap: 10px;          /* arada boşluq */
+    align-items: center;
+    margin-left: 500px;
+}
+.badge {
+    width: 200px;
+    height: 30px;
+    background: #ccf9e2;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #10a23c;
+    text-align: center;
+}
+
+.joined {
+    font-weight: 600;
+    color: #120aa5;
+    width: 200px;
+    height: 30px;
+    background: #d5eefc;
+    border-radius: 50px;
+    text-align: center;
+}
+
+#threeDotDiv {
+    cursor: pointer;
+    font-size: 22px;
+    padding: 5px 10px;
+    display: inline-block;
+    user-select: none;
+    margin-left: 600px;
+    margin-bottom: 40px;
+}
+
+.dropdown {
+    position: absolute;
+    background: white;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    width: 160px;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-left: 600px;
+    margin-bottom: 40px;
+}
+
+.dropdown .item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown .item:hover {
+    background: #f2f2f2;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#documents {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+/* BUTTON */
+.upload-btn {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #0073e6, #5400e6);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* GRID FLEX */
+#previewBox {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* CARD */
+.file-card {
+    width: 140px;
+    flex: 0 0 auto;
+
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+}
+
+.file-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.file-name {
+    font-size: 12px;
+    margin-top: 5px;
+    word-break: break-word;
+}
+</style>
+<script src="/js/documents.js"></script>
+
+</body>
+</html>

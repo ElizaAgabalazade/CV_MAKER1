@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/CoverLetter1.css" />
+    <script src="./js/COVER.js" defer></script>
+        <link rel="icon" href="img/logo.png">
+
+    <title>Document</title>
+
+</head>
+<body>
+    <header>
+        <div class="header_left">
+            <div><a href="./index.html" class="site_name">●MakeCV</a></div>
+        </div>
+        <div class="header_middle">
+            <nav>
+                <ul>
+                    <li><a href="./Resume_templates.html">Resume Templates </a></li>
+                    <li><a href="./CoverLetter.html">Cover Letter</a> </li>
+                    <li><a href="./ATS.html">ATS Checker</a> </li>
+                    <li><a href="./PaymentMethods.html">Payment </a></li>
+                    <li>About us</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header_right">
+            <a href="register.html" class="sign_part">Sign Up</a>
+            <a href="/Log_in.html" class="log_in">Log In</a>
+        </div>
+    </header>
+    <section>
+        <div class="section_1_2">
+            <div class="section_1">
+                <div class="site_name1">● <span>MakeCV</span></div>
+                <button type="button" id="upload-cv-btn" class="generate-btn" style="margin-left: 0; width: auto;">
+                    Upload CV
+                </button>
+            </div>
+            <div class="section_2" id="section_2">
+                <p>Generate yor Cover Letter with AI </p>
+                <textarea name="" id="job-description"
+                    placeholder="Enter your personal details, job role, and any specific experience you want to highlight... "></textarea>
+                <button type="button" id="generate-btn" class="generate-btn">
+                    <strong>Generate</strong> with AI
+                </button>
+            </div>
+        </div>
+        <div id="upload-modal" class="modal-overlay">
+            <div class="modal-content">
+                <div class="inside_box">
+                    <span class="close-modal">&times;</span>
+                    <div class="modal-body">
+                        <div class="upload-box" onclick="document.getElementById('file-input').click()">
+                            <img src="./img/CoverLetter/plus.png" alt="" class="plus_click">
+                            <input type="file" id="file-input" hidden accept=".pdf,.doc,.docx">
+                        </div>
+
+                        <hr class="hr">
+
+                        <div class="saved-cvs">
+                            <ul id="cv-list">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="design-container" class="theme-default">
+            <div class="designs_header">
+                <h3>Document preview & Editor</h3>
+                <div class="designs_header_right">
+                    <button type="submit" class="download" id="downloadCoverLetter">Download</button>
+                    <button type="button" id="change-design" class="edit_adjust">Change Design</button>
+                </div>
+            </div>
+
+            <!-- DEFAULT THEME  -->
+            <div class="default-theme-block">
+                <div class="default-page">
+                    <div class="default-left-border"></div>
+
+                    <div class="default-content">
+                        <div class="default-header-blue-box">
+                            <textarea class="default-date-input date" rows="1">February 26, 2035</textarea>
+
+                            <div class="default-recipient-info">
+                                <textarea class="default-bold-textarea recipient name1" rows="1">Dario Amodei</textarea>
+                            </div>
+                        </div>
+
+                        <div class="default-body">
+                            <textarea class="overall cv-editor"
+                                placeholder="I am writing to express my profound interest..."></textarea>
+                        </div>
+                        <div class="default-bottom-contacts">
+                            <textarea class="bottom-contact-item email">ingrid.schneider.esg@global.com</textarea>
+                            <textarea class="bottom-contact-item phone">+1 (917) 555-0777</textarea>
+                            <textarea class="bottom-contact-item address">New York, NY</textarea>
+                            <textarea class="bottom-contact-item linkedin">linkedin.com/in/...</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MODERN THEME  -->
+            <div class="modern-theme-block">
+                <div class="modern-sidebar"></div>
+                <div class="modern-inner">
+                    <div class="modern-header">
+                        <div class="modern-name-box">
+                            <textarea class="modern-name-editor name1" rows="1">AMELIA DUPONT</textarea>
+                        </div>
+                        <div class="modern-contact-box">
+                            <textarea class="modern-contact-item address" rows="1">Lyon, France</textarea>
+                            <textarea class="modern-contact-item phone" rows="1">+33 6 45 22 91 78</textarea>
+                            <textarea class="modern-contact-item email" rows="1">amelia.dupont@example.com</textarea>
+                            <textarea class="modern-contact-item linkedn" rows="1">amelia-dupont-pr</textarea>
+                        </div>
+                    </div>
+
+                    <div class="modern-body">
+                        <textarea class="modern-date-editor date" rows="1">12/12/2026</textarea>
+                        <textarea class="modern-overall cv-editor"
+                            placeholder="I am writing to express my enthusiasm..."></textarea>
+
+                    </div>
+                </div>
+            </div>
+            <div class="elegant-theme-block">
+                <div class="elegant-page">
+                    <div class="elegant-header-row">
+                        <div class="elegant-contact-col">
+                            <textarea class="elegant-contact-item email"
+                                rows="1">ines.costa.marketing@example.com</textarea>
+                            <textarea class="elegant-contact-item phone" rows="1">+351 914 221 540</textarea>
+                            <textarea class="elegant-contact-item address" rows="1">ines-costa-ads</textarea>
+                        </div>
+                        <div class="elegant-name-col">
+                            <textarea class="elegant-name-edito name1" rows="1">INÊS COSTA</textarea>
+                        </div>
+                    </div>
+
+                    <div class="elegant-body">
+                        <div class="elegant-date-line">
+                            <textarea class="elegant-date-editor date" rows="1">12/12/2025</textarea>
+                        </div>
+
+                        <textarea class="elegant-overall cv-editor"
+                            placeholder="I am writing to apply for the Paid Social Lead position..."></textarea>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- CORPORATE THEME (Erik Lindström stili) -->
+            <div class="corporate-theme-block">
+                <div class="corporate-page">
+                    <div class="corporate-left-sidebar">
+                        <div class="blue-stripe"></div>
+                        <div class="blue-stripe"></div>
+                        <div class="corporate-sidebar-bottom">
+                            <div class="blue-square"></div>
+                            <div class="corporate-footer-contact">
+                                <textarea class="corp-contact-editor address " rows="1"></textarea>
+                                <textarea class="corp-contact-editor  phone" rows="1"></textarea>
+                                <textarea class="corp-contact-editor email" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sağ tərəfdəki əsas məzmun -->
+                    <div class="corporate-main-content">
+                        <div class="corporate-header">
+                            <!-- Tarix üçün textarea -->
+                            <textarea class="corp-date-editor date" rows="1">February 26, 2035</textarea>
+
+                            <div class="recipient-info">
+                                <textarea class="corp-recipient-editor name1" rows="1">Dario Amodei</textarea>
+                       
+                                <textarea class="corp-recipient-editor  address" rows="2">
+                            548 Market St, San Francisco, CA 94104, USA</textarea>
+                            </div>
+                        </div>
+
+                        <div class="corporate-body">
+                            <textarea class="corporate-overall cv-editor"
+                                placeholder="I am writing to apply for..."></textarea>
+                            <div class="corporate-closing">
+                                <p>Thank you for your time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MINIMALIST SIDEBAR THEME (Irene Castillo stili - Redaktə edilə bilən) -->
+            <div class="minimalist-theme-block">
+                <div class="minimalist-page">
+                    <div class="minimalist-main">
+                        <div class="minimalist-header">
+                            <textarea class="minimalist-name-editor name1" rows="1">Irene Castillo</textarea>
+                            <div class="minimalist-line"></div>
+                        </div>
+
+                        <div class="minimalist-content-body">
+                            <textarea class="minimalist-date-editor date" rows="1">12/12/2026</textarea>
+
+                            <div class="recipient-details">
+                                <textarea class="recipient-editor address  " rows="1"></textarea>
+                                <textarea class="recipient-editor phone " rows="1"></textarea>
+                            </div>
+
+                            <!-- Mövzu üçün textarea -->
+                            <textarea class="minimalist-overall cv-editor"
+                                placeholder="Customer retention is the heartbeat of sustainable business growth..."></textarea>
+                            <div class="minimalist-footer">
+                                <textarea class="minimalist-closing-editor" rows="2">Warm regards</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="minimalist-sidebar">
+                        <div class="minimalist-contact-section">
+                            <div class="contact-item">
+                                <strong>Phone</strong>
+                                <textarea class="sidebar-contact-editor phone" rows="1">+34 672 991 440</textarea>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Email</strong>
+                                <textarea class="sidebar-contact-editor email"
+                                    rows="1">sofia.martinez.crm@example.com</textarea>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Location</strong>
+                                <textarea class="sidebar-contact-editor address" rows="1">Barcelona, Spain</textarea>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="corporate-alt-theme-block">
+                <div class="corporate-alt-page">
+                    <!-- Üst Header: Mavi Kvadrat və Mövzu -->
+                    <div class="corp-alt-header-box">
+                        <div class="blue-square-top">
+                        </div>
+                    </div>
+
+                    <!-- Əsas Məzmun Sahəsi -->
+                    <div class="corp-alt-content">
+                        <!-- Tarix -->
+                        <textarea class="corp-alt-date-editor date" rows="1">February 26, 2035</textarea>
+
+                        <!-- Alıcı Məlumatları -->
+                        <div class="corp-alt-recipient-section">
+                            <textarea class="corp-alt-bold-editor name1" rows="2">Dario Amodei
+Hiring Manager</textarea>
+                            <textarea class="corp-alt-bold-editor address" rows="2">Anthropic
+548 Market St, San Francisco, CA 94104, USA</textarea>
+                        </div>
+                        <textarea class="corp-alt-main-text cv-editor"
+                            placeholder="I am writing to apply for...">I am writing to apply for the Lead Machine Learning Researcher position at Anthropic. As a data scientist who has spent my career at the intersection of European mathematical rigor and Silicon Valley engineering speed, I have followed Anthropic's commitment to AI safety and constitutional AI with deep admiration.</textarea>
+
+
+                    </div>
+
+                    <!-- Alt hissə: Mavi kiçik kvadrat və Kontaktlar -->
+                    <div class="corp-alt-bottom-contact">
+                        <div class="blue-square-bottom"></div>
+                        <textarea class="corp-alt-contact-details address phone email" rows="3">Palo Alto, CA
++1 (650) 555-0888
+e.lindstrom.ai@example.tech</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modern-side-theme-block">
+                <div class="modern-side-page">
+                    <!-- Sol Şaquli Kontaktlar Sahəsi -->
+                    <div class="modern-side-margin-left">
+                        <div class="modern-side-contacts">
+                            <textarea class="side-contact-item email">ingrid.schneider.esg@global.com</textarea>
+                            <textarea class="side-contact-item phone">+1 (917) 555-0777</textarea>
+                            <textarea class="side-contact-item address">New York, NY</textarea>
+                            <textarea class="side-contact-item linkedn">linkedin.com/in/ingrid-schneider</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Əsas Ağ Məzmun -->
+                    <div class="modern-side-main">
+                        <div class="modern-side-header">
+                            <textarea class="ms-date-editor date" rows="1">February 26, 2035</textarea>
+                            <div class="ms-recipient-box">
+                                <textarea class="ms-bold-editor name1" rows="2">Dario Amodei
+Hiring Manager</textarea>
+                                <textarea class="ms-bold-editor address" rows="2">Anthropic
+548 Market St, San Francisco, CA 94104, USA</textarea>
+                            </div>
+                        </div>
+
+                        <div class="modern-side-body">
+                            <textarea class="ms-overall-text cv-editor"
+                                placeholder="I am writing to express...">I am writing to express my profound interest in the Senior Sustainability Advisor position within the United Nations Environment Programme (UNEP)...</textarea>
+
+                        </div>
+                    </div>
+
+                    <!-- Sağ Boş Margin -->
+                    <div class="modern-side-margin-right"></div>
+                </div>
+            </div>
+            <div class="luxury-side-theme-block">
+                <div class="luxury-side-page">
+                    <!-- Sol Şaquli Yaşıl Zolaq və Kontaktlar -->
+                    <div class="luxury-side-sidebar">
+                        <div class="luxury-side-contacts">
+                            <textarea class="luxury-contact-item email">seraphina.thorne@luxury.com</textarea>
+                            <textarea class="luxury-contact-item phone">+1 (212) 555-0198</textarea>
+                            <textarea class="luxury-contact-item address">New York, NY</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Əsas Məzmun -->
+                    <div class="luxury-side-main">
+                        <div class="luxury-header">
+                            <textarea class="lux-date-editor date" rows="1">April 5, 2028</textarea>
+
+                            <div class="lux-recipient-box">
+                                <textarea class="lux-recipient-editor" rows="3">Confidential Submission
+Leena Nair</textarea>
+
+                                <textarea class="lux-company-editor address" rows="3">Chanel
+15 East 57th Street, New York
+York, NY 10022, USA</textarea>
+                            </div>
+                        </div>
+
+                        <!-- Qızılı İncə Xətt -->
+                        <div class="lux-gold-line"></div>
+
+                        <div class="luxury-body">
+                            <textarea class="luxury-overall-text cv-editor"
+                                placeholder="I am writing to express...">I am writing to express my profound interest in the Global Brand Director position at Chanel. As a professional who has dedicated her career to the intersection of art and commerce in NYC and Paris...</textarea>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

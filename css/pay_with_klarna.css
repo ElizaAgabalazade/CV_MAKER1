@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.pay_with_apple_overlay{
+  position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.64);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.pay_with_apple_overlay.active{
+    display: flex;
+}
+.pay_with_apple_card {
+    width: 30%;
+    background: #fff;
+    border-radius: 45px;
+    box-shadow: 1px 8px 24px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+.apple_transfer_header{
+    display: flex;
+    background: #ffff;
+    width: 100%;
+    position: relative;
+    border-radius: 45px;
+}
+.apple_transfer_header img{
+    width: 100%;
+    height: auto;
+}
+.apple_transfer_header h2{
+    width: 80%;
+    margin-top: 1rem;
+
+}
+ .apple_transfer_header .close_black_google{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 2rem;
+    top: 1.6rem;
+}
+.pay_with_apple_middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pay_wiht_apple_middle_2{
+    display: flex;
+    width: 90%;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    background: #EFF6FF;
+    border-radius: 45px;
+    gap: 10px;
+     box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.pay_wiht_apple_middle_2 button{
+    background: #000;
+    color: #fff;
+    padding: 1rem 4rem;
+    border-radius: 45px;
+    margin:0 auto;
+    margin-top: 1rem;
+}
+
+
+
+

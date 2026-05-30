@@ -1,0 +1,1049 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url('../img/ResumeTemplates/bacground2.PNG');
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: #F3F3F3;
+    position: fixed;
+    z-index: 1111;
+    top: 0;
+    left: 0;
+
+}
+
+.header_left {
+    width: 15%;
+    /* background: red; */
+    position: relative;
+}
+
+/* .header_middle nav li a{
+    text-decoration: none;
+
+} */
+
+.site_name {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    font-weight: 900;
+    font-size: 22px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+
+.header_middle {
+    width: 60%;
+    padding-left: 1rem;
+    /* background: violet; */
+}
+
+.header_middle ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 2rem;
+    gap: 1rem;
+
+
+}
+
+.header_middle ul li {
+    font-size: 18px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.header_middle ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    /* background: blue; */
+}
+
+.header_right a {
+    font-weight: 700;
+    margin-left: 15px;
+    text-decoration: none;
+
+}
+
+.sign_part {
+    color: #4b2cff;
+
+}
+
+.log_in {
+    background: #4b2cff;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+
+}
+
+:root {
+    --border-color: #dcd6ff;
+    --text-label: #333;
+    --placeholder-color: #b5b5b5;
+    --bg-gradient: linear-gradient(135deg, #f0f4ff 0%, #e8eaff 100%);
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #444;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.step-indicator {
+    background: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: var(--primary-color);
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card {
+    background: white;
+    border: 2px solid #6343ff;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(99, 67, 255, 0.05);
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 22px;
+    color: #222;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 25px;
+    flex-grow: 1;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-label);
+}
+
+.input-group label span {
+    color: red;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--placeholder-color);
+}
+
+.photo-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 120px;
+}
+
+.action-box {
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action-box:hover {
+    background: #f8f7ff;
+}
+
+.action-box .icon {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin: 0 auto;
+
+}
+
+.action-box p {
+    font-size: 11px;
+    margin: 0;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.next-btn {
+    background: linear-gradient(to right, #6343ff, #3b59ff);
+    color: white;
+    border: none;
+    padding: 12px 60px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(99, 67, 255, 0.3);
+}
+
+/* .................................................................. */
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #a78bfa, #8b5cf6);
+    --bg-light: #f8faff;
+    --border-dashed: #6366f1;
+}
+
+/* Modal Arxa Fonu */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Şəffaflıq üçün qara ton daha yaxşıdır */
+    background-image: url('../img/ResumeTemplates/bacground2.PNG');
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 99999;
+    /* Digər elementlərin üzərində olması üçün */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Yalnız active klası olanda flex olsun */
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-card {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10001;
+    /* Kartın özü overlay-dən də öndə olsun */
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Kəsik xəttli yükləmə sahəsi */
+.upload-area {
+    /* ... mövcud border, border-radius və hündürlük stilləriniz ... */
+    border: 2px dashed #6366f1;
+    /* Nümunə rəng */
+    border-radius: 15px;
+    height: 200px;
+    /* Nümunə hündürlük */
+
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#savePhotoBtn .icon {
+    width: 60px !important;  /* Bura öz istədiyin ikon ölçüsünü yaz */
+    height: 60px !important; /* Eni və hündürlüyü eyni saxla */
+    min-width: 40px;
+    max-width: 40px;
+    overflow: hidden;        /* Şəkil kənara çıxmasın */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#imagePreview {
+
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: transform 0.1s ease-out;
+}
+
+.plus-btn {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gradient);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+}
+
+.upload-area p {
+    color: #a0aec0;
+    font-size: 14px;
+}
+
+/* Zoom Slider */
+.zoom-container {
+    margin-top: 25px;
+}
+
+.zoom-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #cbd5e0;
+    margin-bottom: 8px;
+}
+
+.slider {
+    width: 100%;
+    accent-color: #a78bfa;
+    cursor: pointer;
+}
+
+/* Modal ilkin olaraq gizli olsun */
+#photoModal {
+    display: none;
+}
+
+/* Gizlətmək üçün köməkçi class */
+.hidden {
+    display: none !important;
+}
+
+/* Modal Düymələri */
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 35px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.change-btn {
+    background: linear-gradient(to right, #6343ff, #3b59ff);
+    color: white;
+    /* Şəkildə ağ görünür */
+}
+
+.save-btn {
+
+    background: linear-gradient(to right, #6343ff, #3b59ff);
+    color: white;
+}
+
+.save-btn:hover,
+.change-btn:hover,
+.confirm-btn:hover {
+    background: #c7d2fe;
+}
+
+/* Confirm düyməsi */
+.confirm-btn {
+    margin-top: 30px;
+    margin-left: 20rem;
+    background: linear-gradient(to right, #6343ff, #3b59ff);
+    color: white;
+    border: none;
+    padding: 12px 50px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(167, 139, 250, 0.2);
+}
+
+/* QR MODALIN ƏSAS FONU */
+.qr-modal-overlay {
+    display: none;
+    /* İlkin olaraq gizli */
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/ResumeTemplates/bacground2.PNG');
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+
+/* Modal aktiv olduqda */
+.qr-modal-overlay.active {
+    display: flex;
+}
+#qr-result-container{
+    position: absolute;
+    left: 12rem;
+    top: 0.5rem;
+    width: 30px;
+    z-index: 111111;
+}
+.qr-display-area {
+    border: 2px dashed #6366f1;
+    border-radius: 25px;
+    padding: 60px;
+    text-align: center;
+    margin: 20px 0;
+}
+.qr-card {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 35px;
+    border-radius: 35px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.qr-modal-overlay.active .qr-card {
+    transform: scale(1); /* Açılarkən böyümə animasiyası */
+}
+
+
+
+/* Düymələrin Hover Effektləri */
+.btn-qr, .confirm-btn-qr {
+    padding: 12px 40px;
+    border-radius: 14px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6366f1 0%, #2563eb 100%);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#qrcode {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    /* Şəkil yaranana qədər yerini görmək üçün */
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    right: 13rem;
+    top: 11rem;
+    z-index: 999;
+    border:1px solid #000;
+    width: 100px;
+    height: 100px;
+}
+
+#qrcode img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.btn-qr:hover {
+    transform: translateY(-5px); /* Yuxarı qalxma */
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    filter: brightness(1.1);
+}
+
+.confirm-btn-qr:hover {
+    padding: 12px 60px; /* Sağa-sola genişlənmə effekti */
+    letter-spacing: 1px;
+}
+
+.action-buttons{
+    margin-left: 10rem;
+}
+.confirm-btn-qr{
+    margin-top: 30px;
+    margin-left: 20rem;
+}
+/* Action box içindəki kiçik QR-ın stili */
+#qr-icon-placeholder img {
+    margin: 0 auto;
+    display: block;
+}
+/* Action Box üçün kursor */
+.action-box { cursor: pointer; }
+/* STEP 3 */
+.container,
+#step3.container {
+    width: 80%;
+    /* Ekranın 80%-ni tutur */
+    max-width: 1200px;
+    /* Maksimum genişlik limiti */
+    min-width: 800px;
+    /* Çox daralmaması üçün minimum genişlik */
+    margin: 40px auto;
+    /* Ekranın mərkəzində yerləşsin */
+    background: #fff;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Təcrübə blokunun daxili genişliyi */
+.experience-block {
+    width: 100%;
+    /* Konteynerin daxilində tam enli olur */
+    border: 2px dashed #6366f1;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    position: relative;
+    box-sizing: border-box;
+    /* Padding-in enə təsir etməməsi üçün */
+}
+
+/* Input sətirləri */
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Şəkildəki kimi 2 sütun */
+    gap: 30px;
+    /* Elementlər arasındakı boşluq */
+    margin-bottom: 25px;
+}
+
+.full-width {
+    grid-template-columns: 1fr;
+}
+
+/* İkonlu inputlar */
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 8px 15px;
+    background: #fff;
+}
+
+.input-with-icon input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.input-icon {
+    font-size: 18px;
+    color: #9ca3af;
+}
+
+/* Textarea tənzimləməsi */
+.exp-desc {
+    width: 100%;
+    min-height: 120px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: inherit;
+    resize: vertical;
+    outline: none;
+}
+
+/* Silmə düyməsi */
+.remove-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #374151;
+}
+
+/* Add Experience düyməsi */
+.add-exp-btn {
+    width: 100%;
+    background: #6343ff;
+    color: white;
+    padding: 18px;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-exp-btn:hover {
+    background: #5235d9;
+    transform: translateY(-2px);
+}
+
+/* ......................................................................... */
+/* ///////////////////// */
+/* Step 5 Konteyneri və Skroll Ayarı */
+/* Step 5 Ümumi Fonu */
+.step5-main-container {
+    background-color: #f0f4f8;
+    /* Boz-mavi fon */
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 2rem;
+}
+
+/* Kart Dizaynı */
+.step5-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step5-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Sətirləri */
+.step5-input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.step5-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+.step5-star {
+    color: #3b82f6;
+    /* Mavi ulduz */
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.step5-input-wrapper input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+.step5-remove-btn {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Skills Bölməsi */
+.step5-textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 12px;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.step5-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.step5-tag {
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.step5-tag:hover {
+    background: #e0e7ff;
+}
+
+/* Dil Səviyyə Bölməsi */
+.step5-languages-layout {
+    display: flex;
+    gap: 30px;
+}
+
+.step5-proficiency-box {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.step5-level-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.step5-level-chip {
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.step5-level-chip.active {
+    background: #3b82f6;
+    color: #fff;
+    border-color: #3b82f6;
+}
+
+/* Düymələr */
+.step5-add-btn {
+    background: linear-gradient(to right, #6366f1, #3b82f6);
+
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    float: right;
+}
+
+.step5-done-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 50px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+
+/* CV yeri */
+.section_right {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 132mm;
+    margin-top: 9rem;
+    height: 70vh;
+    /* background: blue; */
+    position: relative;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.section_right.active {
+    display: flex !important;
+}
+.section_right h3{
+    font-size: 30px;
+    margin-left: -11rem;
+}
+.cv-container {
+    width: 132mm; /* A4 formatı */
+    min-height: 70vh;
+    height: auto;
+    background: white;
+    margin: 0 auto;
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Sol tərəf geniş */
+.main-content {
+    flex: 2;
+}
+#sendTitle1 {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+#phoneR,
+#emailR,
+#adressR,
+#phoneR::placeholder,
+#emailR::placeholder,
+#adressR::placeholder,
+#linkedinR,
+#linkedinR::placeholder{
+    width: 80%;
+    height: 100%;
+    resize: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: none;
+    outline: none;
+    color: #000000;
+    font-size: 8px;
+    margin-left: 1rem;
+    background: transparent;
+    font-weight: 900;
+
+      /* YIĞCAMLIQ ÜÇÜN ƏSAS HİSSƏ */
+    line-height: 1.1;       /* Sətirləri bir-birinə yapışdırır */
+    margin-bottom: 1px;     /* Elementlər arasındakı məsafəni minimuma endirir */
+    padding: 0 !important;  /* Daxili boşluqları tam sıfırlayır */
+    
+    resize: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    display: block;         /* Yan-yana deyil, blok şəklində alt-alta düzülməsi üçün */
+    margin-left: auto;      /* Mərkəzləmək üçün */
+    margin-right: auto;
+}
+
+
+/* Sağ tərəf dar */
+.sidebar {
+    flex: 1;
+    border-left: 1px solid #eee;
+    padding-left: 20px;
+}
+
+/* Başlıqlar */
+h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+/* Textarealar (İnput kimi görünməsi üçün) */
+textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    outline: none;
+    background: transparent;
+}
+
+.input_h1 {
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    margin-bottom: 0;
+}
+
+.job-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-top: -5px;
+}
+
+/* Şəkil və QR */
+.photo-section {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.section_right_top_left_shadow {
+    width: 150px;
+    height: 180px;
+    background: #e0e0e0;
+    border: 1px solid #ccc;
+}
+
+#qr-cv-display {
+    width: 50px;
+    height: 50px;
+    background: #000;
+}
+
+/* Kontakt və siyahılar */
+.contact-info textarea {
+    font-size: 18px;
+    color: #666;
+    height: 20px;
+    text-align: right;
+}
+
+.outputArea {
+    font-size: 12px;
+    line-height: 1.5;
+    height: 150px;
+    color: #444;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.place li, .skill_list_right li, #itemListCertificate_right1 li {
+    font-size: 8px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.place li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+.section_right_top_skills,
+.section_right_top_language,
+.rightSideContainer {
+    margin-left: 0.5rem;
+    margin-top: 3rem;
+    width: 80%;
+    height: auto;
+    /* margin-top: 1rem; */
+}
+
+/* Education və Language hissəsi (Sağ tərəf üçün xüsusi) */
+.rightSideContainer ul li, .section_right_top_language ul li {
+    font-size: 8px;
+    margin-bottom: 15px;
+}
+
+/* Mobil görünüş (Opsional) */
+@media print {
+    body { background: none; padding: 0; }
+    .cv-container { box-shadow: none; }
+}

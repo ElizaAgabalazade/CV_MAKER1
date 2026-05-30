@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="./css/settings.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Profile Card -->
+  <div class="card profile-card">
+    <h2>Lavinia Vicolvioni</h2>
+    <p class="email">lavinlavicolvioni555@gmail.com</p>
+    
+    <div class="badges">
+      <span class="badge green">Professional Member</span>
+      <span class="badge blue">Joined in April 2026</span>
+    </div>
+  </div>
+
+  <!-- Language -->
+  <div class="card row">
+    <div>
+      <h3>Language</h3>
+      <p>Choose your preferred language for the app.</p>
+    </div>
+
+    <select class="dropdown">
+      <option>English (UK)</option>
+      <option>French</option>
+      <option>German</option>
+      <option>Italian</option>
+      <option>Portugese</option>
+      <option>Spain</option>
+    </select>
+  </div>
+
+  <!-- Email Notifications -->
+  <div class="card row">
+    <div>
+      <h3>Email Notifications</h3>
+      <p>Receive updates about your account.</p>
+    </div>
+
+    <label class="switch">
+      <input type="checkbox" checked id="toggleNotif">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- Sign Out -->
+  <div class="card row">
+    <div>
+      <h3>Sign Out</h3>
+      <p>Logout from your account.</p>
+    </div>
+
+    <button class="btn gradient-blue" onclick="signOut()">Sign Out</button>
+  </div>
+
+  <!-- Delete Account -->
+  <div class="card row danger">
+    <div>
+      <h3 class="red">Delete Account</h3>
+      <p>Please be certain, once you delete your account, there is no going back</p>
+    </div>
+
+    <button class="btn gradient-red" onclick="deleteAccount()">Delete</button>
+  </div>
+
+</div>
+
+<script src="/js/settings.js"></script>
+</body>
+</html>

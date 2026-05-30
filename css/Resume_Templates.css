@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: #F3F3F3;
+    position: fixed;
+    z-index: 1111;
+    top: 0;
+    left: 0;
+
+}
+body{
+    background-image: url('../img/ResumeTemplates/Bacground3.PNG');
+     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+}
+.header_left {
+    width: 15%;
+    /* background: red; */
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* .header_middle nav li a{
+    text-decoration: none;
+
+} */
+
+.site_name {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    font-weight: 900;
+    font-size: 22px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+       /* font-family: 'Montserrat', sans-serif; */
+}
+
+
+.header_middle {
+    width: 60%;
+    padding-left: 1rem;
+    /* background: violet; */
+}
+
+.header_middle ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 2rem;
+    gap: 1rem;
+       font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.header_middle ul li {
+    font-size: 18px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.header_middle ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    /* background: blue; */
+}
+
+.header_right a {
+    font-weight: 700;
+    margin-left: 15px;
+    text-decoration: none;
+
+}
+
+.sign_part {
+    color: #4b2cff;
+       font-family: 'Montserrat', sans-serif;
+
+}
+
+.log_in {
+    background: #4b2cff;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+       font-family: 'Montserrat', sans-serif;
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_1 {
+    margin-top: 10%;
+    font-size: 40px;
+    color: #B1B2B7;
+    text-align: center;
+}
+
+.section_1 span {
+    color: #0088FF;
+}
+
+.section_2 {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Xarici mavi-açıq gradient fonlu blok */
+.section_2-left,
+.section_2-right {
+    width: 587px;
+    min-height: 297;
+    background: linear-gradient(135deg, #73AFF3 0%, #eef5ff 100%);
+    padding: 15px;
+    /* Kənardakı mavi haşiyənin qalınlığı */
+    border-radius: 25px;
+    /* Xarici künclər */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Daxili ağ blok */
+.section_2-left_inside,
+.section_2-right_inside {
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 20px;
+    /* Daxili künclər */
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    /* Yüngül kölgə */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    position: relative;
+}
+
+.section_2-left_inside img,
+.section_2-right_inside img{
+    align-self: flex-end;
+    width: 35px;
+}
+
+/* Yazıların stilləri */
+.section_2-left_inside h3,
+.section_2-right_inside h3
+ {
+    color: #888;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 28px;
+
+}
+
+.section_2-left_inside p,
+.section_2-right_inside p 
+{
+    color: #007bff;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+.section_2-right_inside a{
+     text-align: right;
+}
+
+
+.section_2-right_inside img {
+   
+    align-self: flex-end;
+    width: 35px;
+}
+
+.section_2-right_inside{
+
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.section_bottom {
+    gap: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.section_bottom h2 {
+    width: 100%;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section_bottom a {
+    margin: 1rem 1.2rem;
+    width: 20%;
+}
+.section_bottom a img{
+    width: 100%;
+}
+
+
+
+
+@media (max-width: 430px) {
+    header {
+        margin: 1rem 1.5rem;
+    }
+
+    .header_name {
+        font-size: 25px; /* 430px-də bir az daha dolğun görünür */
+        margin-top: 1rem;
+    }
+
+    section {
+        width: 95%;
+    }
+
+    .section_bottom {
+        gap: 1.2rem; /* Boşluğu bir az artırdıq ki, səliqəli görünsün */
+        justify-content: center;
+    }
+
+    .section_bottom a {
+        /* Yan-yana 2 ədəd daha geniş və aydın görünür */
+        width: 44%; 
+        margin: 0.4rem;
+    }
+
+    .section_bottom h2 {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 414px) {
+    header {
+        margin: 1rem 1.5rem; /* Kənar boşluqları bir az daraltdıq */
+    }
+
+    .header_name {
+        font-size: 24px; /* 28px-dən bir az kiçik, lakin hələ də oxunaqlı */
+        margin-top: 0.8rem;
+    }
+
+    section {
+        width: 95%; /* Məzmunun ekrana daha yaxşı yayılması üçün */
+    }
+
+    .section_bottom {
+        gap: 1rem;
+        justify-content: center; /* Elementləri mərkəzə yığırıq */
+    }
+
+    .section_bottom a {
+        /* Yan-yana 2 element çıxması üçün eni artırdıq */
+        width: 42%; 
+        margin: 0.5rem;
+    }
+
+    .section_bottom h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+}
+@media (max-width: 375px) {
+    header {
+        margin: 1rem; /* Kənar boşluqları bir az azaltdıq */
+    }
+
+    .header_name {
+        font-size: 22px; /* Başlıq mobil üçün bir az kiçildi */
+    }
+
+    .section_bottom {
+        gap: 1rem; /* Elementlər arası məsafəni sıxdıq */
+        margin: 1.5rem 0;
+    }
+
+    .section_bottom a {
+        /* 375px-də 20% çox kiçik qalır, 
+           yan-yana 2 ədəd görünməsi üçün 40% daha ideal olar */
+        width: 40%; 
+        margin: 0.5rem;
+    }
+
+    .section_bottom h2 {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mergen Login</title>
+<link rel="icon" href="img/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- LEFT -->
+    <div class="left">
+        <div class="logo">
+            <div class="circle"></div>
+            <a href="index.html"><span>MakeCV</span></a>
+        </div>
+
+        <div class="left-content">
+            <h1>Hello,<br>Friend !</h1>
+            <p>Join<br><strong>over 100K+</strong><br>professional candidates</p>
+        </div>
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="right">
+        <div class="card">
+
+            <h2>Sign in</h2>
+
+            <div class="social-grid">
+
+                <div id="googleBtn" class="social-btn">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg">
+    Google
+</div>
+
+                <a href="linkedin.html" class="social-btn">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg">
+    Linkedin
+</a>
+
+<a href="apple.html" class="social-btn">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg">
+    Apple
+</a>
+
+<a href="facebook.html" class="social-btn">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg">
+    Facebook
+</a>
+
+            </div>
+
+            <div class="divider">
+                <div></div>
+                <span>or</span>
+                <div></div>
+            </div>
+
+            <form id="form">
+
+                <label>Email</label>
+                <input type="email" required>
+
+                <div class="pass-row">
+                    <label>Password</label>
+                    <a href="forgot.html">Forgot password?</a>
+                </div>
+
+                <input type="password" required>
+
+                <button class="done-btn">Done</button>
+            </form>
+
+            <div class="magic">
+                <span>🔑</span> Login via Magic Link
+            </div>
+
+            <div class="signup">
+                New to MERGEN.IO?
+                <a href="register.html">Create Account</a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    height:100vh;
+    background:linear-gradient(to right, #f3f3f3, #b1caf3);
+}
+
+.wrapper{
+    width:100%;
+    height:100%;
+    display:flex;
+    border-radius:28px;
+    overflow:hidden;
+    
+}
+
+/* LEFT */
+
+.left{
+    width:50%;
+    padding:70px;
+    display:flex;
+    flex-direction:column;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    margin-bottom:80px;
+}
+
+.circle{
+    width:46px;
+    height:46px;
+    background:black;
+    border-radius:50%;
+    margin-right:18px;
+}
+
+.logo span{
+    font-weight:600;
+    letter-spacing:1px;
+    color:#3b57ff;
+}
+
+.left-content h1{
+    font-size: 60px;
+    color: #b8b8b8;
+    font-weight:700;
+    line-height:1.1;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+.left-content p{
+    margin-top:20px;
+    font-size:27px;
+    color:#b8b8b8;
+    line-height:1.4;
+    margin-left: 200px;
+}
+
+.left-content strong{
+    font-weight:700;
+}
+
+/* RIGHT */
+
+.right{
+    width:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right: 100px;
+}
+
+.card{
+    width:400px;
+}
+
+.card h2{
+    text-align:center;
+    font-weight:500;
+    margin-bottom:30px;
+}
+
+/* SOCIAL */
+
+.social-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-bottom:28px;
+}
+
+.social-btn{
+    background:#f2f2f2;
+    border:none;
+    border-radius:40px;
+    padding:13px 18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:14px;
+    cursor:pointer;
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.12);
+    transition:all .25s ease;
+}
+
+.social-btn img{
+    width:18px;
+    height:18px;
+}
+
+.social-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* DIVIDER */
+
+.divider{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin:25px 0;
+}
+
+.divider div{
+    flex:1;
+    height:1px;
+    background:#aaa;
+}
+
+.divider span{
+    font-size:14px;
+    color:#666;
+}
+
+/* FORM */
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+input{
+    padding:14px 18px;
+    border-radius:40px;
+    border:none;
+    margin-bottom:22px;
+    font-size:14px;
+    box-shadow:0 6px 14px rgba(0,0,0,0.12);
+    outline:none;
+}
+
+.pass-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.pass-row a{
+    font-size:12px;
+    text-decoration:none;
+    color:#444;
+}
+
+.done-btn{
+    background:black;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:40px;
+    font-size:15px;
+    cursor:pointer;
+    box-shadow:0 8px 18px rgba(0,0,0,0.25);
+    transition:.25s;
+}
+
+.done-btn:hover{
+    opacity:.85;
+}
+
+/* MAGIC */
+
+.magic{
+    margin:25px 0;
+    text-align:center;
+    font-size:14px;
+    color:#444;
+}
+
+/* SIGNUP */
+
+.signup{
+    text-align:center;
+    font-size:14px;
+}
+
+.signup a{
+    font-weight:600;
+    color:black;
+    text-decoration:none;
+}
+
+
+
+
+
+/* RESPONSIVE MEDIA QUERIES */
+
+@media (max-width:1000px){
+    .wrapper{
+        flex-wrap: nowrap;
+    }
+
+    .left{
+        flex: 1 1 50%;
+        padding: 40px 20px;
+    }
+
+    .right{
+        flex: 1 1 50%;
+        margin-right: 0;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card{
+        width:100%;
+        max-width:350px;
+    }
+}
+
+/* Mobil */
+@media (max-width:600px){
+    .left{
+        flex: 1 1 50%;
+    }
+
+    .right{
+        flex: 1 1 50%;
+    }
+
+    .left-content h1{
+        font-size: 28px;
+        margin-left: 20px;
+    }
+
+    .left-content p{
+        font-size:16px;
+        margin-left:20px;
+    }
+
+    .social-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        max-width:300px;
+    }
+}
+</style>
+
+
+
+
+
+
+
+
+
+<script>
+const form = document.getElementById("form");
+
+form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const email = form.querySelector('input[type="email"]').value.trim();
+    const password = form.querySelector('input[type="password"]').value.trim();
+
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+
+    
+    if(email === ""){
+        alert("Email cannot be empty!");
+        return;
+    }
+
+    if(!emailPattern.test(email)){
+        alert("Please enter a valid email address!");
+        return;
+    }
+
+    if(password === ""){
+        alert("Password cannot be empty!");
+        return;
+    }
+
+    if(password.length < 6){
+        alert("Password must be at least 6 characters!");
+        return;
+    }
+
+   
+    try {
+        const response = await fetch("http://localhost:5000/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+
+        if(data.message === "Login successful"){
+            alert("Login successful!");
+            window.location.href = "index.html";
+        } else {
+            alert(data.message); 
+        }
+
+    } catch (error) {
+        alert("Server error!");
+        console.log(error);
+    }
+});
+</script>
+<script>
+function handleCredentialResponse(response) {
+    fetch("http://localhost:5000/auth/google", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ token: response.credential })
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert("Login success");
+        window.location.href = "index.html";
+    });
+}
+window.addEventListener("load", function () {
+
+    google.accounts.id.initialize({
+        client_id: "89514379125-0dmgjukki5nmip8934vqe4fbfekki3dg.apps.googleusercontent.com",
+        callback: handleCredentialResponse
+    });
+
+    google.accounts.id.renderButton(
+        document.getElementById("googleBtn"),
+        {
+            theme: "outline",
+            size: "large",
+            type: "standard"
+        }
+    );
+
+});
+
+
+
+//CHECK
+function loginSuccess() {
+  localStorage.setItem("isLoggedIn", "true");
+  window.location.href = "index.html";
+}
+
+
+</script>
+</body>
+</html>

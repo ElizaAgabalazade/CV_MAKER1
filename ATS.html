@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/ATS.css" />
+    <script src="./js/ATS.js" defer></script>
+    <title>Document</title>
+    <link rel="icon" href="img/logo.png">
+</head>
+
+<body>
+    <header>
+        <div class="header_left">
+            <div><a href="./index.html" class="site_name">●MakeCV</a></div>
+        </div>
+        <div class="header_middle">
+            <nav>
+                <ul>
+                    <li><a href="./Resume_templates.html">Resume Templates </a></li>
+                    <li><a href="./CoverLetter.html">Cover Letter</a> </li>
+                    <li><a href="./ATS.html">ATS Checker</a> </li>
+                    <li><a href="./PaymentMethods.html">Payment </a></li>
+                    <li><a href="./about.html">About Us </a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="header_right">
+            <a href="register.html" class="sign_part">Sign Up</a>
+            <a href="/Log_in.html" class="log_in">Log In</a>
+        </div>
+    </header>
+    <section>
+        <div class="main-form-container">
+
+            <div class="section-card" id="section-cv">
+                <div class="card-header">
+                    <span class="title">CV</span>
+                     <div class="fileName"></div>
+                    <div class="dropdown">
+                        <button class="btn-select"> <span class="arrow">Upload▼</span></button>
+                        <div class="menu-list">
+                            <div class="item" data-mode="upload"> <span>Upload›</span></div>
+                            <div class="item" data-mode="select"> <span>Select›</span></div>
+                        </div>
+                        <div class="file-list-container"></div>
+                    </div>
+                </div>
+                <div class="content-box hidden"></div>
+            </div>
+
+            <div class="section-card" id="section-cl">
+                <div class="card-header">
+                    <span class="title">Cover Letter</span>
+                     <div class="fileName"></div>
+                    <div class="dropdown">
+                        <button class="btn-select1 outline"> <span class="arrow">Upload▼</span></button>
+                        <div class="menu-list1">
+                            <div class="item" data-mode="upload"> <span>Upload›</span></div>
+                            <div class="item" data-mode="select"> <span>Select›</span></div>
+                        </div>
+                    </div>
+                    <div class="file-list-container"></div>
+                </div>
+                <div class="content-box hidden"></div>
+            </div>
+
+            <div class="section-card" id="section-jd">
+                <div class="card-header">
+                    <span class="title">Job description</span>
+                    <div class="dropdown">
+                        <button class="btn-select2 small">Enter text <span class="arrow">▼</span></button>
+                        <div class="menu-list2">
+                            <div class="item" data-mode="text"> <span>Enter text›</span></div>
+                            <div class="item" data-mode="upload"> <span>Upload›</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box hidden" id="job_text"></div>
+            </div>
+
+            <button class="scan-button" id="scanB">Scan</button>
+        </div>
+        <div id="compatibility-result" class="result-card hidden">
+            <div class="score-container">
+                <div class="circular-progress">
+                    <span class="percentage" id="scoreValue">87%</span>
+                </div>
+            </div>
+
+            <div class="result-info">
+                <h3>Compatibility Result</h3>
+                <p class="description" id="feedbackText">
+                    The document shows low alignment with the requirements for a Senior Developer role.
+                    The candidate's experience does not sufficiently reflect the technical expertise...
+                </p>
+
+                <div class="action-buttons">
+                    <button class="btn-errors">See Errors</button>
+                    <button class="btn-advice" id="adviceB">See Advice</button>
+                </div>
+            </div>
+        </div>
+        <div id="analysis-section" class="hidden">
+
+            <div class="keyword-card matching">
+                <div class="card-header1">
+                    <h4>Matching keywords:</h4>
+                    <button class="close-card-btn" id="close-matching">&times;</button>
+                </div>
+                <div class="tags-container" id="matchTags">
+                </div>
+            </div>
+
+            <div class="keyword-card missing">
+                <div class="card-header1">
+                    <h4>Missing keywords & skills:</h4>
+                    <button class="close-card-btn" id="close-missing">&times;</button>
+                </div>
+                <div class="tags-container" id="missingTags">
+                </div>
+            </div>
+        </div>
+        <div id="advice-section" class="hidden">
+            <div class="advice-card">
+                <div class="card-header1">
+                    <div class="card-header_top">
+                        <h3>Expert Suggestions for Improvement</h3>
+                    </div>
+                    <button class="close-card-btn" id="closeAdvice">&times;</button>
+                    <ul class="advice-list">
+                        <li><img src="./img/ATS/Ekran şəkli 2026-04-20 125828.png" alt="" class="bullet"><span>Enhance
+                                your profile by adding
+                                a clickable portfolio link that reflects real-world impact and technical depth</span>
+                        </li>
+                        <li><img src="./img/ATS/Ekran şəkli 2026-04-20 125828.png" alt=""
+                                class="bullet"><span>Strengthen credibility by
+                                incorporating quantifiable achievements (e.g., performance gains, scalability
+                                improvements)</span>
+                        </li>
+                        <li><img src="./img/ATS/Ekran şəkli 2026-04-20 125828.png" alt="" class="bullet"><span>Highlight
+                                proficiency in
+                                modern technologies such as cloud platforms, CI/CD pipelines, and microservices</span>
+                        </li>
+                        <li><img src="./img/ATS/Ekran şəkli 2026-04-20 125828.png" alt="" class="bullet"><span>Further
+                                elevate your CV by
+                                showcasing involvement in system design and architectural decisions</span></li>
+                        <li><img src="./img/ATS/Ekran şəkli 2026-04-20 125828.png" alt=""
+                                class="bullet"><span>Demonstrate cross-functional
+                                collaboration to reflect real-world product development experience</span></li>
+                        <li><img src="./img/ATS/Ekran şəkli 2026-04-20 125828.png" alt="" class="bullet"><span>Refine
+                                impact statements to
+                                better communicate business and product value</span></li>
+                        <li><img src="./img/ATS/Ekran şəkli 2026-04-20 125828.png" alt="" class="bullet"><span>Ensure
+                                linguistic and
+                                structural consistency for a more polished presentation</span></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="advice-footer">
+                <div class="update-dropdown">
+                    <button class="btn-update" id="updateBtn">
+                        Update <span class="arrow">▼</span>
+                    </button>
+                    <div class="update-menu" id="updateMenu">
+                        <div class="update-item">CV <span>›</span></div>
+                        <div class="update-item">Cover Letter <span>›</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

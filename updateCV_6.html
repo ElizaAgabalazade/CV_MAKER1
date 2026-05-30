@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/updateCV_6.css">
+    <script src="./js/fill_data.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_left">
+            <div><a href="./index.html" class="site_name">●MakeCV</a></div>
+        </div>
+        <div class="header_middle">
+            <nav>
+                <ul>
+                    <li><a href="./update_cv.html">Resume Templates </a></li>
+                    <li><a href="./CoverLetter.html">Cover Letter</a> </li>
+                    <li><a href="./ATS.html">ATS Checker</a> </li>
+                    <li><a href="./PaymentMethods.html">Payment </a></li>
+                    <li>About us</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header_right">
+            <a href="register.html" class="sign_part">Sign Up</a>
+            <a href="/Log_in.html" class="log_in">Log In</a>
+        </div>
+    </header>
+    <section>
+        <div class="section_right">
+            <h3>Document preview & Editor</h3>
+            <div class="cv_paper">
+                <div class="cv_header">
+                    <textarea id="nameToCV" class="input_h1" placeholder="SOPHIE LEBRUN"></textarea>
+                </div>
+                <div id="qr-result-container">
+                    <div id="qr-cv-display"> </div>
+                </div>
+                <div class="info_input">
+                    <textarea id="phoneR" placeholder="Paris, France  •  +33 0 12 12 43 11" class="phoneR"></textarea>
+                    <textarea id="emailR" placeholder="hello@site.com" class="emailR"></textarea>
+                    <textarea id="adressR" placeholder="linkedin.com/in/sophie" class="adressR"></textarea>
+                    <textarea id="linkedinR" name="linkedin" placeholder="linkedin.com/in/username"
+                        class="linkedinR"></textarea>
+                </div>
+
+                <div class="cv_content">
+                    <div class="section_block">
+                        <h2 class="section_title">Professional Summary</h2>
+                        <hr>
+                        <textarea class="outputArea" id="autoTextarea"
+                            placeholder="Write your summary here..."></textarea>
+                    </div>
+
+                    <div class="section_block">
+                        <h2 class="section_title">Experience</h2>
+                        <hr>
+                        <ul id="sendList"></ul>
+                    </div>
+
+                    <div class="section_block">
+                        <h2 class="section_title">Education</h2>
+                        <hr>
+                        <ul id="sendList1"></ul>
+                    </div>
+                    <div class="section_right_top_certificat" id="certificate">
+                        <h2>Certificate</h2>
+                        <ul id="itemListCertificate_right1"></ul>
+                    </div>
+
+
+                    <div class="skills_part" id="skills_container">
+                        <h2 class="section_title">Skills & Interests</h2>
+                        <ul id="entry_list" class="skill_list_final"></ul>
+                    </div>
+                    <div class="skills_lang_flex">
+                        <div class="lang_part">
+                            <ul id="itemListLanguage_right1" class="lang_list_final"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-change"><a href="./Resume_templates.html">Change Format</a></button>
+                <button id="download-pdf" class="btn btn-download">Download</button>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

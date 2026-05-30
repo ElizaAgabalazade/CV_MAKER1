@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Billing Dashboard</title>
+  <link rel="stylesheet" href="./css/bilings.css">
+  <link rel="icon" href="img/logo.png">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <h2>Lavinia Vicolvioni</h2>
+      <p>laviniavicolvioni555@gmail.com</p>
+    </div>
+
+    <div class="header-right">
+      <span class="badge">Professional Member</span>
+      <span class="joined">Joined in April 2020</span>
+    </div>
+    <div id="threeDotDiv">⋮</div>
+
+<div id="dropdownMenu" class="dropdown hidden">
+    <div class="item"><a href="documents.html">Documents</a></div>
+    <div class="item"><a href="password.html">Password</a></div>
+    <div class="item"><a href="settings.html">Settings</a></div>
+    <div class="item"><a href="bilings.html">Billings</a></div>
+</div>
+  </div>
+
+  <!-- SUBSCRIPTION -->
+  <div class="card row">
+    <div>
+      <h3>Subscription Plan</h3>
+      Manage your current plan and billing cycle.<br>
+
+      <div class="sub-info">
+        <strong>Starter</strong>
+        <span>$9 per month / Next billing on June 2026</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn gradient" onclick="openPlanModal()">Change Plan</button>
+      <button class="btn red">Cancel Plan</button>
+    </div>
+  </div>
+
+  <!-- PAYMENT -->
+  <div class="card row">
+    <div>
+      <h3>Payment Method</h3>
+      <div class="sub-info">
+        <strong>Visa ending in 4242</strong>
+        <span>EXPIRES 12/28</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn gradient" onclick="openMethodModal()">Change Method</button>
+      <button class="btn gradient" onclick="openCardModal()">Change Card</button>
+    </div>
+  </div>
+
+  <!-- BILLING HISTORY -->
+  <div class="card">
+    <h3>Billing History</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Invoice</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apr 20, 2026</td>
+          <td class="bold">$9.00</td>
+          <td class="paid">Paid</td>
+          <td><button onclick="download()">⬇</button></td>
+        </tr>
+        <tr>
+          <td>May 20, 2026</td>
+          <td class="bold">$9.00</td>
+          <td class="paid">Paid</td>
+          <td><button onclick="download()">⬇</button></td>
+        </tr>
+        <tr>
+          <td>Jun 20, 2026</td>
+          <td class="bold">$9.00</td>
+          <td class="paid">Paid</td>
+          <td><button onclick="download()">⬇</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- ================= PLAN MODAL ================= -->
+<div id="planModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closePlanModal()">&times;</span>
+    <h2>Change Plan</h2>
+
+    <div class="plans">
+      <div class="plan-card">
+        <h3>Basic</h3>
+        <p>$9 / month</p>
+        Build a smart, job-ready resume<br>
+    ATS Score + instant improvement suggestions<br>
+
+Real-time AI feedback <br>
+(content & structure)<br>
+
+AI Cover Letter generator<br>
+
+Modern, recruiter-friendly templates<br>
+
+Import & upgrade your existing CV<br>
+
+Personal QR code <br>
+(link your portfolio, LinkedIn, more)<br>
+
+PDF export<br>
+        <button onclick="selectPlan(this)">Select</button>
+      </div>
+
+      <div class="plan-card">
+        <h3>Professional</h3>
+        <p>$19 / month</p>
+         Stand out in every application<br>
+    Everything in Starter +<br>
+
+Advanced ATS optimization<br>
+(job-specific insights)<br>
+
+AI rewriting<br>
+(stronger bullet points, impact-driven wording)<br>
+
+Job description matching <br>
+
+Personalized cover letters per application<br>
+
+Custom QR content<br>
+(dynamic updates to your links & portfolio)<br>
+        <button onclick="selectPlan(this)">Select</button>
+      </div>
+
+      <div class="plan-card">
+        <h3>Elite</h3>
+        <p>$39 / month</p>
+        Your AI-powered career advantage<br>
+
+Everything in Professional +<br>
+
+Deep AI analysis<br>
+(industry-level optimization)<br>
+
+Section-by-section resume scoring insights<br>
+
+Unlimited tailored CV & cover letter generation<br>
+
+Priority AI processing<br>
+
+Early access to new features<br>
+        <button onclick="selectPlan(this)">Select</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= METHOD MODAL ================= -->
+<div id="methodModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeMethodModal()">&times;</span>
+    <h2>Change Payment Method</h2>
+
+    <p>Choose your payment method type:</p>
+
+    <button>Visa</button>
+    <button>MasterCard</button>
+    <button>PayPal</button>
+
+  </div>
+</div>
+
+<!-- ================= CARD MODAL ================= -->
+<div id="cardModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeCardModal()">&times;</span>
+
+    <h2>Change Card</h2>
+
+   <div class="cardpayment">
+    <label>Cardholder Name</label>
+    <input type="text" placeholder="Lavinia vicolvioni">
+
+    <label>Card Number</label>
+    <input type="text" placeholder="0000 0000 0000 0000">
+
+    <div class="row">
+      <div>
+        <label>Expiry Date</label>
+        <input type="text" placeholder="MM/YY">
+      </div>
+
+      <div>
+        <label>CVC/CVV</label>
+        <input type="text" placeholder="012">
+      </div>
+
+    </div>
+
+    <div class="actions">
+      <button onclick="closeCardModal()">Cancel</button>
+      <button class="save">Save Card</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="/js/bilings.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choose Account</title>
+<link rel="stylesheet" href="google.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- LEFT -->
+    <div class="left">
+        <div class="logo">
+            <div class="circle"></div>
+            <span>MERGEN.IO</span>
+        </div>
+
+        <div class="left-content">
+            <h1>Hello,<br>Friend !</h1>
+            <p>Join<br>over 100k+<br>professional candidates</p>
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+        <a href="register.html" class="nav-back">← Back to <b>Sign in</b></a>
+
+        <div class="form-area">
+            <h2>Choose Account</h2>
+            <p class="sub">To Continue to <span>MERGEN.IO</span></p>
+
+            <!-- ACCOUNT 1 -->
+            <div class="account">
+                <input type="radio" name="account" id="acc1" checked>
+                <label for="acc1" class="account-card">
+                    <div class="account-info">
+                        <div class="avatar"></div>
+                        <div>
+                            <h3>Ricardo Sanders</h3>
+                            <p>ricardosand@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="arrow">›</div>
+                </label>
+            </div>
+
+            <!-- ACCOUNT 2 -->
+            <div class="account">
+                <input type="radio" name="account" id="acc2">
+                <label for="acc2" class="account-card">
+                    <div class="account-info">
+                        <div class="avatar small"></div>
+                        <div>
+                            <h3>Ricardo</h3>
+                            <p>ricardo00@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="arrow">›</div>
+                </label>
+            </div>
+
+            <p class="use-other">Use Another Account</p>
+
+            <p class="bottom-text">
+                Already Registered? <span>Sign In</span>
+            </p>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    background:#f2f2f2;
+}
+
+.wrapper{
+    display:flex;
+    height:100vh;
+}
+
+/* LEFT */
+.left{
+    width:50%;
+    background:#eeeeee;
+    padding:60px;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    position:absolute;
+    top:40px;
+    left:60px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.circle{
+    width:50px;
+    height:50px;
+    background:black;
+    border-radius:50%;
+}
+
+.logo span{
+    font-weight:600;
+    font-size:22px;
+    color:#3c5bff;
+}
+
+.left-content h1{
+    font-size:60px;
+    color:#b8b8b8;
+    line-height:1.1;
+}
+
+.left-content p{
+    margin-top:30px;
+    font-size:22px;
+    color:#b8b8b8;
+}
+
+/* RIGHT */
+.right{
+    width:50%;
+    background:#e6edf6;
+    padding:80px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.nav-back{
+    position:absolute;
+    top:40px;
+    left:60px;
+    font-size:15px;
+    color:#555;
+    text-decoration:none;
+}
+
+.form-area{
+    width:100%;
+    max-width:460px;
+}
+
+.form-area h2{
+    margin-bottom:5px;
+}
+
+.sub{
+    color:#777;
+    margin-bottom:30px;
+}
+
+/* ACCOUNT CARDS */
+
+.account{
+    margin-bottom:20px;
+}
+
+.account input{
+    display:none;
+}
+
+.account-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    border-radius:25px;
+    background:white;
+    cursor:pointer;
+    box-shadow:0 8px 15px rgba(0,0,0,0.15);
+    border:2px solid transparent;
+    transition:0.3s;
+}
+
+.account input:checked + .account-card{
+    border:2px solid #6c4cff;
+}
+
+.account-info{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.avatar{
+    width:45px;
+    height:45px;
+    background:#ccc;
+    border-radius:50%;
+}
+
+.avatar.small{
+    background:#999;
+}
+
+.account-card h3{
+    font-size:16px;
+}
+
+.account-card p{
+    font-size:13px;
+    color:#777;
+}
+
+.arrow{
+    font-size:24px;
+    color:#555;
+}
+
+.use-other{
+    text-align:center;
+    margin:25px 0;
+    color:#777;
+    cursor:pointer;
+}
+
+.bottom-text{
+    text-align:center;
+    font-size:14px;
+    color:#999;
+}
+
+.bottom-text span{
+    color:black;
+    font-weight:500;
+}
+</style>
+
+
+
+<script>
+    const radios = document.querySelectorAll('input[name="account"]');
+
+radios.forEach(radio => {
+    radio.addEventListener("change", () => {
+        window.location.href = "index.html";
+    });
+});
+</script>
+
+
+
+
+</body>
+</html>

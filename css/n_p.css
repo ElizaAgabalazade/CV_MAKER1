@@ -1,0 +1,818 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100%;
+    /* overflow-x: hidden; */
+}
+
+section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+
+}
+
+.section_left {
+    width: 48%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
+    /* background: red; */
+
+}
+
+.section_left_top {
+    width: 100%;
+    margin-left: 2rem;
+    position: relative;
+    margin: 5px auto;
+    margin-left: 10px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.section_left h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 1.4rem;
+}
+
+.bin {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+}
+
+.information_top {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+}
+
+.information_top label {
+    margin-left: 1.7rem;
+}
+
+.inside_desc {
+    width: 37rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+    background: #F5F5F5;
+}
+
+.inside_desc ul {
+    display: flex;
+
+    list-style-type: none;
+    margin-left: 2rem;
+}
+
+.hr {
+    margin-bottom: 1rem;
+    width: 37rem;
+}
+
+.textarea1 {
+    margin-left: 2rem;
+
+    resize: none;
+    width: 30rem;
+    height: 5rem;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border: none;
+    overflow-y: auto;
+}
+
+
+/* ///////////     WORK    /////////////////// */
+
+
+
+.left_work {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 1.4rem;
+    margin-top: 2rem;
+}
+
+.left_work label {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 1.4rem;
+    margin-top: 2rem;
+}
+
+.left_work input {
+    border: none;
+    outline: none;
+    font: 16px;
+    color: #868693;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    margin-left: 1rem;
+    width: 100%;
+
+    border-radius: 10px;
+}
+
+.section_middle_left_work {
+    margin-top: 3rem;
+    display: flex;
+    width: 100%;
+}
+
+.section_middle_left_work .start_left_work {
+    width: 40%;
+}
+
+.end_left_work {
+    width: 40%;
+}
+
+.stillWorking_left_work {
+    width: 10%;
+}
+
+.section_left_bottom_entry_job {
+    margin-top: 2rem;
+}
+
+.section_left_bottom_left_work {
+    height: 7rem;
+}
+
+.inside_desc_left_work {
+    width: 37rem;
+    height: 6.4rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+    background: #F5F5F5;
+}
+
+.inside_desc_left_work ul {
+    display: flex;
+    height: 3rem;
+    list-style-type: none;
+    margin-left: 2rem;
+}
+
+.hr_left_work {
+    margin-bottom: 1rem;
+    width: 37rem;
+}
+
+.textarea1_left_work {
+    margin-left: 2rem;
+    resize: none;
+    width: 30rem;
+    height: 2rem;
+    padding-bottom: 5px;
+    border: none;
+    outline: none;
+    overflow-y: auto;
+}
+
+/*                   EUCATION   PART          */
+
+.section_left_top_education label {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 1.4rem;
+    margin-top: 2rem;
+}
+
+.section_left_top_education input {
+    border: none;
+    outline: none;
+    font: 16px;
+    color: #868693;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 35rem;
+    border-radius: 10px;
+}
+
+.section_left_bottom_education {
+    margin-top: 2rem;
+}
+
+
+
+
+.section_middle_education {
+    margin-top: 3rem;
+    display: flex;
+    width: 100%;
+}
+
+.section_middle_education label {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 1.4rem;
+    margin-top: 2rem;
+}
+
+.start,
+.end {
+    width: 50%;
+}
+
+.start input,
+.end input {
+
+    border: none;
+    outline: none;
+    font: 16px;
+    color: #868693;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+
+}
+
+
+/* ////////////           Skills        /////*/
+.section_left_skill {
+    width: 100%;
+
+}
+
+.section_left_skill label,
+.skill_level_skill {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 1.4rem;
+    margin-top: 2rem;
+}
+
+.section_left_skill input {
+    border: none;
+    outline: none;
+    font: 16px;
+    color: #868693;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    margin-top: 1rem;
+
+    margin-left: 1rem;
+    width: 36rem;
+    border-radius: 10px;
+}
+
+.section_left_bottom_skill {
+    margin-top: 2rem;
+}
+
+
+
+
+
+.skill_level_skill {
+    margin-top: 1rem;
+}
+
+.skill_level_skill select {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    padding: 0.5rem;
+    width: 35rem;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+
+}
+
+
+
+
+
+
+
+/*        LANGUAGE      */
+.language {
+    margin-top: 1rem;
+}
+
+.language label {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 1.4rem;
+    margin-top: 2rem;
+}
+
+
+.skill_level_language label {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 1.4rem;
+}
+
+.language input {
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    font: 16px;
+    color: #868693;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    margin-left: 1rem;
+    width: 35rem;
+    border-radius: 10px;
+}
+
+
+
+
+.section_left_bottom_language {
+    margin-top: 2rem;
+
+}
+
+.skill_level_language {
+    margin-top: 1rem;
+}
+
+.skill_level_language select {
+    margin: 1rem;
+    margin-bottom: 5rem;
+    padding: 0.5rem;
+    width: 35rem;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+
+}
+
+.itemlistLanguage {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+    font-size: 12px;
+
+}
+
+.itemlistLanguage li {
+    margin-left: 1.5rem;
+}
+
+
+
+.information,
+.left_work,
+.education_part,
+.skills,
+.language {
+    display: none;
+}
+
+
+.buttons_all {
+    position: absolute;
+    top: 37rem;
+}
+
+
+.back {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    background-color: #73AFF3;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.next {
+    padding: 1rem;
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+    background-color: #73AFF3;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #fff;
+
+
+}
+
+
+.done {
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 40px;
+    width: 20rem;
+    padding: 1rem;
+    background: linear-gradient(to right, #5C17FC, #73AFF3);
+}
+
+
+
+.section_right {
+    width: 48%;
+    height: 90vh;
+    /* background: blue; */
+    margin-left: 0.5rem;
+}
+
+
+
+.section_right_top {
+   background-color: #337282;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.input_h1 {
+    border: none;
+    outline: none;
+    background-color: #337282;
+    color: #fff;
+    text-align: center;
+    width: 20rem;
+     min-height: 3rem;
+    /* Daha geniş olsun deyə */
+    min-height: 3rem;
+    /* ORTADA DURMASI ÜÇÜN BUNU SIL! */
+    resize: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.input_h1::placeholder {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+   white-space: pre-wrap
+}
+
+
+
+.section_right hr {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #868693;
+
+}
+
+.info_input input {
+    border: none;
+    outline: none;
+    background-color: #337282;
+    color: #ECF4F6;
+    width: 12rem;
+    padding: 1rem;
+}
+
+.info_input input::placeholder {
+    color: #ECF4F6;
+}
+
+.section_right_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_right_1 p {
+    font-size: 16px;
+    margin-top: 1rem;
+    padding-bottom: 0.2rem;
+
+
+
+}
+
+.outputArea {
+    width: 30rem;
+    height: 19vh;
+    resize: none;
+    padding: 10px 12px;
+    border: none;
+    outline: none;
+
+
+}
+
+.outputArea::placeholder {
+    color: #868693;
+    font-size: 10px;
+    background: violet;
+    padding-bottom: 0.2rem;
+
+
+}
+
+/*  right WORK part */
+.work_experience_right h2,
+.education_right h2,
+.right_skills h2,
+.language_right h2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 16px;
+    margin-left: 1rem;
+}
+
+
+.work_experience_right form,
+.education_right form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+
+}
+
+.place {
+    width: 55%;
+    border: none;
+    outline: none;
+}
+
+.situation {
+    margin-left: 1rem;
+    width: 30%;
+    border: none;
+    outline: none;
+}
+
+.position {
+    width: 50%;
+    margin-top: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+.work_experience_right_exp {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    padding-bottom: 0.2rem;
+}
+
+.section_right_hr {
+    margin-top: 3.5rem;
+}
+
+.educationForm form {
+    margin-bottom: 1.2rem;
+}
+
+.list_input {
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    margin-left: 1rem;
+}
+
+.information.active,
+.left_work.active,
+.education_part.active,
+.skills.active,
+.language.active {
+    display: flex;
+    /* yalnız active olan görünəcək */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+}
+
+#itemList {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    font-size: 12px;
+}
+#itemList ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+#itemList li{
+    margin-left: 1.5rem;
+    font-size: 12px;
+
+
+}
+#skill_list {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+
+}
+
+#skill_list li {
+    margin-left: 1.5rem;
+    
+}
+
+@media (max-width: 1024px) {
+  section {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .section_left,
+  .section_right {
+    width: 100%;
+    height: auto;
+    margin: 0 0 1rem 0;
+    box-shadow: none; /* İstəyə bağlı, kölgəni azalda bilərsən */
+  }
+
+  .section_left_top {
+    margin-left: 0.5rem;
+  }
+
+  .section_left h1 {
+    font-size: 28px;
+    margin-left: 0.5rem;
+  }
+
+  .bin {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .information_top,
+  .left_work label,
+  .section_left_top_education label,
+  .section_left_skill label,
+  .skill_level_skill,
+  .language label,
+  .skill_level_language label {
+    font-size: 16px;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .inside_desc,
+  .inside_desc_left_work {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .inside_desc ul,
+  .inside_desc_left_work ul {
+    margin-left: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .textarea1,
+  .textarea1_left_work,
+  .section_left_top_education input,
+  .section_left_skill input,
+  .language input,
+  .skill_level_skill select,
+  .skill_level_language select {
+    width: 100%;
+    margin-left: 0.5rem;
+    font-size: 14px;
+    padding: 0.75rem;
+  }
+
+  .section_middle_left_work,
+  .section_middle_education {
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+
+  .start,
+  .end,
+  .start_left_work,
+  .end_left_work,
+  .stillWorking_left_work {
+    width: 100%;
+  }
+
+  .input_h1 {
+    width: 100%;
+    font-size: 14px;
+    min-height: 2.5rem;
+    margin: 1rem 0 0 0;
+  }
+.section_right{
+    width: 80%;
+}
+  .section_right_top {
+    padding: 1rem;
+  }
+
+  .info_input input {
+    width: 100%;
+    margin: 0.25rem 0;
+    font-size: 14px;
+    padding: 0.75rem;
+  }
+  .section_middle_left_work{
+    display: flex;
+    flex-direction: row;
+  }
+  .start_left_work{
+    width: 40%;
+  }
+  .end_left_work{
+    width: 40%;
+  }
+.stillWorking_left_work{
+    width: 20%;
+}
+.stillWorking_left_work label{
+    margin-left: 3rem;
+}
+  .itemlistLanguage,
+  #skill_list,
+  #itemList {
+    font-size: 10px;
+    gap: 0.3rem;
+    padding-left: 1rem;
+  }
+
+  .itemlistLanguage li,
+  #skill_list li,
+  #itemList li {
+    margin-left: 0.8rem;
+  }
+
+  .buttons_all {
+    position: static;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .back,
+  .next,
+  .done {
+    width: 80%;
+    margin: 0.5rem auto;
+    font-size: 14px;
+  }
+  .check_done{
+        position: absolute;
+        left: 28rem;
+        top: 22.5rem;
+    }
+    .done{
+        font-size: 20px;
+    }
+}
+@media(max-width:768px){
+    .check_done{
+        position: absolute;
+        left: 20.5rem;
+        top: 22.5rem;
+    }
+    .done{
+        font-size: 20px;
+    }
+}
+@media(max-width:480px){
+    .section_left{
+        width: 90%;
+        margin-right: 10%;
+    }
+    .inside_desc{
+        width: 77%;
+
+    }
+    .inside_desc .hr{
+        width: 25
+    }
+}

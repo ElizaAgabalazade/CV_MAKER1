@@ -1,0 +1,2418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+body {
+    width: 100vw;
+    background-image: url("../img/CoverLetter/bacground_Cover_letter.PNG");
+    background-repeat: no-repeat;
+    /* Birinci dəyər eni (100%), ikinci dəyər hündürlüyüdür (məsələn 70% və ya 500px) */
+    background-size: 100% 100vh;
+    background-position: center;
+    /* Şəkli yuxarıya yapışdırır */
+    background-attachment: fixed;
+    min-height: 100vh;
+
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: #F3F3F3;
+    position: fixed;
+    z-index: 1111;
+    top: 0;
+    left: 0;
+
+}
+
+.header_left {
+    width: 15%;
+    /* background: red; */
+    position: relative;
+}
+
+
+.site_name {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    font-weight: 900;
+    font-size: 22px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.header_middle {
+    width: 60%;
+    padding-left: 1rem;
+    /* background: violet; */
+}
+
+.header_middle ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 2rem;
+    gap: 1rem;
+
+
+}
+
+.header_middle ul li {
+    font-size: 18px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.header_middle ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    /* background: blue; */
+}
+
+.header_right a {
+    font-weight: 700;
+    margin-left: 15px;
+    text-decoration: none;
+
+}
+
+.sign_part {
+    color: #4b2cff;
+
+}
+
+.log_in {
+    background: #4b2cff;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+
+}
+
+
+
+
+.section_1 {
+    display: flex;
+    width: 70%;
+    /* background: red; */
+    margin: 0 auto;
+    margin-top: 6rem;
+}
+
+.site_name1 {
+    font-size: 28px;
+    width: 85%;
+
+}
+
+.section_1 button {
+    width: 15%;
+}
+
+/* Modal Dizaynı */
+.modal-overlay {
+    display: none;
+    /* Gizli başlasın */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    /* Sənin istədiyin ölçü */
+    background: linear-gradient(to right,
+            #ABCFF7 0%,
+            #ABCFF7 15%,
+            /* Mavi rəng burada hələ tamdır */
+
+
+            /* 70%-də artıq tam ağ rəngə keçid edib */
+            #FFFFFF 100%) !important;
+    /* transition: all 0.3s ease; */
+    /* Daha güclü və yalnız aşağıya fokuslanmış kölgə */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.inside_box {
+    background: #ffff;
+}
+
+.close-modal {
+    float: right;
+    font-size: 28px;
+    font-weight: 700px;
+    cursor: pointer;
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+}
+
+.hr {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.upload-box {
+    border: 1.5px dashed #93C5FD;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.cv-item {
+    display: flex;
+    justify-content: space-between;
+    /* Adı sola, ölçünü sağa sıxır */
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cv-item:hover {
+    background: rgba(115, 175, 243, 0.1);
+}
+
+.cv-size {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.plus_click {
+    padding: 1rem;
+    width: 3rem;
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+    border-radius: 30px;
+}
+
+.cv-card-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    transition: opacity 0.3s;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cv-card-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #E3EFFF;
+    border-radius: 14px;
+    /* Şəkildəki kimi yumşaq künclər */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cv-pdf-icon {
+    background-color: #CFE4FF;
+    /* Şəkildəki açıq mavi fon */
+    color: #000000;
+    font-weight: 800;
+    font-size: 14px;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 12px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cv-details {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cv-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: #1A1A1A;
+}
+
+.cv-size {
+    font-size: 12px;
+    color: #B0B0B0;
+    margin-top: 2px;
+}
+
+.cv-delete-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s;
+}
+
+.cv-delete-icon-btn:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+.section_2 {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: 70%;
+    height: 380px;
+    border-radius: 20px;
+    background: linear-gradient(to right,
+            #ABCFF7 0%,
+            #ABCFF7 15%,
+            /* Mavi rəng burada hələ tamdır */
+
+
+            /* 70%-də artıq tam ağ rəngə keçid edib */
+            #FFFFFF 100%) !important;
+    /* transition: all 0.3s ease; */
+    /* Daha güclü və yalnız aşağıya fokuslanmış kölgə */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.section_2 p {
+    padding: 1rem 3rem;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    /* font-weight: 550; */
+}
+
+.section_2 textarea {
+    width: 90%;
+    height: 230px;
+    margin: 0 2rem auto;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    resize: none;
+    overflow-y: scroll;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 5px;
+    padding: 1rem;
+
+}
+
+
+.generate-btn {
+    margin-top: 1rem;
+    margin-left: 45rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem 0.5rem;
+    color: #ffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+}
+
+.generate-btn:hover {
+    opacity: 55%;
+}
+
+/* --- DIZAYNLAR --- */
+.designs_header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 8rem;
+    padding-bottom: 2rem;
+    z-index: 1111111;
+}
+
+.designs_header h3 {
+    font-size: 28px;
+    font-weight: 700;
+    width: 55%;
+
+}
+
+.designs_header_right {
+    width: 30%;
+    display: flex;
+    gap: 3px;
+    padding-bottom: 10px;
+}
+
+.edit_adjust {
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: inline-block;
+    outline: none;
+}
+
+.download {
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: inline-block;
+    outline: none;
+}
+
+.edit_adjus:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+
+.download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+
+.download-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#design-container {
+    display: none;
+}
+
+.default-theme-block,
+.modern-theme-block {
+    display: none;
+
+}
+
+/* --- BASE THEME SETTINGS --- */
+
+/* A4 vərəq ölçüsü və mərkəzləmə */
+.theme-default .default-theme-block {
+    display: block !important;
+    background: #fff;
+    width: 210mm;
+    /* Standart A4 genişliyi */
+    min-height: 297mm;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Preview üçün yüngül kölgə */
+}
+
+.default-page {
+    display: flex;
+    min-height: 297mm;
+    position: relative;
+    background-color: white;
+}
+
+/* Sol tərəfdəki nazik mavi zolaq */
+.default-left-border {
+    width: 15px;
+    background-color: #f0f4ff;
+    flex-shrink: 0;
+}
+
+.default-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0;
+    /* İç padding-i alt elementlər idarə edəcək */
+}
+
+/* --- HEADER (MAVİ BLOK) --- */
+
+.default-header-blue-box {
+    background-color: #f0f4ff;
+    /* Şəkildəki açıq mavi tonu */
+    width: 300px;
+    margin-left: auto;
+    /* Bloqu sağa yapışdırır */
+    padding: 40px 30px;
+    border-bottom-left-radius: 0px;
+}
+
+/* Header daxilindəki textarea-lar */
+.default-header-blue-box textarea {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.modern-contact-box,
+.elegant-contact-col,
+.corporate-footer-contact,
+.minimalist-header,
+.minimalist-contact-section,
+.modern-side-contacts,
+.luxury-side-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-height: 20px;
+    height: auto;
+}
+
+.modern-contact-item,
+.elegant-contact-item,
+.corp-contact-editor,
+.minimalist-name-editor,
+.sidebar-contact-editor,
+.side-contact-item,
+.luxury-contact-item {
+    width: 100%;
+    min-height: 20px;
+    padding: 2px 0;
+    border: none;
+    resize: none;
+    overflow: hidden;
+    line-height: 1.1;
+    margin-bottom: 1px;
+    padding: 0 !important;
+    /* Daxili boşluqları tam sıfırlayır */
+    outline: none;
+    overflow: hidden;
+}
+
+/* --- BODY (MƏTN SAHƏSİ) --- */
+
+.default-body {
+    padding: 60px 80px 40px 60px;
+    /* Şəkildəki boşluqlara uyğun */
+    flex: 1;
+}
+
+/* "Subject:" və Başlıq */
+.default-subject-label {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 5px !important;
+}
+
+.default-title-textarea {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px !important;
+    line-height: 1.2;
+}
+
+.default-salutation-textarea {
+    font-size: 15px;
+    margin-bottom: 20px !important;
+}
+
+/* Əsas CV mətni */
+.overall {
+    width: 100%;
+    height: auto;
+    min-height: 450px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #222;
+    text-align: justify;
+    background: transparent;
+}
+
+/* Footer (Sincerely və İmza) */
+.default-footer {
+    margin-top: 30px;
+}
+
+.default-closing-textarea,
+.default-signature-textarea {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px !important;
+}
+
+/* --- BOTTOM CONTACTS (SƏHİFƏNİN SONU) --- */
+
+.default-bottom-contacts {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 0;
+    margin-top: auto;
+    /* Səhifənin ən aşağısına itələyir */
+}
+
+.bottom-contact-item {
+    width: auto !important;
+    font-size: 11px !important;
+    color: #666;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* --- DEFAULT --- */
+
+.default-theme-block textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* MODERN */
+/* --- MODERN THEME (AMELIA DUPONT STYLE) --- */
+
+.modern-theme-block {
+    display: none;
+    /* JS tərəfindən aktivləşdirilir */
+    position: relative;
+    background: #fff;
+    width: 210mm;
+    /* A4 genişliyi */
+    min-height: 297mm;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tema aktiv olduqda */
+.theme-modern .modern-theme-block {
+    display: block !important;
+}
+
+.modern-sidebar {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 45px;
+    background-color: #e0e0e0;
+}
+
+.modern-inner {
+    padding: 60px 60px 60px 130px;
+    min-height: 297mm;
+    display: flex;
+    flex-direction: column;
+}
+
+.modern-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 20px 0;
+    margin-bottom: 60px;
+}
+
+.modern-box {
+    flex: 1;
+}
+
+.modern-name-editor {
+    font-size: 28px !important;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.modern-sub-editor {
+    font-size: 16px !important;
+    margin-top: 5px !important;
+    color: #444;
+}
+
+.modern-contact-box {
+    width: 250px;
+    text-align: right;
+}
+
+.modern-contact-item {
+    font-size: 12px !important;
+    line-height: 1.4;
+    text-align: right;
+    color: #333;
+}
+
+/* --- BODY SAHƏSİ --- */
+.modern-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.modern-date-editor {
+    font-size: 14px !important;
+    margin-bottom: 30px !important;
+}
+
+.modern-dear-editor {
+    font-size: 15px !important;
+    font-weight: bold;
+    margin-bottom: 20px !important;
+}
+
+.modern-overall {
+    width: 100%;
+    min-height: 500px;
+    font-family: 'Georgia', serif;
+    font-size: 14.5px !important;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.modern-footer {
+    margin-top: auto;
+    padding-bottom: 40px;
+}
+
+.modern-closing-editor {
+    font-size: 15px !important;
+}
+
+.modern-signature-editor {
+    font-size: 18px !important;
+    font-weight: bold;
+    margin-top: 5px !important;
+}
+
+.modern-theme-block textarea {
+    width: 100%;
+    border: none !important;
+    outline: none !important;
+    resize: none !important;
+    background: transparent !important;
+    font-family: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    display: block;
+    overflow: hidden;
+}
+
+
+
+/* ELEGANT */
+/* --- ELEGANT THEME (INÊS COSTA STYLE) --- */
+
+.elegant-theme-block {
+    display: none;
+    /* JS tərəfindən idarə olunur */
+    background: #fff;
+    width: 210mm;
+    /* Standart A4 genişliyi */
+    min-height: 297mm;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'serif';
+}
+
+.theme-elegant .elegant-theme-block {
+    display: block !important;
+}
+
+.elegant-page {
+    position: relative;
+    min-height: 297mm;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER (BOZ FON VƏ İKİ SÜTUN) --- */
+.elegant-header-row {
+    background-color: #e9e9e9;
+    /* Şəkildəki boz fon */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 60px;
+    margin-bottom: 50px;
+}
+
+/* Kontakt sütunu və qara xətt */
+.elegant-contact-col {
+    flex: 1;
+    border-right: 3px solid #000;
+    /* Şəkildəki vertikal qara xətt */
+    padding-right: 30px;
+}
+
+.elegant-contact-item {
+    font-size: 13px !important;
+    text-align: right !important;
+    margin-bottom: 2px !important;
+    color: #333;
+}
+
+/* Ad və Subtitle sütunu */
+.elegant-name-col {
+    flex: 1.5;
+    text-align: right;
+    padding-left: 30px;
+}
+
+.elegant-name-editor {
+    font-size: 32px !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.elegant-sub-editor {
+    font-size: 14px !important;
+    color: #555;
+    margin-top: 5px !important;
+    text-transform: uppercase;
+}
+
+/* --- BODY (MƏTN SAHƏSİ) --- */
+.elegant-body {
+    padding: 0 80px;
+    text-align: right;
+    /* Şəkildəki ümumi sağa hizalama */
+    flex: 1;
+}
+
+.elegant-date-editor,
+.elegant-dear-editor {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+    text-align: right !important;
+}
+
+/* Əsas CV mətni */
+.elegant-overall {
+    width: 100%;
+    min-height: 400px;
+    font-size: 14.5px !important;
+    line-height: 1.7;
+    text-align: right !important;
+    margin: 30px 0;
+}
+
+/* Footer */
+.elegant-footer {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.elegant-closing-editor {
+    font-size: 14px !important;
+}
+
+.elegant-signature-editor {
+    font-size: 18px !important;
+    font-weight: bold;
+    margin-top: 5px !important;
+}
+
+/* --- DEKORATİV FON YAZISI --- */
+.elegant-bottom-bg-name {
+    position: absolute;
+    bottom: 50px;
+    left: 60px;
+    opacity: 0.07;
+    /* Şəkildəki kimi çox solğun */
+    pointer-events: none;
+    /* Redaktəyə mane olmaması üçün */
+}
+
+.elegant-bg-text-editor {
+    font-size: 100px !important;
+    font-weight: 900 !important;
+    line-height: 0.8 !important;
+    font-family: sans-serif !important;
+    text-transform: uppercase;
+}
+
+/* --- ÜMUMİ TEXTAREA RESET --- */
+.elegant-theme-block textarea {
+    width: 100%;
+    border: none !important;
+    outline: none !important;
+    resize: none !important;
+    background: transparent !important;
+    font-family: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    display: block;
+    overflow: hidden;
+}
+
+/* theme-corporate */
+/* Corporate Theme Block */
+/* --- CORPORATE THEME (ERIK LINDSTRÖM STYLE) --- */
+
+.corporate-theme-block {
+    display: none;
+    /* Default gizli */
+    background: #fff;
+    width: 210mm;
+    /* A4 genişliyi */
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tema aktiv olduqda */
+.theme-corporate .corporate-theme-block {
+    display: block !important;
+}
+
+.corporate-page {
+    display: flex;
+    width: 100%;
+    min-height: 297mm;
+    background-color: white;
+}
+
+/* Sol Sidebar (Mavi detallar və Subject) */
+.corporate-left-sidebar {
+    width: 30%;
+    /* Şəkildəki nisbətə uyğun */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    position: relative;
+}
+
+/* Üstdəki iki mavi zolaq */
+.blue-stripe {
+    width: 20px;
+    background-color: #dbeafe;
+    /* Açıq mavi */
+    height: 180px;
+    /* Şəkildəki uzunluq */
+}
+
+/* Şaquli yazını saxlayan konteyner */
+.subject-text-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    /* Yazını bir az yuxarıdan başladır */
+    justify-content: center;
+    padding-top: 10px;
+
+}
+
+/* Şaquli Textarea */
+.corporate-subject-editor {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: 700;
+    font-size: 22px;
+    color: #000;
+    border: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    font-family: 'Arial', sans-serif;
+    white-space: nowrap;
+    height: 600px;
+    text-align: center;
+}
+
+/* Sol Alt hissə */
+.corporate-sidebar-bottom {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.blue-square {
+    width: 80px;
+    height: 90px;
+    background-color: #dbeafe;
+    margin-bottom: 40px;
+    margin-left: -20px;
+    /* Şəkildəki kimi bir az kənara çıxması üçün */
+}
+
+.corporate-footer-contact {
+    width: 100%;
+    padding-left: 10px;
+    height: 10rem;
+}
+
+.corp-contact-editor {
+    font-size: 11px;
+    line-height: 1.3;
+    color: #000;
+    border: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    height: 90%;
+}
+
+/* Sağ Əsas Məzmun */
+.corporate-main-content {
+    flex: 1;
+    width: 70%;
+    padding: 80px 60px 60px 20px;
+    /* Sağ tərəfdən daha çox boşluq */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Textarea-ların ümumi təmizlənməsi */
+.corporate-main-content textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    font-family: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.corp-date-editor {
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.recipient-info {
+    margin-bottom: 60px;
+}
+
+.corp-recipient-editor {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* Dario Amodei və Anthropic kimi sözlərin qalın görünməsi üçün editor daxilində manual istifadə olunur */
+.corp-salutation-editor {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.corporate-overall {
+    min-height: 500px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.corporate-closing {
+    margin-top: 20px;
+}
+
+.corporate-closing p {
+    font-size: 14.5px;
+    margin-bottom: 10px;
+}
+
+.corp-signature-editor {
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+
+/* MINIMALIST SIDEBAR THEME */
+
+/* 1. İlkin gizlətmə və ümumi ölçü */
+.minimalist-theme-block {
+    display: none;
+    background: #fff;
+    width: 243mm;
+    margin: 0 auto;
+}
+
+/* 2. Aktiv olanda görünməsi */
+.theme-minimalist .minimalist-theme-block {
+    display: block;
+}
+
+.minimalist-page {
+    display: flex;
+    min-height: 850px;
+    border: 1px solid #eee;
+}
+
+/* Bütün redaktə edilə bilən textarea-lar üçün ortaq xüsusiyyətlər */
+.minimalist-theme-block textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    font-family: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+/* Sol tərəf */
+.minimalist-main {
+    flex: 2;
+    padding: 50px;
+}
+
+/* Başlıq hissəsi textarea-ları */
+.minimalist-name-editor {
+    font-size: 28px;
+    font-family: 'Serif', Georgia, serif;
+    font-weight: bold;
+    height: auto;
+}
+
+.minimalist-role-editor {
+    font-size: 16px;
+    color: #444;
+    margin: 5px 0 15px 0;
+}
+
+.minimalist-line {
+    width: 150px;
+    height: 1px;
+    background-color: #999;
+    margin-bottom: 40px;
+}
+
+/* Gövdə hissəsi textarea-ları */
+.minimalist-date-editor {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.recipient-editor {
+    margin: 20px 0;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.minimalist-re-editor {
+    font-weight: bold;
+    margin: 30px 0 20px 0;
+    font-size: 14px;
+}
+
+.minimalist-salutation-editor {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.minimalist-overall {
+    width: 100%;
+    min-height: 400px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.minimalist-closing-editor {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Sağ Sidebar */
+.minimalist-sidebar {
+    flex: 1;
+    background-color: #e6e6e6;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.contact-item strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Sidebar daxili textarea-lar */
+.sidebar-contact-editor {
+    font-size: 13px;
+    color: #555;
+    text-align: right;
+}
+
+/* Sidebarın altındakı imza sahəsi */
+.minimalist-sidebar-signature {
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    width: 100px;
+    height: 60px;
+    /* P teqi silindiyi üçün bura boş qala bilər və ya dekorativ qutu kimi işlənə bilər */
+}
+
+
+
+
+/* CORPORATE-ALT design */
+
+/* --- CORPORATE ALTERNATIVE THEME --- */
+
+.corporate-alt-theme-block {
+    display: none;
+    /* Default olaraq gizli */
+    background: #fff;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tema aktiv olanda */
+.theme-corporate-alt .corporate-alt-theme-block {
+    display: block !important;
+}
+
+.corporate-alt-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 297mm;
+    position: relative;
+    padding-bottom: 80px;
+    /* Alt kontaktlar üçün yer */
+}
+
+/* Bütün Textarea-lar üçün ortaq stil */
+.corporate-alt-theme-block textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+/* Üst Mavi Qutu və Subject */
+.corp-alt-header-box {
+    padding-top: 0;
+}
+
+.blue-square-top {
+    background-color: #a5c2f9;
+    /* Şəkildəki mavi tonu */
+    width: 300px;
+    height: 180px;
+    padding: 60px 20px 20px 60px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.corp-alt-subject-editor {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #000 !important;
+    overflow: hidden;
+}
+
+/* Məzmun sahəsi */
+.corp-alt-content {
+    padding: 40px 80px 0 80px;
+}
+
+.corp-alt-date-editor {
+    font-size: 14px;
+    margin-bottom: 30px !important;
+}
+
+.corp-alt-recipient-section {
+    margin-bottom: 40px;
+}
+
+.corp-alt-bold-editor {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px !important;
+}
+
+.corp-alt-salutation-editor {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 25px !important;
+}
+
+.corp-alt-main-text {
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 400px;
+    text-align: justify;
+}
+
+.corp-alt-closing-editor {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/* Alt Kontakt Hissəsi */
+.corp-alt-bottom-contact {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.blue-square-bottom {
+    background-color: #a5c2f9;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.corp-alt-contact-details {
+    font-size: 10px;
+    line-height: 1.3;
+    font-weight: bold;
+    width: 200px !important;
+}
+
+/* --- MODERN SIDE THEME (INGRID SCHNEIDER) --- */
+
+.modern-side-theme-block {
+    display: none;
+    background: #fdf2ff;
+    /* Şəkildəki zəif bənövşəyi fon */
+    width: 210mm;
+    margin: 0 auto;
+}
+
+/* JS ilə aktivləşmə */
+.theme-modern-side .modern-side-theme-block {
+    display: block !important;
+}
+
+.modern-side-page {
+    display: flex;
+    min-height: 297mm;
+}
+
+/* Bütün textarea-lar üçün təmizləmə */
+.modern-side-theme-block textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    font-family: 'Helvetica', Arial, sans-serif;
+    color: #333;
+    padding: 0;
+}
+
+/* Yan tərəflər (Margin-lər) */
+.modern-side-margin-left,
+.modern-side-margin-right {
+    width: 60px;
+    background-color: #fdf2ff;
+}
+
+/* Sol tərəfdəki şaquli kontaktlar */
+.modern-side-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+    padding-top: 50px;
+}
+
+.side-contact-item {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 10px;
+    color: #666;
+    text-align: center;
+}
+
+/* Əsas ağ vərəq */
+.modern-side-main {
+    flex: 1;
+    background: white;
+    padding: 60px 50px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.ms-date-editor {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.ms-recipient-box {
+    text-align: right;
+    margin-bottom: 60px;
+}
+
+.ms-bold-editor {
+    font-weight: bold;
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+/* Mövzu hissəsi */
+.ms-subject-label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.ms-subject-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.ms-salutation {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.ms-overall-text {
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 500px;
+    text-align: justify;
+}
+
+.ms-closing {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+/* --- LUXURY SIDE THEME (SERAPHINA THORNE) --- */
+
+.luxury-side-theme-block {
+    display: none;
+    background: #fff;
+    width: 210mm;
+    margin: 0 auto;
+}
+
+/* JS Aktivləşməsi */
+.theme-luxury-side .luxury-side-theme-block {
+    display: block !important;
+}
+
+.luxury-side-page {
+    display: flex;
+    min-height: 297mm;
+    background-color: #fff;
+}
+
+/* Bütün textarea-lar üçün təmizləmə */
+.luxury-side-theme-block textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    font-family: 'Helvetica', Arial, sans-serif;
+    color: #000;
+    padding: 0;
+}
+
+/* Sol Sidebar (Yaşıl Zolaq) */
+.luxury-side-sidebar {
+    width: 80px;
+    background-color: #d8e1a1;
+    /* Şəkildəki yaşıl tonu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.luxury-side-contacts {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    justify-content: space-around;
+}
+
+.luxury-contact-item {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 11px;
+    color: #444;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Əsas Məzmun Sahəsi */
+.luxury-side-main {
+    flex: 1;
+    padding: 60px 80px;
+}
+
+.lux-date-editor {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 25px !important;
+}
+
+.lux-recipient-box {
+    margin-bottom: 40px;
+}
+
+.lux-recipient-editor {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 15px !important;
+}
+
+.lux-company-editor {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Qızılı İncə Xətt */
+.lux-gold-line {
+    width: 100%;
+    height: 2px;
+    background-color: #d4cf9a;
+    /* Qızılı tonu */
+    margin: 30px 0;
+}
+
+/* Mövzu və Salamlama */
+.lux-subject-editor {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px !important;
+    line-height: 1.2;
+}
+
+.lux-salutation-editor {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 25px !important;
+}
+
+/* Əsas Mətn */
+.luxury-overall-text {
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 500px;
+    color: #333;
+    text-align: justify;
+}
+
+.lux-closing-editor {
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+@media(max-width:1024px) {
+    .header_part {
+        margin: 2rem;
+        /* background: #000; */
+    }
+
+    .section_2 {
+        margin-top: 0.5rem;
+    }
+
+    .generate-btn {
+        margin-left: 34rem;
+
+    }
+
+    .generate-btn:hover {
+        opacity: 55%;
+    }
+}
+
+
+@media(max-width:912px) {
+    .generate-btn {
+        margin-left: 28rem;
+
+    }
+}
+
+@media(max-width:820px) {
+    .generate-btn {
+        margin-left: 25rem;
+
+    }
+
+    .generate-btn:hover {
+        opacity: 55%;
+    }
+
+}
+
+@media(max-width:540px) {
+    .section_1 button {
+        margin: 0;
+    }
+
+    .generate-btn {
+        margin-left: 15rem;
+        font-size: 12px;
+
+    }
+
+    .generate-btn:hover {
+        opacity: 55%;
+    }
+}
+
+@media (max-width: 430px) {
+    body {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .header_part {
+        margin: 2.5rem 1rem;
+        text-align: center;
+    }
+
+    .header_part a {
+        font-size: 22px;
+    }
+
+    .modal-content {
+        width: 85%;
+        /* 375px-dən fərqli olaraq bir az daha geniş (85%) saxladıq */
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .upload-box {
+        padding: 30px 15px;
+        /* Daxili boşluq bir az artırıldı */
+        margin-bottom: 20px;
+    }
+
+    .cv-card-main {
+        border-radius: 12px;
+    }
+
+    .cv-pdf-icon {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    .cv-name {
+        font-size: 14px;
+        /* Yazı ölçüsünü bir az artırdıq */
+        max-width: 180px;
+        /* Daha geniş ekran olduğu üçün limiti artırdıq */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .cv-size {
+        font-size: 11px;
+    }
+
+    .cv-card-wrapper {
+        gap: 10px;
+    }
+
+
+    .section_1 button {
+        font-size: 14px;
+        padding: 5px;
+        margin: 0;
+
+    }
+
+    .cv-delete-icon-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .plus_click {
+        width: 2.8rem;
+        padding: 0.9rem;
+    }
+
+    .section_1,
+    .section_2 {
+        width: 92%;
+        margin: 0 auto;
+    }
+
+    .section_2 {
+        margin-top: 1rem;
+    }
+
+    .section_2 p {
+        padding: 1.5rem;
+        font-size: 17px;
+    }
+
+    .section_2 textarea {
+        width: 88%;
+        margin: 0 auto 10px auto;
+        display: block;
+        padding: 10px;
+    }
+
+    .generate-btn {
+        display: block;
+        margin: 1.5rem auto;
+        padding: 0.8rem 2rem;
+        font-size: 18px;
+        width: fit-content;
+    }
+
+    .generate-btn:hover {
+        opacity: 55%;
+    }
+
+    .section_3 {
+        width: 92%;
+        min-height: auto;
+        margin: 1rem auto;
+    }
+
+    .section_3_all {
+        flex-direction: column;
+        /* Sol zolaq və sağ tərəfi alt-alta düzür */
+    }
+
+    .section_left {
+        width: 100%;
+        min-height: 12px;
+        height: 12px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .section_3_top {
+        width: 100%;
+        margin-left: 0;
+        /* 50% marjini sıfırlandı */
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .section_3_middle p {
+        font-size: 20px;
+        /* 26px-dən bir az kiçiltdik ki, ekrana sığsın */
+        margin: 1rem;
+    }
+
+    .overall {
+        width: 90%;
+        margin-left: 5%;
+        /* Mətni mərkəzlədik */
+        font-size: 14px;
+        min-height: 350px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .ending {
+        margin-left: 1.5rem;
+        font-size: 15px;
+    }
+
+    .section_3_bottom {
+        flex-direction: column;
+        /* Email, Tel və Ünvan alt-alta */
+        margin-left: 1.5rem;
+        gap: 0.7rem;
+        margin-top: 1.5rem;
+    }
+
+    .section_3_bottom input {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .download {
+        display: block;
+        width: 80%;
+        margin: 2rem auto;
+        /* 40rem marjini ləğv edildi, düymə mərkəzləndi */
+        padding: 0.8rem 1rem;
+        font-size: 17px;
+        float: none;
+    }
+}
+
+@media(max-width:414px) {
+    body {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .header_part {
+        margin: 2.5rem 1rem;
+        text-align: center;
+    }
+
+    .header_part a {
+        font-size: 22px;
+    }
+
+    .section_1,
+    .section_2 {
+        width: 92%;
+        margin: 0 auto;
+    }
+
+    .section_2 {
+        margin-top: 2rem;
+    }
+
+    .modal-content {
+        width: 85%;
+        /* 375px-dən fərqli olaraq bir az daha geniş (85%) saxladıq */
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .upload-box {
+        padding: 30px 15px;
+        /* Daxili boşluq bir az artırıldı */
+        margin-bottom: 20px;
+    }
+
+    .cv-card-main {
+        border-radius: 12px;
+    }
+
+    .cv-pdf-icon {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    .cv-name {
+        font-size: 14px;
+        /* Yazı ölçüsünü bir az artırdıq */
+        max-width: 180px;
+        /* Daha geniş ekran olduğu üçün limiti artırdıq */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .cv-size {
+        font-size: 11px;
+    }
+
+    .cv-card-wrapper {
+        gap: 10px;
+    }
+
+    .cv-delete-icon-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .plus_click {
+        width: 2.8rem;
+        padding: 0.9rem;
+    }
+
+    .section_2 p {
+        padding: 1.5rem;
+        font-size: 17px;
+    }
+
+    .section_2 textarea {
+        width: 88%;
+        margin: 0 auto 10px auto;
+        display: block;
+        padding: 10px;
+    }
+
+    .generate-btn {
+        display: block;
+        margin: 1.5rem auto;
+        padding: 0.8rem 2rem;
+        font-size: 18px;
+        width: fit-content;
+    }
+
+    .generate-btn:hover {
+        opacity: 55%;
+    }
+}
+
+@media(max-width: 412px) {
+    body {
+        height: 100vh;
+    }
+
+    .header_part {
+        margin: 2rem 1rem;
+        /* Kənar boşluqları azaltdıq */
+        text-align: center;
+    }
+
+    .header_part a {
+        font-size: 20px;
+        /* Yazını bir az kiçiltdik */
+    }
+
+    .section_1,
+    .section_2 {
+        width: 95%;
+        /* Mobil ekranda daha çox yer tutsun */
+        margin: 0 auto;
+    }
+
+    .section_2 {
+        margin-top: 2rem;
+    }
+
+    .section_2 p {
+        padding: 1.5rem;
+        /* Daxili boşluğu azaltdıq */
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .section_2 textarea {
+        width: 90%;
+        margin: 0 auto 10px auto;
+        /* Mərkəzə gətirdik */
+        display: block;
+        /* Mərkəzləmə üçün vacibdir */
+    }
+
+    .generate-btn {
+        margin: 1rem auto;
+        /* Sənin yazdığın 45rem-i sıfırlayıb mərkəzə qoyduq */
+        display: block;
+        /* Düyməni blok etdik ki, margin: auto işləsin */
+        padding: 0.8rem;
+        margin-left: 12rem;
+        font-size: 18px;
+    }
+
+    .generate-btn:hover {
+        opacity: 55%;
+    }
+
+    .section_3 {
+        width: 95%;
+        margin: 1rem auto;
+        padding: 10px;
+    }
+
+    .section_3_all {
+        flex-direction: column;
+        /* Sol zolaq və sağ tərəf alt-alta olsun */
+    }
+
+    /* Sol mavi zolaq - mobildə yuxarıda nazik bir xətt kimi görünsün və ya gizlənsin */
+    .section_left {
+        width: 100%;
+        min-height: 10px;
+        height: 10px;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    /* Üst hissə (Tarix, Menecer və s.) */
+    .section_3_top {
+        width: 100%;
+        margin-left: 0;
+        /* 50% marjini sıfırladıq */
+        padding: 10px;
+    }
+
+    /* Başlıq (Subject) hissəsi */
+    .section_3_middle p {
+        font-size: 18px;
+        /* Yazını kiçiltdik */
+        margin: 1rem 0.5rem;
+    }
+
+    /* Əsas mətn sahəsi (AI-nin yazdığı yer) */
+    .overall {
+        width: 95%;
+        margin-left: 0;
+        padding: 10px;
+        font-size: 14px;
+        /* Oxunaqlı olması üçün bir az böyütdük */
+    }
+
+    .overall::placeholder {
+        font-size: 14px;
+    }
+
+    /* Sincerely hissəsi */
+    .ending {
+        margin-left: 0.5rem;
+        font-size: 14px;
+    }
+
+    /* Alt məlumatlar (Email, Tel, Ünvan) */
+    .section_3_bottom {
+        flex-direction: column;
+        /* Yan-yana sığmazlar, alt-alta düzdük */
+        margin-left: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .section_3_bottom input {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    /* Download düyməsi */
+    .download {
+        width: 100%;
+        /* Mobildə tam en olması daha rahatdır */
+        margin-left: 0;
+        /* 40rem-i sıfırladıq */
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+@media(max-width:375px) {
+    .modal-content {
+        width: 90%;
+        /* Pəncərə ekranın 90%-ni tutsun ki, kənarlara çox yapışmasın */
+        padding: 20px 15px;
+        /* İç boşluğu azaltdıq */
+        border-radius: 20px;
+    }
+
+    .upload-box {
+        padding: 20px 10px;
+        /* Upload sahəsini kiçiltdik */
+        margin-bottom: 15px;
+    }
+
+    .cv-pdf-icon {
+        padding: 10px 15px;
+        /* İkon qutusunu mobilə uyğunlaşdırdıq */
+        font-size: 12px;
+        min-width: 50px;
+    }
+
+    .cv-name {
+        font-size: 13px;
+        /* Uzun fayl adları ekrana sığsın deyə */
+        max-width: 150px;
+        /* Uzun adları kəsmək üçün (isteğe bağlı) */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .close-modal {
+        right: 5px;
+    }
+
+    .cv-size {
+        font-size: 10px;
+    }
+
+    .cv-card-wrapper {
+        gap: 8px;
+        /* Elementlər arası məsafəni azaltdıq */
+    }
+
+    .cv-delete-icon-btn svg {
+        width: 18px;
+        /* Silmə ikonunu bir az kiçiltdik */
+        height: 18px;
+    }
+
+    .plus_click {
+        width: 2.5rem;
+        /* + Düyməsinin ölçüsü */
+        padding: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    body {
+        height: auto;
+        /* Mobil ekranda məzmunun kəsilməməsi üçün auto daha yaxşıdır */
+    }
+
+    .header_part {
+        margin: 1.5rem 0.5rem;
+    }
+
+    .header_part a {
+        font-size: 18px;
+    }
+
+    .section_1,
+    .section_2 {
+        width: 98%;
+        /* Ekran çox dar olduğu üçün yanlarda çox az boşluq saxladıq */
+    }
+
+
+    .section_2 p {
+        padding: 1rem;
+        font-size: 14px;
+        /* Yazını bir az kiçiltdik ki, çox yer tutmasın */
+    }
+
+    .section_2 textarea {
+        width: 85%;
+        height: 120px;
+        /* Hündürlüyü bir az azaltdıq */
+        font-size: 14px;
+        margin: 0 auto 10px auto;
+    }
+
+    .generate-btn {
+        /* VACİB: margin-left: 12rem-i tamamilə sıfırlayırıq */
+        margin: 1rem auto;
+        display: block;
+        width: 70%;
+        /* Düyməni ekranın 70%-i qədər etdik */
+        padding: 0.6rem;
+        font-size: 16px;
+        float: none;
+        /* Hər ehtimala qarşı sola/sağa meyilliliyi ləğv edirik */
+    }
+
+    .generate-btn:hover {
+        opacity: 55%;
+    }
+
+    .section_3 {
+        width: 95%;
+        min-height: auto;
+        margin: 1rem auto;
+        padding-bottom: 1rem;
+    }
+
+    .section_3_all {
+        flex-direction: column;
+        /* Elementləri alt-alta yığırıq */
+        box-shadow: none;
+        /* Mobildə daha təmiz görünüş üçün */
+    }
+
+    .section_left {
+        width: 100%;
+        min-height: 8px;
+        height: 8px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .section_3_top {
+        width: 100%;
+        margin-left: 0;
+        /* 50% marjini sıfırlandı */
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .section_3_middle p {
+        font-size: 18px;
+        /* 26px çox böyük idi */
+        margin: 0.8rem 1rem;
+    }
+
+    .overall {
+        width: 90%;
+        margin-left: 5%;
+        font-size: 14px;
+        /* 12px mobildə çox kiçikdir */
+        min-height: 280px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .ending {
+        margin-left: 1.5rem;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .section_3_bottom {
+        flex-direction: column;
+        /* Yan-yana sığmayan inputları alt-alta yığdıq */
+        margin-left: 1.5rem;
+        gap: 0.6rem;
+        margin-top: 1.5rem;
+    }
+
+    .section_3_bottom input {
+        width: 90%;
+        font-size: 13px;
+    }
+
+    .download {
+        display: block;
+        width: 85%;
+        margin: 2rem auto 1rem auto;
+        /* 40rem marjini mərkəzləmə ilə əvəz olundu */
+        padding: 0.8rem 1rem;
+        font-size: 16px;
+        float: none;
+    }
+}
+
+@media(max-width:344px) {
+    .site_name {
+        font-size: 24px;
+    }
+
+    .section_1,
+    .section_2 {
+        width: 90%;
+    }
+
+    .generate-btn {
+        /* margin-left: 10rem; */
+        font-size: 12px;
+
+    }
+
+    .generate-btn:hover {
+        opacity: 55%;
+    }
+
+    .section_3 {
+        width: 95%;
+        /* Ekran dar olduğu üçün kənarlarda az boşluq qoyuruq */
+        min-height: auto;
+        margin: 1rem auto;
+    }
+
+    .section_3_all {
+        flex-direction: column;
+        /* Sol zolaq və sağ tərəf alt-alta olsun */
+    }
+
+    .section_left {
+        width: 100%;
+        min-height: 10px;
+        height: 10px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .section_3_top {
+        width: 100%;
+        margin-left: 0;
+        /* 50% boşluğu sıfırladıq */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .section_3_middle p {
+        font-size: 18px;
+        /* 26px çox böyükdür, kiçiltdik */
+        margin: 1rem 0.5rem;
+        line-height: 1.2;
+    }
+
+    .overall {
+        width: 90%;
+        margin-left: 5%;
+        /* Mərkəzlədik */
+        font-size: 14px;
+        /* 12px telefonda çox kiçik görünür */
+        min-height: 250px;
+        padding: 5px;
+    }
+
+    .ending {
+        margin-left: 1rem;
+        font-size: 14px;
+    }
+
+    .section_3_bottom {
+        flex-direction: column;
+        /* Email, Tel və Ünvan alt-alta */
+        margin-left: 1rem;
+        gap: 0.8rem;
+    }
+
+    .section_3_bottom input {
+        width: 90%;
+        font-size: 13px;
+    }
+
+    .download {
+        display: block;
+        width: 80%;
+        margin: 1.5rem auto;
+        /* 40rem-i sildik, düyməni mərkəzlədik */
+        padding: 0.8rem 1rem;
+        text-align: center;
+        float: none;
+    }
+}
+
+
+
+
+
+/* html2pdf generasya prosesi zamanı işə düşən xüsusi ölçülər */
+.html2pdf__container {
+    width: 210mm !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.html2pdf__container .designs_header {
+    display: none !important;
+}
+
+/* Blokların ümumi ölçüləri */
+.html2pdf__container .default-theme-block,
+.html2pdf__container .modern-theme-block,
+.html2pdf__container .elegant-theme-block,
+.html2pdf__container .corporate-theme-block,
+.html2pdf__container .minimalist-theme-block,
+.html2pdf__container .corporate-alt-theme-block,
+.html2pdf__container .modern-side-theme-block,
+.html2pdf__container .luxury-side-theme-block {
+    width: 210mm !important;
+    min-height: 297mm !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+}
+
+/* 🔥 GİZLİ BLOKLARIN SIZMASINI TAMAMİLƏ KƏSƏN QAYDA: */
+/* Əgər hər hansı bir theme-block gizlədilibsə, onun içindəki müvəqqəti div də daxil olmaqla HƏR ŞEYİ yox et */
+.html2pdf__container [style*="display: none"],
+.html2pdf__container [style*="display: none"] *,
+.html2pdf__container [style*="display: none"] .html2pdf-temp-div {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+.html2pdf__container #design-container * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+/* Orijinal inputlar və textarealar gizlədiləndə stillərin toqquşmaması üçün */
+.html2pdf__container textarea,
+.html2pdf__container input {
+    height: auto !important;
+    overflow: visible !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* 🔥 AKTİV BLOKDAKI müvəqqəti div-lərin mütləq şəkildə düzgün görünməsi */
+/* Burada display: block !important-ın yanına digər sıfırlayıcı stillər artırıldı ki, */
+/* textarea-dan miras qalan lüzumsuz kontakt dizaynları (məs. şaquli düzülüş) div-i sındırmasın */
+.html2pdf__container .html2pdf-temp-div {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.html2pdf__container #design-container div,
+.html2pdf__container #design-container section {
+    overflow: visible !important;
+}

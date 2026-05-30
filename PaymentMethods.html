@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/PaymentMethods.css" />
+    <script src="https://js.stripe.com/v3/" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://pay.google.com/gp/p/js/pay.js" defer></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD" defer></script>
+    <script src="./js/PaymentMethods.js" defer></script>
+    <link rel="icon" href="img/logo.png">
+
+    <title>PaymentMethods</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_left">
+            <div><a href="./index.html" class="site_name">●MakeCV</a></div>
+        </div>
+        <div class="header_middle">
+            <nav>
+                <ul>
+                    <li><a href="./Resume_templates.html">Resume Templates </a></li>
+                    <li><a href="./CoverLetter.html">Cover Letter</a></li>
+                    <li><a href="./ATS.html">ATS Checker</a></li>
+                    <li><a href="./PaymentMethods.html">Payment </a></li>
+                    <li><a href="./about.html">About Us </a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header_right">
+            <a href="register.html" class="sign_part">Sign Up</a>
+            <a href="/Log_in.html" class="log_in">Log In</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="section_1">
+            <ul>
+                <li><a href="">Plans</a></li>
+                <li><a href="">Payment methods</a></li>
+            </ul>
+        </div>
+        <div class="section_2">
+            <img src="./img/payment/card.PNG" alt="" class="card" id="card">
+            <img src="./img/payment/Paypal.PNG" alt="" class="paypal" id="paypalBtn">
+            <img src="./img/payment/ApplePay.PNG" alt="" class="apple" id="apple">
+            <img src="./img/payment/GooglePay.PNG" alt="" class="google" id="google">
+            <img src="./img/payment/KlarnaPay.PNG" alt="" class="klarna" id="klarna">
+            <img src="./img/payment/Bank.PNG" alt="" class="bank" id="bank">
+        </div>
+        <div class="section_3">
+            <img src="./img/payment/Payment_method_left_picture.PNG" alt="">
+
+        </div>
+        <div class="section_4">
+            <div class="pay_with_card">
+                <h3>Payment details</h3>
+                <label>Cardholder Name</label>
+                <input type="text" id="cardholder-name" placeholder="Lavinia Vicolvioni">
+                <hr />
+                <label>Card Number</label>
+                <div id="card-number"></div>
+                <hr />
+                <div class="pay_with_card_bottom">
+                    <div class="expiry-group">
+                        <label>Expiry month</label>
+                        <input type="text" id="exp-month" placeholder="MM" maxlength="2">
+                        <hr />
+                    </div>
+
+                    <div class="expiry-group">
+                        <label>Expiry year</label>
+                        <input type="text" id="fake-year" placeholder="YYYY" maxlength="4"
+                            style="background:transparent; border:none; width:100%; color:#000; font-size:16px; padding: 10px 0; outline: none;">
+                        <hr />
+                    </div>
+
+
+                    <div class="cvv-group">
+                        <label>CVV</label>
+                        <div id="card-cvc-element"></div>
+                        <hr />
+                    </div>
+                </div>
+
+                <button id="pay_btn">Pay</button>
+            </div>
+            <div class="pay_with_paypal" id="pay_with_paypal">
+                <img src="./img/payment/pay_with_PayPal.PNG" alt="">
+                <a href="#" id="paypalProceed">Proceed with PayPal</a>
+            </div>
+            <div class="paypal-overlay" id="paypalOverlay">
+                <div class="main_section">
+                    <div class="inside_main_section">
+                        <div class="header">
+                            <img src="./img/Payment/PaypalHeader.PNG" alt="">
+                            <img src="./img/Payment/close.png" alt="" class="cansel">
+                        </div>
+                        <div class="inside_main_scetion_middle">
+                            <h3>Pay with PayPal</h3>
+                            <p>Enter your email and password to log in.</p>
+                            <form action="" method="post">
+                                <input type="email" placeholder="Email" class="email">
+                                <input type="password" placeholder="Password" class="password">
+                                <button type="submit" class="login-pay">
+                                    Log In & Pay
+                                </button>
+                                <button type="button" class="card-pay">
+                                    Pay with Debit or Credit Card
+                                </button>
+                            </form>
+                            <div class="inside_main_bottom">
+                                <p>Secure Payment by PayPal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pay_with_apple" id="pay_with_apple">
+                <img src="./img/payment/pay_with_apple.PNG" alt="">
+                <a href="" id="apple_proceed">Proceed With Apple </a>
+            </div>
+            <div class="pay_with_apple_overlay">
+                <div class="pay_with_apple_card">
+                    <div class="apple_transfer_header">
+                        <img src="./img/Payment/apple_pay_process.PNG" alt="">
+                        <img src="./img/Payment/close_black.png" alt="" class="close_black_google">
+                    </div>
+
+                    <div class="pay_wiht_apple_middle_2">
+                        <button>Pay $ ZZZ.ZZ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pay_with_google" id="pay_with_google">
+                <img src="./img/payment/pay_with_google.PNG" alt="">
+                <a href="#" id="googlePayLink">Pay With Google Pay</a>
+            </div>
+            <div class="pay_with_google_overlay" id="googlePayOverlay">
+                <div class="pay_with_google_card">
+                    <div class="google_transfer_header">
+                        <img src="./img/Payment/pay_google.PNG" alt="">
+                        <img src="./img/Payment/close_black.png" alt="" class="close_black_google" id="closeGooglePay">
+                    </div>
+
+                    <div class="pay_wiht_google_middle_2">
+                        <button>Pay $ ZZZ.ZZ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pay_with_klarna" id="pay_with_klarna">
+                <img src="./img/payment/pay_with_klarna.PNG" alt="">
+                <a href="">Proceed with Klarna</a>
+            </div>
+            <div class="pay_with_klarna_overlay" id="klarnaOverlay">
+                <div class="pay_with_klarna_header">
+                    <img src="./img/Payment/pay_with_header_klarna.PNG" alt="">
+                    <img src="./img/Payment/close_black.png" alt="" class="klarna_close">
+
+                    <div class="pay_with_klarna_middle">
+                        <p>Pay later with Klarna.</p>
+                        <form class="payment-plans">
+                            <label class="plan-option">
+                                <input type="radio" name="plan" checked>
+                                <div class="plan-text">
+                                    <strong>Pay in 4 interest-free payments</strong>
+                                    <h3>$ ZZ.ZZ today, then every 2 weeks</h3>
+                                </div>
+                            </label>
+                            <label class="plan-option">
+                                <input type="radio" name="plan">
+                                <div class="plan-text">
+                                    <strong>Pay in 30 days</strong>
+                                    <h3>No interest. No fees.</h3>
+                                </div>
+                            </label>
+                            <button type="submit" class="login-pay">Continue</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="pay_with_bank" id="pay_with_bank">
+                <img src="./img/payment/pay_with_bank.PNG" alt="">
+                <a href="">I have transferred $ ZZZ.ZZ</a>
+            </div>
+            <div class="pay_with_bank_overlay" id="bankOverlay">
+                <div class="pay_with_bank_card">
+                    <div class="bank_transfer_header">
+                        <img src="./img/Payment/bank_header.png" alt="">
+                        <h2>Bank Transfer</h2>
+                        <img src="./img/Payment/close_black.png" alt="" class="close_black">
+                    </div>
+                    <div class="pay_with_bank_middle">
+                        <div class="pay_with_bank_middle_1">
+                            <p>Please transfer the total amount of <span>$ZZZ.ZZ</span> to the following bank account.
+                                Use
+                                the
+                                reference code
+                                provided</p>
+                        </div>
+                        <div class="pay_wiht_bank_middle_2">
+                            <form action="">
+                                <input type="text" placeholder="Bank Name ">
+                                <input type="text" placeholder="Global City Bank" class="right_side_middle_2">
+                                <input type="text" placeholder="Account Holder">
+                                <input type="text" placeholder="Resume Inc." class="right_side_middle_2">
+                                <input type="text" placeholder=" IBAN">
+                                <input type="text" placeholder="US89 3704 0044 0532 0130 00"
+                                    class="right_side_middle_2">
+                                <input type="text" placeholder="  SWIT/BIC">
+                                <input type="text" placeholder="GCBKUS33" class="right_side_middle_2">
+                                <div class="payment-reference">
+
+                            </form>
+                            <p class="payment-reference">Reference code: <strong id="bankRef">Loading...</strong></p>
+                        </div>
+                    </div>
+                    <div class="pay_with_bank_middle_3">
+                        <button type="button" onclick="confirmBankTransfer()">I have made the transfer </button>
+                    </div>
+                    <div class="pay_with_bank_footer_side">
+                        <p>Secure Payment by PayPal</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <footer>
+        <img src="./img/payment/lock.png" alt="">
+        <p>Secure SSL Encrypted</p>
+    </footer>
+
+
+
+
+</body>
+
+</html>
