@@ -121,7 +121,7 @@ header {
     display: flex !important;
     flex-direction: column;
     justify-content: center;
-    width: 132mm;
+    width: 210mm;
     margin-top: 5rem;
     height: 70vh;
     position: relative;
@@ -383,7 +383,7 @@ header {
 }
 
 .section_right_top_skills {
-    margin-top: 16rem;
+    margin-top: 25rem;
     margin-left: 3rem;
     width: 80%;
     height: auto;
@@ -734,9 +734,11 @@ header {
 .html2pdf__container .section_right_top .input_h1 {
     font-size: 16px;
 }
-.html2pdf__container .section_right_top #sendList{
+
+.html2pdf__container .section_right_top #sendList {
     margin-left: 18rem;
 }
+
 .html2pdf__container .section_right_top ul li {
     font-size: 12px;
 }
@@ -777,4 +779,5 @@ div.outputArea {
     visibility: visible !important;
     opacity: 1 !important;
 }
+
 /* end */

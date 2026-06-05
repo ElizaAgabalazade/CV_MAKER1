@@ -795,7 +795,7 @@ h3 {
     display: none;
     flex-direction: column;
     justify-content: center;
-    width: 132mm;
+    width: 210mm;
     margin-top: 5rem;
     height: 70vh;
     position: relative;
@@ -1061,7 +1061,7 @@ h3 {
 }
 
 .section_right_top_skills {
-    margin-top: 16rem;
+    margin-top: 25rem;
     margin-left: 3rem;
     width: 80%;
     height: auto;
@@ -1424,7 +1424,7 @@ h3 {
 }
 
 .html2pdf__container .section_right_top_skills {
-    margin-top: 24rem;
+    margin-top: 27rem;
     margin-left: 2rem;
 }
 

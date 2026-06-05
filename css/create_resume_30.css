@@ -807,9 +807,10 @@ h3 {
 }
 
 #preview2 {
-    width: 40%;
+    width: 20%;
     height: fit-content;
-    margin: -1rem 3rem;
+    position: absolute;
+    left: 9rem;
     border-radius: 40px;
 
 }
@@ -840,7 +841,11 @@ h3 {
 #fileInput2 {
     display: none;
 }
-
+.section_inside_top{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+}
 .section_1 {
     display: flex;
     width: 50%;
@@ -851,18 +856,19 @@ h3 {
     width: 50%;
     background-image: url("../img/UpdateCv/bg_30.png");
     background-size: contain;
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
-    min-height: 70%;
+    min-height: 100%;
     height: auto;
     position: relative;
+ 
 }
 
 
 .names {
     width: 100%;
     padding-top: 2rem;
-    margin-left: 3rem;
+    margin-left: 6rem;
     background: transparent;
 }
 
@@ -872,8 +878,8 @@ h3 {
     flex-direction: column;
     align-items: stretch;
     position: absolute;
-    top: 19rem;
-    margin-left: 4rem;
+    top: 12rem;
+    margin-left: 7rem;
     border: none;
     outline: none;
     min-height: 20px;

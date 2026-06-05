@@ -7,17 +7,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/user-icon.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <link rel="stylesheet" href="./css/CoverLetter1.css" />
     <script src="./js/COVER.js" defer></script>
-        <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="./css/CoverLetter.css">
+    <link rel="icon" href="img/logo.png">
 
     <title>Document</title>
 
 </head>
+
 <body>
     <header>
         <div class="header_left">
@@ -34,7 +36,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="header_right">
+        <div class="header_right" id="headerRight">
             <a href="register.html" class="sign_part">Sign Up</a>
             <a href="/Log_in.html" class="log_in">Log In</a>
         </div>
@@ -144,7 +146,6 @@
                             <textarea class="elegant-contact-item email"
                                 rows="1">ines.costa.marketing@example.com</textarea>
                             <textarea class="elegant-contact-item phone" rows="1">+351 914 221 540</textarea>
-                            <textarea class="elegant-contact-item address" rows="1">ines-costa-ads</textarea>
                         </div>
                         <div class="elegant-name-col">
                             <textarea class="elegant-name-edito name1" rows="1">INÊS COSTA</textarea>
@@ -188,9 +189,9 @@
 
                             <div class="recipient-info">
                                 <textarea class="corp-recipient-editor name1" rows="1">Dario Amodei</textarea>
-                       
+
                                 <textarea class="corp-recipient-editor  address" rows="2">
-                            548 Market St, San Francisco, CA 94104, USA</textarea>
+                           </textarea>
                             </div>
                         </div>
 
@@ -268,7 +269,7 @@
                         <div class="corp-alt-recipient-section">
                             <textarea class="corp-alt-bold-editor name1" rows="2">Dario Amodei
 Hiring Manager</textarea>
-                            <textarea class="corp-alt-bold-editor address" rows="2">Anthropic
+                            <textarea class="corp-alt-bold-editor address" rows="1">Anthropic
 548 Market St, San Francisco, CA 94104, USA</textarea>
                         </div>
                         <textarea class="corp-alt-main-text cv-editor"
@@ -280,9 +281,9 @@ Hiring Manager</textarea>
                     <!-- Alt hissə: Mavi kiçik kvadrat və Kontaktlar -->
                     <div class="corp-alt-bottom-contact">
                         <div class="blue-square-bottom"></div>
-                        <textarea class="corp-alt-contact-details address phone email" rows="3">Palo Alto, CA
-+1 (650) 555-0888
-e.lindstrom.ai@example.tech</textarea>
+                        <textarea class="corp-alt-contact-details address"></textarea>
+                        <textarea class="corp-alt-contact-details  phone "></textarea>
+                        <textarea class="corp-alt-contact-details  email"></textarea>
                     </div>
                 </div>
             </div>
@@ -290,12 +291,7 @@ e.lindstrom.ai@example.tech</textarea>
                 <div class="modern-side-page">
                     <!-- Sol Şaquli Kontaktlar Sahəsi -->
                     <div class="modern-side-margin-left">
-                        <div class="modern-side-contacts">
-                            <textarea class="side-contact-item email">ingrid.schneider.esg@global.com</textarea>
-                            <textarea class="side-contact-item phone">+1 (917) 555-0777</textarea>
-                            <textarea class="side-contact-item address">New York, NY</textarea>
-                            <textarea class="side-contact-item linkedn">linkedin.com/in/ingrid-schneider</textarea>
-                        </div>
+
                     </div>
 
                     <!-- Əsas Ağ Məzmun -->
@@ -313,23 +309,24 @@ Hiring Manager</textarea>
                         <div class="modern-side-body">
                             <textarea class="ms-overall-text cv-editor"
                                 placeholder="I am writing to express...">I am writing to express my profound interest in the Senior Sustainability Advisor position within the United Nations Environment Programme (UNEP)...</textarea>
-
                         </div>
-                    </div>
-
-                    <!-- Sağ Boş Margin -->
+                        <div class="modern-side-contacts">
+                            <textarea class="side-contact-item email">ingrid.schneider.esg@global.com</textarea>
+                            <textarea class="side-contact-item phone">+1 (917) 555-0777</textarea>
+                            <textarea class="side-contact-item address">New York, NY</textarea>
+                            <textarea class="side-contact-item linkedn">linkedin.com/in/ingrid-schneider</textarea>
+                        </div>
+                    </div> <!-- Sağ Boş Margin -->
                     <div class="modern-side-margin-right"></div>
+
+
                 </div>
             </div>
             <div class="luxury-side-theme-block">
                 <div class="luxury-side-page">
                     <!-- Sol Şaquli Yaşıl Zolaq və Kontaktlar -->
                     <div class="luxury-side-sidebar">
-                        <div class="luxury-side-contacts">
-                            <textarea class="luxury-contact-item email">seraphina.thorne@luxury.com</textarea>
-                            <textarea class="luxury-contact-item phone">+1 (212) 555-0198</textarea>
-                            <textarea class="luxury-contact-item address">New York, NY</textarea>
-                        </div>
+
                     </div>
 
                     <!-- Əsas Məzmun -->
@@ -355,6 +352,11 @@ York, NY 10022, USA</textarea>
                                 placeholder="I am writing to express...">I am writing to express my profound interest in the Global Brand Director position at Chanel. As a professional who has dedicated her career to the intersection of art and commerce in NYC and Paris...</textarea>
 
                         </div>
+                        <div class="luxury-side-contacts">
+                            <textarea class="luxury-contact-item email">seraphina.thorne@luxury.com</textarea>
+                            <textarea class="luxury-contact-item phone">+1 (212) 555-0198</textarea>
+                            <textarea class="luxury-contact-item address">New York, NY</textarea>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -362,5 +364,6 @@ York, NY 10022, USA</textarea>
         </div>
     </section>
 </body>
+<script src="/js/check-user.js"></script>
 
 </html>

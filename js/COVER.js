@@ -41,8 +41,6 @@ const extractTextFromPDF = async (file) => {
 const fillDataFromText = (text) => {
     if (!text) return;
 
-    // KÖHNƏ PROBLEMİN HƏLLİ: Sətirləri təmiz ayırmaq üçün əvvəlcə mətni təmizləyirik
-    // Çoxlu boşluqları tək boşluğa salırıq, lakin sətir sonlarını qoruyuruq
     const lines = text
         .split(/[\r\n]+/)
         .map(line => line.trim())
@@ -434,7 +432,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // DOWNLOAD (PRİNT) LOGİKASI
     // DOWNLOAD (PRİNT) LOGİKASI - ABSOLYUT HƏLL
     const downloadCLBtn = document.getElementById("downloadCoverLetter");
     if (downloadCLBtn) {
@@ -502,7 +499,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tempDiv.style.padding = computedStyle.padding;
                 tempDiv.style.margin = computedStyle.margin;
                 tempDiv.style.textAlign = computedStyle.textAlign;
-
+              
                 textarea.style.setProperty('display', 'none', 'important');
                 textarea.parentNode.insertBefore(tempDiv, textarea.nextSibling);
 

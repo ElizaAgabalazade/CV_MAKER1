@@ -132,16 +132,28 @@ header {
 }
 
 
+#preview2 {
+    width: 20%;
+    height: fit-content;
+    position: absolute;
+    left: 9rem;
+    border-radius: 40px;
+
+}
+
+.section_right.active {
+    display: flex !important;
+}
 
 .section_right h3 {
     font-size: 30px;
     margin-left: -11rem;
-    margin-top: 3rem;
 }
 
 
 .section_right_top {
     width: 100%;
+    min-height: 100hv;
     height: auto;
     display: flex;
     background: #ffff;
@@ -155,7 +167,11 @@ header {
 #fileInput2 {
     display: none;
 }
-
+.section_inside_top{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+}
 .section_1 {
     display: flex;
     width: 50%;
@@ -165,25 +181,20 @@ header {
 .section_right_r_side_r {
     width: 50%;
     background-image: url("../img/UpdateCv/bg_30.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 60vh;
+    min-height: 100%;
     height: auto;
     position: relative;
+ 
 }
-
-.section_right_r_side_r img {
-    width: 35%;
-    margin: -7rem 4rem;
-}
-
 
 
 .names {
     width: 100%;
     padding-top: 2rem;
-    margin-left: 3rem;
+    margin-left: 6rem;
     background: transparent;
 }
 
@@ -193,8 +204,8 @@ header {
     flex-direction: column;
     align-items: stretch;
     position: absolute;
-    top: 15rem;
-    margin-left: 2.5rem;
+    top: 12rem;
+    margin-left: 7rem;
     border: none;
     outline: none;
     min-height: 20px;
@@ -248,11 +259,8 @@ header {
     text-align: center;
     font-weight: 700;
     background-color: transparent;
-
-
     line-height: 1.1;
     padding: 0 !important;
-
     resize: none;
     border: none;
     outline: none;
@@ -741,21 +749,17 @@ header {
     height: auto;
     position: relative;
 }
-
 .html2pdf__container .name_form {
     position: absolute;
     top: 20rem;
     left: 5rem;
 }
-
 div.outputArea {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
 }
-
 .html2pdf__container #qr-result-container {
     top: 1rem;
 }
-
 /* end */

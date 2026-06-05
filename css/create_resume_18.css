@@ -796,7 +796,7 @@ h3 {
     display: none;
     flex-direction: column;
     justify-content: center;
-    width: 132mm;
+    width: 210mm;
     height: 70vh;
     position: relative;
     flex-direction: column;
@@ -817,9 +817,9 @@ h3 {
 }
 
 #preview2 {
-    width: 60%;
+    width: 50%;
     height: fit-content;
-    margin: 10px 5px;
+    margin: 1rem;
     border-radius: 30px;
 }
 
