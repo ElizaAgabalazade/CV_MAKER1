@@ -144,7 +144,8 @@ header {
     cursor: pointer;
     font-size: 16px;
 }
-.back-btn a{
+
+.back-btn a {
     text-decoration: none;
     color: #444;
 
@@ -826,7 +827,7 @@ h3 {
     display: none;
     flex-direction: column;
     justify-content: center;
-    width: 2q0mm;
+    width: 210mm;
     margin-top: 12rem;
     height: 70vh;
     position: relative;
@@ -1208,53 +1209,6 @@ element.style {
     outline: none;
 }
 
-.button-container {
-    display: flex;
-    width: 100%;
-    gap: 15px;
-    margin-top: 30px;
-    margin-left: 14rem;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 32px;
-    border-radius: 50px;
-    border: none;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: white !important;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    outline: none;
-}
-
-
-
-.btn-change a {
-    text-decoration: none;
-    color: #FFFF;
-}
-
-.btn-change,
-.btn-download {
-    background: linear-gradient(to right, #5C17FC, #0D5EFF);
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(92, 23, 252, 0.4);
-    filter: brightness(1.1);
-}
-
-.btn:active {
-    transform: translateY(-1px);
-}
 
 
 @media(max-width:1024px) {
@@ -1290,6 +1244,70 @@ element.style {
         margin-top: 1rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .section_right {
+        width: 210mm !important;
+        transform: scale(0.7);
+        transform-origin: top center;
+        margin: 0 auto;
+        margin-bottom: -80mm;
+    }
+    .section_right h3{
+        margin-top: 30rem;
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        justify-items: center;
+    }
+
+    .header {
+        width: 80%;
+    }
+
+    .card {
+        width: 70%;
+    }
+
+    .section_right {
+        transform: scale(0.5);
+        margin-bottom: -130mm;
+    }
+
+    .info_input {
+        flex-direction: column !important;
+        align-items: center;
+        width: 100% !important;
+    }
+
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR {
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
+
+@media print {
+    .section_right {
+        transform: none !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        page-break-after: always;
+    }
+
+    .button-container {
+        display: none !important;
     }
 }
 
@@ -1426,7 +1444,7 @@ element.style {
     }
 }
 
-.html2pdf__container .section_right_top {
+/* .html2pdf__container .section_right_top {
     width: 210mm !important;
     min-height: 297mm !important;
     height: auto !important;
@@ -1521,5 +1539,51 @@ element.style {
     width: 50px;
     height: 30px;
     top: 1rem;
+} */
+.button-container {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    margin-top: 30px;
+    margin-left: 14rem;
 }
-/* end */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 32px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white !important;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+
+
+.btn-change a {
+    text-decoration: none;
+    color: #FFFF;
+}
+
+.btn-change,
+.btn-download {
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(92, 23, 252, 0.4);
+    filter: brightness(1.1);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}

@@ -1198,13 +1198,23 @@ h3 {
     transform: translateY(-1px);
 }
 
+@media(max-width:1280px) {
+
+    .profile_label,
+    .profile_input {
+        width: 90%;
+        margin-left: 1rem;
+    }
+
+}
+
 @media(max-width:1024px) {
     .section_right {
         margin-top: -11rem;
     }
 
     .section_right h3 {
-        margin-top: 1rem;
+        margin-top: 15rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
     }
@@ -1216,8 +1226,8 @@ h3 {
     }
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 15rem;
+        margin-left: -2rem;
         margin-bottom: 1rem;
     }
 }
@@ -1228,13 +1238,141 @@ h3 {
     }
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 15rem;
+        margin-left: 0rem;
         margin-bottom: 1rem;
     }
 }
 
+
+
+@media screen and (max-width: 768px) {
+    /* Reset fixed A4 print widths to responsive viewport widths */
+    .section_right,
+    .section_right_top_corner,
+    .section_right_top {
+        width: 100% !important;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .section_right_l_side {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .info_input,
+    .textarea_part {
+        width: 95% !important;
+        align-items: flex-start !important;
+    }
+
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR {
+        text-align: left !important;
+        margin-left: 0 !important;
+    }
+
+    .section_right_r_side {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section_right_r_side_l,
+    .section_right_r_side_r {
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        border-left: none !important; /* Removes the vertical dividing line */
+    }
+
+    .section__right_l_side_1 img {
+        display: block;
+        margin: 0 auto 20px auto !important;
+        width: 50% !important;
+        max-width: 150px;
+    }
+
+    .section_right_top_skills,
+    .section_right_top_language,
+    .work_experience_right,
+    .rightSideContainer,
+    .section_right_side_2 {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    /* Fix header alignments inside sections for a uniform look */
+    .section_right_top_skills h2,
+    .section_right_top_language h2,
+    .section_right_top_certificat h2,
+    .work_experience_right h2,
+    .rightSideContainer h2 {
+        text-align: left !important;
+        margin-left: 0 !important;
+    }
+
+    /* Fix form alignments inside containers */
+    .work_experience_right form,
+    .education_right form {
+        margin-left: 0 !important;
+    }
+    .button-container{
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+}
+
+
 @media (max-width: 600px) {
+ header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+  .section_right h3{
+            margin-top: 18rem;
+        }
+
     .container {
         width: 100%;
         justify-items: center;
@@ -1249,7 +1387,112 @@ h3 {
     }
 
 }
+@media screen and (max-width: 480px) {
+     header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
 
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+        .section_right h3{
+            margin-top: 18rem;
+        }
+    .section_right_top_corner {
+        padding: 15px 10px !important;
+        margin-top: 1rem !important;
+    }
+
+    /* Increase font size of name/header for impact on mobile */
+    .input_h1,
+    .input_h1::placeholder {
+        font-size: 18px !important;
+        width: 100% !important;
+    }
+
+    /* Boost tiny 8px micro-copy text up to 11px-12px for thumb-readability */
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR,
+    .phoneR::placeholder,
+    .emailR::placeholder,
+    #itemListLanguage_right1 li,
+    #sendList li,
+    #entry_list li,
+    #itemListCertificate_right1 li,
+    #sendList1 {
+        font-size: 11px !important;
+        height: auto !important;
+    }
+
+    /* Adjust the professional summary body font size */
+    .section_right_side_2 .outputArea,
+    .section_right_side_2 .outputArea::placeholder {
+        font-size: 11px !important;
+        padding-left: 0 !important;
+    }
+
+    /* Scale down the profile photo size so it doesn't drown the small screen */
+    .section__right_l_side_1 img {
+        width: 60% !important;
+        max-width: 130px !important;
+        margin-left: auto !important;
+    }
+
+    /* Force input forms to use vertical layout structures (full rows instead of inline rows) */
+    .work_experience_right form,
+    .education_right form {
+        flex-direction: column !important;
+        gap: 8px;
+    }
+
+    /* Tweak core component headers for small viewport ratios */
+    #sendTitle,
+    #sendTitle1,
+    .section_right_top_skills h2,
+    .section_right_top_language h2,
+    .section_right_top_certificat h2,
+    .work_experience_right h2,
+    .rightSideContainer h2 {
+        font-size: 13px !important;
+        letter-spacing: 1px !important;
+        margin-top: 1.5rem !important;
+        margin-bottom: 5px !important;
+    }
+}
 @media(max-width: 430px) {
     header {
         flex-direction: column;
@@ -1366,7 +1609,6 @@ h3 {
         width: 50%;
     }
 }
-
 
 .html2pdf__container {
     width: 210mm !important;

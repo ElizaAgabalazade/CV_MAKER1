@@ -31,31 +31,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Siyahılar
     const experienceList = document.getElementById('experienceList');
-    const educationList  = document.getElementById('educationList');
-    const certList       = document.getElementById('step5-certificateList');
-    const langList       = document.getElementById('step5-languageList');
-    const sendList       = document.getElementById('sendList');
-    const sendList1      = document.getElementById('sendList1');
+    const educationList = document.getElementById('educationList');
+    const certList = document.getElementById('step5-certificateList');
+    const langList = document.getElementById('step5-languageList');
+    const sendList = document.getElementById('sendList');
+    const sendList1 = document.getElementById('sendList1');
 
     // Naviqasiya Düymələri
-    const toStep3Btn    = document.querySelector('.next-btn');
-    const toStep4Btn    = document.getElementById('toStep4');
-    const toStep5Btn    = document.getElementById('toStep5');
+    const toStep3Btn = document.querySelector('.next-btn');
+    const toStep4Btn = document.getElementById('toStep4');
+    const toStep5Btn = document.getElementById('toStep5');
     const backToStep3Btn = document.getElementById('backToStep3');
     const backToStep4Btn = document.getElementById('backToStep4');
     const backToStep2Btn = document.getElementById('backToStep2');
 
     // Əlavə etmə düymələri
     const addExperienceBtn = document.getElementById('addExperienceBtn');
-    const addEducationBtn  = document.getElementById('addEducationBtn');
-    const addCertBtn       = document.getElementById('step5-addCertificateBtn');
-    const addLangBtn       = document.getElementById('step5-addLanguageBtn');
+    const addEducationBtn = document.getElementById('addEducationBtn');
+    const addCertBtn = document.getElementById('step5-addCertificateBtn');
+    const addLangBtn = document.getElementById('step5-addLanguageBtn');
 
     const uploadBox2 = document.getElementById('uploadBox2');
     const fileInput2 = document.getElementById('fileInput2');
-    const preview2   = document.getElementById('preview2');
+    const preview2 = document.getElementById('preview2');
 
-    const skillsInput      = document.getElementById('skillsInput');
+    const skillsInput = document.getElementById('skillsInput');
     const profSummaryInput = document.getElementById('profSummary');
 
     if (profSummaryInput) {
@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const counterDisplay = document.createElement('div');
         counterDisplay.id = 'js-profSummary-counter';
-        counterDisplay.style.fontSize   = '12px';
-        counterDisplay.style.color      = '#666';
-        counterDisplay.style.marginTop  = '4px';
-        counterDisplay.style.textAlign  = 'right';
+        counterDisplay.style.fontSize = '12px';
+        counterDisplay.style.color = '#666';
+        counterDisplay.style.marginTop = '4px';
+        counterDisplay.style.textAlign = 'right';
         counterDisplay.style.transition = 'color 0.2s ease, font-weight 0.2s ease';
         counterDisplay.innerText = `0 / ${MAX_CHARS}`;
 
@@ -84,12 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
             counterDisplay.innerText = `${currentLength} / ${MAX_CHARS}`;
 
             if (currentLength >= MAX_CHARS) {
-                counterDisplay.style.color      = 'red';
-                counterDisplay.style.fontWeight  = 'bold';
+                counterDisplay.style.color = 'red';
+                counterDisplay.style.fontWeight = 'bold';
                 profSummaryInput.style.borderColor = 'red';
             } else {
-                counterDisplay.style.color      = '#666';
-                counterDisplay.style.fontWeight  = 'normal';
+                counterDisplay.style.color = '#666';
+                counterDisplay.style.fontWeight = 'normal';
                 profSummaryInput.style.borderColor = '';
             }
         };
@@ -189,12 +189,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // QR Elementləri
-    const qrCodeModal       = document.getElementById('qrModal');
-    const qrCodeOpenBtn     = document.getElementById('openQrBoxBtn');
-    const qrCodeConfirmBtn  = document.getElementById('confirmQrBtn');
-    const qrCodeRemoveBtn   = document.getElementById('removeQrBtn');
+    const qrCodeModal = document.getElementById('qrModal');
+    const qrCodeOpenBtn = document.getElementById('openQrBoxBtn');
+    const qrCodeConfirmBtn = document.getElementById('confirmQrBtn');
+    const qrCodeRemoveBtn = document.getElementById('removeQrBtn');
     const qrIconPlaceholder = document.getElementById('qr-icon-placeholder');
-    const uploadQrBtn       = document.getElementById('uploadQrBtn');
+    const uploadQrBtn = document.getElementById('uploadQrBtn');
 
     const generateQRCode = (content) => {
         const cvContainer = document.getElementById('qr-cv-display');
@@ -232,8 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (qrCodeModal) {
                 qrCodeModal.classList.add('active');
                 qrCodeModal.style.display = 'flex';
-                document.body.style.backgroundImage    = "url('img/ResumeTemplates/bacground2.PNG')";
-                document.body.style.backgroundSize     = "cover";
+                document.body.style.backgroundImage = "url('img/ResumeTemplates/bacground2.PNG')";
+                document.body.style.backgroundSize = "cover";
                 document.body.style.backgroundAttachment = "fixed";
             }
         });
@@ -261,8 +261,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const qrFileInput  = document.createElement('input');
-    qrFileInput.type   = 'file';
+    const qrFileInput = document.createElement('input');
+    qrFileInput.type = 'file';
     qrFileInput.style.display = 'none';
     qrFileInput.accept = 'image/*';
     document.body.appendChild(qrFileInput);
@@ -306,8 +306,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 1. İŞ TƏCRÜBƏSİ ---
     const addExperienceBlock = () => {
         const experienceList = document.getElementById('experienceList');
-        const addBtn         = document.getElementById('addExperienceBtn');
-        const sendList       = document.getElementById('sendList');
+        const addBtn = document.getElementById('addExperienceBtn');
+        const sendList = document.getElementById('sendList');
 
         if (!experienceList) return;
         if (experienceList.querySelectorAll('.experience-block').length >= 3) return;
@@ -344,13 +344,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const updatePreview = () => {
             if (!previewLi) return;
-            const title    = block.querySelector('[data-type="title"]').value   || 'Job Title';
-            const company  = block.querySelector('[data-type="company"]').value || 'Company';
-            const start    = block.querySelector('[data-type="start"]').value   || 'Start';
+            const title = block.querySelector('[data-type="title"]').value || 'Job Title';
+            const company = block.querySelector('[data-type="company"]').value || 'Company';
+            const start = block.querySelector('[data-type="start"]').value || 'Start';
             const endInput = block.querySelector('[data-type="end"]');
             const isCurrent = block.querySelector('[data-type="current"]').checked;
-            const loc      = block.querySelector('[data-type="loc"]').value     || '';
-            const desc     = block.querySelector('[data-type="desc"]').value    || '';
+            const loc = block.querySelector('[data-type="loc"]').value || '';
+            const desc = block.querySelector('[data-type="desc"]').value || '';
 
             endInput.disabled = isCurrent;
             const endValue = isCurrent ? "Present" : (endInput.value || "End");
@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 2. TƏHSİL ---
     const addEducationBlock = () => {
         const educationList = document.getElementById('educationList');
-        const sendList1     = document.getElementById('sendList1');
+        const sendList1 = document.getElementById('sendList1');
         if (!educationList) return;
         if (educationList.querySelectorAll('.experience-block').length >= 2) return;
 
@@ -412,9 +412,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const updatePreview = () => {
             if (!previewLi) return;
-            const degree   = block.querySelector('[data-type="degree"]').value    || 'Degree';
-            const uni      = block.querySelector('[data-type="uni"]').value       || 'University';
-            const start    = block.querySelector('[data-type="edu-start"]').value || 'Start';
+            const degree = block.querySelector('[data-type="degree"]').value || 'Degree';
+            const uni = block.querySelector('[data-type="uni"]').value || 'University';
+            const start = block.querySelector('[data-type="edu-start"]').value || 'Start';
             const endInput = block.querySelector('[data-type="edu-end"]');
             const isCurrent = block.querySelector('[data-type="edu-current"]').checked;
 
@@ -451,8 +451,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --- 4. DİLLƏR ---
-    const proficiencyBox  = document.querySelector('.step5-proficiency-box');
-    let lastFocusedInput  = null;
+    const proficiencyBox = document.querySelector('.step5-proficiency-box');
+    let lastFocusedInput = null;
 
     const updateLangPreview = () => {
         const langPreviewUl = document.getElementById('itemListLanguage_right1');
@@ -461,15 +461,15 @@ document.addEventListener('DOMContentLoaded', () => {
         langPreviewUl.innerHTML = "";
 
         langList.querySelectorAll('.step5-input-row').forEach(row => {
-            const input    = row.querySelector('input');
+            const input = row.querySelector('input');
             const langName = input ? input.value.trim() : "";
-            const level    = input ? (input.dataset.level || "") : "";
+            const level = input ? (input.dataset.level || "") : "";
 
             if (langName) {
                 const li = document.createElement('li');
-                li.style.listStyle   = "none";
+                li.style.listStyle = "none";
                 li.style.marginBottom = "3px";
-                li.style.fontSize    = "8px";
+                li.style.fontSize = "8px";
                 li.innerHTML = `<strong>${langName}</strong>${level ? ' — ' + level : ''}`;
                 langPreviewUl.appendChild(li);
             }
@@ -528,10 +528,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Window-a export et (storage.js üçün lazımdır)
     window.addExperienceBlock = addExperienceBlock;
-    window.addEducationBlock  = addEducationBlock;
-    window.createCertRow      = createCertRow;
-    window.createLangRow      = createLangRow;
-    window.updateLangPreview  = updateLangPreview;
+    window.addEducationBlock = addEducationBlock;
+    window.createCertRow = createCertRow;
+    window.createLangRow = createLangRow;
+    window.updateLangPreview = updateLangPreview;
 
     // --- 5. STEP KEÇİDLƏRİ ---
     backToStep2Btn?.addEventListener('click', () => {
@@ -609,30 +609,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 7. FINISH CV ---
     const handleFinishCV = () => {
         const cvPreview = document.querySelector('.section_right');
-        const step5     = document.getElementById('step5');
+        const step5 = document.getElementById('step5');
 
         cvPreview?.classList.add('active');
         step5?.classList.add('hidden');
         if (step5) step5.style.display = 'none';
 
         const safeSet = (id, targetId) => {
-            const el     = document.getElementById(id);
+            const el = document.getElementById(id);
             const target = document.getElementById(targetId);
             if (el && target) target.value = el.value;
         };
 
         const firstName = document.getElementById('firstName')?.value || '';
-        const lastName  = document.getElementById('lastName')?.value  || '';
-        const fullName  = `${firstName} ${lastName}`.trim();
+        const lastName = document.getElementById('lastName')?.value || '';
+        const fullName = `${firstName} ${lastName}`.trim();
 
         const nameToCV = document.getElementById('nameToCV');
         if (nameToCV) nameToCV.value = fullName;
 
-        safeSet('phoneNumber',    'phoneR');
-        safeSet('emailAddress',   'emailR');
-        safeSet('locationCity',   'adressR');
-        safeSet('profSummary',    'autoTextarea');
-        safeSet('linkedinProfile','linkedinR');
+        safeSet('phoneNumber', 'phoneR');
+        safeSet('emailAddress', 'emailR');
+        safeSet('locationCity', 'adressR');
+        safeSet('profSummary', 'autoTextarea');
+        safeSet('linkedinProfile', 'linkedinR');
 
         const adjustAutoTextareaHeight = (element) => {
             if (!element) return;
@@ -647,8 +647,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Sertifikatlar
         const certInputContainer = document.getElementById('step5-certificateList');
-        const cvCertList         = document.getElementById('itemListCertificate_right1');
-        const certSection        = document.getElementById('certificate');
+        const cvCertList = document.getElementById('itemListCertificate_right1');
+        const certSection = document.getElementById('certificate');
 
         if (certInputContainer && cvCertList) {
             let certHtml = '';
@@ -660,7 +660,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Skills
-        const skillsVal  = skillsInput?.value;
+        const skillsVal = skillsInput?.value;
         const cvSkillList = document.getElementById('entry_list');
         if (cvSkillList && skillsVal) {
             cvSkillList.innerHTML = skillsVal.split(',')
@@ -676,47 +676,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 8. PDF YÜKLƏMƏ ---
     const downloadCVAsPDF = () => {
-        const element   = document.querySelector(".section_right_top");
+        const element = document.querySelector(".section_right_top");
         const rightSide2 = document.querySelector('.section_right_side_2');
         if (rightSide2) rightSide2.style.height = 'auto';
 
         const opt = {
-            margin   : 0,
-            filename : `CV_Export_${Date.now()}.pdf`,
-            image    : { type: 'jpeg', quality: 1 },
+            margin: 0,
+            filename: `CV_Export_${Date.now()}.pdf`,
+            image: { type: 'jpeg', quality: 1 },
             pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
             html2canvas: {
-                scale   : 3,
-                useCORS : true,
-                onclone : (clonedDoc) => {
+                scale: 3,
+                useCORS: true,
+                onclone: (clonedDoc) => {
                     const clonedCounter = clonedDoc.getElementById('js-profSummary-counter');
                     if (clonedCounter) clonedCounter.remove();
 
                     clonedDoc.querySelectorAll('.outputArea').forEach(ta => {
                         const div = clonedDoc.createElement('div');
-                        div.className    = ta.className;
+                        div.className = ta.className;
                         div.style.cssText = window.getComputedStyle(ta).cssText;
-                        div.style.height      = 'auto';
-                        div.style.display     = 'block';
-                        div.style.overflow    = 'visible';
-                        div.style.whiteSpace  = 'pre-wrap';
-                        div.style.wordBreak   = 'break-word';
+                        div.style.height = 'auto';
+                        div.style.display = 'block';
+                        div.style.overflow = 'visible';
+                        div.style.whiteSpace = 'pre-wrap';
+                        div.style.wordBreak = 'break-word';
                         div.innerText = ta.value;
                         if (ta.parentNode) ta.parentNode.replaceChild(div, ta);
                     });
 
                     const cvBase = clonedDoc.querySelector(".section_right_top");
                     if (cvBase) {
-                        cvBase.style.height       = 'auto';
-                        cvBase.style.minHeight    = '297mm';
-                        cvBase.style.display      = 'flex';
+                        cvBase.style.height = 'auto';
+                        cvBase.style.minHeight = '297mm';
+                        cvBase.style.display = 'flex';
                         cvBase.style.flexDirection = 'row';
                     }
 
                     clonedDoc.querySelectorAll('.section_right_l_side, .section_right_r_side').forEach(col => {
-                        col.style.height    = 'auto';
+                        col.style.height = 'auto';
                         col.style.minHeight = '297mm';
-                        col.style.flex      = "1";
+                        col.style.flex = "1";
                     });
                 }
             },
@@ -730,11 +730,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById("download-pdf")?.addEventListener("click", downloadCVAsPDF);
 
+    // --- 9. STORAGE LOAD & AUTO-SAVE ---
     loadFromStorage();
 
     document.addEventListener('input', (e) => {
+        if (isLoading) return;
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
             saveToStorage();
+
+            // Real vaxtda preview sinxronizasiyası
+            const container = document.querySelector('.section_right_r_side');
+            if (container && CLASS_MAP[e.target.id]) {
+                const target = container.querySelector(CLASS_MAP[e.target.id]);
+                if (target) target.value = e.target.value;
+            }
         }
     });
+
 });

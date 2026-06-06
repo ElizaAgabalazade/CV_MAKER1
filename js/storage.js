@@ -1,62 +1,82 @@
+let isLoading = false;
+
+// Preview konteyner və sinxronizasiya map-i
+const PREVIEW_CONTAINER = '.section_right_r_side';
+
+const CLASS_MAP = {
+    'autoTextarea' : '.outputArea',
+    'phoneR'       : '.phoneR',
+    'emailR'       : '.emailR',
+    'adressR'      : '.adressR',
+    'linkedinR'    : '.linkedinR',
+    'nameToCV'     : '.input_h1',
+};
+
+// Bütün preview-ları sinxronlaşdır
+const syncPreview = () => {
+    const container = document.querySelector(PREVIEW_CONTAINER);
+    if (!container) return;
+
+    Object.entries(CLASS_MAP).forEach(([sourceId, targetClass]) => {
+        const source = document.getElementById(sourceId);
+        const target = container.querySelector(targetClass);
+        if (source && target) target.value = source.value;
+    });
+};
+
+
 const saveToStorage = () => {
     const data = {};
 
-    // Sadə input/textarea sahələri
     document.querySelectorAll('input, textarea').forEach(input => {
         if (input.id) {
             data[input.id] = input.type === 'checkbox' ? input.checked : input.value;
         }
     });
 
-    // Foto
     const preview2 = document.getElementById('preview2');
     if (preview2 && preview2.src && preview2.src.startsWith('data:image')) {
         data['preview2_src'] = preview2.src;
     }
 
-    // Preview HTML-ləri (section_right_top üçün)
     data.sendListHTML  = document.getElementById('sendList')?.innerHTML                   || '';
     data.sendList1HTML = document.getElementById('sendList1')?.innerHTML                  || '';
     data.certListHTML  = document.getElementById('itemListCertificate_right1')?.innerHTML || '';
     data.langListHTML  = document.getElementById('itemListLanguage_right1')?.innerHTML    || '';
     data.skillListHTML = document.getElementById('entry_list')?.innerHTML                 || '';
 
-    // İş təcrübəsi bloklarını ayrıca saxla
     const experienceBlocks = [];
     document.querySelectorAll('#experienceList .experience-block').forEach(block => {
         experienceBlocks.push({
-            title   : block.querySelector('[data-type="title"]')?.value        || '',
-            company : block.querySelector('[data-type="company"]')?.value      || '',
-            start   : block.querySelector('[data-type="start"]')?.value        || '',
-            end     : block.querySelector('[data-type="end"]')?.value          || '',
-            current : block.querySelector('[data-type="current"]')?.checked    || false,
-            loc     : block.querySelector('[data-type="loc"]')?.value          || '',
-            desc    : block.querySelector('[data-type="desc"]')?.value         || '',
+            title   : block.querySelector('[data-type="title"]')?.value     || '',
+            company : block.querySelector('[data-type="company"]')?.value   || '',
+            start   : block.querySelector('[data-type="start"]')?.value     || '',
+            end     : block.querySelector('[data-type="end"]')?.value       || '',
+            current : block.querySelector('[data-type="current"]')?.checked || false,
+            loc     : block.querySelector('[data-type="loc"]')?.value       || '',
+            desc    : block.querySelector('[data-type="desc"]')?.value      || '',
         });
     });
     data.experienceBlocks = experienceBlocks;
 
-    // Təhsil bloklarını ayrıca saxla
     const educationBlocks = [];
     document.querySelectorAll('#educationList .experience-block').forEach(block => {
         educationBlocks.push({
-            degree  : block.querySelector('[data-type="degree"]')?.value         || '',
-            uni     : block.querySelector('[data-type="uni"]')?.value            || '',
-            start   : block.querySelector('[data-type="edu-start"]')?.value      || '',
-            end     : block.querySelector('[data-type="edu-end"]')?.value        || '',
-            current : block.querySelector('[data-type="edu-current"]')?.checked  || false,
+            degree  : block.querySelector('[data-type="degree"]')?.value        || '',
+            uni     : block.querySelector('[data-type="uni"]')?.value           || '',
+            start   : block.querySelector('[data-type="edu-start"]')?.value     || '',
+            end     : block.querySelector('[data-type="edu-end"]')?.value       || '',
+            current : block.querySelector('[data-type="edu-current"]')?.checked || false,
         });
     });
     data.educationBlocks = educationBlocks;
 
-    // Sertifikat sıralarını ayrıca saxla
     const certificateRows = [];
     document.querySelectorAll('#step5-certificateList .step5-input-row input').forEach(input => {
         certificateRows.push(input.value || '');
     });
     data.certificateRows = certificateRows;
 
-    // Dil sıralarını ayrıca saxla
     const languageRows = [];
     document.querySelectorAll('#step5-languageList .step5-input-row input').forEach(input => {
         languageRows.push({
@@ -74,15 +94,36 @@ const loadFromStorage = () => {
     const savedData = JSON.parse(localStorage.getItem('userCVData'));
     if (!savedData) return;
 
+    isLoading = true;
+
+    // Dinamik blokları əvvəlcə təmizlə
+    const expList = document.getElementById('experienceList');
+    if (expList) expList.querySelectorAll('.experience-block').forEach(b => b.remove());
+
+    const eduList = document.getElementById('educationList');
+    if (eduList) eduList.querySelectorAll('.experience-block').forEach(b => b.remove());
+
+    const certList = document.getElementById('step5-certificateList');
+    if (certList) certList.querySelectorAll('.step5-input-row').forEach(r => r.remove());
+
+    const langList = document.getElementById('step5-languageList');
+    if (langList) langList.querySelectorAll('.step5-input-row').forEach(r => r.remove());
+
     // 1. Sadə input/textarea sahələri
+    const skipKeys = [
+        'sendListHTML', 'sendList1HTML', 'certListHTML', 'langListHTML',
+        'skillListHTML', 'preview2_src', 'experienceBlocks',
+        'educationBlocks', 'certificateRows', 'languageRows'
+    ];
+
     Object.keys(savedData).forEach(id => {
+        if (skipKeys.includes(id)) return;
         const el = document.getElementById(id);
-        if (el) {
-            if (el.type === 'checkbox') {
-                el.checked = savedData[id];
-            } else if (el.tagName === 'TEXTAREA' || el.tagName === 'INPUT') {
-                el.value = savedData[id];
-            }
+        if (!el) return;
+        if (el.type === 'checkbox') {
+            el.checked = savedData[id];
+        } else if (el.tagName === 'TEXTAREA' || el.tagName === 'INPUT') {
+            el.value = savedData[id];
         }
     });
 
@@ -93,7 +134,7 @@ const loadFromStorage = () => {
         preview2.style.display = 'block';
     }
 
-    // 3. Preview HTML-ləri (section_right_top-da görünən hissə)
+    // 3. Preview HTML-lər
     const htmlFields = {
         'sendList'                   : savedData.sendListHTML,
         'sendList1'                  : savedData.sendList1HTML,
@@ -181,4 +222,9 @@ const loadFromStorage = () => {
         txtArea.style.height = 'auto';
         txtArea.style.height = Math.max(txtArea.scrollHeight, 100) + 'px';
     }
+
+    isLoading = false;
+
+    // 9. Bütün preview-ları sinxronlaşdır
+    syncPreview();
 };

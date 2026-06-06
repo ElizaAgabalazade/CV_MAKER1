@@ -733,9 +733,11 @@ document.addEventListener('DOMContentLoaded', () => {
 };
     document.getElementById("download-pdf")?.addEventListener("click", downloadCVAsPDF);
     
+     // --- 9. STORAGE LOAD & AUTO-SAVE ---
     loadFromStorage();
-
+ 
     document.addEventListener('input', (e) => {
+        if (isLoading) return;  // Load zamanı save etmə
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
             saveToStorage();
         }
