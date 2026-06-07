@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const mainForm = document.querySelector('.container');
     const body = document.body;
-
+ 
     // 1. ELEMENTLƏRİN DÜZGUN TƏYİNİ
     const photoModal = document.getElementById('photoModal');
     const openPhotoBtn = document.getElementById('openPhotoBtn');
@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const imagePreview = document.getElementById('imagePreview');
     const zoomRange = document.getElementById('zoomRange');
     const zoomPercent = document.getElementById('zoomPercent');
-
+ 
     const changePhotoBtn = document.getElementById('changePhotoBtn');
-
+ 
     const changeFormatBtn = document.querySelector('.btn-change');
     if (changeFormatBtn) {
         changeFormatBtn.addEventListener('click', (e) => {
@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = './Resume_templates.html';
         });
     }
-
+ 
     // Konteynerlər (Steplər)
     const step3Container = document.getElementById('step3');
     const step4Container = document.getElementById('step4');
     const step5Container = document.getElementById('step5');
-
+ 
     // Siyahılar
     const experienceList = document.getElementById('experienceList');
     const educationList  = document.getElementById('educationList');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const langList       = document.getElementById('step5-languageList');
     const sendList       = document.getElementById('sendList');
     const sendList1      = document.getElementById('sendList1');
-
+ 
     // Naviqasiya Düymələri
     const toStep3Btn    = document.querySelector('.next-btn');
     const toStep4Btn    = document.getElementById('toStep4');
@@ -44,24 +44,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToStep3Btn = document.getElementById('backToStep3');
     const backToStep4Btn = document.getElementById('backToStep4');
     const backToStep2Btn = document.getElementById('backToStep2');
-
+ 
     // Əlavə etmə düymələri
     const addExperienceBtn = document.getElementById('addExperienceBtn');
     const addEducationBtn  = document.getElementById('addEducationBtn');
     const addCertBtn       = document.getElementById('step5-addCertificateBtn');
     const addLangBtn       = document.getElementById('step5-addLanguageBtn');
-
+ 
     const uploadBox2 = document.getElementById('uploadBox2');
     const fileInput2 = document.getElementById('fileInput2');
     const preview2   = document.getElementById('preview2');
-
+ 
     const skillsInput      = document.getElementById('skillsInput');
     const profSummaryInput = document.getElementById('profSummary');
-
+ 
     if (profSummaryInput) {
         const MAX_CHARS = 500;
         profSummaryInput.setAttribute('maxlength', MAX_CHARS);
-
+ 
         const counterDisplay = document.createElement('div');
         counterDisplay.id = 'js-profSummary-counter';
         counterDisplay.style.fontSize   = '12px';
@@ -70,19 +70,19 @@ document.addEventListener('DOMContentLoaded', () => {
         counterDisplay.style.textAlign  = 'right';
         counterDisplay.style.transition = 'color 0.2s ease, font-weight 0.2s ease';
         counterDisplay.innerText = `0 / ${MAX_CHARS}`;
-
+ 
         profSummaryInput.parentNode.insertBefore(counterDisplay, profSummaryInput.nextSibling);
-
+ 
         const updateSummaryCounter = () => {
             let currentLength = profSummaryInput.value.length;
-
+ 
             if (currentLength > MAX_CHARS) {
                 profSummaryInput.value = profSummaryInput.value.substring(0, MAX_CHARS);
                 currentLength = MAX_CHARS;
             }
-
+ 
             counterDisplay.innerText = `${currentLength} / ${MAX_CHARS}`;
-
+ 
             if (currentLength >= MAX_CHARS) {
                 counterDisplay.style.color      = 'red';
                 counterDisplay.style.fontWeight  = 'bold';
@@ -93,16 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 profSummaryInput.style.borderColor = '';
             }
         };
-
+ 
         profSummaryInput.addEventListener('input', updateSummaryCounter);
         profSummaryInput.addEventListener('paste', () => setTimeout(updateSummaryCounter, 10));
         updateSummaryCounter();
     }
-
+ 
     // Şəkil yükləmə (uploadBox2)
     if (uploadBox2 && fileInput2) {
         uploadBox2.addEventListener('click', () => fileInput2.click());
-
+ 
         fileInput2.addEventListener('change', (e) => {
             const file = e.target.files[0];
             if (file) {
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
+ 
     // 2. FOTO SEÇMƏ VƏ ZOOM
     const handlePhotoSelect = (e) => {
         const file = e.target.files[0];
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             reader.readAsDataURL(file);
         }
     };
-
+ 
     zoomRange?.addEventListener('input', () => {
         const scale = zoomRange.value / 20;
         if (imagePreview) {
@@ -141,16 +141,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (zoomPercent) zoomPercent.textContent = Math.round(scale * 100) + '%';
         }
     });
-
+ 
     // 3. FINALIZE
     const finalizePhoto = () => {
         if (!imagePreview) return;
         const currentSrc = imagePreview.src;
-
+ 
         if (currentSrc && currentSrc.includes('data:image')) {
             const preview2 = document.getElementById('preview2');
             if (preview2) preview2.src = currentSrc;
-
+ 
             const iconDiv = document.querySelector('#openPhotoBtn .icon');
             if (iconDiv) {
                 iconDiv.innerHTML = `<img src="${currentSrc}" style="width: 40px; height: 40px; object-fit: cover; border: 1px solid #ccc;">`;
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("Lütfən şəkil seçin!");
         }
     };
-
+ 
     // 4. EVENT LISTENER-LƏR
     openPhotoBtn?.addEventListener('click', () => {
         if (photoModal) {
@@ -173,21 +173,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         document.body.style.backgroundImage = "url('img/ResumeTemplates/bacground2.PNG')";
     });
-
+ 
     photoInput?.addEventListener('change', handlePhotoSelect);
     uploadPlaceholder?.addEventListener('click', () => photoInput.click());
     changePhotoBtn?.addEventListener('click', () => photoInput.click());
-
+ 
     savePhotoBtn?.addEventListener('click', finalizePhoto);
     confirmBtn?.addEventListener('click', finalizePhoto);
-
+ 
     photoModal?.addEventListener('click', (e) => {
         if (e.target === photoModal) {
             photoModal.style.display = 'none';
             document.body.style.backgroundImage = "";
         }
     });
-
+ 
     // QR Elementləri
     const qrCodeModal       = document.getElementById('qrModal');
     const qrCodeOpenBtn     = document.getElementById('openQrBoxBtn');
@@ -195,28 +195,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const qrCodeRemoveBtn   = document.getElementById('removeQrBtn');
     const qrIconPlaceholder = document.getElementById('qr-icon-placeholder');
     const uploadQrBtn       = document.getElementById('uploadQrBtn');
-
+ 
     const generateQRCode = (content) => {
         const cvContainer = document.getElementById('qr-cv-display');
         if (cvContainer) {
             cvContainer.innerHTML = "";
             new QRCode(cvContainer, { text: content, width: 50, height: 50, correctLevel: QRCode.CorrectLevel.H });
         }
-
+ 
         if (qrIconPlaceholder) {
             qrIconPlaceholder.innerHTML = "";
             new QRCode(qrIconPlaceholder, { text: content, width: 35, height: 35 });
             const pTag = qrCodeOpenBtn?.querySelector('p');
             if (pTag) pTag.textContent = "Edit QR Data";
         }
-
+ 
         const modalDisplay = document.getElementById('qr-modal-display');
         if (modalDisplay) {
             modalDisplay.innerHTML = "";
             new QRCode(modalDisplay, { text: content, width: 50, height: 50 });
         }
     };
-
+ 
     const handleQRUpdate = () => {
         const userInput = document.getElementById('qrInput')?.value || "https://makecv.pro";
         generateQRCode(userInput);
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.backgroundImage = "";
         }
     };
-
+ 
     if (qrCodeOpenBtn) {
         qrCodeOpenBtn.addEventListener('click', () => {
             if (qrCodeModal) {
@@ -238,9 +238,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
+ 
     if (qrCodeConfirmBtn) qrCodeConfirmBtn.addEventListener('click', handleQRUpdate);
-
+ 
     if (qrCodeRemoveBtn) {
         qrCodeRemoveBtn.addEventListener('click', () => {
             const cvDisp = document.getElementById('qr-cv-display');
@@ -260,16 +260,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
+ 
     const qrFileInput  = document.createElement('input');
     qrFileInput.type   = 'file';
     qrFileInput.style.display = 'none';
     qrFileInput.accept = 'image/*';
     document.body.appendChild(qrFileInput);
-
+ 
     if (uploadQrBtn) {
         uploadQrBtn.addEventListener('click', () => qrFileInput.click());
-
+ 
         qrFileInput.addEventListener('change', (e) => {
             const file = e.target.files[0];
             if (file) {
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
+ 
     const createPreviewLi = (parentElement) => {
         if (!parentElement) return null;
         const li = document.createElement('li');
@@ -302,16 +302,16 @@ document.addEventListener('DOMContentLoaded', () => {
         parentElement.appendChild(li);
         return li;
     };
-
+ 
     // --- 1. İŞ TƏCRÜBƏSİ ---
     const addExperienceBlock = () => {
         const experienceList = document.getElementById('experienceList');
         const addBtn         = document.getElementById('addExperienceBtn');
         const sendList       = document.getElementById('sendList');
-
+ 
         if (!experienceList) return;
         if (experienceList.querySelectorAll('.experience-block').length >= 3) return;
-
+ 
         const block = document.createElement('div');
         block.className = 'experience-block';
         block.innerHTML = `
@@ -333,15 +333,15 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="input-with-icon"><input type="text" placeholder="Location" data-type="loc"></div>
         </div>
         <textarea placeholder="Key Responsibilities..." data-type="desc"></textarea>`;
-
+ 
         experienceList.appendChild(block);
-
+ 
         if (experienceList.querySelectorAll('.experience-block').length >= 3) {
             addBtn.style.display = 'none';
         }
-
+ 
         const previewLi = createPreviewLi(sendList);
-
+ 
         const updatePreview = () => {
             if (!previewLi) return;
             const title    = block.querySelector('[data-type="title"]').value   || 'Job Title';
@@ -351,37 +351,37 @@ document.addEventListener('DOMContentLoaded', () => {
             const isCurrent = block.querySelector('[data-type="current"]').checked;
             const loc      = block.querySelector('[data-type="loc"]').value     || '';
             const desc     = block.querySelector('[data-type="desc"]').value    || '';
-
+ 
             endInput.disabled = isCurrent;
             const endValue = isCurrent ? "Present" : (endInput.value || "End");
-
+ 
             const points = desc.split('\n')
                 .filter(item => item.trim() !== "")
                 .map(item => `<li style="margin-left:15px;">${item.trim()}</li>`)
                 .join("");
-
+ 
             previewLi.innerHTML = `
             <div style="font-weight:bold;font-size:11px;">${title}</div>
             <div style="font-size:9px;color:#555;">${company}${loc ? ', ' + loc : ''} | ${start} - ${endValue}</div>
             <ul style="margin:0;padding:0;font-size:9px;">${points}</ul>`;
         };
-
+ 
         block.querySelectorAll('input, textarea').forEach(el => el.addEventListener('input', updatePreview));
-
+ 
         block.querySelector('.remove-btn').addEventListener('click', () => {
             block.remove();
             previewLi?.remove();
             if (addBtn) addBtn.style.display = '';
         });
     };
-
+ 
     // --- 2. TƏHSİL ---
     const addEducationBlock = () => {
         const educationList = document.getElementById('educationList');
         const sendList1     = document.getElementById('sendList1');
         if (!educationList) return;
         if (educationList.querySelectorAll('.experience-block').length >= 2) return;
-
+ 
         const block = document.createElement('div');
         block.className = 'experience-block';
         block.innerHTML = `
@@ -401,15 +401,15 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="input-row">
             <input type="text" placeholder="University/ School" data-type="uni">
         </div>`;
-
+ 
         educationList.appendChild(block);
-
+ 
         if (educationList.querySelectorAll('.experience-block').length >= 2) {
             addEducationBtn.style.display = 'none';
         }
-
+ 
         const previewLi = createPreviewLi(sendList1);
-
+ 
         const updatePreview = () => {
             if (!previewLi) return;
             const degree   = block.querySelector('[data-type="degree"]').value    || 'Degree';
@@ -417,24 +417,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const start    = block.querySelector('[data-type="edu-start"]').value || 'Start';
             const endInput = block.querySelector('[data-type="edu-end"]');
             const isCurrent = block.querySelector('[data-type="edu-current"]').checked;
-
+ 
             endInput.disabled = isCurrent;
             const endValue = isCurrent ? "Present" : (endInput.value || "End");
-
+ 
             previewLi.innerHTML = `
             <div style="font-weight:bold;font-size:11px;">${degree}</div>
             <div style="font-size:9px;">${uni} | ${start} - ${endValue}</div>`;
         };
-
+ 
         block.querySelectorAll('input').forEach(el => el.addEventListener('input', updatePreview));
-
+ 
         block.querySelector('.remove-btn').addEventListener('click', () => {
             block.remove();
             previewLi?.remove();
             addEducationBtn.style.display = '';
         });
     };
-
+ 
     // --- 3. SERTİFİKATLAR ---
     const createCertRow = () => {
         if (!certList) return;
@@ -449,22 +449,22 @@ document.addEventListener('DOMContentLoaded', () => {
         certList.appendChild(div);
         div.querySelector('.step5-remove-btn').addEventListener('click', () => div.remove());
     };
-
+ 
     // --- 4. DİLLƏR ---
     const proficiencyBox  = document.querySelector('.step5-proficiency-box');
     let lastFocusedInput  = null;
-
+ 
     const updateLangPreview = () => {
         const langPreviewUl = document.getElementById('itemListLanguage_right1');
         if (!langPreviewUl || !langList) return;
-
+ 
         langPreviewUl.innerHTML = "";
-
+ 
         langList.querySelectorAll('.step5-input-row').forEach(row => {
             const input    = row.querySelector('input');
             const langName = input ? input.value.trim() : "";
             const level    = input ? (input.dataset.level || "") : "";
-
+ 
             if (langName) {
                 const li = document.createElement('li');
                 li.style.listStyle   = "none";
@@ -475,11 +475,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
-
+ 
     const createLangRow = () => {
         if (!langList) return;
         if (proficiencyBox) proficiencyBox.classList.remove('show');
-
+ 
         const div = document.createElement('div');
         div.className = 'step5-input-row';
         div.innerHTML = `
@@ -488,10 +488,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <input type="text" placeholder="Language (e.g., English)" data-level="">
             </div>
             <button class="step5-remove-btn" type="button">×</button>`;
-
+ 
         langList.appendChild(div);
         const input = div.querySelector('input');
-
+ 
         input.addEventListener('focus', () => {
             lastFocusedInput = input;
             if (proficiencyBox) proficiencyBox.classList.add('show');
@@ -500,9 +500,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.classList.toggle('active', btn.textContent === currentLevel);
             });
         });
-
+ 
         input.addEventListener('input', updateLangPreview);
-
+ 
         div.querySelector('.step5-remove-btn').addEventListener('click', () => {
             if (lastFocusedInput === input) {
                 lastFocusedInput = null;
@@ -512,7 +512,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateLangPreview();
         });
     };
-
+ 
     document.querySelectorAll('.step5-level-chip').forEach(btn => {
         btn.addEventListener('click', (e) => {
             if (!lastFocusedInput) {
@@ -525,14 +525,14 @@ document.addEventListener('DOMContentLoaded', () => {
             updateLangPreview();
         });
     });
-
+ 
     // Window-a export et (storage.js üçün lazımdır)
     window.addExperienceBlock = addExperienceBlock;
     window.addEducationBlock  = addEducationBlock;
     window.createCertRow      = createCertRow;
     window.createLangRow      = createLangRow;
     window.updateLangPreview  = updateLangPreview;
-
+ 
     // --- 5. STEP KEÇİDLƏRİ ---
     backToStep2Btn?.addEventListener('click', () => {
         step3Container.classList.add('hidden');
@@ -540,7 +540,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainForm.classList.remove('hidden');
         mainForm.style.display = 'block';
     });
-
+ 
     toStep3Btn?.addEventListener('click', () => {
         mainForm.classList.add('hidden');
         if (step3Container) {
@@ -549,7 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (experienceList && experienceList.children.length === 0) addExperienceBlock();
     });
-
+ 
     toStep4Btn?.addEventListener('click', () => {
         step3Container.classList.add('hidden');
         step3Container.style.display = 'none';
@@ -559,7 +559,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (educationList && educationList.children.length === 0) addEducationBlock();
     });
-
+ 
     toStep5Btn?.addEventListener('click', () => {
         step4Container.classList.add('hidden');
         step4Container.style.display = 'none';
@@ -570,27 +570,27 @@ document.addEventListener('DOMContentLoaded', () => {
         if (certList && certList.children.length === 0) { for (let i = 0; i < 3; i++) createCertRow(); }
         if (langList && langList.children.length === 0) createLangRow();
     });
-
+ 
     backToStep3Btn?.addEventListener('click', () => {
         step4Container.classList.add('hidden');
         step4Container.style.display = 'none';
         step3Container.classList.remove('hidden');
         step3Container.style.display = 'block';
     });
-
+ 
     backToStep4Btn?.addEventListener('click', () => {
         step5Container.classList.add('hidden');
         step5Container.style.display = 'none';
         step4Container.classList.remove('hidden');
         step4Container.style.display = 'block';
     });
-
+ 
     addExperienceBtn?.addEventListener('click', addExperienceBlock);
     addEducationBtn?.addEventListener('click', addEducationBlock);
     addCertBtn?.addEventListener('click', createCertRow);
     addLangBtn?.addEventListener('click', createLangRow);
     document.getElementById('step5-addLanguageBtn')?.addEventListener('click', createLangRow);
-
+ 
     // --- 6. DELEGATION ---
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('step5-level-chip')) {
@@ -605,35 +605,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-
+ 
     // --- 7. FINISH CV ---
     const handleFinishCV = () => {
         const cvPreview = document.querySelector('.section_right');
         const step5     = document.getElementById('step5');
-
+ 
         cvPreview?.classList.add('active');
         step5?.classList.add('hidden');
         if (step5) step5.style.display = 'none';
-
+ 
         const safeSet = (id, targetId) => {
             const el     = document.getElementById(id);
             const target = document.getElementById(targetId);
             if (el && target) target.value = el.value;
         };
-
+ 
         const firstName = document.getElementById('firstName')?.value || '';
         const lastName  = document.getElementById('lastName')?.value  || '';
         const fullName  = `${firstName} ${lastName}`.trim();
-
+ 
         const nameToCV = document.getElementById('nameToCV');
         if (nameToCV) nameToCV.value = fullName;
-
+ 
         safeSet('phoneNumber',    'phoneR');
         safeSet('emailAddress',   'emailR');
         safeSet('locationCity',   'adressR');
         safeSet('profSummary',    'autoTextarea');
         safeSet('linkedinProfile','linkedinR');
-
+ 
         const adjustAutoTextareaHeight = (element) => {
             if (!element) return;
             element.style.height = 'auto';
@@ -644,12 +644,12 @@ document.addEventListener('DOMContentLoaded', () => {
             txtArea.addEventListener('input', (e) => adjustAutoTextareaHeight(e.target));
             adjustAutoTextareaHeight(txtArea);
         }
-
+ 
         // Sertifikatlar
         const certInputContainer = document.getElementById('step5-certificateList');
         const cvCertList         = document.getElementById('itemListCertificate_right1');
         const certSection        = document.getElementById('certificate');
-
+ 
         if (certInputContainer && cvCertList) {
             let certHtml = '';
             certInputContainer.querySelectorAll('input').forEach(input => {
@@ -658,7 +658,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cvCertList.innerHTML = certHtml;
             if (certSection) certSection.style.display = certHtml ? 'block' : 'none';
         }
-
+ 
         // Skills
         const skillsVal  = skillsInput?.value;
         const cvSkillList = document.getElementById('entry_list');
@@ -667,56 +667,100 @@ document.addEventListener('DOMContentLoaded', () => {
                 .map(s => s.trim() ? `<li>${s.trim()}</li>` : '')
                 .join('');
         }
-
+ 
         saveToStorage();
+ 
+        // ── Boş section-ları gizlət ──────────────────────────────────────
+        const autoHideSections = () => {
+ 
+            // 1. Skills
+            const skillList      = document.getElementById('entry_list');
+            const skillContainer = document.getElementById('skills_container');
+            if (skillContainer) {
+                const hasSkills = skillList && skillList.querySelectorAll('li').length > 0;
+                skillContainer.style.display = hasSkills ? '' : 'none';
+            }
+ 
+            // 2. Certificate
+            const certListEl    = document.getElementById('itemListCertificate_right1');
+            const certSectionEl = document.getElementById('certificate');
+            if (certSectionEl) {
+                const hasCerts = certListEl && certListEl.querySelectorAll('li').length > 0;
+                certSectionEl.style.display = hasCerts ? '' : 'none';
+            }
+ 
+            // 3. Language
+            const langListEl  = document.getElementById('itemListLanguage_right1');
+            const langSection = document.getElementById('language');
+            if (langSection) {
+                const hasLangs = langListEl && langListEl.querySelectorAll('li').length > 0;
+                langSection.style.display = hasLangs ? '' : 'none';
+            }
+ 
+            // 4. Experience
+            const sendListEl = document.getElementById('sendList');
+            const expSection = document.getElementById('sendedParts');
+            if (expSection) {
+                const hasExp = sendListEl && sendListEl.querySelectorAll('li').length > 0;
+                expSection.style.display = hasExp ? '' : 'none';
+            }
+ 
+            // 5. Education
+            const sendList1El = document.getElementById('sendList1');
+            const eduSection  = document.getElementById('rightSideContainer');
+            if (eduSection) {
+                const hasEdu = sendList1El && sendList1El.querySelectorAll('li').length > 0;
+                eduSection.style.display = hasEdu ? '' : 'none';
+            }
+        };
+ 
+        autoHideSections();
+        // ─────────────────────────────────────────────────────────────────
+ 
         cvPreview?.scrollIntoView({ behavior: 'smooth' });
     };
-
+ 
     document.getElementById('finishBtn')?.addEventListener('click', handleFinishCV);
-
+ 
     // --- PDF YÜKLƏMƏ ---
-const downloadCVAsPDF = () => {
-    const element = document.querySelector(".section_right_top");
-    
-    // PDF üçün konfiqurasiya
-    const opt = {
-        margin: 0,
-        filename: `CV_Export_${Date.now()}.pdf`,
-        image: { type: 'jpeg', quality: 1 },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        html2canvas: {
-            scale: 2,
-            useCORS: true,
-            // SİRLİ HİSSƏ: PDF üçün xüsusi CSS-i burada aktivləşdiririk
-            onclone: (clonedDoc) => {
-                const cvBase = clonedDoc.querySelector(".section_right_top");
-                
-                // Mürəkkəb dairəvi formaları düzbucaqlı ilə əvəz edirik ki, PDF "sınmasın"
-                cvBase.style.width = '210mm';
-                cvBase.style.height = '297mm';
-                cvBase.style.padding = '10mm';
-                cvBase.style.background = '#ffffff'; // Ağ fon dizaynı təmizləyir
-                
-                // Sənin CV-ndəki "dairəvi" elementləri tapıb onları düzbucaqlıya çeviririk
-                const complexElements = clonedDoc.querySelectorAll('.dairəvi_klas_adın'); // Buraya dairəvi div-inin klas adını yaz
-                complexElements.forEach(el => {
-                    el.style.borderRadius = '0';
-                    el.style.clipPath = 'none';
-                });
+    const downloadCVAsPDF = () => {
+        const element = document.querySelector(".section_right_top");
+ 
+        const opt = {
+            margin: 0,
+            filename: `CV_Export_${Date.now()}.pdf`,
+            image: { type: 'jpeg', quality: 1 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+            html2canvas: {
+                scale: 2,
+                useCORS: true,
+                onclone: (clonedDoc) => {
+                    const cvBase = clonedDoc.querySelector(".section_right_top");
+ 
+                    cvBase.style.width      = '210mm';
+                    cvBase.style.height     = '297mm';
+                    cvBase.style.padding    = '10mm';
+                    cvBase.style.background = '#ffffff';
+ 
+                    const complexElements = clonedDoc.querySelectorAll('.dairəvi_klas_adın');
+                    complexElements.forEach(el => {
+                        el.style.borderRadius = '0';
+                        el.style.clipPath     = 'none';
+                    });
+                }
             }
-        }
+        };
+ 
+        html2pdf().set(opt).from(element).save();
     };
-
-    html2pdf().set(opt).from(element).save();
-};
-
+ 
     document.getElementById("download-pdf")?.addEventListener("click", downloadCVAsPDF);
-    
-      // --- 9. STORAGE LOAD & AUTO-SAVE ---
+ 
+    // --- 9. STORAGE LOAD & AUTO-SAVE ---
     loadFromStorage();
  
     document.addEventListener('input', (e) => {
-        if (isLoading) return;  // Load zamanı save etmə
+        if (isLoading) return;
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
             saveToStorage();
         }
