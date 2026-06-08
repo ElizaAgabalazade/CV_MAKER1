@@ -7,7 +7,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="./js/storage.js" defer></script>
     <script src="./js/create_2.js" defer></script>
+    <script src="./js/17.js" defer></script>
     <link rel="stylesheet" href="./css/create_resume_17.css" />
     <title>Resume 17</title>
 
@@ -35,10 +37,9 @@
         </div>
     </header>
     <section>
-
         <div class="container">
             <div class="header">
-                <button class="back-btn">← Back</button>
+                <button class="back-btn"><a href="./Resume_templates.html">← Back</a></button>
                 <span class="step-indicator">Step 2/5</span>
             </div>
             <div class="card">
@@ -140,8 +141,9 @@
                 </div>
 
                 <div class="action-buttons">
+                    <input type="file" id="qrFileInput" style="display: none;" accept="image/*">
+                    <button type="button" class="btn-qr btn-upload" id="uploadQrBtn">Upload</button>
                     <button type="button" class="btn-qr btn-remove" id="removeQrBtn">Remove</button>
-                    <button type="button" class="btn-qr btn-save" id="saveQrBtn">Save</button>
                 </div>
 
             </div>
@@ -248,7 +250,8 @@
             </div>
         </div>
         <div class="section_right">
-            <div class="cv-container">
+            <h3>Document preview & Editor</h3>
+            <div class="section_right_top">
                 <div class="main-content">
                     <div class="work_experience_right" id="sendedParts">
                         <h2 id="sendTitle">Professional Experience</h2>
@@ -309,6 +312,11 @@
                         <ul id="itemListLanguage_right1"></ul>
                     </div>
                 </div>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-change" id="changeFormat"><a href="./Resume_templates.html">Change
+                        Format</a></button>
+                <button id="download-pdf" class="btn btn-download">Download</button>
             </div>
         </div>
     </section>
