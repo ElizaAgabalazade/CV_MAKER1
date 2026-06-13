@@ -114,6 +114,15 @@ header {
 
 }
 
+/* RIGHT */
+.section_right {
+    display: none;
+}
+
+.section_right.active {
+    display: block !important;
+}
+
 .section_right h3 {
     font-size: 30px;
     margin-left: -11rem;

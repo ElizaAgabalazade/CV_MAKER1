@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="./css/Create_resume_29.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="./js/storage.js" defer></script>
+    <script src="./js/create_2.js" defer></script>
+
+    <title>Studio classic</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_left">
+            <div><a href="./index.html" class="site_name">●MakeCV</a></div>
+        </div>
+        <div class="header_middle">
+            <nav>
+                <ul>
+                    <li><a href="./update_cv.html">Resume Templates </a></li>
+                    <li><a href="./CoverLetter.html">Cover Letter</a> </li>
+                    <li><a href="./ATS.html">ATS Checker</a> </li>
+                    <li><a href="./PaymentMethods.html">Payment </a></li>
+                    <li>About us</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header_right">
+            <a href="register.html" class="sign_part">Sign Up</a>
+            <a href="/Log_in.html" class="log_in">Log In</a>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+          <div class="header">
+                <button class="back-btn"><a href="./Resume_templates.html">← Back</a></button>
+                <span class="step-indicator">Step 2/5</span>
+            </div>
+            <div class="card">
+                <h3>Personal Info</h3>
+                <div class="form-row">
+                    <div class="input-group-container">
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label for="firstName">First Name<span>*</span></label>
+                                <input type="text" id="firstName" placeholder="Ingrid">
+                            </div>
+                            <div class="input-group">
+                                <label for="phoneNumber">Phone Number<span>*</span></label>
+                                <input type="text" id="phoneNumber" placeholder="+1 234 567 890">
+                            </div>
+                            <div class="input-group">
+                                <label for="lastName">Last Name<span>*</span></label>
+                                <input type="text" id="lastName" placeholder="Schneider">
+                            </div>
+                            <div class="input-group">
+                                <label for="linkedinProfile">LinkedIn Profile</label>
+                                <input type="text" id="linkedinProfile" placeholder="linkedin.com/in/...">
+                            </div>
+                            <div class="input-group">
+                                <label for="emailAddress">Email<span>*</span></label>
+                                <input type="email" id="emailAddress" placeholder="Ingridschneider@exp.com">
+                            </div>
+                            <div class="input-group">
+                                <label for="locationCity">Location</label>
+                                <input type="text" id="locationCity" placeholder="Anywhere, Anywhere Street 123">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-actions">
+                        <div class="action-box" id="openPhotoBtn">
+                            <div class="icon">📷</div>
+                            <p>Add photo<span>*</span></p>
+                        </div>
+                        <div class="action-box" id="openQrBoxBtn">
+                            <div class="icon" id="qr-icon-placeholder">🔳</div>
+                            <p>Add QR Data</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Professional Summary</h3>
+                <textarea id="profSummary"
+                    placeholder="Briefly describe your professional background, key strengths, and your aim here"></textarea>
+            </div>
+            <div class="footer">
+                <button class="next-btn">Next</button>
+            </div>
+        </div>
+
+
+        <div id="photoModal" class="modal-overlay">
+            <div class="modal-card">
+                <h3>Add Profile Photo</h3>
+                <div class="upload-area" id="photoDropZone">
+                    <img id="imagePreview" src="" alt=""
+                        style="display: none; width: 100%; height: 100%; object-fit: contain; position: absolute;">
+                    <div class="plus-btn" id="uploadPlaceholder">+</div>
+                    <p>Click to upload photo</p>
+                    <input type="file" id="photoInput" accept="image/*" style="display: none;">
+                </div>
+                <div class="zoom-container">
+                    <div class="zoom-labels">
+                        <span>Zoom</span>
+                        <span id="zoomPercent">100%</span>
+                    </div>
+                    <input type="range" id="zoomRange" min="1" max="100" value="20" class="slider">
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn change-btn" id="changePhotoBtn">Change</button>
+                    <button class="btn save-btn" id="savePhotoBtn">Save</button>
+                </div>
+            </div>
+
+            <button class="confirm-btn">Confirm</button>
+        </div>
+        <div id="qrModal" class="qr-modal-overlay">
+            <div class="qr-card">
+                <h3>Add QR Code Data</h3>
+
+                <div class="info-text">
+                    <span class="star-icon">★</span>
+                    <p>You can add your social media, portfolio, website, digital business card info and other essential
+                        data with QR code!</p>
+                </div>
+
+                <div class="qr-display-area">
+                    <div id="qrcode">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=Behance" alt="QR Code"
+                            id="qrImage">
+                        <p class="qr-label">Behance Portfolio</p>
+                    </div>
+                </div>
+
+                 <div class="action-buttons">
+                    <input type="file" id="qrFileInput" style="display: none;" accept="image/*">
+                    <button type="button" class="btn-qr btn-upload" id="uploadQrBtn">Upload</button>
+                    <button type="button" class="btn-qr btn-remove" id="removeQrBtn">Remove</button>
+                </div>
+
+            </div>
+            <div class="confirm-wrapper">
+                <button type="button" class="confirm-btn-qr" id="confirmQrBtn">Confirm</button>
+            </div>
+        </div>
+
+        <div id="step3" class="container hidden">
+            <div class="header">
+                <button class="back-btn" id="backToStep2">← Back</button>
+                <span class="step-indicator">Step 3/5</span>
+            </div>
+            <div class="card">
+                <h3>Work Experience</h3>
+                <div id="experienceList">
+                </div>
+                <button id="addExperienceBtn" class="add-exp-btn">+ Add Experience</button>
+            </div>
+            <div class="footer">
+                <button class="next-btn" id="toStep4">Next</button>
+            </div>
+        </div>
+        <div id="step4" class="container hidden">
+            <div class="header">
+                <button class="back-btn" id="backToStep3">← Back</button>
+                <span class="step-indicator">Step 4/5</span>
+            </div>
+            <div class="card">
+                <h3>Education</h3>
+                <div id="educationList">
+                </div>
+
+                <button id="addEducationBtn" class="add-exp-btn">+ Add Education</button>
+            </div>
+
+            <div class="footer">
+                <button class="next-btn" id="toStep5">Next</button>
+            </div>
+        </div>
+
+        <div id="step5" class="container hidden">
+            <div class="header">
+                <button class="back-btn" id="backToStep4">← Back</button>
+                <span class="step-indicator">Step 5/5</span>
+            </div>
+
+            <div class="step5-card">
+                <h3 class="step5-card-title">Key Skills</h3>
+                <textarea id="skillsInput" class="step5-textarea"
+                    placeholder="Add skills (e.g., React, UI Design, Problem Solving)"></textarea>
+
+                <div class="step5-suggestions-label">Quick Add Suggestions:</div>
+                <div class="step5-tags-container">
+                    <span class="step5-tag">Teamwork</span>
+                    <span class="step5-tag">Leadership</span>
+                    <span class="step5-tag">Problem Solving</span>
+                    <span class="step5-tag">Communication</span>
+                    <span class="step5-tag">Agile</span>
+                    <span class="step5-tag">Time Management</span>
+                    <span class="step5-tag">Project Management</span>
+                    <span class="step5-tag">Adaptability</span>
+                    <span class="step5-tag">Critical Thinking</span>
+                    <span class="step5-tag">Public Speaking</span>
+                    <span class="step5-tag">Digital Marketing</span>
+                    <span class="step5-tag">UI/UX Design</span>
+                    <span class="step5-tag">SQL</span>
+                    <span class="step5-tag">Microsoft Office</span>
+                </div>
+            </div>
+
+            <div class="step5-card">
+                <h3 class="step5-card-title">Certificates</h3>
+                <div id="step5-certificateList">
+                </div>
+                <div class="step5-add-wrapper">
+                    <button id="step5-addCertificateBtn" class="step5-add-btn">+ Add</button>
+                </div>
+            </div>
+
+            <div class="step5-card">
+                <h3 class="step5-card-title">Languages</h3>
+                <div class="step5-languages-layout">
+                    <div id="step5-languageList" class="step5-language-inputs">
+                    </div>
+
+                    <div class="step5-proficiency-box">
+                        <h4 class="step5-proficiency-title">Proficiency Level</h4>
+                        <div class="step5-level-grid">
+                            <button class="step5-level-chip">Beginner</button>
+                            <button class="step5-level-chip">Intermediate</button>
+                            <button class="step5-level-chip">Advanced</button>
+                            <button class="step5-level-chip">Native</button>
+                        </div>
+                        <p class="step5-proficiency-hint">Select level for each language*</p>
+                    </div>
+                </div>
+                <div class="step5-add-wrapper">
+                    <button id="step5-addLanguageBtn" class="step5-add-btn">+ Add</button>
+                </div>
+            </div>
+
+            <div class="step5-footer">
+                <button class="step5-done-btn" id="finishBtn">Done</button>
+            </div>
+        </div>
+
+
+        <div class="section_right">
+            <h3>Document preview & Editor</h3>
+            <div class="section_right_top">
+                <div class="section_1">
+                    <div class="section_right_side_2">
+                        <p id="aboutMeTextarea"> Profile</p>
+                        <textarea class="outputArea" id="autoTextarea" placeholder=" Write here"></textarea>
+                    </div>
+                    <div id="qr-result-container">
+                        <div id="qr-cv-display"> </div>
+                    </div>
+                    <div id="rightSideContainer" class="rightSideContainer">
+                        <h2 id="sendTitle1">Education</h2>
+                        <form method="post">
+                            <ul class="place" id="sendList1"></ul>
+                        </form>
+                    </div>
+                    <div class="section_right_top_certificat" id="certificate">
+                        <h2>Certificate</h2>
+                        <ul id="itemListCertificate_right1"></ul>
+                    </div>
+                </div>
+                <div class="section_right_r_side_r" id="uploadBox2">
+                    <form class="names">
+                        <input type="text" id="nameToCV" class="input_h1" placeholder="LARS BERGSTRÖM">
+                    </form>
+
+                    <form method="post" class="name_form">
+                        <textarea name="" id="phoneR" placeholder="+123-456-7890"
+                            pattern="^\+[0-9]{1,3}\s?[0-9]{1,14}(\s[0-9]{1,13})?$"
+                            title="Daxil edin: +<CountryCode> <PhoneNumber>" class="phoneR" required></textarea>
+                        <textarea id="emailR" name="email" placeholder="hello@greatsite.com" required
+                            class="emailR"></textarea>
+                        <textarea id="adressR" name="address" placeholder="123 Anywhere St.,Any City" required
+                            class="adressR"></textarea>
+                        <textarea id="linkedinR" name="linkedin" placeholder="linkedin.com/in/username"
+                            class="linkedinR"></textarea>
+                    </form>
+                </div>
+                <div class="section_right_r_side">
+                    <div class="section_right_top_right">
+                        <div class="work_experience_right" id="sendedParts">
+                            <h2 id="sendTitle">EXPERIENCE</h2>
+                            <form method="post">
+                                <ul class="place" id="sendList"></ul>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="section_right_top_language" id="language">
+                        <h2>Language</h2>
+                        <ul id="itemListLanguage_right1"></ul>
+                    </div>
+                    <div class="section_right_top_skills" id="skills_container">
+                        <h2>Skills</h2>
+                        <ul id="entry_list" class="skill_list_right"></ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-change" id="changeFormat"><a href="./Resume_templates.html">Change Format</a></button>
+                <button id="download-pdf" class="btn btn-download">Download</button>
+            </div>
+        </div>
+<!-- end -->
+
+    </section>
+</body>
+
+</html>

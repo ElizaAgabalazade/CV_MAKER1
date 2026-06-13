@@ -26,15 +26,10 @@ body{
 }
 .header_left {
     width: 15%;
-    /* background: red; */
     position: relative;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* .header_middle nav li a{
-    text-decoration: none;
-
-} */
 
 .site_name {
     position: absolute;
@@ -46,14 +41,12 @@ body{
     text-decoration: none;
     color: #000;
     cursor: pointer;
-       /* font-family: 'Montserrat', sans-serif; */
 }
 
 
 .header_middle {
     width: 60%;
     padding-left: 1rem;
-    /* background: violet; */
 }
 
 .header_middle ul {
@@ -86,7 +79,6 @@ body{
     margin-left: 15px;
     text-decoration: none;
     font-weight: bold;
-    /* background: blue; */
 }
 
 .header_right a {

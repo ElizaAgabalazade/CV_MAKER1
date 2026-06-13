@@ -851,13 +851,11 @@ h3 {
     background-image: url('../img/UpdateCv/bg34.png');
     background-repeat: no-repeat;
     background-position: right bottom;
-    background-size: 90% 100%;
+    background-size: 95% 100%;
     display: flex;
-    margin-top: 7rem;
-    min-height: 15rem;
-    height: auto;
     padding-left: 7rem;
     flex-direction: column;
+    align-items: flex-end;
     box-sizing: border-box;
 }
 
@@ -951,7 +949,7 @@ h3 {
 }
 
 .bg_34_2 img {
-    width: 220px;
+    width: 200px;
 }
 
 .overlay_inputs {
@@ -1238,376 +1236,57 @@ h3 {
 }
 
 @media(max-width:1024px) {
-
+    .section_right {
+        margin-top: -11rem;
+    }
 
     .section_right h3 {
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
-    }
-
-    .section_top_bottom_side_right {
-        background-image: url('../img/UpdateCv/bg34.png') !important;
-        background-size: 103% 100% !important;
-        background-position: right bottom !important;
-        background-repeat: no-repeat !important;
-        width: 30rem !important;
-        height: 20rem;
-        margin-top: 6rem;
-        margin-left: 10rem;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-end !important;
-        -webkit-print-color-adjust: exact !important;
-    }
-
-    #preview2 {
-        width: 40%;
-        height: fit-content;
-        margin: 0 4rem;
-        top: 12rem;
-        border-radius: 50px;
     }
 }
 
 @media(max-width:912px) {
-
+    .section_right {
+        margin-top: -11rem;
+    }
 
     .section_right h3 {
-        margin-top: 2rem;
-        margin-left: -2rem;
+        margin-top: 1rem;
+        margin-left: -6rem;
         margin-bottom: 1rem;
     }
 }
 
 @media(max-width:853px) {
+    .section_right {
+        margin-top: -11rem;
+    }
 
     .section_right h3 {
-        margin-top: 2rem;
-        margin-left: 0rem;
+        margin-top: 1rem;
+        margin-left: -6rem;
         margin-bottom: 1rem;
     }
-
-    .input_h1 {
-        left: 2rem;
-    }
-
-    .name_form {
-        top: 29rem;
-        left: 10rem;
-    }
-
-    .bg_34_left {
-        height: auto;
-    }
-     .section_top_bottom_side_right {
-        background-image: url('../img/UpdateCv/bg34.png') !important;
-        background-size: 103% 100% !important;
-        background-position: right bottom !important;
-        background-repeat: no-repeat !important;
-        width: 30rem !important;
-        height: 20rem;
-        margin-top: 13rem;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-end !important;
-        -webkit-print-color-adjust: exact !important;
-    }
-
-    #preview2 {
-        width: 40%;
-        height: fit-content;
-        margin: 0 4rem;
-        top: 19rem;
-        border-radius: 50px;
-    }
 }
 
-@media(max-width:768px) {
-
-    .section_right h3 {
-        margin-top: 2rem;
-        margin-left: 2rem;
-        margin-bottom: 1rem;
-        font-size: 26px;
-    }
-
-    .section_right_top {
-        width: 95%;
-        margin: 0 auto;
-    }
-         .section_top_bottom_side_right {
-     width: 28rem !important;
-   }
-}
-
-
-
-@media screen and (max-width: 600px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 10px;
-    }
-
-    .header_left {
+@media (max-width: 600px) {
+    .container {
         width: 100%;
-        height: 60px;
+        justify-items: center;
     }
 
-    .site_name {
-        position: static;
-        padding-top: 15px;
-        display: block;
-    }
-
-    .header_middle {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .header_middle ul {
-        justify-content: center;
-        margin-top: 10px;
-        gap: 0.5rem;
-    }
-
-    .header_middle ul li {
-        font-size: 14px;
-        margin-left: 0.5rem;
-    }
-
-    .header_right {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 10px;
-        justify-content: center;
-    }
-  .section_right {
-        width: 100vw;
-        margin-top: 2rem;
-        min-height: auto;
-    }
-
-    .section_right h3 {
-        font-size: 20px;
-        margin-left: 0;
-        margin-top: 7rem;
-    }
-
-    /* --- TOP BLOCK --- */
-    .section_right_top {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-
-    .section_right_top_left {
-        width: 22%;
-        min-width: 22%;
-    }
-
-    .section_right_top_right {
-        width: 78%;
-    }
-
-    /* --- BOTTOM SIDE --- */
-    .section_top_bottom_side {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-
-    .section_top_bottom_side_left {
-        width: 20%;
-        min-width: 20%;
-    }
-
- 
-.section_top_bottom_side {
-    width: 80%;
-    background: #000;
-    background-image: url('../img/UpdateCv/bg34.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    margin-top: 7rem;
-    min-height: 15rem;
-    height: auto;
-    margin-left: 18rem;
-    flex-direction: column;
-}
-.section_top_bottom_side_right{
-    width: 100%;
-}
-
-    /* --- INPUT H1 (şaquli yazı qorunur) --- */
-    .input_h1,
-    .input_h1::placeholder {
-        font-size: 11px;
-        left: 0.2rem;
-        width: 45%;
-    }
-
-    /* --- RIGHT R SIDE (foto) --- */
-    .section_right_r_side_r {
-        width: 100%;
-        position: relative;
-    }
-
-    .section_right_r_side_r img {
-        width: 28%;
-        position: absolute;
-        bottom: -8rem;
-        left: 0.5rem;
-        border-radius: 30px;
-    }
-
-    /* --- NAME FORM --- */
-    .name_form {
-        width: 80%;
-        margin-top: 1rem;
-        font-size: 11px;
-    }
-
-    /* --- BG 34 LEFT --- */
-    .bg_34_left {
-        min-height: 180px;
-        height: auto;
-        margin-top: 0.5rem;
-    }
-
-    /* --- BG 34 2 (overlay şəkil) --- */
-    .bg_34_2 img {
-        width: 12rem;
-    }
-
-    .overlay_inputs {
-        top: 2rem;
-        left: 3px;
-        height: 5.5rem;
-    }
-
-    .overlay_inputs textarea,
-    .overlay_inputs textarea::placeholder {
-        font-size: 7px;
-        width: 92%;
-    }
-
-    /* --- RIGHT SIDE 2 (əsas content) --- */
-    .section_right_side_2 {
-        width: 95%;
-        margin-left: 0.3rem;
-        margin-top: 1rem;
-    }
-
-    #autoTextarea {
-        font-size: 7px;
-        padding-left: 0.25rem;
-        min-height: 70px;
-    }
-
-    .section_right_side_2 .outputArea {
-        width: 100%;
-        font-size: 7px;
-        height: 40px;
-    }
-
-    .section_right_side_2 p {
-        font-size: 10px;
-        padding: 3px;
-    }
-
-    /* --- CONTAINERS --- */
-    #certificate,
-    #rightSideContainer,
-    #language {
-        width: 100%;
-        text-align: right;
-        padding-right: 0.5rem;
-        box-sizing: border-box;
-    }
-
-    .rightSideContainer h2,
-    .section_right_top_certificat h2,
-    .section_right_top_skills h2,
-    .section_right_top_language h2 {
-        font-size: 10px;
-        padding: 3px;
-    }
-
-    .section_right_top_language {
-        width: 100%;
-        margin-top: 0.5rem;
-    }
-
-    /* --- LISTS --- */
-    #sendList,
-    #entry_list {
-        font-size: 7px;
-        margin-left: 0.5rem;
-    }
-
-    #sendList1 li,
-    #itemListLanguage_right1 li,
-    #itemListCertificate_right1 li {
-        font-size: 7px;
-    }
-
-    #sendList1,
-    #itemListLanguage_right1,
-    #itemListCertificate_right1 {
-        padding-bottom: 0.5rem;
-    }
-
-    /* --- PREVIEW (profil foto) --- */
-    #preview2 {
-        width: 100%;
-        margin: 0 1.5rem;
-        top: 15rem;
-        border-radius: 30px;
-    }
-
-    /* --- WORK / EDUCATION FORMS --- */
-    .work_experience_right {
-        gap: 6px;
-        margin-top: 8px;
-    }
-
-    .work_experience_right h2,
-    .right_skills h2,
-    .language_right h2 {
-        margin-top: 0.5rem;
-    }
-
-    .work_experience_right form,
-    .education_right form {
-        flex-wrap: wrap;
-        margin-top: 0.5rem;
-        margin-left: 0.3rem;
-    }
-
-    #sendTitle1.active {
+    .header {
         width: 80%;
     }
 
-    #sendedParts h2 {
-        font-size: 10px;
+    .card {
+        width: 70%;
     }
-     .button-container{
-        margin: 0 auto;
-        margin-top: 1rem;
-    }
+
 }
-@media(max-width: 480px) {
-    .section_right h3{
-        margin-top: 6rem;
-    }
-    .button-container{
-        margin: 0 auto;
-        margin-top: 1rem;
-    }
-}
+
 @media(max-width: 430px) {
     header {
         flex-direction: column;
@@ -1662,18 +1341,6 @@ h3 {
         margin-top: 10rem;
         font-size: 22px;
         text-align: center;
-    }
-
-    .namesTop {
-        width: 100%;
-        margin-right: 2rem;
-    }
-
-    .input_h1 {
-        width: 100%;
-        min-height: 100%;
-        height: auto;
-
     }
 
     .info_input {
@@ -1736,7 +1403,6 @@ h3 {
         width: 50%;
     }
 }
-
 
 .html2pdf__container .section_right_top {
     width: 210mm !important;

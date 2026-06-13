@@ -790,7 +790,6 @@ h3 {
 }
 
 
-
 /* RIGHT */
 
 .section_right {
@@ -803,11 +802,15 @@ h3 {
     margin-top: 3rem;
     font-family: 'Montserrat', sans-serif;
 
-
 }
 
 .section_right.active {
     display: flex !important;
+}
+
+.section_right h3 {
+    font-size: 30px;
+    margin-left: -11rem;
 }
 
 .section_right_top {
@@ -818,24 +821,8 @@ h3 {
     display: flex;
     flex-direction: column;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-    position: relative;
 
 }
-
-.section_right h3 {
-    font-size: 30px;
-    margin-left: -11rem;
-}
-
-
-.section_right_top_corner {
-    margin: 0.5rem 0;
-    background: #FFF9E3;
-}
-
-
 
 #fileInput2 {
     display: none;
@@ -843,14 +830,12 @@ h3 {
 
 
 .section_right_l_side {
-    display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
     width: 90%;
     min-height: 70%;
     height: auto;
     margin: 1rem;
-    position: relative;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
 
 }
@@ -858,18 +843,33 @@ h3 {
 
 
 .section_right_l_side_header_left {
-    width: 50%;
-
+    width: 100%;
+    position: relative;
 }
 
+.seperate {
+    position: absolute;
+    width: 140px;
+    height: 3px;
+    right: 0;
+    top: 2rem;
+    background: #000;
+}
 
+.info_input {
+    width: 100%;
+    display: flex;
+}
+
+.top_form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+}
 
 .top_form input {
-    width: 15rem;
-    margin-left: -3rem;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    border: none;
+    width: 100%;
     border: none;
     outline: none;
 
@@ -879,7 +879,7 @@ h3 {
 .input_h1::placeholder {
     font-size: 15px;
     font-weight: 700;
-    width: 100rem;
+    width: 10rem;
 }
 
 
@@ -888,11 +888,6 @@ h3 {
     width: 50%;
     display: flex;
     flex-direction: column;
-}
-
-.info_input {
-    width: 100%;
-    display: flex;
 }
 
 .phoneR,
@@ -924,6 +919,7 @@ h3 {
     margin-left: 1rem;
     margin-right: auto;
 
+
 }
 
 
@@ -937,13 +933,6 @@ h3 {
     outline: none;
     resize: none;
 
-}
-
-#preview2 {
-    width: 60%;
-    height: fit-content;
-    margin: 10px 5px;
-    border-radius: 50px;
 }
 
 .section_right_r_side {
@@ -977,7 +966,12 @@ h3 {
 .section_right_side_2 .outputArea,
 .section_right_side_2 .outputArea::placeholder {
     resize: none;
+    display: block !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    overflow: hidden !important;
     height: auto;
+    min-height: 100px;
     border: none;
     outline: none;
     font-size: 8px;
@@ -987,13 +981,12 @@ h3 {
 }
 
 
+
 .section_right_r_side_r {
     width: 50%;
 }
 
-#language_form_range {
-    display: none;
-}
+
 
 #itemListLanguage_right1 {
     list-style: none;
@@ -1005,45 +998,46 @@ h3 {
     font-size: 8px;
 }
 
+.bothcerstificate_language {
+    display: flex;
+    width: 100%;
+}
 
+.section_right_top_language,
+.section_right_top_certificat {
+    width: 50%;
+    border: none;
+    outline: none;
+    margin-left: 0.5rem;
+    font-size: 12px !important;
+    height: auto;
+
+}
 
 .section_right_top_skills,
 .work_experience_right,
 .rightSideContainer {
     border: none;
     outline: none;
-    padding-left: 1rem;
+    margin-left: 0.5rem;
     width: 80%;
+    font-size: 12px !important;
     height: auto;
 }
 
-#entry_list {
+#itemListCertificate_right1 {
     list-style-type: none;
 }
 
-#entry_list li {
+#itemListCertificate_right1 li {
     font-size: 8px;
 }
 
-
-
-.language_form_range {
-    display: flex;
-    width: 90%;
+.section_right_top_skills i {
+    margin: 0.5rem 1rem;
 }
 
-.language_input {
-    border: none;
-    outline: none;
-    width: 48%;
-    font-size: 10px;
 
-}
-
-.language_input::placeholder {
-    font-size: 10px;
-
-}
 
 
 #sendedParts h2 {
@@ -1059,33 +1053,12 @@ h3 {
     font-size: 8px;
 }
 
-#itemListCertificate_right1 {
-    list-style-type: none;
-}
-
-#itemListCertificate_right1 li {
-    font-size: 8px;
-}
-
 .rightSideContainer {
     margin-bottom: 5px;
 }
 
-.cert-lang {
-    display: flex;
-    width: 100%;
-}
 
-.section_right_top_certificat,
-.section_right_top_language {
-    width: 50%;
-    border: none;
-    outline: none;
-    padding-left: 1rem;
-    height: auto;
-}
-
-.section_right_top_language .section_right_side_2 .outputArea::placeholder {
+.section_right_side_2 .outputArea::placeholder {
     color: #000000;
     font-size: 10px;
 
@@ -1096,8 +1069,9 @@ h3 {
 }
 
 
+
 #sendTitle1 {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #sendList1 {
@@ -1106,50 +1080,46 @@ h3 {
     margin: 0.5rem;
 }
 
+#entry_list {
+    list-style-type: none;
+}
+
+#entry_list li {
+    font-size: 8px;
+}
+
 .skill_list_right {
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 5px 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
 }
 
+.language-item {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    gap: 6px;
+    font-size: 8px;
+    border-radius: 6px;
+
+}
 
 .section_right_top_certificat h2,
 .section_right_top_language h2,
 .rightSideContainer h2,
 .work_experience_right h2,
 .section_right_top_skills h2 {
+    flex-direction: column;
     margin-top: 1rem;
     font-size: 12px;
 }
 
 
 
-
-.section__right_l_side_1 {
-    display: flex;
-}
-
-.section_right_l_side_header {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-
-}
-
-.section__right_l_side_1 {
-    width: 50%;
-}
-
-.section_right_l_side_header img {
-    margin-left: 2rem;
-    margin-top: 1rem;
-    width: 70%;
-    margin-bottom: 1rem;
-    border-radius: 80px;
-}
 
 .work_experience_right {
     display: flex;
@@ -1166,6 +1136,7 @@ h3 {
     margin-left: 1rem;
 
 }
+
 
 
 .button-container {
@@ -1189,7 +1160,6 @@ h3 {
     color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-
 
 .btn-change {
     background: linear-gradient(to right, #5C17FC, #0D5EFF);
@@ -1216,6 +1186,7 @@ h3 {
     transform: translateY(-1px);
 }
 
+
 @media(max-width:1280px) {
 
     .name_form,
@@ -1229,7 +1200,7 @@ h3 {
 
 
     .section_right h3 {
-        margin-top: 2rem;
+        margin-top: -2rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
     }
@@ -1239,7 +1210,7 @@ h3 {
 
 
     .section_right h3 {
-        margin-top: 2rem;
+        margin-top: -2rem;
         margin-left: -2rem;
         margin-bottom: 1rem;
     }
@@ -1594,6 +1565,7 @@ h3 {
 
 
 
+
 .html2pdf__container {
     width: 210mm !important;
     height: auto !important;
@@ -1706,7 +1678,7 @@ div.outputArea {
 }
 .html2pdf__container #qr-result-container {
     position: absolute;
-    right: 1rem;
-    top: 32rem;
+    right: 4rem;
+    top: 50rem;
 }
 /* end */

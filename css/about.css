@@ -432,7 +432,7 @@ header {
       background:#18346D;
       color:#fff;
       padding:60px 8% 30px;
-      margin-top: 200px;
+      margin-top: 900px;
     }
 
    .footer_bottom{
@@ -490,6 +490,24 @@ header {
       font-size:13px;
       color:#c5cee5;
     }
+
+    .bimg{
+  position:absolute;
+ left: 745px;
+  top: 100px;
+  z-index:1;
+  pointer-events:none;
+  }
+
+  .bimage{
+    width: 1000px;
+    height: 620px;
+ position:absolute;
+ left: 290px;
+ top: 4700px;
+  z-index:1;
+  pointer-events:none;
+  }
 /* =========================
    RESPONSIVE
 ========================= */

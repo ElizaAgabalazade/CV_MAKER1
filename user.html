@@ -1,55 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Personal Details</title>
-<link rel="icon" href="img/logo.png">
-<link rel="stylesheet" href="./css/user.css">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Details</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="./css/user.css">
+    <script src="./js/user.js" defer> </script>
 
 </head>
 
 <body>
 
 
-<div class="personaldetail">
 
-    <div class="name">Lavinia Vicolvioni</div><br>
-    <div class="email">laviniavicolvioni555@gmail.com</div>
+    <header>
+        <div class="header_left">
+            <div><a href="./index.html" class="site_name">●MakeCV</a></div>
+        </div>
+        <div class="header_middle">
+            <nav>
+                <ul>
+                    <li><a href="./Resume_templates.html">Resume Templates </a></li>
+                    <li><a href="./CoverLetter.html">Cover Letter</a> </li>
+                    <li><a href="./ATS.html">ATS Checker</a> </li>
+                    <li><a href="./PaymentMethods.html">Payment </a></li>
+                    <li><a href="./about.html">About Us </a></li>
 
-    <div class="profile-box">
-  <div class="badge">Professional Member</div>
-  <div class="joined">Joined in April 2026</div>
-</div>
-<div id="threeDotDiv">⋮</div>
+                </ul>
+            </nav>
+        </div>
+        <div class="header_right">
+            <a href="register.html" class="sign_part">Sign Up</a>
+            <a href="/Log_in.html" class="log_in">Log In</a>
+        </div>
+    </header>
 
-<div id="dropdownMenu" class="dropdown hidden">
-    <div class="item"><a href="documents.html">Documents</a></div>
-    <div class="item"><a href="password.html">Password</a></div>
-    <div class="item"><a href="settings.html">Settings</a></div>
-    <div class="item"><a href="bilings.html">Billings</a></div>
-</div>
-</div>
+    <div class="page-bg">
 
+        <div class="profile-card">
+            <div class="profile-left">
+                <div class="avatar-wrap">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/80?img=47" alt="Avatar" />
+                    </div>
+                    <div class="avatar-badge">&#10003;</div>
+                </div>
+                <div class="profile-info">
+                    <p class="profile-name" id="username">Lavinia Vicolvioni</p>
+                    <p class="profile-email" id="username">
+                        <span class="email-icon">&#9993;</span>
+                        laviniavicolvioni555@gmail.com
+                    </p>
+                </div>
+            </div>
+            <div class="profile-right">
+                <span class="badge badge-green">Professional Member</span>
+                <span class="badge badge-blue">Joined in April 2026</span>
 
+                <div class="menu-wrap">
+                    <span class="menu-btn" id="menuBtn">&#8942;</span>
+                    <div class="dropdown" id="dropdown">
+                        <ul>
+                            <li><span class="menu-icon" id="personal_details"></span> Personal Info <span
+                                    class="arrow">›</span></li>
+                            <li><span class="menu-icon" id="documents"></span> Documents <span class="arrow">›</span>
+                            </li>
+                            <li><span class="menu-icon" id="password"></span> Password <span class="arrow">›</span></li>
+                            <li><span class="menu-icon" id="settings"></span> Settings <span class="arrow">›</span></li>
+                            <li><span class="menu-icon" id="billing"></span> Billing <span class="arrow">›</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="details-card" id="details-card">
+            <div class="details-header">
+                <p class="details-title">Personal Details</p>
+                <button class="edit-btn">Edit Profile</button>
+            </div>
 
-<div class="container">
-    <div class="header">
-        <h1>Personal Details</h1>
-        <button class="btn" onclick="toggleEdit()">Edit Profile</button>
+            <div class="field-group">
+                <label class="field-label">Full Name</label>
+                <input class="field-input" type="text" placeholder="Lavinia Vicolvioni" />
+            </div>
+            <div class="field-group">
+                <label class="field-label">Phone Number</label>
+                <input class="field-input" type="text" placeholder="+0123456789" />
+            </div>
+            <div class="field-group last">
+                <label class="field-label">Email Address</label>
+                <input class="field-input" type="text" placeholder="laviniavicolvioni555@gmail.com" />
+            </div>
+        </div>
+        <div class="documents-card" id="documents-card">
+            <div class="docs-column">
+                <h2 class="docs-title">Your Docs</h2>
+                <ul class="docs-list" id="your-docs-list">
+                </ul>
+            </div>
+
+            <div class="docs-column">
+                <h2 class="docs-title">Drafts</h2>
+                <ul class="docs-list" id="drafts-list">
+                </ul>
+            </div>
+
+        </div>
     </div>
 
-    <label>Full Name</label>
-    <input id="name" type="text" disabled />
-
-    <label>Phone Number</label>
-    <input id="phone" type="text" disabled />
-
-    <label>Email Address</label>
-    <input id="email" type="text" disabled />
-</div>
 
 
 
@@ -57,9 +118,7 @@
 
 
 
-
-
-<script src="/js/user.js"> </script>
 
 </body>
+
 </html>

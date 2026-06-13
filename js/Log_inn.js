@@ -44,7 +44,7 @@ loginForm.addEventListener("submit", async (e) => {
             payload.email;
 
         resultEl.innerText = userName;
-        window.location.href = "/"; // на главную страницу сайта
+        window.location.href = "/";
 
     } catch (err) {
         console.error(err);
@@ -52,7 +52,7 @@ loginForm.addEventListener("submit", async (e) => {
     }
 });
 
-// 🔽 Arrow function
+//  Arrow function
 const getPayloadFromToken = (token) => {
     const payloadPart = token.split(".")[1];
 

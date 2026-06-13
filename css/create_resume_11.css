@@ -144,8 +144,7 @@ header {
     cursor: pointer;
     font-size: 16px;
 }
-
-.back-btn a {
+.back-btn a{
     text-decoration: none;
     color: #444;
 
@@ -343,7 +342,6 @@ h3 {
 }
 
 #imagePreview {
-
     object-fit: contain;
     width: 100%;
     height: 100%;
@@ -474,7 +472,7 @@ h3 {
 #qr-result-container {
     position: absolute;
     right: 15rem;
-    top: 1rem;
+    top: 4rem;
     width: 30px;
     z-index: 11111;
 }
@@ -552,7 +550,6 @@ h3 {
     padding: 12px 60px;
     letter-spacing: 1px;
 }
-
 .action-buttons {
     display: flex;
     margin-left: 10rem;
@@ -665,7 +662,7 @@ h3 {
     transform: translateY(-2px);
 }
 
-/* Step 5 Konteyneri və Skroll Ayarı */
+/* Step 5 Ümumi Fonu */
 .step5-main-container {
     background-color: #f0f4f8;
     padding: 20px;
@@ -825,7 +822,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     width: 210mm;
-    margin-top: 7rem;
+    margin-top: 6rem;
     height: 70vh;
     position: relative;
     flex-direction: column;
@@ -841,7 +838,6 @@ h3 {
 .section_right h3 {
     font-size: 30px;
     margin-left: -11rem;
-    margin-top: 14rem;
 }
 
 .section_right_top {
@@ -862,7 +858,6 @@ h3 {
     height: auto;
     background: #FFFF;
 }
-
 
 
 
@@ -915,7 +910,6 @@ h3 {
 
 .section_right_r_side {
     width: 50%;
-    height: 100%;
 }
 
 .section_right_r_side_inside,
@@ -927,8 +921,7 @@ h3 {
     padding: 40px;
     width: 100%;
     height: auto;
-    min-height: 200px;
-    position: relative;
+    min-height: 100mm;
 }
 
 #peview2 {
@@ -951,12 +944,10 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75%;
+    width: 100%;
     top: 50%;
-    left: 15rem;
-    transform: translate(-50%, -50%);
-    margin-left: 10rem;
-
+    margin-left:5rem;
+    transform: translate(50%, -50%);
     background: #D9D9D9;
     border: none;
     gap: 10px;
@@ -1007,6 +998,7 @@ h3 {
     height: auto !important;
     max-height: none !important;
     overflow: visible !important;
+
 }
 
 .section_right_side_2 .outputArea,
@@ -1026,9 +1018,6 @@ h3 {
     height: auto;
     min-height: 100px;
 }
-
-
-
 
 .section_right_side_2 p {
     padding: 5px;
@@ -1083,13 +1072,10 @@ h3 {
 }
 
 
-
-#preview2 {
-    width: 90%;
-    height: fit-content;
-    margin: 10px 5px;
-
+.section_right_top_skills i {
+    margin: 0.5rem 1rem;
 }
+
 
 
 #sendedParts h2 {
@@ -1256,7 +1242,6 @@ h3 {
 .btn:active {
     transform: translateY(-1px);
 }
-
 
 
 @media(max-width:1280px) {
@@ -1613,8 +1598,6 @@ h3 {
         width: 50%;
     }
 }
-
-
 .html2pdf__container {
     width: 210mm !important;
     height: 297mm !important;
@@ -1652,19 +1635,23 @@ h3 {
     background: #FFFFFF !important;
 }
 
+
 .html2pdf__container .section_right_r_side_inside {
     background-image: url("../img/UpdateCv/bacground_Resume_11-13.png") !important;
     background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
+
     width: 100% !important;
-    height: 650px !important;
-    min-height: unset !important;
+    height: 50% !important;
+    min-height: 50% !important;
+
     position: relative !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     padding: 0 !important;
+    box-sizing: border-box !important;
 }
 
 .html2pdf__container .name_form {
@@ -1673,12 +1660,10 @@ h3 {
     left: auto !important;
     transform: none !important;
     width: 80% !important;
-    height: 50%;
-    padding-bottom: 5rem;
+    height: auto !important;
     margin: 0 auto !important;
     display: block !important;
     background: #D9D9D9 !important;
-
 }
 
 .html2pdf__container .input_h1 {
@@ -1691,21 +1676,15 @@ h3 {
     border: none !important;
     overflow: visible !important;
     height: auto !important;
-    min-height: 30px;
+    min-height: 30px !important;
 }
 
-.html2pdf__container .section_right_r_side_r {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    margin: 15px 0 !important;
-}
-
+.html2pdf__container .section_right_r_side_r,
 .html2pdf__container #preview2 {
-    width: 80% !important;
-    height: fit-content !important;
-    border-radius: 4px !important;
-    object-fit: cover !important;
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .html2pdf__container .info_input {
@@ -1713,16 +1692,18 @@ h3 {
     background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
+
     width: 100% !important;
-    height: auto !important;
-    min-height: 450px !important;
+    height: 50% !important;
+    min-height: 50% !important;
+
     position: relative !important;
-    margin-top: auto !important;
+    margin-top: 0 !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     box-sizing: border-box !important;
-
+    padding: 20px !important;
 }
 
 .html2pdf__container .top_form {
@@ -1735,8 +1716,9 @@ h3 {
     background: #D9D9D9 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 8px !important;
+    gap: 12px !important;
 }
+
 
 .html2pdf__container #phoneR,
 .html2pdf__container #emailR,
@@ -1749,25 +1731,20 @@ h3 {
     opacity: 1 !important;
     appearance: none !important;
     -webkit-appearance: none !important;
-
     border: none !important;
     outline: none !important;
     background: transparent !important;
     background-color: transparent !important;
-
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-
     color: #000000 !important;
     font-size: 11px !important;
     font-family: inherit !important;
     text-align: center !important;
-
     white-space: pre-wrap !important;
     word-break: break-word !important;
     overflow: visible !important;
-
     text-shadow: none !important;
     -webkit-text-fill-color: #000000 !important;
 }
@@ -1784,9 +1761,7 @@ h3 {
     padding-bottom: 3px !important;
     margin-bottom: 8px !important;
 }
-
-.html2pdf__container #qr-result-container {
+.html2pdf__container #qr-result-container{
     right: 23rem;
 }
-
 /* end */

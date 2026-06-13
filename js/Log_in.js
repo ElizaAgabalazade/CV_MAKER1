@@ -1,52 +1,23 @@
-const baseURL = "https://api.makecv.pro:5001/api/Auth/login";
+async function login(event) {
+  event.preventDefault();
 
-const form = document.getElementById("loginForm");
-const emailInput = document.getElementById("emailInput");
-const passwordInput = document.getElementById("passwordInput");
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-// Serverə POST ilə login göndərən funksiya
-const sendLogin = async () => {
-  const email = emailInput.value.trim();
-  const password = passwordInput.value;
+  const response = await fetch("https://api.makecv.pro:5001/api/Auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ email, password })
+  });
 
-  if (!email || !password) {
-    alert("❌ Zəhmət olmasa email və parolu doldurun!");
-    return;
+  const data = await response.json();
+
+  if (response.ok) {
+    localStorage.setItem("token", data.token);
+    window.location.href = "/index.html";
+  } else {
+    alert("Login failed");
   }
-
-  try {
-    const res = await fetch(baseURL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password
-      })
-    });
-
-    const data = await res.json();
-    console.log("Server cavabı:", data);
-
-    if (res.ok) {
-      alert("✅ Login uğurlu! Xoş gəldin " + email);
-
-      localStorage.setItem("googleUser", email);
-
-      // Burada yönləndirmə edə bilərsən
-      // window.location.href = "AI_cv.html";
-    } else {
-      alert("❌ Xəta: " + (data.message || "Email və ya parol səhvdir!"));
-    }
-  } catch (err) {
-    console.error("Server xətası:", err);
-    alert("❌ Server xətası!");
-  }
-};
-
-// Form submit olunduqda işləyir
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  sendLogin();
-});
+}
