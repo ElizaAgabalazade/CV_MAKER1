@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/user.css">
+        <link rel="stylesheet" href="./css/user.css"/>
     <script src="./js/user.js" defer> </script>
 
 </head>
@@ -51,8 +51,8 @@
                     <div class="avatar-badge">&#10003;</div>
                 </div>
                 <div class="profile-info">
-                    <p class="profile-name" id="username">Lavinia Vicolvioni</p>
-                    <p class="profile-email" id="username">
+                    <p class="profile-name" id="user-name">Lavinia Vicolvioni</p>
+                    <p class="profile-email" id="user-email">
                         <span class="email-icon">&#9993;</span>
                         laviniavicolvioni555@gmail.com
                     </p>
@@ -152,7 +152,7 @@
             <div class="settings-item">
                 <div class="settings-left">
                     <div class="settings-icon-wrap">
-                        <img src="./img/User_html/image.png" alt=""class="ti ti-language">
+                        <img src="./img/User_html/language.png" alt="" class="ti ti-language">
                     </div>
                     <div class="settings-text">
                         <p class="settings-title">Language</p>
@@ -191,7 +191,7 @@
             <div class="settings-item">
                 <div class="settings-left">
                     <div>
-                        <img src="./img/User_html/sign_out.png" alt=""class="settings-icon-wrap ">
+                        <img src="./img/User_html/sign_out.png" alt="" class="settings-icon-wrap ">
                     </div>
                     <div class="settings-text">
                         <p class="settings-title">Sign Out</p>
@@ -206,7 +206,7 @@
             <div class="settings-item danger-item">
                 <div class="settings-left">
                     <div class="settings-icon-wrap danger-icon">
-                        <img src="./img/User_html/bin.png" alt=""class="ti ti-trash">
+                        <img src="./img/User_html/bin.png" alt="" class="ti ti-trash">
                     </div>
                     <div class="settings-text">
                         <p class="settings-title danger-text">Delete Account</p>
@@ -215,7 +215,7 @@
                     </div>
                 </div>
                 <div class="settings-right">
-                    <button class="btn-delete" id="delete-btn">Delete</button>
+                    <button class="btn-delete" id="delete-account-btn">Delete</button>
                 </div>
                 <div class="modal-overlay" id="delete-modal">
                     <div class="modal-box">
@@ -231,16 +231,276 @@
                         </div>
                     </div>
                 </div>
-            
+
             </div>
 
         </div>
+        <div class="billing-section" id="billing-card">
+
+            <!-- Subscription Plan -->
+            <div class="b-card">
+                <p class="b-card-title">Subscription Plan</p>
+                <p class="b-card-sub">Manage your current plan and billing cycle.</p>
+                <div class="b-row">
+                    <div class="b-plan-info">
+                        <div class="b-plan-icon"><img src="./img/User_html/dollar.png" alt=""
+                                class="ti ti-currency-dollar"></div>
+                        <div>
+                            <div class="b-plan-name">Starter</div>
+                            <div class="b-plan-detail">$9/per month / Next billing on June 2026</div>
+                        </div>
+                    </div>
+                    <div class="b-btn-group">
+                        <button class="b-btn b-btn-blue" id="bChangePlanBtn">Change Plan</button>
+                        <button class="b-btn b-btn-red" id="bCancelPlanBtn">Cancel Plan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="b-card">
+                <p class="b-card-title">Payment Method</p>
+                <div class="b-row">
+                    <div class="b-visa-row">
+                        <div class="b-visa-box"><img src="./img/User_html/visa.png" alt=""></div>
+                        <div>
+                            <div class="b-visa-name">Visa ending in 4242</div>
+                            <div class="b-visa-exp">EXPIRES 12/28</div>
+                        </div>
+                    </div>
+                    <div class="b-btn-group">
+                        <button class="b-btn b-btn-blue" id="bChangeCardBtn">Change Card</button>
+                        <button class="b-btn b-btn-ghost" id="bChangeMethodBtn">Change Method</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Billing History -->
+            <div class="b-card">
+                <p class="b-card-title">Billing History</p>
+                <table class="b-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Invoice</th>
+                        </tr>
+                    </thead>
+                    <tbody id="billing-history-body">
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- ====== OVERLAYS ====== -->
+
+        <!-- Change Plan -->
+        <div class="b-overlay" id="bChangePlanOverlay">
+            <div class="plans-modal">
+                <div class="plans-header">
+                    <h2 class="plans-title">Plans</h2>
+                    <button class="plans-back" id="plansBackBtn">Back to Billing</button>
+                </div>
+                <div class="plans-grid">
+
+                    <div class="plan-card" data-plan="basic">
+                        <div class="plan-price"><span class="plan-amount">$9</span> Basic</div>
+                        <div class="plan-cycle">per month/billed annual</div>
+                        <div class="plan-tagline">Build a smart, job-ready resume</div>
+                        <ul class="plan-features">
+                            <li>ATS Score + instant improvement suggestions</li>
+                            <li>Real-time AI feedback (content & structure)</li>
+                            <li>AI Cover Letter generator</li>
+                            <li>Modern, recruiter-friendly templates</li>
+                            <li>Import & upgrade your existing CV</li>
+                            <li>Personal QR code (link your portfolio, LinkedIn, more)</li>
+                            <li>PDF export</li>
+                        </ul>
+                        <button class="plan-btn plan-btn-select">Select</button>
+                    </div>
+
+                    <div class="plan-card" data-plan="professional">
+                        <!-- <div class="plan-card">Most Popular</div> -->
+                        <div class="plan-price"><span class="plan-amount">$19</span> Professional</div>
+                        <div class="plan-cycle">per month/billed annual</div>
+                        <div class="plan-tagline">Stand out in every application</div>
+                        <ul class="plan-features">
+                            <li>Everything in Starter +</li>
+                            <li>Advanced ATS optimization (job-specific insights)</li>
+                            <li>AI rewriting (stronger bullet points, impact-driven wording)</li>
+                            <li>Job description matching</li>
+                            <li>Personalized cover letters per application</li>
+                            <li>Custom QR content (dynamic updates to your links & portfolio)</li>
+                        </ul>
+                        <button class="plan-btn plan-btn-select">Select</button>
+                    </div>
+
+                    <div class="plan-card" data-plan="elite">
+                        <div class="plan-price"><span class="plan-amount">$39</span> Elite</div>
+                        <div class="plan-cycle">per month/billed annual</div>
+                        <div class="plan-tagline">Your AI-powered career advantage</div>
+                        <ul class="plan-features">
+                            <li>Everything in Professional +</li>
+                            <li>Deep AI analysis (industry-level optimization)</li>
+                            <li>Section-by-section resume scoring insights</li>
+                            <li>Unlimited tailored CV & cover letter generation</li>
+                            <li>Priority AI processing</li>
+                            <li>Early access to new features</li>
+                        </ul>
+                        <button class="plan-btn plan-btn-select">Select</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Cancel Plan -->
+        <div class="b-overlay" id="bCancelPlanOverlay">
+            <div class="b-modal">
+                <button class="b-modal-close" onclick="bCloseAll()"><i class="ti ti-x"></i></button>
+                <img src="./img/User_html/redBin.png" alt="trash" style="width: 40px; margin-bottom: 15px;">
+                <h3>Cancel Subscription?</h3>
+                <p>You will <b>lose access</b> to premium features at the end of the current cycle.</p>
+                <div class="b-modal-actions">
+                    <button class="b-btn b-btn-ghost" onclick="bCloseAll()">Keep plan</button>
+                    <button class="b-btn b-btn-red" id="confirmCancelBtn">Yes, cancel</button>
+                </div>
+            </div>
+        </div>
+        <!-- Change Card -->
+        <div class="b-overlay" id="bChangeCardOverlay">
+            <div class="cc-modal">
+                <button class="b-modal-close" onclick="bCloseAll()"><i class="ti ti-x"></i></button>
+                <button class="cc-back" onclick="bCloseAll()">Back to Billing</button>
+
+                <h3 class="cc-title">Change Card</h3>
+
+                <div class="cc-card">
+                    <div class="cc-field">
+                        <label class="cc-label">Cardholder Name</label>
+                        <input class="cc-input" type="text" id="cardholderName" placeholder="Lavinia Vicolvioni" />
+                    </div>
+
+                    <div class="cc-field">
+                        <label class="cc-label">Card Number</label>
+                        <input class="cc-input" type="text" id="cardNumber" placeholder="0000 0000 0000 0000"
+                            maxlength="19" />
+                    </div>
+
+                    <div class="cc-row">
+                        <div class="cc-field">
+                            <label class="cc-label">Expiry Date</label>
+                            <input class="cc-input" type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5" />
+                        </div>
+                        <div class="cc-field">
+                            <label class="cc-label">CVC/CVV</label>
+                            <input class="cc-input" type="text" id="cardCvc" placeholder="012" maxlength="4" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cc-actions">
+                    <button class="b-btn b-btn-ghost" onclick="bCloseAll()">Cancel</button>
+                    <button class="b-btn b-btn-blue" onclick="bSaveCard()">Save Card</button>
+                </div>
+            </div>
+        </div>
+        <!-- Change Method -->
+        <div class="b-overlay" id="bChangeMethodOverlay">
+            <div class="cm-modal">
+                <button class="cm-back" onclick="bCloseAll()">Back to Billing</button>
+
+                <h3 class="cm-title">Change Payment Method</h3>
+                <p class="cm-sub">Choose how you'd like to pay for your subscription</p>
+
+                <div class="cm-list">
+
+                    <label class="cm-opt">
+                        <div class="cm-opt-left">
+                            <div class="cm-icon"><img src="./img/User_html/visa.png" alt="card" /></div>
+                            <div>
+                                <div class="cm-opt-name">Card</div>
+                                <div class="cm-opt-desc">VISA/ Mastercard/ AMEX</div>
+                            </div>
+                        </div>
+                        <input class="cm-radio" type="radio" name="payMethod" value="card" checked />
+                    </label>
+
+                    <label class="cm-opt">
+                        <div class="cm-opt-left">
+                            <div class="cm-icon cm-icon-paypal">P</div>
+                            <div>
+                                <div class="cm-opt-name">PayPal</div>
+                                <div class="cm-opt-desc">Fast and secure checkout</div>
+                            </div>
+                        </div>
+                        <input class="cm-radio" type="radio" name="payMethod" value="paypal" />
+                    </label>
+
+                    <label class="cm-opt">
+                        <div class="cm-opt-left">
+                            <div class="cm-icon cm-icon-apple">&#63743;</div>
+                            <div>
+                                <div class="cm-opt-name">Apple Pay</div>
+                                <div class="cm-opt-desc">Pay with your Apple account</div>
+                            </div>
+                        </div>
+                        <input class="cm-radio" type="radio" name="payMethod" value="applepay" />
+                    </label>
+
+                    <label class="cm-opt">
+                        <div class="cm-opt-left">
+                            <div class="cm-icon cm-icon-google">G</div>
+                            <div>
+                                <div class="cm-opt-name">Google Pay</div>
+                                <div class="cm-opt-desc">Pay with your Google account</div>
+                            </div>
+                        </div>
+                        <input class="cm-radio" type="radio" name="payMethod" value="googlepay" />
+                    </label>
+
+                    <label class="cm-opt">
+                        <div class="cm-opt-left">
+                            <div class="cm-icon cm-icon-klarna">K.</div>
+                            <div>
+                                <div class="cm-opt-name">Klarna</div>
+                                <div class="cm-opt-desc">Pay with Klarna</div>
+                            </div>
+                        </div>
+                        <input class="cm-radio" type="radio" name="payMethod" value="klarna" />
+                    </label>
+
+                    <label class="cm-opt">
+                        <div class="cm-opt-left">
+                            <div class="cm-icon cm-icon-bank">&#127963;</div>
+                            <div>
+                                <div class="cm-opt-name">Bank Transfer</div>
+                                <div class="cm-opt-desc">SEPA/ SWIFT/ Wire Transfer</div>
+                            </div>
+                        </div>
+                        <input class="cm-radio" type="radio" name="payMethod" value="bank" />
+                    </label>
+
+                </div>
+
+                <div class="cm-actions">
+                    <button class="b-btn b-btn-ghost" onclick="bCloseAll()">Cancel</button>
+                    <button class="b-btn b-btn-blue" onclick="bConfirmMethod()">Next</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
     </div>
 
 
 
 
-
+<!-- end -->
 
 
 
