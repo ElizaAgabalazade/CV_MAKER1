@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="./js/fill_data.js" defer></script>
+    <link rel="stylesheet" href="./css/updateCV_40.css " />
+    <title>Minimalism 01</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_left">
+            <div><a href="./index.html" class="site_name">●MakeCV</a></div>
+        </div>
+        <div class="header_middle">
+            <nav>
+                <ul>
+                    <li><a href="./update_cv.html">Resume Templates </a></li>
+                    <li><a href="./CoverLetter.html">Cover Letter</a> </li>
+                    <li><a href="./ATS.html">ATS Checker</a> </li>
+                    <li><a href="./PaymentMethods.html">Payment </a></li>
+                    <li>About us</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header_right">
+            <a href="register.html" class="sign_part">Sign Up</a>
+            <a href="/Log_in.html" class="log_in">Log In</a>
+        </div>
+    </header>
+    <section>
+     
+        <div class="section_right">
+            <h3>Document preview & Editor</h3>
+            <div class="section_right_top">
+                <div class="section_right_top_header">
+                    <div class="section_right_r_side_r">
+                        <div class="header-info">
+                            <textarea id="nameToCV" class="input_h1" placeholder="Sofia Moretti"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="contact-info">
+                        <textarea id="phoneR" placeholder="+44 7700 900777"></textarea>
+                        <textarea id="emailR" placeholder="s.moretti@legalbrand.co.uk"></textarea>
+                        <textarea id="adressR" placeholder="London, UK"></textarea>
+                        <textarea id="linkedinR" placeholder="linkedin.com/in/sofiamoretti"></textarea>
+                        <div id="qr-result-container">
+                            <div id="qr-cv-display"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="section_right_side_2">
+                    <p id="aboutMeTextarea"> Summary</p>
+                    <textarea class="outputArea" id="autoTextarea" placeholder="Write here..."></textarea>
+                </div>
+
+                <div class="work_experience_right" id="sendedParts">
+                    <h2 id="sendTitle">Work Experience</h2>
+                    <form method="post">
+                        <ul class="place" id="sendList">
+                        </ul>
+                    </form>
+                </div>
+                <div class="certificate_skills">
+                    <div class="section_right_top_certificat" id="certificate">
+                        <h2>Certifications</h2>
+                        <ul id="itemListCertificate_right1"></ul>
+                    </div>
+                    <div class="section_right_top_skills" id="skills_container">
+                        <h2>Skills</h2>
+                        <ul id="entry_list" class="skill_list_right"></ul>
+                    </div>
+                </div>
+                <div class="education_language">
+                    <div id="rightSideContainer" class="rightSideContainer">
+                        <h2 id="sendTitle1">Education</h2>
+                        <form method="post">
+                            <ul class="place" id="sendList1"></ul>
+                        </form>
+                    </div>
+                    <div class="section_right_top_language" id="language">
+                        <h2>Language</h2>
+                        <ul id="itemListLanguage_right1"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-change" id="changeFormat"><a href="./Resume_templates.html">Change
+                        Format</a></button>
+                <button id="download-pdf" class="btn btn-download">Download</button>
+            </div>
+
+
+
+
+
+
+        </div>
+</body>
+
+</html>

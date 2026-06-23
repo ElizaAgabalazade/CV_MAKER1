@@ -19,6 +19,7 @@
     <header>
         <div class="header_left">
             <div><a href="./index.html" class="site_name">●MakeCV</a></div>
+            <button id="adminBtn">A</button>
         </div>
         <div class="header_middle">
             <nav>
@@ -46,7 +47,32 @@
 
 
 
+<script>
+document.getElementById("adminBtn").addEventListener("click", function () {
 
+    let username = prompt("İstifadəçi adını daxil edin:");
+
+    if(username === null) return;
+
+    let password = prompt("Şifrəni daxil edin:");
+
+    if(password === null) return;
+
+    if(username === "admin" && password === "makecvpro"){
+        window.location.href = "dashboard.html";
+    } else {
+        alert("İstifadəçi adı və ya şifrə yanlışdır!");
+    }
+
+});
+</script>
+
+
+
+
+
+
+    
 
 <div class="container">
             <div class="qr">Add QR info</div>

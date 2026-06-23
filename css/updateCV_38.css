@@ -114,11 +114,8 @@ header {
 
 }
 
-.section_right {
-    display: none;
-}
 
-.section_right.active {
+.section_right {
     display: block !important;
     width: 210mm;
 }

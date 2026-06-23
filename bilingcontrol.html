@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="bilingcontrol.css">
+<link rel="icon" href="img/logo.png">
+</head>
+<body>
+
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Admin panel dashboard showing user metrics, revenue, template usage, and ATS engagement statistics</h2>
+
+<div class="dash">
+  <aside class="sidebar">
+<img src="icon.png" alt="icon"
+     style="width:25px; height:25px; position:absolute; left:0px; top:19px;">    <div class="sidebar-logo"><i class="ti ti-layout-dashboard" aria-hidden="true"></i> Admin Panel</div>
+    <div class="nav-item active" data-page="dashboard.html" onclick="window.location.href='dashboard.html'"><i class="ti ti-home" aria-hidden="true"></i>Dashboard</div>    
+    <div class="nav-item" data-page="usercontrol.html" onclick="window.location.href='usercontrol.html'"><i class="ti ti-users" aria-hidden="true"></i>User Control</div>
+    <div class="nav-item" data-page="bilingcontrol.html" onclick="window.location.href='bilingcontrol.html'" ><i class="ti ti-credit-card" aria-hidden="true"></i> Billing Control</div>
+    <div class="nav-item" data-page="templateengine.html" onclick="window.location.href='templateengine.html'"><i class="ti ti-template" aria-hidden="true"></i> Template Engine</div>
+    <div class="nav-item" data-page="airulesinputs.html" onclick="window.location.href='airulesinputs.html'"><i class="ti ti-brain" aria-hidden="true"></i> AI Rules & Inputs</div>
+    <div class="nav-item" data-page="cmssupport.html" onclick="window.location.href='cmssupport.html'"><i class="ti ti-headset" aria-hidden="true"></i> CMS & Support</div>
+    <div class="nav-item" data-page="logsmarketing.html" onclick="window.location.href='logsmarketing.html'"><i class="ti ti-speakerphone" aria-hidden="true"></i> Logs & Marketing</div>
+  </aside>
+
+  
+
+
+<main class="main">
+    <h1 class="main-header">Subscription &amp; Billing Controls</h1>
+
+    <div class="tab-bar" id="tabBar">
+      <button class="tab-btn active" data-target="subscription">Subscription Packages</button>
+      <button class="tab-btn" data-target="billing">Billing Control &amp; Operations</button>
+    </div>
+
+    <!-- Panel: Subscription Packages -->
+    <section class="content-panel active" id="panel-subscription">
+      <h2 class="section-title">Subscription Packages</h2>
+
+      <div class="pricing-grid">
+
+        <!-- Basic -->
+        <div class="plan-card">
+          <h3 class="plan-name">Basic</h3>
+          <div class="plan-price-row">
+            <span class="plan-price">$9</span>
+          </div>
+          <span class="plan-cycle">per month/billed annual</span>
+          <p class="plan-tagline">Build a smart, job-ready resume</p>
+          <ul class="plan-features">
+            <li class="accent">ATS Score + instant improvement suggestions</li>
+            <li>Real-time AI feedback (content &amp; structure)</li>
+            <li class="accent">AI Cover Letter generator</li>
+            <li>Modern, recruiter-friendly templates</li>
+            <li class="accent">Import &amp; upgrade your existing CV</li>
+            <li>Personal QR code (link your portfolio, LinkedIn, more)</li>
+            <li class="accent">PDF export</li>
+          </ul>
+          <button class="plan-cta">Choose Basic</button>
+        </div>
+
+        <!-- Professional -->
+        <div class="plan-card featured">
+          <h3 class="plan-name">Professional</h3>
+          <div class="plan-price-row">
+            <span class="plan-price">$19</span>
+            <span class="plan-cycle">/per month</span>
+          </div>
+          <p class="plan-tagline">Stand out in every application</p>
+          <ul class="plan-features">
+            <li class="accent">Everything in Starter +</li>
+            <li>Advanced ATS optimization (job-specific insights)</li>
+            <li class="accent">AI rewriting (stronger bullet points, impact-driven wording)</li>
+            <li>Job description matching</li>
+            <li class="accent">Personalized cover letters per application</li>
+            <li>Custom QR content (dynamic updates to your links &amp; portfolio)</li>
+          </ul>
+          <button class="plan-cta">Choose Professional</button>
+        </div>
+
+        <!-- Elite -->
+        <div class="plan-card">
+          <h3 class="plan-name">Elite</h3>
+          <div class="plan-price-row">
+            <span class="plan-price">$39</span>
+          </div>
+          <span class="plan-cycle">per month/billed annual</span>
+          <p class="plan-tagline">Your AI-powered career advantage</p>
+          <ul class="plan-features">
+            <li class="accent">Everything in Professional +</li>
+            <li>Deep AI analysis (industry-level optimization)</li>
+            <li class="accent">Section-by-section resume scoring insights</li>
+            <li>Unlimited tailored CV &amp; cover letter generation</li>
+            <li class="accent">Priority AI processing</li>
+            <li>Early access to new features</li>
+          </ul>
+          <button class="plan-cta">Choose Elite</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Panel: Billing Control & Operations -->
+    <section class="content-panel" id="panel-billing">
+      <h2 class="section-title">Billing Control &amp; Operations</h2>
+
+      <!-- Filter bar -->
+      <div class="filters-bar">
+        <input type="text" class="filter-input" id="f-mail" placeholder="Owner mail">
+        <input type="text" class="filter-input" id="f-name" placeholder="Owner Full name">
+        <input type="text" class="filter-input" id="f-txid" placeholder="Transaction ID">
+        <input type="date" class="filter-input" id="f-date" placeholder="Payment date: DD/MM/YY">
+        <button class="filter-search-btn" id="f-search">Search</button>
+      </div>
+
+      <!-- Toolbar: rows-per-page + status + plan -->
+      <div class="ops-toolbar">
+        <div class="ops-toolbar-group">
+          <span class="ops-toolbar-label">View</span>
+          <select class="ops-pill" id="f-perpage">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="0">All</option>
+          </select>
+        </div>
+        <div class="ops-toolbar-group">
+          <span class="ops-toolbar-label">Status</span>
+          <select class="ops-pill" id="f-status">
+            <option value="all">All</option>
+            <option value="paid">Paid</option>
+            <option value="failed">Failed</option>
+          </select>
+        </div>
+        <div class="ops-toolbar-group">
+          <span class="ops-toolbar-label">Plan</span>
+          <select class="ops-pill" id="f-plan">
+            <option value="all">All</option>
+            <option value="basic">Basic</option>
+            <option value="professional">Professional</option>
+            <option value="elite">Elite</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Transactions table -->
+      <div class="ops-table-card">
+        <table class="ops-table-v2">
+          <thead>
+            <tr>
+              <th class="col-select"><input type="checkbox" id="select-all"></th>
+              <th>Transaction ID</th>
+              <th>Customer</th>
+              <th>Amount</th>
+              <th>Payment Date</th>
+              <th>Status</th>
+              <th>Plan</th>
+              <th class="col-view"></th>
+            </tr>
+          </thead>
+          <tbody id="ops-tbody">
+            <!-- rows injected by JS -->
+          </tbody>
+        </table>
+
+        <!-- Mobile card view (same data, rendered as cards) -->
+        <div class="ops-cards" id="ops-cards"></div>
+
+        <p class="ops-empty" id="ops-empty" hidden>Heç bir əməliyyat tapılmadı.</p>
+      </div>
+    </section>
+  </main>
+
+</div>
+
+<script>
+  const page = window.location.pathname.split("/").pop();
+
+  document.querySelectorAll(".nav-item").forEach(item => {
+    item.classList.remove("active");
+    if (item.getAttribute("data-page") === page) {
+      item.classList.add("active");
+    }
+  });
+
+  // --- Mobil sidebar (bu elementlər səhifədə yoxdursa, sadəcə işə düşmür, xəta vermir) ---
+  const sidebar = document.getElementById('sidebar');
+  const toggle = document.getElementById('menuToggle');
+  const overlay = document.getElementById('overlay');
+
+  function openSidebar(){
+    sidebar.classList.add('open');
+    toggle.classList.add('open');
+    overlay.classList.add('show');
+  }
+  function closeSidebar(){
+    sidebar.classList.remove('open');
+    toggle.classList.remove('open');
+    overlay.classList.remove('show');
+  }
+
+  if (toggle && sidebar && overlay) {
+    toggle.addEventListener('click', () => {
+      sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+    });
+    overlay.addEventListener('click', closeSidebar);
+  }
+
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', () => {
+      if (sidebar && window.innerWidth <= 900) closeSidebar();
+    });
+  });
+
+  // --- Tab bar: Subscription Packages / Billing Control & Operations ---
+  document.querySelectorAll('.tab-btn').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      document.querySelectorAll('.content-panel').forEach(p => p.classList.remove('active'));
+      document.getElementById('panel-' + tab.dataset.target).classList.add('active');
+    });
+  });
+
+  // --- Plan seçim düymələri ---
+  document.querySelectorAll('.plan-cta').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const planName = btn.closest('.plan-card').querySelector('.plan-name').textContent;
+      btn.textContent = 'Selected ✓';
+      setTimeout(() => {
+        btn.textContent = 'Choose ' + planName;
+      }, 1500);
+    });
+  });
+
+  // =========================================================
+  // Billing Control & Operations — transactions table
+  // =========================================================
+  const TRANSACTIONS = [
+    { id:'TAX1029', name:'Rirota Lali',          mail:'rirotahlalihio.example@gmail.com',     amount:19, date:'2027-04-05', status:'paid',   plan:'elite' },
+    { id:'TAX1030', name:'Lavinia Vicolvio',     mail:'lavivicol89.example@gmail.com',        amount:39, date:'2027-05-08', status:'failed', plan:'professional' },
+    { id:'TAX1031', name:'Veronica Vrij',        mail:'vrijdeveronic.example@gmail.com',      amount:19, date:'2027-05-26', status:'failed', plan:'elite' },
+    { id:'TAX1032', name:'Noriaki Kakyoin',      mail:'noriaki234.example@gmail.com',         amount:9,  date:'2027-07-27', status:'paid',   plan:'basic' },
+    { id:'TAX1033', name:'Josuke Higashikata',   mail:'higakatajojo.example@gmail.com',       amount:39, date:'2027-12-30', status:'paid',   plan:'professional' },
+    { id:'TAX1034', name:'Bruno Burcharatti',    mail:'bruno90bronu.example@gmail.com',       amount:39, date:'2027-12-30', status:'paid',   plan:'professional' },
+    { id:'TAX1035', name:'Jolyne Kujoh',         mail:'jolynej0t4r0.example@gmail.com',       amount:19, date:'2027-07-27', status:'paid',   plan:'elite' },
+    { id:'TAX1036', name:'Oingo Kit',            mail:'oingohonierokit.example@gmail.com',    amount:19, date:'2027-05-08', status:'failed', plan:'elite' },
+    { id:'TAX1037', name:'Bliss Foster',         mail:'blissfoster456.example@gmail.com',     amount:39, date:'2027-04-05', status:'paid',   plan:'professional' },
+    { id:'TAX1038', name:'Soi Feng',             mail:'yoruichishiouin428.example@gmail.com', amount:39, date:'2027-05-26', status:'paid',   plan:'professional' }
+  ];
+
+  function initials(name){
+    return name.split(' ').map(p => p[0]).slice(0,2).join('').toUpperCase();
+  }
+
+  function formatDate(iso){
+    const [y,m,d] = iso.split('-');
+    return `${d}.${m}.${y}`;
+  }
+
+  function renderTransactions(){
+    const fMail = document.getElementById('f-mail').value.trim().toLowerCase();
+    const fName = document.getElementById('f-name').value.trim().toLowerCase();
+    const fTxId = document.getElementById('f-txid').value.trim().toLowerCase();
+    const fDate = document.getElementById('f-date').value;
+    const fStatus = document.getElementById('f-status').value;
+    const fPlan = document.getElementById('f-plan').value;
+    const perPage = parseInt(document.getElementById('f-perpage').value, 10);
+
+    let rows = TRANSACTIONS.filter(t => {
+      if (fMail && !t.mail.toLowerCase().includes(fMail)) return false;
+      if (fName && !t.name.toLowerCase().includes(fName)) return false;
+      if (fTxId && !t.id.toLowerCase().includes(fTxId)) return false;
+      if (fDate && t.date !== fDate) return false;
+      if (fStatus !== 'all' && t.status !== fStatus) return false;
+      if (fPlan !== 'all' && t.plan !== fPlan) return false;
+      return true;
+    });
+
+    if (perPage > 0) rows = rows.slice(0, perPage);
+
+    const tbody = document.getElementById('ops-tbody');
+    const cards = document.getElementById('ops-cards');
+    const empty = document.getElementById('ops-empty');
+
+    tbody.innerHTML = '';
+    cards.innerHTML = '';
+
+    if (rows.length === 0) {
+      empty.hidden = false;
+    } else {
+      empty.hidden = true;
+    }
+
+    rows.forEach(t => {
+      const planLabel = t.plan.charAt(0).toUpperCase() + t.plan.slice(1);
+      const statusLabel = t.status.charAt(0).toUpperCase() + t.status.slice(1);
+
+      // Desktop table row
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td class="col-select"><input type="checkbox" class="row-check"></td>
+        <td>${t.id}</td>
+        <td>
+          <div class="ops-customer">
+            <div class="ops-avatar">${initials(t.name)}</div>
+            <div class="ops-customer-info">
+              <strong>${t.name}</strong>
+              <span>${t.mail}</span>
+            </div>
+          </div>
+        </td>
+        <td>€${t.amount.toFixed(2)}</td>
+        <td>${formatDate(t.date)}</td>
+        <td><span class="ops-status ${t.status}">${statusLabel}</span></td>
+        <td><span class="ops-plan-badge ${t.plan}">${planLabel}</span></td>
+        <td class="col-view"><button class="ops-view-btn" data-id="${t.id}">View</button></td>
+      `;
+      tbody.appendChild(tr);
+
+      // Mobile card
+      const card = document.createElement('div');
+      card.className = 'ops-card';
+      card.innerHTML = `
+        <div class="ops-card-row">
+          <div class="ops-card-customer">
+            <div class="ops-avatar">${initials(t.name)}</div>
+            <div class="ops-customer-info">
+              <strong>${t.name}</strong>
+              <span>${t.mail}</span>
+            </div>
+          </div>
+          <button class="ops-view-btn" data-id="${t.id}">View</button>
+        </div>
+        <div class="ops-card-row"><span class="label">Transaction ID</span><span>${t.id}</span></div>
+        <div class="ops-card-row"><span class="label">Amount</span><span>€${t.amount.toFixed(2)}</span></div>
+        <div class="ops-card-row"><span class="label">Payment Date</span><span>${formatDate(t.date)}</span></div>
+        <div class="ops-card-row"><span class="label">Status</span><span class="ops-status ${t.status}">${statusLabel}</span></div>
+        <div class="ops-card-row"><span class="label">Plan</span><span class="ops-plan-badge ${t.plan}">${planLabel}</span></div>
+      `;
+      cards.appendChild(card);
+    });
+
+    document.getElementById('select-all').checked = false;
+  }
+
+  ['f-mail','f-name','f-txid','f-date'].forEach(id => {
+    document.getElementById(id).addEventListener('input', renderTransactions);
+  });
+  ['f-perpage','f-status','f-plan'].forEach(id => {
+    document.getElementById(id).addEventListener('change', renderTransactions);
+  });
+  document.getElementById('f-search').addEventListener('click', renderTransactions);
+
+  document.getElementById('select-all').addEventListener('change', (e) => {
+    document.querySelectorAll('.row-check').forEach(cb => cb.checked = e.target.checked);
+  });
+
+  document.getElementById('ops-tbody').addEventListener('click', (e) => {
+    if (e.target.classList.contains('ops-view-btn')) {
+      alert('Əməliyyat: ' + e.target.dataset.id);
+    }
+  });
+  document.getElementById('ops-cards').addEventListener('click', (e) => {
+    if (e.target.classList.contains('ops-view-btn')) {
+      alert('Əməliyyat: ' + e.target.dataset.id);
+    }
+  });
+
+  renderTransactions();
+
+</script>
+</body>
+</html>

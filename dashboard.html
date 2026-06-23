@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="icon" href="img/logo.png">
+</head>
+<body>
+
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Admin panel dashboard showing user metrics, revenue, template usage, and ATS engagement statistics</h2>
+
+<div class="dash">
+  <aside class="sidebar">
+<img src="icon.png" alt="icon"
+     style="width:25px; height:25px; position:absolute; left:0px; top:19px;">    <div class="sidebar-logo"><i class="ti ti-layout-dashboard" aria-hidden="true"></i> Admin Panel</div>
+    <div class="nav-item active" data-page="dashboard.html" onclick="window.location.href='dashboard.html'"><i class="ti ti-home" aria-hidden="true"></i>Dashboard</div>    
+    <div class="nav-item" data-page="usercontrol.html" onclick="window.location.href='usercontrol.html'"><i class="ti ti-users" aria-hidden="true"></i>User Control</div>
+    <div class="nav-item" data-page="bilingcontrol.html" onclick="window.location.href='bilingcontrol.html'" ><i class="ti ti-credit-card" aria-hidden="true"></i> Billing Control</div>
+    <div class="nav-item" data-page="templateengine.html" onclick="window.location.href='templateengine.html'"><i class="ti ti-template" aria-hidden="true"></i> Template Engine</div>
+    <div class="nav-item" data-page="airulesinputs.html" onclick="window.location.href='airulesinputs.html'"><i class="ti ti-brain" aria-hidden="true"></i> AI Rules & Inputs</div>
+    <div class="nav-item" data-page="cmssupport.html" onclick="window.location.href='cmssupport.html'"><i class="ti ti-headset" aria-hidden="true"></i> CMS & Support</div>
+    <div class="nav-item" data-page="logsmarketing.html" onclick="window.location.href='logsmarketing.html'"><i class="ti ti-speakerphone" aria-hidden="true"></i> Logs & Marketing</div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Compatibility Result</h1>
+      <div class="topbar-right">
+        <i class="ti ti-search" aria-label="Search"></i>
+        <i class="ti ti-bell" aria-label="Notifications"></i>
+        <i class="ti ti-settings" aria-label="Settings"></i>
+        <i class="ti ti-user-circle" aria-label="Profile"></i>
+      </div>
+    </div>
+
+    <div class="section-title">Users demographics</div>
+    <div class="cards-grid">
+      <div class="metric-card">
+        <div class="label">Total users</div>
+        <div class="value">14,352</div>
+        <div class="sublabel">vs last month</div>
+        <span class="badge green"><i class="ti ti-arrow-up" style="font-size:10px" aria-hidden="true"></i> 15.6%</span>
+      </div>
+      <div class="metric-card">
+        <div class="label">Active users</div>
+        <div class="value">8,921</div>
+        <div class="sublabel">currently online</div>
+        <span class="badge green"><i class="ti ti-arrow-up" style="font-size:10px" aria-hidden="true"></i> 15.6%</span>
+      </div>
+      <div class="metric-card">
+        <div class="label">New users (month)</div>
+        <div class="value">3,120</div>
+        <div class="sublabel">vs last month</div>
+        <span class="badge green"><i class="ti ti-arrow-up" style="font-size:10px" aria-hidden="true"></i> 15.6%</span>
+      </div>
+      <div class="metric-card">
+        <div class="label">New users (today)</div>
+        <div class="value">142</div>
+        <div class="sublabel">since midnight</div>
+        <span class="badge green"><i class="ti ti-arrow-up" style="font-size:10px" aria-hidden="true"></i> 15.6%</span>
+      </div>
+      <div class="metric-card">
+        <div class="label">Premium users</div>
+        <div class="value">4,683</div>
+        <div class="sublabel">32.6% conversion</div>
+        <span class="badge green"><i class="ti ti-arrow-up" style="font-size:10px" aria-hidden="true"></i> 15.6%</span>
+      </div>
+      <div class="metric-card">
+        <div class="label">Elite users</div>
+        <div class="value">9,125</div>
+        <div class="sublabel">54.9% conversion</div>
+        <span class="badge green"><i class="ti ti-arrow-up" style="font-size:10px" aria-hidden="true"></i> 15.6%</span>
+      </div>
+      <div class="metric-card">
+        <div class="label">Basic users</div>
+        <div class="value">16,017</div>
+        <div class="sublabel">87% conversion</div>
+        <span class="badge red"><i class="ti ti-arrow-down" style="font-size:10px" aria-hidden="true"></i> 2.1%</span>
+      </div>
+    </div>
+
+    <div class="section-title">Content statistics</div>
+    <div class="cards-grid">
+      <div class="metric-card">
+        <div class="label">Total CVs</div>
+        <div class="value">43,892</div>
+        <div class="sublabel">12,487 this month</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">Total cover letters</div>
+        <div class="value">21,042</div>
+        <div class="sublabel">5,925 this month</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">ATS checks</div>
+        <div class="value">84,392</div>
+        <div class="sublabel">24,918 this month</div>
+      </div>
+    </div>
+
+    <div class="section-title">Financial performance</div>
+    <div class="cards-grid">
+      <div class="metric-card">
+        <div class="label">Monthly revenue</div>
+        <div class="value">$88,920</div>
+        <div class="sublabel">+34.2% MoM</div>
+        <span class="badge green"><i class="ti ti-arrow-up" style="font-size:10px" aria-hidden="true"></i> 15.6%</span>
+      </div>
+      <div class="metric-card">
+        <div class="label">Annual revenue</div>
+        <div class="value">$1.06M</div>
+        <div class="sublabel">Projected $1.2M</div>
+        <span class="badge green"><i class="ti ti-arrow-up" style="font-size:10px" aria-hidden="true"></i> 15.6%</span>
+      </div>
+      <div class="metric-card">
+        <div class="label">Active subscriptions</div>
+        <div class="value">4,210</div>
+        <div class="sublabel">Churn rate 1.4%</div>
+        <span class="badge green"><i class="ti ti-arrow-up" style="font-size:10px" aria-hidden="true"></i> 15.6%</span>
+      </div>
+      <div class="metric-card">
+        <div class="label">Failed payments</div>
+        <div class="value">23</div>
+        <div class="sublabel">Recovered: 18</div>
+        <span class="badge red"><i class="ti ti-arrow-down" style="font-size:10px" aria-hidden="true"></i> 2.1%</span>
+      </div>
+    </div>
+
+    <div class="section-title">Growth tracking</div>
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <span class="ctitle">User registrations</span>
+        <span class="csub">Monthly signups</span>
+      </div>
+      <canvas id="regChart" height="160"></canvas>
+    </div>
+
+    <div class="section-title">Financial stream</div>
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <span class="ctitle">Monthly revenue stream</span>
+        <span class="csub">Revenue ($)</span>
+      </div>
+      <canvas id="revChart" height="160"></canvas>
+    </div>
+
+    <div class="section-title">Popular CV & cover letter templates</div>
+    <div class="two-col">
+      <div class="chart-card" style="margin-bottom:0">
+        <div class="chart-card-header"><span class="ctitle">CV templates</span><span class="csub">Real-time statistics</span></div>
+        <div class="template-row"><div><div class="tname">ATS ozonic</div></div><div class="tright"><div class="tmeta">5,678 uses</div><div class="tmeta">84.2%</div></div></div>
+        <div class="template-row"><div><div class="tname">Clean state 04</div></div><div class="tright"><div class="tmeta">3,456 uses</div><div class="tmeta">72%</div></div></div>
+        <div class="template-row"><div><div class="tname">Blueprint 02 classic</div></div><div class="tright"><div class="tmeta">2,345 uses</div><div class="tmeta">48%</div></div></div>
+        <div class="template-row"><div><div class="tname">Navy path 02 classic</div></div><div class="tright"><div class="tmeta">1,234 uses</div><div class="tmeta">62%</div></div></div>
+        <div class="template-row"><div><div class="tname">Blue inspire 03 classic</div></div><div class="tright"><div class="tmeta">1,023 uses</div><div class="tmeta">62%</div></div></div>
+        <div style="margin-top:1rem;display:flex;gap:8px">
+          <button class="view" onclick="sendPrompt('Show me more details about popular CV templates')" style="font-size:12px">View all ↗</button>
+        </div>
+      </div>
+      <div class="chart-card" style="margin-bottom:0">
+        <div class="chart-card-header"><span class="ctitle">Cover letter templates</span><span class="csub">Real-time statistics</span></div>
+        <div class="template-row"><div><div class="tname">ATS ozonic cover letter</div></div><div class="tright"><div class="tmeta">5,678 uses</div><div class="tmeta">84.2%</div></div></div>
+        <div class="template-row"><div><div class="tname">Blumarine cover letter</div></div><div class="tright"><div class="tmeta">3,456 uses</div><div class="tmeta">72%</div></div></div>
+        <div class="template-row"><div><div class="tname">Noir 02 cover letter</div></div><div class="tright"><div class="tmeta">2,345 uses</div><div class="tmeta">48%</div></div></div>
+        <div class="template-row"><div><div class="tname">Structure cover letter</div></div><div class="tright"><div class="tmeta">1,234 uses</div><div class="tmeta">62%</div></div></div>
+        <div class="template-row"><div><div class="tname">Corporate edge 02</div></div><div class="tright"><div class="tmeta">1,023 uses</div><div class="tmeta">62%</div></div></div>
+        <div style="margin-top:1rem;display:flex;gap:8px">
+          <button class="view" onclick="sendPrompt('Show me more details about popular cover letter templates')" style="font-size:12px">View all ↗</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title" style="margin-top:1.5rem">ATS tool engagement</div>
+    <div class="ats-card">
+      <div class="chart-card-header" style="margin-bottom:1rem"><span class="ctitle">Overall system success rate</span><span class="csub">Real-time statistics</span></div>
+      <div class="ats-row">
+        <span class="ats-name">Overall system success rate</span>
+        <div class="ats-bar-wrap"><div class="ats-bar" style="width:84.2%"></div></div>
+        <span class="ats-pct">84.2%</span>
+      </div>
+      <div class="ats-row">
+        <span class="ats-name">CV analysis check</span>
+        <div class="ats-bar-wrap"><div class="ats-bar" style="width:72%"></div></div>
+        <span class="ats-pct">72%</span>
+      </div>
+      <div class="ats-row">
+        <span class="ats-name">Cover letter matching</span>
+        <div class="ats-bar-wrap"><div class="ats-bar" style="width:48%"></div></div>
+        <span class="ats-pct">48%</span>
+      </div>
+      <div class="ats-row">
+        <span class="ats-name">Detailed improvement export</span>
+        <div class="ats-bar-wrap"><div class="ats-bar" style="width:62%"></div></div>
+        <span class="ats-pct">62%</span>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+
+  
+const page = window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".nav-item").forEach(item => {
+    item.classList.remove("active");
+
+    if (item.getAttribute("data-page") === page) {
+        item.classList.add("active");
+    }
+});
+
+
+
+
+const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const isDark = document.documentElement.getAttribute('data-color-scheme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches;
+const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.07)';
+const textColor = isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.45)';
+const blue = '#378ADD';
+
+const baseOpts = (yLabel) => ({
+  responsive:true,
+  maintainAspectRatio:true,
+  plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>yLabel+(Math.round(ctx.parsed.y).toLocaleString())}}},
+  scales:{
+    x:{grid:{color:gridColor},ticks:{color:textColor,font:{size:11}}},
+    y:{grid:{color:gridColor},ticks:{color:textColor,font:{size:11},callback:v=>yLabel+Math.round(v).toLocaleString()}}
+  }
+});
+
+new Chart(document.getElementById('regChart'),{
+  type:'bar',
+  data:{
+    labels:months,
+    datasets:[{
+      data:[820,940,1050,1200,1380,1520,1660,1800,2100,2340,2700,3120],
+      backgroundColor:blue+'55',
+      borderColor:blue,
+      borderWidth:1,
+      borderRadius:4
+    }]
+  },
+  options:baseOpts('')
+});
+
+new Chart(document.getElementById('revChart'),{
+  type:'line',
+  data:{
+    labels:months,
+    datasets:[{
+      data:[42000,48000,52000,58000,63000,70000,75000,79000,82000,86000,88000,88920],
+      borderColor:blue,
+      backgroundColor:blue+'22',
+      fill:true,
+      tension:0.4,
+      pointRadius:3,
+      pointBackgroundColor:blue
+    }]
+  },
+  options:baseOpts('$')
+});
+</script>
+</body>
+</html>

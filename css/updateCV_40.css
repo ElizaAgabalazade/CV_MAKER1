@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url('../img/ResumeTemplates/bacground2.PNG');
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: #F3F3F3;
+    position: fixed;
+    z-index: 1111;
+    top: 0;
+    left: 0;
+
+}
+
+.header_left {
+    width: 15%;
+    position: relative;
+}
+
+
+.site_name {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    font-weight: 900;
+    font-size: 22px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+
+.header_middle {
+    width: 60%;
+    padding-left: 1rem;
+}
+
+.header_middle ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 2rem;
+    gap: 1rem;
+
+
+}
+
+.header_middle ul li {
+    font-size: 18px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.header_middle ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header_right a {
+    font-weight: 700;
+    margin-left: 15px;
+    text-decoration: none;
+
+}
+
+.sign_part {
+    color: #4b2cff;
+
+}
+
+.log_in {
+    background: #4b2cff;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+
+}
+
+.section_right {
+    display: block !important;
+    width: 210mm;
+}
+
+.section_right h3 {
+    font-size: 30px;
+    margin-left: -11rem;
+    margin-top: 3rem;
+}
+
+/* Əsas Konteyner */
+.section_right_top {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 40px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #333;
+    background: #F6F4F4;
+}
+
+/* Header və Kontakt */
+.section_right_top_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.input_h1 {
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    margin: 0;
+    background: transparent;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    width: 100%;
+    position: relative;
+}
+#qr-result-container{
+position: absolute;
+}
+.contact-info textarea {
+    border: none;
+    width: 100%;
+    text-align: right;
+    resize: none;
+    background: transparent;
+    padding: 2px 0;
+    margin: 0;
+    line-height: 1.2;
+    padding-right: 6rem;
+    height: 2rem;
+    font-size: 10px;
+}
+
+h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 25px 0 10px 0;
+    color: #000;
+}
+
+.certificate_skills,
+.education_language {
+    display: flex;
+    gap: 40px;
+}
+
+.certificate_skills>div,
+.education_language>div {
+    flex: 1;
+}
+
+.place,
+.skill_list_right,
+#itemListCertificate_right1,
+#itemListLanguage_right1 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.outputArea {
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 14px;
+    min-height: 60px;
+    background: transparent;
+}
+
+#qr-cv-display {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+}
+
+.button-container {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 14rem;
+}
+
+.btn {
+    padding: 12px 32px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-change {
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+
+}
+
+.btn-change a {
+    text-decoration: none;
+    color: #FFFF;
+}
+
+.btn-change:hover,
+.btn-download:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+}
+
+.btn-download {
+    background: linear-gradient(to right, #5C17FC, #0D5EFF);
+}
+
+
+.btn:active {
+    transform: translateY(-1px);
+}
+/* =============================================
+   RESPONSIVE — create_resume_40.css əlavəsi
+   Minimalism 01 şablonu
+   ============================================= */
+
+/* ── Tablet: ≤1024px ── */
+@media (max-width: 1024px) {
+
+    body { padding: 20px 10px; }
+
+    /* Header */
+    .header_left  { width: 20%; }
+    .header_middle { width: 55%; }
+    .header_right  { width: 25%; }
+    .header_middle ul li { font-size: 15px; margin-left: 0.5rem; }
+
+    /* Layout: şaquli */
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .container,
+    #step3.container,
+    #step4.container,
+    #step5.container {
+        width: 95%;
+        min-width: unset;
+        max-width: 100%;
+        padding: 24px;
+        margin-top: 80px;
+    }
+
+    /* CV preview */
+    .section_right,
+    .section_right.active {
+        width: 95% !important;
+        margin: 0 auto 40px auto;
+    }
+
+    .section_right h3 {
+        margin-left: 0;
+        margin-top: 1.5rem;
+        font-size: 22px;
+    }
+
+    .section_right_top {
+        max-width: 100%;
+        padding: 24px;
+    }
+
+    .button-container {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    /* Step 5 dil */
+    .step5-languages-layout { flex-direction: column; }
+    .step5-proficiency-box  { width: 100%; }
+}
+
+/* ── Mobile: ≤768px ── */
+@media (max-width: 768px) {
+
+    /* ---- Header: tamamilə şaquli ---- */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 14px;
+        position: relative;
+        gap: 4px;
+    }
+
+    .header_left  { width: 100%; }
+    .header_middle { width: 100%; padding-left: 0; }
+    .header_right {
+        width: 100%;
+        justify-content: flex-start;
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .site_name {
+        position: static;
+        font-size: 18px;
+        display: inline-block;
+        padding: 4px 0;
+    }
+
+    .header_middle ul {
+        flex-direction: column;
+        margin-top: 4px;
+        gap: 2px;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0;
+        margin-bottom: 4px;
+    }
+
+    /* ---- Body ---- */
+    body { padding: 10px 6px; }
+
+    .container,
+    #step3.container,
+    #step4.container,
+    #step5.container {
+        width: 100%;
+        min-width: unset;
+        padding: 16px;
+        margin-top: 16px;
+        border-radius: 16px;
+    }
+
+    /* ---- Personal Info ---- */
+    .form-row         { flex-direction: column; }
+    .input-grid       { grid-template-columns: 1fr; gap: 12px; }
+
+    .photo-actions {
+        flex-direction: row;
+        justify-content: center;
+        min-width: unset;
+        gap: 12px;
+    }
+
+    .action-box { flex: 1; max-width: 140px; }
+
+    /* ---- Work experience ---- */
+    .experience-block { padding: 20px 14px; }
+    .input-row        { grid-template-columns: 1fr; gap: 14px; }
+
+    /* ---- Step 5 ---- */
+    .step5-card             { padding: 18px; }
+    .step5-languages-layout { flex-direction: column; }
+    .step5-proficiency-box  { width: 100%; }
+    .step5-level-grid       { grid-template-columns: 1fr 1fr; }
+
+    /* ---- Modals ---- */
+    .modal-card, .qr-card {
+        width: 96%;
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .confirm-btn, .confirm-btn-qr {
+        margin-left: 0;
+        width: 80%;
+        display: block;
+        margin: 20px auto 0;
+    }
+
+    .action-buttons {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    /* ---- CV Preview: scale ilə kiçil ---- */
+    .section_right,
+    .section_right.active {
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+
+    .section_right h3 {
+        font-size: 16px;
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    .section_right_top {
+        transform: scale(0.72);
+        transform-origin: top left;
+        width: calc(100% / 0.72);
+        margin-bottom: -28%;
+        padding: 20px;
+    }
+
+    /* CV header: ad solda, kontakt sağda — mobilde şaquli */
+    .section_right_top_header {
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 14px;
+    }
+
+    .section_right_r_side_r { width: 100%; }
+
+    .contact-info {
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .contact-info textarea {
+        text-align: left;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    #qr-result-container {
+        position: static;
+        margin-top: 8px;
+    }
+
+    /* CV 2-sütunlu hissələr → şaquli */
+    .certificate_skills,
+    .education_language {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* Buttons */
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .btn { width: 80%; text-align: center; }
+
+    .footer          { justify-content: center; }
+    .next-btn        { width: 100%; padding: 12px 0; }
+    .step5-footer    { text-align: center; }
+    .step5-done-btn  { width: 80%; }
+}
+
+/* ── Small mobile: ≤420px ── */
+@media (max-width: 420px) {
+
+    .header_middle ul li { font-size: 13px; }
+
+    h3   { font-size: 17px; }
+    .card { padding: 14px; border-radius: 14px; }
+
+    .action-box   { padding: 10px; }
+    .action-box p { font-size: 10px; }
+
+    .step5-tag { font-size: 12px; padding: 5px 10px; }
+
+    /* CV daha da kiçil */
+    .section_right_top {
+        transform: scale(0.58);
+        width: calc(100% / 0.58);
+        margin-bottom: -42%;
+    }
+
+    h2 { font-size: 13px; }
+}

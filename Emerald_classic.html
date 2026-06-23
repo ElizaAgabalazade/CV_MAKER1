@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="./js/storage.js" defer></script>
-    <script src="./js/create_2.js" defer></script>\
-    <link rel="stylesheet" href="css/create_resume_37.css">
-    <title>ATS blue</title>
+    <link rel="stylesheet" href="./css/create_resume_8.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="./js/create_2.js" defer></script>
+
+
+    <title>Emerald  classic</title>
 </head>
 
 <body>
@@ -36,7 +40,7 @@
     </header>
     <section>
         <div class="container">
-            <div class="header">
+           <div class="header">
                 <button class="back-btn"><a href="./Resume_templates.html">← Back</a></button>
                 <span class="step-indicator">Step 2/5</span>
             </div>
@@ -138,7 +142,7 @@
                     </div>
                 </div>
 
-                <div class="action-buttons">
+                   <div class="action-buttons">
                     <input type="file" id="qrFileInput" style="display: none;" accept="image/*">
                     <button type="button" class="btn-qr btn-upload" id="uploadQrBtn">Upload</button>
                     <button type="button" class="btn-qr btn-remove" id="removeQrBtn">Remove</button>
@@ -247,38 +251,42 @@
                 <button class="step5-done-btn" id="finishBtn">Done</button>
             </div>
         </div>
+
+
         <div class="section_right">
             <h3>Document preview & Editor</h3>
             <div class="section_right_top">
-                <div class="main-content">
-                    <div class="section_right_side_2">
-                        <p id="aboutMeTextarea"> Summary</p>
-                        <textarea class="outputArea" id="autoTextarea" placeholder="Write here..."></textarea>
-                    </div>
-                    <div class="section_right_r_side_r" id="uploadBox2">
-                        <img id="preview2" src="./img/UpdateCv/image 434.png" alt="upload icon">
-                        <input type="file" id="fileInput2" accept="image/*">
+                <div class="section_right_l_side">
+                    <form method="post" class="info_input">
+                        <textarea name="" id="phoneR" placeholder="+123-456-7890"
+                            pattern="^\+[0-9]{1,3}\s?[0-9]{1,14}(\s[0-9]{1,13})?$"
+                            title="Daxil edin: +<CountryCode> <PhoneNumber>" class="phoneR" required></textarea>
+                        <textarea id="emailR" name="email" placeholder="hello@greatsite.com" required
+                            class="emailR"></textarea>
+                        <textarea id="adressR" name="address" placeholder="123 Anywhere St.,Any City" required
+                            class="adressR"></textarea>
+                        <textarea id="linkedinR" name="linkedin" placeholder="linkedin.com/in/username"
+                            class="linkedinR"></textarea>
 
-                        <div class="header-info">
-                            <textarea id="nameToCV" class="input_h1" placeholder="Sofia Moretti"></textarea>
-                        </div>
-                        <div id="qr-result-container">
-                            <div id="qr-cv-display"></div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="work_experience_right" id="sendedParts">
-                    <h2 id="sendTitle">Professional Experience</h2>
-                    <form method="post">
-                        <ul class="place" id="sendList">
-                        </ul>
                     </form>
-                </div>
-                <div class="certificate_education">
-                    <div class="section_right_top_certificat" id="certificate">
-                        <h2>Certifications</h2>
-                        <ul id="itemListCertificate_right1"></ul>
+                    <div class="info_input_hr"></div>
+                    <div class="allSkills_Certificate_Language">
+                        <div class="section_right_top_skills" id="skills_container">
+                            <h2>Skills</h2>
+                            <ul id="entry_list" class="skill_list_right"></ul>
+                            <div class="info_input_hr"></div>
+                        </div>
+                        <div class="section_right_top_certificat" id="certificate">
+                            <h2>Certificate</h2>
+                            <ul id="itemListCertificate_right1"></ul>
+                            <div class="info_input_hr"></div>
+
+                        </div>
+                        <div class="section_right_top_language" id="language">
+                            <h2>Language</h2>
+                            <ul id="itemListLanguage_right1"></ul>
+
+                        </div>
                     </div>
                     <div id="rightSideContainer" class="rightSideContainer">
                         <h2 id="sendTitle1">Education</h2>
@@ -286,40 +294,37 @@
                             <ul class="place" id="sendList1"></ul>
                         </form>
                     </div>
-                </div>
-                <div class="skills_language">
-                    <div class="section_right_top_skills" id="skills_container">
-                        <h2>Skills</h2>
-                        <ul id="entry_list" class="skill_list_right"></ul>
-                    </div>
-                    <div class="section_right_top_language" id="language">
-                        <h2>Language</h2>
-                        <ul id="itemListLanguage_right1"></ul>
-                    </div>
 
                 </div>
-                <div class="photo-section">
-                    <div class="contact-info">
-                        <textarea id="phoneR" placeholder="+44 7700 900777"></textarea>
-                        <textarea id="emailR" placeholder="s.moretti@legalbrand.co.uk"></textarea>
-                        <textarea id="adressR" placeholder="London, UK"></textarea>
-                        <textarea id="linkedinR" placeholder="linkedin.com/in/sofiamoretti"></textarea>
+                <div class="section_right_r_side">
+                    <form method="POST" class="top_form">
+                        <textarea id="nameToCV" class="input_h1"
+                            placeholder="EMMA SCHULZ Marketing Executive"></textarea>
+                    </form>
+                    <div id="qr-result-container">
+                        <div id="qr-cv-display"> </div>
+                    </div>
+                    <div class="section_right_side_2">
+                        <p id="aboutMeTextarea"> Professional Summary</p>
+                        <textarea class="outputArea" id="autoTextarea" placeholder=" Write here"></textarea>
+                    </div>
+                    <hr>
+                    <div class="work_experience_right" id="sendedParts">
+                        <h2 id="sendTitle">Work Experience</h2>
+                        <form method="post">
+                            <ul class="place" id="sendList"></ul>
+                        </form>
                     </div>
 
                 </div>
             </div>
             <div class="button-container">
-                <button class="btn btn-change" id="changeFormat"><a href="./Resume_templates.html">Change
-                        Format</a></button>
+                <button class="btn btn-change" id="changeFormat"><a href="./Resume_templates.html">Change Format</a></button>
                 <button id="download-pdf" class="btn btn-download">Download</button>
             </div>
-
-
-
-
-
-
         </div>
+<!-- end -->
+    </section>
 </body>
 
 </html>

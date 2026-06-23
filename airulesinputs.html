@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="icon" href="img/logo.png">
+</head>
+<body>
+
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Admin panel dashboard showing user metrics, revenue, template usage, and ATS engagement statistics</h2>
+
+<div class="dash">
+  <aside class="sidebar">
+    <img src="icon.png" alt="icon"
+     style="width:25px; height:25px; position:absolute; left:0px; top:19px;">
+    <div class="sidebar-logo"><i class="ti ti-layout-dashboard" aria-hidden="true"></i> Admin Panel</div>
+    <div class="nav-item active" data-page="dashboard.html" onclick="window.location.href='dashboard.html'"><i class="ti ti-home" aria-hidden="true"></i>Dashboard</div>    
+    <div class="nav-item" data-page="usercontrol.html" onclick="window.location.href='usercontrol.html'"><i class="ti ti-users" aria-hidden="true"></i>User Control</div>
+    <div class="nav-item" data-page="bilingcontrol.html" onclick="window.location.href='bilingcontrol.html'" ><i class="ti ti-credit-card" aria-hidden="true"></i> Billing Control</div>
+    <div class="nav-item" data-page="templateengine.html" onclick="window.location.href='templateengine.html'"><i class="ti ti-template" aria-hidden="true"></i> Template Engine</div>
+    <div class="nav-item" data-page="airulesinputs.html" onclick="window.location.href='airulesinputs.html'"><i class="ti ti-brain" aria-hidden="true"></i> AI Rules & Inputs</div>
+    <div class="nav-item" data-page="cmssupport.html" onclick="window.location.href='cmssupport.html'"><i class="ti ti-headset" aria-hidden="true"></i> CMS & Support</div>
+    <div class="nav-item" data-page="logsmarketing.html" onclick="window.location.href='logsmarketing.html'"><i class="ti ti-speakerphone" aria-hidden="true"></i> Logs & Marketing</div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Compatibility Result</h1>
+      <div class="topbar-right">
+        <i class="ti ti-search" aria-label="Search"></i>
+        <i class="ti ti-bell" aria-label="Notifications"></i>
+        <i class="ti ti-settings" aria-label="Settings"></i>
+        <i class="ti ti-user-circle" aria-label="Profile"></i>
+      </div>
+    </div>
+  </main>
+  <script>
+    const page = window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".nav-item").forEach(item => {
+    item.classList.remove("active");
+
+    if (item.getAttribute("data-page") === page) {
+        item.classList.add("active");
+    }
+});
+  </script>
+</body>
+</html>
