@@ -605,8 +605,83 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // --- 7. AUTO-HIDE SECTIONS ---
+    const autoHideSections = () => {
+        // 1. Skills
+        const skillList      = document.getElementById('entry_list');
+        const skillContainer = document.getElementById('skills_container');
+        if (skillContainer) {
+            const hasSkills = skillList && skillList.querySelectorAll('li').length > 0;
+            skillContainer.style.display = hasSkills ? '' : 'none';
+        }
+
+        // 2. Certificate
+        const certListEl    = document.getElementById('itemListCertificate_right1');
+        const certSectionEl = document.getElementById('certificate');
+        if (certSectionEl) {
+            const hasCerts = certListEl && certListEl.querySelectorAll('li').length > 0;
+            certSectionEl.style.display = hasCerts ? '' : 'none';
+        }
+
+        // 3. Language
+        const langListEl  = document.getElementById('itemListLanguage_right1');
+        const langSection = document.getElementById('language');
+        if (langSection) {
+            const hasLangs = langListEl && langListEl.querySelectorAll('li').length > 0;
+            langSection.style.display = hasLangs ? '' : 'none';
+        }
+
+        // 4. Experience
+        const sendListEl = document.getElementById('sendList');
+        const expSection = document.getElementById('sendedParts');
+        if (expSection) {
+            const hasExp = sendListEl && sendListEl.querySelectorAll('li').length > 0;
+            expSection.style.display = hasExp ? '' : 'none';
+        }
+
+        // 5. Education
+        const sendList1El = document.getElementById('sendList1');
+        const eduSection  = document.getElementById('rightSideContainer');
+        if (eduSection) {
+            const hasEdu = sendList1El && sendList1El.querySelectorAll('li').length > 0;
+            eduSection.style.display = hasEdu ? '' : 'none';
+        }
+
+        // 6. Summary
+        const summaryText    = document.getElementById('autoTextarea')?.value?.trim();
+        const summarySection = document.querySelector('.section_right_side_2');
+        if (summarySection) {
+            summarySection.style.display = summaryText ? '' : 'none';
+        }
+
+        // 7. QR
+        const qrDisplay   = document.getElementById('qr-cv-display');
+        const qrContainer = document.getElementById('qr-result-container');
+        if (qrContainer) {
+            const hasQR = qrDisplay && qrDisplay.innerHTML.trim() !== '';
+            qrContainer.style.display = hasQR ? '' : 'none';
+        }
+
+        // 8. LinkedIn
+        const linkedinEl = document.getElementById('linkedinR');
+        if (linkedinEl) {
+            const linkedinVal = linkedinEl.value?.trim();
+            linkedinEl.style.display = linkedinVal ? '' : 'none';
+        }
+
+        // 9. education_language wrapper — hər ikisi boşdursa gizlət
+        const eduLangSection = document.querySelector('.education_language');
+        if (eduLangSection) {
+            const eduVisible  = document.getElementById('rightSideContainer')?.style.display !== 'none';
+            const langVisible = document.getElementById('language')?.style.display !== 'none';
+            eduLangSection.style.display = (eduVisible || langVisible) ? '' : 'none';
+        }
+    };
+
+    window.autoHideSections = autoHideSections;
  
-    // --- 7. FINISH CV ---
+    // --- 8. FINISH CV ---
     const handleFinishCV = () => {
         const cvPreview = document.querySelector('.section_right');
         const step5     = document.getElementById('step5');
@@ -667,62 +742,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 .map(s => s.trim() ? `<li>${s.trim()}</li>` : '')
                 .join('');
         }
+
+        // Language preview-u yenilə
+        updateLangPreview();
  
         saveToStorage();
  
-        // ── Boş section-ları gizlət ──────────────────────────────────────
-        const autoHideSections = () => {
- 
-            // 1. Skills
-            const skillList      = document.getElementById('entry_list');
-            const skillContainer = document.getElementById('skills_container');
-            if (skillContainer) {
-                const hasSkills = skillList && skillList.querySelectorAll('li').length > 0;
-                skillContainer.style.display = hasSkills ? '' : 'none';
-            }
- 
-            // 2. Certificate
-            const certListEl    = document.getElementById('itemListCertificate_right1');
-            const certSectionEl = document.getElementById('certificate');
-            if (certSectionEl) {
-                const hasCerts = certListEl && certListEl.querySelectorAll('li').length > 0;
-                certSectionEl.style.display = hasCerts ? '' : 'none';
-            }
- 
-            // 3. Language
-            const langListEl  = document.getElementById('itemListLanguage_right1');
-            const langSection = document.getElementById('language');
-            if (langSection) {
-                const hasLangs = langListEl && langListEl.querySelectorAll('li').length > 0;
-                langSection.style.display = hasLangs ? '' : 'none';
-            }
- 
-            // 4. Experience
-            const sendListEl = document.getElementById('sendList');
-            const expSection = document.getElementById('sendedParts');
-            if (expSection) {
-                const hasExp = sendListEl && sendListEl.querySelectorAll('li').length > 0;
-                expSection.style.display = hasExp ? '' : 'none';
-            }
- 
-            // 5. Education
-            const sendList1El = document.getElementById('sendList1');
-            const eduSection  = document.getElementById('rightSideContainer');
-            if (eduSection) {
-                const hasEdu = sendList1El && sendList1El.querySelectorAll('li').length > 0;
-                eduSection.style.display = hasEdu ? '' : 'none';
-            }
-        };
- 
+        // Bütün boş seksiyaları gizlət
         autoHideSections();
-        // ─────────────────────────────────────────────────────────────────
+
+        // MutationObserver — siyahılar dəyişdikdə avtomatik yenilə
+        const observer = new MutationObserver(autoHideSections);
+        ['sendList', 'sendList1', 'itemListCertificate_right1',
+         'itemListLanguage_right1', 'entry_list'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) observer.observe(el, { childList: true, subtree: true });
+        });
+
+        // Summary dəyişdikdə də yenilə
+        document.getElementById('autoTextarea')?.addEventListener('input', autoHideSections);
  
         cvPreview?.scrollIntoView({ behavior: 'smooth' });
     };
  
     document.getElementById('finishBtn')?.addEventListener('click', handleFinishCV);
  
-    // --- PDF YÜKLƏMƏ ---
+    // --- 9. PDF YÜKLƏMƏ ---
     const downloadCVAsPDF = () => {
         const element = document.querySelector(".section_right_top");
  
@@ -736,12 +781,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 useCORS: true,
                 onclone: (clonedDoc) => {
                     const cvBase = clonedDoc.querySelector(".section_right_top");
- 
+
                     cvBase.style.width      = '210mm';
                     cvBase.style.height     = '297mm';
                     cvBase.style.padding    = '10mm';
                     cvBase.style.background = '#ffffff';
- 
+
                     const complexElements = clonedDoc.querySelectorAll('.dairəvi_klas_adın');
                     complexElements.forEach(el => {
                         el.style.borderRadius = '0';
@@ -756,7 +801,7 @@ document.addEventListener('DOMContentLoaded', () => {
  
     document.getElementById("download-pdf")?.addEventListener("click", downloadCVAsPDF);
  
-    // --- 9. STORAGE LOAD & AUTO-SAVE ---
+    // --- 10. STORAGE LOAD & AUTO-SAVE ---
     loadFromStorage();
  
     document.addEventListener('input', (e) => {

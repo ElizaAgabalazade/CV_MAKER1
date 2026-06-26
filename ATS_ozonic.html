@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/create_resume_44.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="./js/storage.js" defer></script>
     <script src="./js/create_2.js" defer></script>
-    <title>ATS ink classic</title>
+    <link rel="stylesheet" href="./css/create_resume_46.css" />
+    <title>ATS ozonic</title>
 </head>
 
 <body>
@@ -250,72 +250,72 @@
         <div class="section_right">
             <h3>Document preview & Editor</h3>
             <div class="section_right_top">
-                <div class="section_right_top_header">
-                    <div class="section_right_top_header_inside">
-                        <div class="header-info">
-                            <textarea id="nameToCV" class="input_h1" placeholder="Sofia Moretti"></textarea>
-
-                            <div id="qr-result-container">
-                                <div id="qr-cv-display"></div>
-                            </div>
-                        </div>
-                        <div class="photo-section">
-                            <div class="contact-info">
-                                <textarea id="phoneR" placeholder="+44 7700 900777"></textarea>
-                                <textarea id="emailR" placeholder="s.moretti@legalbrand.co.uk"></textarea>
-                                <textarea id="adressR" placeholder="London, UK"></textarea>
-                                <textarea id="linkedinR" placeholder="linkedin.com/in/sofiamoretti"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section_right_side_2">
-                    <p id="aboutMeTextarea"> Summary</p>
-                    <textarea class="outputArea" id="autoTextarea" placeholder="Write here..."></textarea>
-                </div>
-                <div class="section_right_top_sides">
-                    <div class="section_right_top_sides_left">
+                <div class="section_right_top_inside">
+                    <div class="section_right_top_inside_left">
                         <div class="work_experience_right" id="sendedParts">
-                            <h2 id="sendTitle">Professional Experience</h2>
+                            <h2 id="sendTitle">Experience</h2>
                             <form method="post">
                                 <ul class="place" id="sendList">
                                 </ul>
                             </form>
                         </div>
                     </div>
-                    <div class="section_right_top_sides_right">
-                        <div class="section_right_top_education_certificate_skills">
-                            <div class="certificate_education">
-                                <div class="section_right_top_certificat" id="certificate">
-                                    <h2>Certifications</h2>
-                                    <ul id="itemListCertificate_right1"></ul>
+                    <div class="section_right_top_inside_right">
+                        <div class="section_right_top_inside_right_head">
+                            <div class="section_right_side_2" id="uploadBox2">
+                                <div class="section_right_side_2_profil">
+                                    <img id="preview2" src="./img/UpdateCv/ResumeProfile17.png" alt="upload icon">
+                                    <input type="file" id="fileInput2" accept="image/*">
                                 </div>
-                                <div class="skills">
-                                    <div class="section_right_top_skills" id="skills_container">
-                                        <h2>Skills</h2>
-                                        <ul id="entry_list" class="skill_list_right"></ul>
-                                    </div>
+                            </div>
+                            <div class="header-info">
+                                <textarea id="nameToCV" class="input_h1" placeholder="Sofia Moretti"></textarea>
+                                <div class="contact-info">
+                                    <textarea id="phoneR" placeholder="+44 7700 900777"></textarea>
+                                    <textarea id="emailR" placeholder="s.moretti@legalbrand.co.uk"></textarea>
+                                    <textarea id="adressR" placeholder="London, UK"></textarea>
+                                    <textarea id="linkedinR" placeholder="linkedin.com/in/sofiamoretti"></textarea>
                                 </div>
+                            </div>
+                            <div id="qr-result-container">
+                                <div id="qr-cv-display"></div>
+                            </div>
+                        </div>
 
+                        <div class="section_right_top_right_side_below">
+                            <div class="section_right_side_2">
+                                <p id="aboutMeTextarea"> Summary</p>
+                                <textarea class="outputArea" id="autoTextarea" placeholder="Write here..."></textarea>
+                            </div>
+                            <div class="section_right_top_certificat" id="certificate">
+                                <h2>Certifications</h2>
+                                <ul id="itemListCertificate_right1"></ul>
+                            </div>
+                            <div class="education_language">
                                 <div id="rightSideContainer" class="rightSideContainer">
                                     <h2 id="sendTitle1">Education</h2>
                                     <form method="post">
                                         <ul class="place" id="sendList1"></ul>
                                     </form>
                                 </div>
-                            </div>
 
-                        </div>
-                        <div class="section_right_top_language" id="language">
-                            <div class="section_right_top_language_inside">
-                                <h2>Language</h2>
-                                <ul id="itemListLanguage_right1"></ul>
-                            </div>
+                                <div class="section_right_top_language" id="language">
+                                    <h2>Language</h2>
+                                    <ul id="itemListLanguage_right1"></ul>
 
+                                </div>
+
+                            </div>
+                            <div class="skills">
+                                <div class="section_right_top_skills" id="skills_container">
+                                    <h2>Skills</h2>
+                                    <ul id="entry_list" class="skill_list_right"></ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
+
             </div>
             <div class="button-container">
                 <button class="btn btn-change" id="changeFormat"><a href="./Resume_templates.html">Change
@@ -331,6 +331,7 @@
 
         </div>
     </section>
+
 </body>
 
 </html>
