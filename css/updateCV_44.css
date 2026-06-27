@@ -114,7 +114,7 @@ header {
 
 }
 
-.section_right {
+.section_right.active {
     display: block !important;
     width: 210mm;
 }
@@ -125,63 +125,89 @@ header {
     margin-top: 3rem;
 }
 
-/* Konteyner və Ümumi Struktur */
 .section_right_top {
     font-family: 'Arial', sans-serif;
     color: #333;
     max-width: 800px;
-    background: #fff;box-shadow: 4px 4px 4px 5px #9e9898;
+    background: #fff;
+    box-shadow: 4px 4px 4px 5px #9e9898;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 30px;
 }
 
 .section_right_top_header {
     width: 100%;
-    height: 150px;
-    background: #1653CD;
+    height: 100px;
+    background: #0D5EFF;
+    flex-shrink: 0;
 }
 
 .section_right_top_header_inside {
     width: 90%;
+    height: 100px;
     margin-left: 5rem;
     background: #ffffff;
     padding-bottom: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 20px;
     position: relative;
-    margin-top: 0;
-    position: relative;
-
-
 }
-#qr-result-container{
+
+.section_right_top_header_inside_bacgorund {
+    background: #fff;
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+#qr-result-container {
     position: absolute;
+    top: 5rem;
+    left: -2rem;
 }
+
 .input_h1 {
     font-size: 32px;
     font-weight: bold;
     color: #2563eb;
     border: none;
     width: 100%;
+    height: 100%;
+}
+
+.header-info {
+    width: 50%;
+    height: 100%;
 }
 
 .contact-info {
     display: flex;
-    gap: 5px;
-    font-size: 13px;
-    text-align: right;
-    width: 100%;
-   position: absolute;
-  top: 5rem;
+    flex-direction: column;
+    align-items: right;
+    gap: 0px;
+    width: 50%;
+    padding-top: 1rem;
+    padding-left: 13rem;
 }
 
 .contact-info textarea {
-    width: 20%;
+    font-size: 9px;
+    text-align: center;
     border: none;
-    text-align: right;
+    outline: none;
     resize: none;
     background: transparent;
-    color: #868693;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    line-height: 1.4;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
 h2 {
@@ -190,14 +216,37 @@ h2 {
     color: #2563eb;
     margin-bottom: 10px;
     padding-left: 30px;
+}
 
+.section_right_side_2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-shrink: 0;
+}
+
+.section_right_side_2_profil {
+    width: 20%;
+    margin-top: 2rem;
+}
+
+.section_right_side_2_content {
+    width: 75%;
+}
+
+.section_right_side_2 img {
+    width: 100%;
+    height: fit-content;
+}
+
+#fileInput2 {
+    display: none;
 }
 
 .section_right_side_2 p {
     font-weight: bold;
     margin-bottom: 5px;
     padding: 30px;
-
 }
 
 .outputArea {
@@ -207,17 +256,21 @@ h2 {
     font-size: 14px;
     margin-bottom: 20px;
 }
-.section_right_top_sides{
+
+.section_right_top_sides {
     display: flex;
     width: 100%;
+    flex-shrink: 0;
 }
-.section_right_top_sides_left{
+
+.section_right_top_sides_left {
     width: 60%;
 }
-.section_right_top_sides_right{
+
+.section_right_top_sides_right {
     width: 40%;
 }
-/* İş Təcrübəsi */
+
 .work_experience_right {
     margin-bottom: 20px;
 }
@@ -227,7 +280,6 @@ h2 {
     padding: 0;
 }
 
-/* İki sütunlu hissə (Təhsil/Sertifikat və Bacarıqlar) */
 .section_right_top_education_certificate_skills {
     display: flex;
     gap: 40px;
@@ -247,35 +299,43 @@ h2 {
     font-size: 13px;
 }
 
-/* Language bölməsi */
 .section_right_top_language {
-    margin-top: 20px;
+    margin-top: auto;
+    width: 100%;
     background: #0D5EFF;
+    flex-shrink: 0;
+    overflow: hidden;
 }
-.section_right_top_language_inside{
-        width: 90%;
-    background: #ffff;
+
+.section_right_top_language_inside {
+    width: 90%;
+    background: #ffffff;
+    margin-right: 40px;
+    padding: 10px 0;
 }
 
 #itemListLanguage_right1 {
     display: flex;
     gap: 20px;
     list-style: none;
-    padding: 0;
-      width: 90%;
-    background: #ffff;
-   
+    padding: 0 0 0 30px;
+    width: 100%;
+    background: #ffffff;
+    flex-wrap: wrap;
 }
 
-/* Textarea təmizlənməsi */
+#itemListLanguage_right1 ul li {
+    font-size: 10px;
+}
+
 textarea {
     outline: none;
     font-family: inherit;
 }
-    
-ul li{padding-left: 30px;}
 
-
+ul li {
+    padding-left: 30px;
+}
 
 .button-container {
     display: flex;
@@ -301,7 +361,6 @@ ul li{padding-left: 30px;}
 
 .btn-change {
     background: linear-gradient(to right, #5C17FC, #0D5EFF);
-
 }
 
 .btn-change a {
@@ -319,14 +378,10 @@ ul li{padding-left: 30px;}
     background: linear-gradient(to right, #5C17FC, #0D5EFF);
 }
 
-
 .btn:active {
     transform: translateY(-1px);
 }
-/* =============================================
-   RESPONSIVE — create_resume_39.css əlavəsi
-   Mövcud stillər üzərindən override edir
-   ============================================= */
+
 
 /* ── Tablet: ≤1024px ── */
 @media (max-width: 1024px) {
@@ -335,13 +390,23 @@ ul li{padding-left: 30px;}
         padding: 20px 10px;
     }
 
-    /* Header */
-    .header_left  { width: 20%; }
-    .header_middle { width: 55%; }
-    .header_right  { width: 25%; }
-    .header_middle ul li { font-size: 15px; margin-left: 0.5rem; }
+    .header_left {
+        width: 20%;
+    }
 
-    /* Main layout: form + preview stacked */
+    .header_middle {
+        width: 55%;
+    }
+
+    .header_right {
+        width: 25%;
+    }
+
+    .header_middle ul li {
+        font-size: 15px;
+        margin-left: 0.5rem;
+    }
+
     section {
         display: flex;
         flex-direction: column;
@@ -360,7 +425,6 @@ ul li{padding-left: 30px;}
         margin-top: 80px;
     }
 
-    /* Preview panel */
     .section_right,
     .section_right.active {
         width: 95% !important;
@@ -383,7 +447,6 @@ ul li{padding-left: 30px;}
         justify-content: center;
     }
 
-    /* Step 5 languages */
     .step5-languages-layout {
         flex-direction: column;
     }
@@ -391,44 +454,58 @@ ul li{padding-left: 30px;}
     .step5-proficiency-box {
         width: 100%;
     }
-    .section_right_top_header{
+
+    .section_right_top_header {
         margin: -1rem;
         width: 251mm;
     }
-    .section_right_top_header_inside{
+
+    .section_right_top_header_inside {
         width: 91%;
     }
 }
-@media (max-width: 912px){
-   .section_right_top_header{
+
+@media (max-width: 912px) {
+    .section_right_top_header {
         margin: -0.9rem;
         width: 224mm;
     }
-    .section_right_top_header_inside{
+
+    .section_right_top_header_inside {
         width: 90%;
     }
 }
-@media (max-width: 853px){
-   .section_right_top_header{
+
+@media (max-width: 853px) {
+    .section_right_top_header {
         margin: -0.9rem;
         width: 207mm;
     }
-    .section_right_top_header_inside{
+
+    .section_right_top_header_inside {
         width: 90%;
     }
 }
+
 /* ── Mobile: ≤768px ── */
 @media (max-width: 768px) {
 
-    /* ---- Header ---- */
     header {
         flex-wrap: wrap;
         padding: 10px 12px;
-        position: relative;         /* scroll ile kalkar, sabit kalmaz */
+        position: relative;
     }
 
-    .header_left  { width: 50%; }
-    .header_right { width: 50%; justify-content: flex-end; margin-left: 0; }
+    .header_left {
+        width: 50%;
+    }
+
+    .header_right {
+        width: 50%;
+        justify-content: flex-end;
+        margin-left: 0;
+    }
+
     .header_middle {
         width: 100%;
         padding-left: 0;
@@ -453,8 +530,9 @@ ul li{padding-left: 30px;}
         padding: 10px 0;
     }
 
-    /* ---- Containers ---- */
-    body { padding: 10px 6px; }
+    body {
+        padding: 10px 6px;
+    }
 
     .container,
     #step3.container,
@@ -467,7 +545,6 @@ ul li{padding-left: 30px;}
         border-radius: 16px;
     }
 
-    /* ---- Personal Info card ---- */
     .form-row {
         flex-direction: column;
     }
@@ -489,7 +566,6 @@ ul li{padding-left: 30px;}
         max-width: 140px;
     }
 
-    /* ---- Work experience block ---- */
     .experience-block {
         padding: 20px 14px;
     }
@@ -499,7 +575,6 @@ ul li{padding-left: 30px;}
         gap: 14px;
     }
 
-    /* ---- Step 5 ---- */
     .step5-card {
         padding: 18px;
     }
@@ -508,7 +583,6 @@ ul li{padding-left: 30px;}
         grid-template-columns: 1fr 1fr;
     }
 
-    /* ---- Modals ---- */
     .modal-card,
     .qr-card {
         width: 96%;
@@ -529,11 +603,10 @@ ul li{padding-left: 30px;}
         justify-content: center;
     }
 
-    /* ---- CV Preview ---- */
     .section_right,
     .section_right.active {
         width: 100% !important;
-        overflow-x: auto;           /* A4 genişliyini scroll ile gör */
+        overflow-x: auto;
     }
 
     .section_right h3 {
@@ -542,14 +615,12 @@ ul li{padding-left: 30px;}
         margin-left: 0;
     }
 
-    /* CV kartını minimum genişlikde saxla, scroll işlesin */
     .section_right_top {
         min-width: 600px;
         padding: 16px;
         font-size: 12px;
     }
 
-    /* Header band */
     .section_right_top_header {
         margin-left: 0;
         width: 100%;
@@ -575,7 +646,6 @@ ul li{padding-left: 30px;}
         font-size: 11px;
     }
 
-    /* Education + skills column */
     .section_right_top_education_certificate_skills {
         flex-direction: column;
         gap: 16px;
@@ -586,7 +656,6 @@ ul li{padding-left: 30px;}
         gap: 8px;
     }
 
-    /* Buttons */
     .button-container {
         flex-direction: column;
         align-items: center;
@@ -599,40 +668,105 @@ ul li{padding-left: 30px;}
         text-align: center;
     }
 
-    /* Steps footer */
-    .footer { justify-content: center; }
+    .footer {
+        justify-content: center;
+    }
 
     .next-btn {
         width: 100%;
         padding: 12px 0;
     }
 
-    .step5-footer { text-align: center; }
-    .step5-done-btn { width: 80%; }
+    .step5-footer {
+        text-align: center;
+    }
+
+    .step5-done-btn {
+        width: 80%;
+    }
 }
 
 /* ── Small mobile: ≤420px ── */
 @media (max-width: 420px) {
 
-    .header_middle ul li { font-size: 12px; }
-    .sign_part, .log_in { font-size: 13px; padding: 6px 12px; }
+    .header_middle ul li {
+        font-size: 12px;
+    }
 
-    h3 { font-size: 18px; }
+    .sign_part,
+    .log_in {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
 
-    .card { padding: 16px; border-radius: 14px; }
+    h3 {
+        font-size: 18px;
+    }
 
-    .action-box { padding: 10px; }
-    .action-box p { font-size: 10px; }
+    .card {
+        padding: 16px;
+        border-radius: 14px;
+    }
 
-    .step5-tag { font-size: 12px; padding: 5px 10px; }
+    .action-box {
+        padding: 10px;
+    }
 
-    /* CV scroll içinde daha küçük yazı */
+    .action-box p {
+        font-size: 10px;
+    }
+
+    .step5-tag {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
     .section_right_top {
         min-width: 520px;
         font-size: 11px;
     }
 
-    .input_h1 { font-size: 18px; }
+    .input_h1 {
+        font-size: 18px;
+    }
 
-    h2 { font-size: 14px; }
+    h2 {
+        font-size: 14px;
+    }
+}
+
+.html2pdf__container .section_right_top {
+    width: 210mm !important;
+    max-width: 210mm !important;
+    min-width: 210mm !important;
+    min-height: 297mm !important;
+    height: auto !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+}
+
+.html2pdf__container .section_right_side_2 {
+    flex-shrink: 0 !important;
+    height: auto !important;
+}
+
+.html2pdf__container .section_right_top_education_certificate_skills {
+    flex-shrink: 0 !important;
+}
+
+.html2pdf__container .section_right_top_language {
+    margin-top: auto !important;
+    width: 100% !important;
+    background: #0D5EFF !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+}
+
+.html2pdf__container .section_right_top_language_inside {
+    width: calc(100% - 40px) !important;
+    background: #ffffff !important;
+    height: auto !important;
 }

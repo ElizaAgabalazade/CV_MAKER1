@@ -790,6 +790,7 @@ h3 {
 .section_right {
     display: none;
     height: auto;
+    width: 210mm;
 }
 
 .section_right.active {

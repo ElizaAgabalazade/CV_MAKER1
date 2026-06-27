@@ -113,7 +113,15 @@ header {
     border-radius: 20px;
 
 }
-
+.section_right{
+    margin-top: 5rem;
+    display: block;
+}
+.section_right h3{
+    font-size: 30px;
+    font-weight: 900;
+    margin-left: -8rem;
+}
 .section_right_top {
     width: 100%;
     height: auto;

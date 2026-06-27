@@ -114,7 +114,7 @@ header {
 
 }
 
-.section_right.active {
+.section_right {
     display: block !important;
     width: 210mm;
 }
@@ -125,7 +125,7 @@ header {
 
 .section_right h3 {
     font-size: 30px;
-    margin-left: -11rem;
+    margin-left: -rem;
     margin-top: 3rem;
 }
 

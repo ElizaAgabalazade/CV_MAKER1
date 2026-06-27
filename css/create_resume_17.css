@@ -839,8 +839,8 @@ h3 {
 
 .contact-info {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 4rem;
+    right: 5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -938,6 +938,8 @@ h3 {
 #qr-cv-display {
     width: 40px;
     height: 40px;
+    position: absolute;
+    left: 0;
 }
 
 .section_right_side_2 {

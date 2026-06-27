@@ -115,9 +115,9 @@ header {
 }
 
 .section_right{
+    display: block !important;
     width: 210mm;
 }
-
 
 .section_right h3 {
     font-size: 30px;
@@ -156,14 +156,14 @@ header {
 }
 
 #preview2 {
-    width: 50px;
+    width: 100px;
     height: fit-content;
 }
 
 #qr-result-container {
     position: absolute;
     width: 30px;
-    left: -2rem;
+    left: -1rem;
     display: block;
 
 }

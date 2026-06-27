@@ -826,7 +826,7 @@ h3 {
 
 .section_right_top_header {
     width: 100%;
-    height: 150px;
+    height: 100px;
     background: #0D5EFF;
     flex-shrink: 0;
 }
@@ -846,12 +846,14 @@ h3 {
 .section_right_top_header_inside_bacgorund {
     background: #fff;
     width: 100%;
-    height: 150px;
+    height: 100px;
     display: flex;
 }
 
 #qr-result-container {
     position: absolute;
+    top: 5rem;
+    left: -2rem;
 }
 
 .input_h1 {
@@ -860,10 +862,12 @@ h3 {
     color: #2563eb;
     border: none;
     width: 100%;
+    height: 100%;
 }
 
 .header-info {
     width: 50%;
+    height: 100%;
 }
 
 .contact-info {
@@ -909,6 +913,7 @@ h2 {
 
 .section_right_side_2_profil {
     width: 20%;
+    margin-top: 2rem;
 }
 
 .section_right_side_2_content {
