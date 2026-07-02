@@ -117,14 +117,15 @@ header {
     margin-top: 5rem;
     display: block;
 }
-.section_right h3{
+
+.section_right h3 {
+    margin-top: 2rem;
     font-size: 30px;
-    font-weight: 900;
-    margin-left: -8rem;
 }
+
 .section_right_top {
-    width: 100%;
-    height: auto;
+    width: 210mm;
+    height: 297mm;
     background: #fff;
     font-family: 'Montserrat', sans-serif;
     display: flex;
@@ -133,7 +134,7 @@ header {
     box-shadow: 4px 4px 4px 5px #f0f4f8;
 }
 
-
+/* ── Üst bar: contacts ── */
 .photo-section {
     background: #83A4E7;
     padding: 8px 20px;
@@ -187,6 +188,7 @@ header {
     gap: 14px;
 }
 
+/* Summary */
 .section_right_side_2 {
     display: flex;
     flex-direction: column;
@@ -194,7 +196,7 @@ header {
 }
 
 #aboutMeTextarea {
-    font-size: 9px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -222,7 +224,7 @@ header {
 /* Work Experience */
 .work_experience_right h2,
 .section_right_top_certificat h2 {
-    font-size: 9px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -265,7 +267,7 @@ header {
 }
 
 #itemListCertificate_right1 li {
-    font-size: 7.5px;
+    font-size: 10px;
     color: #333;
     line-height: 1.5;
     padding-left: 10px;
@@ -278,7 +280,6 @@ header {
     color: #1a1a2e;
 }
 
-/* ── Sağ sütun ── */
 .section_right_top_right {
     flex: 1;
     padding: 0 20px 16px 16px;
@@ -287,7 +288,6 @@ header {
     gap: 14px;
 }
 
-/* Foto + Ad bloku */
 .section_right_top_right_1 {
     display: flex;
     flex-direction: column;
@@ -311,8 +311,9 @@ header {
 
 .header-info {
     width: 100%;
-    text-align: center;
     margin-top: 8px;
+    padding-right: 7rem;
+    margin-top: 2rem;
 }
 
 .input_h1 {
@@ -334,7 +335,6 @@ header {
     word-wrap: break-word;
     word-break: break-all;
     overflow-wrap: break-word;
-
 }
 
 #qr-result-container {
@@ -677,4 +677,14 @@ header {
     .qr-display-area {
         padding: 30px;
     }
+}
+
+.html2pdf__container .section_right_top .work_experience_right h2,
+.html2pdf__container .section_right_top.section_right_top_certificat h2,
+.html2pdf__container .section_right_top .work_experience_right h2,
+.html2pdf__container .section_right_top .section_right_top_certificat h2,
+.html2pdf__container .section_right_top .section_right_top_skills h2,
+.html2pdf__container .section_right_top .rightSideContainer h2,
+.html2pdf__container .section_right_top .section_right_top_language h2 {
+    margin-top: 2rem;
 }

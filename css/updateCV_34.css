@@ -124,7 +124,6 @@ header {
     justify-content: center;
     width: 210mm;
     margin-top: 5rem;
-    min-height: 70vh;
     height: auto;
     position: relative;
     flex-direction: column;
@@ -134,7 +133,6 @@ header {
 }
 
 
-
 .section_right h3 {
     font-size: 30px;
     margin-left: -11rem;
@@ -142,42 +140,47 @@ header {
 
 .section_right_top {
     width: 100%;
-    height: auto;
+    height: 297mm;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     background: #FFF;
     align-items: stretch;
     box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.3);
 
 }
+
 .section_right_top_left {
     width: 20%;
-}
-.section_right_top_right {
-    width: 80%;
-}
-.section_top_bottom_side {
-    display: flex;
-    width: 210mm;
-    overflow: visible !important;
-}
-
-.section_top_bottom_side_left {
-    width: 20%;
-}
-
-.section_top_bottom_side_right {
-    width: 61%;
-    background-image: url('../img/UpdateCv/bg34.png');
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 91% 90%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    box-sizing: border-box;
+    justify-content: space-around;
 }
 
+.section_right_top_right {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section_top_bottom_side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    overflow: visible !important;
+    position: relative;
+}
+.bottom_side_bg{
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height:100%;
+}
 .section_top_bottom_side_right h2 {
     margin-top: 10px;
     margin-bottom: 5px;
@@ -186,9 +189,10 @@ header {
 #certificate,
 #rightSideContainer,
 #language {
-    width: 90%;
-    text-align: right;
-    padding-right: 1rem;
+    width: 100%;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 0.5rem;
 }
 
 #fileInput2 {
@@ -228,17 +232,20 @@ header {
 }
 
 .section_right_r_side_r {
-    width: 400px;
+    width: 100%;
     position: relative;
-
+    display: flex;
+    align-items: flex-start;
 }
 
 .section_right_r_side_r img {
-    width: 20%;
-    position: absolute;
-    bottom: -12rem;
-    left: 1rem;
-    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    bottom: auto;
+    left: auto;
 }
 
 
@@ -268,7 +275,7 @@ header {
 }
 
 .bg_34_2 img {
-    width:17rem;
+    width: 17rem;
 }
 
 .overlay_inputs {
@@ -319,6 +326,7 @@ header {
     display: flex;
     flex-direction: column;
 }
+
 #autoTextarea {
     display: block !important;
     width: 100%;
@@ -345,6 +353,7 @@ header {
     color: #000;
 
 }
+
 .section_right_side_2 .outputArea::placeholder {
     color: #000;
     font-size: 8px;
@@ -365,21 +374,12 @@ header {
 
 }
 
-
-
-
-
-
-.rightSideContainer {
-    width: 100%;
-    margin: 0;
-    height: auto;
-}
 .section_right_top_skills {
     width: 100%;
     margin: 0;
     padding: 0;
 }
+
 .section_right_top_language {
     margin-top: 1rem;
     width: 47%;
@@ -421,9 +421,6 @@ header {
     margin-left: 1rem;
 }
 
-.rightSideContainer {
-    margin-bottom: 5px;
-}
 
 
 .section_right_side_2 .outputArea::placeholder {
@@ -436,11 +433,6 @@ header {
 #sendList {
     list-style-type: none;
 }
-
-
-
-
-
 #sendList1,
 #itemListLanguage_right1,
 #itemListCertificate_right1 {
@@ -453,28 +445,38 @@ header {
 
 #sendList1 li,
 #itemListLanguage_right1 li,
-#itemListCertificate_right1 li{
+#itemListCertificate_right1 li {
     font-size: 8px;
 }
 
 
-
 #preview2 {
-    width: 40%;
+    width: 20%;
     height: fit-content;
-    margin: 0 4rem;
-    top: 4rem;
-    border-radius: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0;
+    top: 6rem;
+    bottom: auto;
+    left: 6rem;
+    position: absolute;
+    flex-shrink: 0;
 }
-
+.contents{
+    display: flex;
+height: 100%;    
+    flex-direction: column;
+    justify-content: space-around;
+  margin-top: 0;
+}
 
 
 .work_experience_right {
     display: flex;
     width: 100%;
+    height: 100%;
     flex-direction: column;
     gap: 10px;
-    margin-top: 15px;
 }
 
 
@@ -565,55 +567,356 @@ header {
 }
 
 @media(max-width:1024px) {
-    .section_right {
-        margin-top: -11rem;
-    }
+
 
     .section_right h3 {
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
+    }
+
+  
+    #preview2 {
+        width: 40%;
+        height: fit-content;
+        margin: 0 4rem;
+        top: 12rem;
+        border-radius: 50px;
     }
 }
 
 @media(max-width:912px) {
-    .section_right {
-        margin-top: -11rem;
-    }
+
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 2rem;
+        margin-left: -2rem;
         margin-bottom: 1rem;
     }
 }
 
 @media(max-width:853px) {
-    .section_right {
-        margin-top: -11rem;
-    }
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 2rem;
+        margin-left: 0rem;
         margin-bottom: 1rem;
+    }
+
+    .input_h1 {
+        left: 2rem;
+    }
+
+    .name_form {
+        top: 29rem;
+        left: 10rem;
+    }
+
+    .bg_34_left {
+        height: auto;
+    }
+
+    .section_top_bottom_side_right {
+        background-image: url('../img/UpdateCv/bg34.png') !important;
+        background-size: 103% 100% !important;
+        background-position: right bottom !important;
+        background-repeat: no-repeat !important;
+        width: 30rem !important;
+        height: 20rem;
+        margin-top: 13rem;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+
+    #preview2 {
+        width: 40%;
+        height: fit-content;
+        margin: 0 4rem;
+        top: 19rem;
+        border-radius: 50px;
     }
 }
 
-@media (max-width: 600px) {
-    .container {
-        width: 100%;
-        justify-items: center;
+@media(max-width:768px) {
+
+    .section_right h3 {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: 26px;
     }
 
-    .header {
+    .section_right_top {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .section_top_bottom_side_right {
+        width: 28rem !important;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .section_right {
+        width: 100vw;
+        margin-top: 2rem;
+        min-height: auto;
+    }
+
+    .section_right h3 {
+        font-size: 20px;
+        margin-left: 0;
+        padding-left: 1rem;
+    }
+
+    /* --- TOP BLOCK --- */
+    .section_right_top {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .section_right_top_left {
+        width: 22%;
+        min-width: 22%;
+    }
+
+    .section_right_top_right {
+        width: 78%;
+    }
+
+    /* --- BOTTOM SIDE --- */
+    .section_top_bottom_side {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .section_top_bottom_side_left {
+        width: 22%;
+        min-width: 22%;
+    }
+
+    .section_top_bottom_side_right {
+        width: 78%;
+        background-size: 100% 100%;
+        background-position: right;
+        margin-top: 7rem;
+    }
+
+    /* --- INPUT H1 (şaquli yazı qorunur) --- */
+    .input_h1,
+    .input_h1::placeholder {
+        font-size: 11px;
+        left: 0.2rem;
+        width: 45%;
+    }
+
+    /* --- RIGHT R SIDE (foto) --- */
+    .section_right_r_side_r {
+        width: 100%;
+        position: relative;
+    }
+
+    .section_right_r_side_r img {
+        width: 28%;
+        position: absolute;
+        bottom: -8rem;
+        left: 0.5rem;
+        border-radius: 30px;
+    }
+
+    /* --- NAME FORM --- */
+    .name_form {
+        width: 80%;
+        margin-top: 1rem;
+        font-size: 11px;
+    }
+
+    /* --- BG 34 LEFT --- */
+    .bg_34_left {
+        min-height: 180px;
+        height: auto;
+        margin-top: 0.5rem;
+    }
+
+    /* --- BG 34 2 (overlay şəkil) --- */
+    .bg_34_2 img {
+        width: 12rem;
+    }
+
+    .overlay_inputs {
+        top: 2rem;
+        left: 3px;
+        height: 5.5rem;
+    }
+
+    .overlay_inputs textarea,
+    .overlay_inputs textarea::placeholder {
+        font-size: 7px;
+        width: 92%;
+    }
+
+    /* --- RIGHT SIDE 2 (əsas content) --- */
+    .section_right_side_2 {
+        width: 95%;
+        margin-left: 0.3rem;
+        margin-top: 1rem;
+    }
+
+    #autoTextarea {
+        font-size: 7px;
+        padding-left: 0.25rem;
+        min-height: 70px;
+    }
+
+    .section_right_side_2 .outputArea {
+        width: 100%;
+        font-size: 7px;
+        height: 40px;
+    }
+
+    .section_right_side_2 p {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    /* --- CONTAINERS --- */
+    #certificate,
+    #rightSideContainer,
+    #language {
+        width: 100%;
+        text-align: right;
+        padding-right: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .rightSideContainer h2,
+    .section_right_top_certificat h2,
+    .section_right_top_skills h2,
+    .section_right_top_language h2 {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .section_right_top_language {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    /* --- LISTS --- */
+    #sendList,
+    #entry_list {
+        font-size: 7px;
+        margin-left: 0.5rem;
+    }
+
+    #sendList1 li,
+    #itemListLanguage_right1 li,
+    #itemListCertificate_right1 li {
+        font-size: 7px;
+    }
+
+    #sendList1,
+    #itemListLanguage_right1,
+    #itemListCertificate_right1 {
+        padding-bottom: 0.5rem;
+    }
+
+    /* --- PREVIEW (profil foto) --- */
+    #preview2 {
+        width: 100%;
+        margin: 0 1.5rem;
+        top: 15rem;
+        border-radius: 30px;
+    }
+
+    /* --- WORK / EDUCATION FORMS --- */
+    .work_experience_right {
+        gap: 6px;
+        margin-top: 8px;
+    }
+
+    .work_experience_right h2,
+    .right_skills h2,
+    .language_right h2 {
+        margin-top: 0.5rem;
+    }
+
+    .work_experience_right form,
+    .education_right form {
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+        margin-left: 0.3rem;
+    }
+
+    #sendTitle1.active {
         width: 80%;
     }
 
-    .card {
-        width: 70%;
+    #sendedParts h2 {
+        font-size: 10px;
     }
 
+    .button-container {
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+}
+
+@media(max-width: 480px) {
+    .section_right h3 {
+        margin-top: 6rem;
+    }
+
+    .button-container {
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
 }
 
 @media(max-width: 430px) {
@@ -670,6 +973,18 @@ header {
         margin-top: 10rem;
         font-size: 22px;
         text-align: center;
+    }
+
+    .namesTop {
+        width: 100%;
+        margin-right: 2rem;
+    }
+
+    .input_h1 {
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+
     }
 
     .info_input {
@@ -733,6 +1048,7 @@ header {
     }
 }
 
+
 .html2pdf__container .section_right_top {
     width: 210mm !important;
     height: 297mm !important;
@@ -793,15 +1109,19 @@ header {
     display: flex !important;
     flex-direction: column !important;
 }
-.html2pdf__container h2{
+
+.html2pdf__container h2 {
     font-size: 14px;
 }
-.html2pdf__container p{
+
+.html2pdf__container p {
     font-size: 10px;
 }
-.html2pdf__container  ul li {
+
+.html2pdf__container ul li {
     font-size: 8px;
 }
+
 .html2pdf__container .overlay_inputs textarea {
     font-size: 11px;
 }
@@ -845,13 +1165,16 @@ header {
     background: transparent;
     font-weight: 700;
 }
+
 div.outputArea {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
     width: 90%;
 }
-.html2pdf__container #qr-result-container{
-top: 0.5rem;
+
+.html2pdf__container #qr-result-container {
+    top: 0.5rem;
 }
+
 /* end */

@@ -797,8 +797,8 @@ h3 {
     flex-direction: column;
     justify-content: center;
     width: 210mm;
-    margin-top: 16rem;
-    height: 70vh;
+    height: auto;
+    margin-top: 3rem;
     position: relative;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
@@ -806,8 +806,14 @@ h3 {
 
 }
 
+.section_right h3 {
+    font-size: 30px;
+    margin-left: -11rem;
+}
+
+
 #preview2 {
-    width: 20%;
+    width: 40%;
     height: fit-content;
     position: absolute;
     left: 3rem;
@@ -819,16 +825,11 @@ h3 {
     display: flex !important;
 }
 
-.section_right h3 {
-    font-size: 30px;
-    margin-left: -11rem;
-}
 
 
 .section_right_top {
     width: 100%;
-    min-height: 100hv;
-    height: auto;
+    height: 297mm;
     display: flex;
     background: #ffff;
     display: flex;
@@ -841,10 +842,9 @@ h3 {
 #fileInput2 {
     display: none;
 }
-.section_inside_top{
+.top_side{
     display: flex;
     width: 100%;
-    height: 60vh;
 }
 .section_1 {
     display: flex;
@@ -855,10 +855,9 @@ h3 {
 .section_right_r_side_r {
     width: 30%;
     background-image: url("../img/UpdateCv/bg_30.png");
-    background-size: contain;
+    background-size: 90% 100%;
     background-position: left;
     background-repeat: no-repeat;
-    min-height: 100%;
     height: auto;
     position: relative;
  
@@ -878,7 +877,7 @@ h3 {
     flex-direction: column;
     align-items: stretch;
     position: absolute;
-    top: 12rem;
+    top: 14rem;
     margin-left: 1rem;
     border: none;
     outline: none;
@@ -922,7 +921,7 @@ h3 {
 .linkedinR::placeholder {
     width: 100%;
     overflow: hidden;
-    height: 5vh;
+    height: 20px;
     resize: none;
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -933,7 +932,7 @@ h3 {
     text-align: center;
     font-weight: 700;
     background-color: transparent;
-    line-height: 1.1;
+    line-height: 1;
     padding: 0 !important;
     resize: none;
     border: none;

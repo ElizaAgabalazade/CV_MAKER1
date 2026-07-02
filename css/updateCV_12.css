@@ -127,15 +127,12 @@ header {
     justify-content: center;
     width: 210mm;
     margin-top: 6rem;
-    height: 70vh;
     position: relative;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
 
 
 }
-
-
 
 .section_right h3 {
     font-size: 30px;
@@ -144,7 +141,7 @@ header {
 
 .section_right_top {
     width: 100%;
-    height: auto;
+    height: 297mm;
     display: flex;
     background: #ffff;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
@@ -556,42 +553,104 @@ header {
 }
 
 @media(max-width:1024px) {
-    .section_right {
-        margin-top: -11rem;
-    }
+
 
     .section_right h3 {
-        margin-top: 1rem;
+        margin-top:3rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
     }
 }
 
 @media(max-width:912px) {
-    .section_right {
-        margin-top: -11rem;
-    }
+
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 3rem;
+        margin-left: -2rem;
         margin-bottom: 1rem;
     }
 }
 
 @media(max-width:853px) {
-    .section_right {
-        margin-top: -11rem;
-    }
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 15rem;
+        margin-left: 0rem;
         margin-bottom: 1rem;
     }
 }
 
-@media (max-width: 600px) {
+@media(max-width:768px) {
+
+    .section_right h3 {
+        margin-top: 15rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: 26px;
+    }
+
+    .section_right_top {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .section_right h3 {
+        margin-top: 23rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: 26px;
+    }
+
+    .section_right_top {
+        width: 95%;
+        margin: 0 auto;
+    }
+
     .container {
         width: 100%;
         justify-items: center;
@@ -604,7 +663,122 @@ header {
     .card {
         width: 70%;
     }
+    /* Əsas konteyner tənzimləmələri */
+    .section_right {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto !important;
+        margin-top: 2rem;
+        padding: 10px;
+    }
 
+    .section_right h3 {
+        margin-left: 0;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    /* Yan-yana olan strukturları alt-alta gətiririk */
+    .section_right_top,
+    .education-certificat {
+        flex-direction: column !important;
+        height: auto;
+    }
+
+    /* Blokların enini tam ekran edirik */
+    .section_right_top_left,
+    .section_right_r_side,
+    .name_form,
+    .top_form,
+    .section_right_top_skills,
+    .section_right_top_language,
+    .section_right_top_certificat,
+    .rightSideContainer,
+    .section_right_side_2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Absolute mövqedə olan formaları mobil üçün sıfırlayırıq */
+    .name_form,
+    .top_form {
+        position: static !important;
+        transform: none !important;
+        margin-top: 15px;
+        padding: 15px;
+    }
+
+    /* Giriş xanaları (Inputs) */
+    .input_h1,
+    .input_h1::placeholder {
+        width: 100% !important;
+        min-height: 60px;
+    }
+
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR {
+        max-width: 100% !important;
+        text-align: center;
+        font-size: 12px;
+        /* Mobildə oxunurluq üçün bir az böyüdüldü */
+        padding: 5px !important;
+    }
+
+    .section_right_r_side_inside,
+    .info_input {
+        padding: 20px;
+        min-height: auto;
+        background-size: cover;
+    }
+
+    .section_right_side_2 .outputArea,
+    .section_right_side_2 .outputArea::placeholder {
+        text-align: left;
+        font-size: 11px;
+        min-height: 120px;
+    }
+
+    .section_right_top_certificat h2,
+    .section_right_top_skills h2,
+    .section_right_top_language h2,
+    .rightSideContainer h2,
+    #sendTitle1,
+    .work_experience_right h2,
+    .education_right h2,
+    .right_skills h2,
+    .language_right h2,
+    .section_right_side_2 p {
+        font-size: 14px !important;
+    }
+
+    #itemListLanguage_right1 li,
+    #sendList li,
+    #itemListCertificate_right1 li,
+    .skill_list_right li,
+    #sendList1 {
+        font-size: 11px !important;
+    }
+
+    .work_experience_right,
+    .work_experience_right form,
+    .education_right form {
+        margin-left: 0 !important;
+        padding-left: 10px;
+    }
+
+    #preview2 {
+        width: 100% !important;
+        margin: 10px 0;
+    }
+    .button-container{
+        margin: 0;
+        margin-top: 1rem;
+    }
 }
 
 @media(max-width: 430px) {
@@ -723,7 +897,6 @@ header {
         width: 50%;
     }
 }
-
 .html2pdf__container {
     width: 210mm !important;
     height: 297mm !important;
@@ -883,7 +1056,6 @@ header {
 
 .html2pdf__container h2 {
     font-size: 13px !important;
-    border-bottom: 1px solid #000000 !important;
     padding-bottom: 3px !important;
     margin-bottom: 8px !important;
 }

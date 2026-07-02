@@ -800,7 +800,6 @@ h3 {
     justify-content: center;
     width: 210mm;
     height: auto;
-    min-height: 60vh;
     margin-top: 3rem;
     font-family: 'Montserrat', sans-serif;
 
@@ -817,11 +816,11 @@ h3 {
 
 .section_right_top {
     width: 100%;
-    min-height: 10rem;
-    height: auto;
+    height: 297mm;
     background: #ffff;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
 
 }
@@ -863,6 +862,7 @@ h3 {
     flex-direction: column;
     padding-left: 14rem;
     width: 70%;
+    padding-bottom: 1rem;
 }
 
 .name_form {
@@ -871,7 +871,7 @@ h3 {
     align-items: center;
     position: absolute;
     top: 11rem;
-    left: 0;
+    margin-left: 2rem;
     width: 100%;
     background: transparent;
     border: none;
@@ -931,7 +931,7 @@ h3 {
 .names {
     width: 100%;
     position: absolute;
-    top: 8rem;
+    top: 7rem;
     right: 0rem;
     background: transparent;
 }
@@ -1784,7 +1784,8 @@ h3 {
     .name_form {
         left: -1rem;
     }
-    .button-container{
+
+    .button-container {
         margin: 0 auto;
         margin-top: 1rem;
     }

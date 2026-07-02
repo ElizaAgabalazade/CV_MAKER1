@@ -829,7 +829,6 @@ h3 {
     justify-content: center;
     width: 210mm;
     margin-top: 12rem;
-    height: 70vh;
     position: relative;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
@@ -846,13 +845,13 @@ h3 {
 }
 
 .section_right_top {
-    width: 100%;
-    height: auto;
+    width: 210mm;
+    height: 297mm;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
+    background: #FFFF;
+    box-shadow: 2px 2px 3px 5px rgba(0, 0, 0, 0.3);
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     position: relative;
@@ -890,7 +889,7 @@ h3 {
 .section_right_r {
     width: 100%;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
 
 }
@@ -916,6 +915,7 @@ element.style {
 
 .rightSideContainer {
     margin-bottom: 5px;
+    
 }
 
 
@@ -1011,6 +1011,7 @@ element.style {
 .section_right_side_2 {
     text-align: center;
     background: #ffff;
+    margin-top: 5%;
 
 }
 
@@ -1025,11 +1026,12 @@ element.style {
     width: 100%;
     height: auto;
 
+
 }
 
 .section_right_top_skills,
 .section_right_top_language {
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 .section_right_top_skills h2,
@@ -1128,7 +1130,9 @@ element.style {
     font-size: 12px;
     font-weight: 700;
 }
-
+.section_right_top_certificat h2{
+    margin-top: 5rem;
+}
 .section_right_side_2 .outputArea::placeholder {
     color: #000000;
     font-size: 8px;
@@ -1171,7 +1175,7 @@ element.style {
 .right_skills h2,
 .language_right h2 {
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 5rem;
     margin-left: 1rem;
     font-size: 12px;
     margin-left: 1rem;
@@ -1491,7 +1495,7 @@ element.style {
 }
 /* end */
 
-/* .html2pdf__container .section_right_top {
+.html2pdf__container .section_right_top {
     width: 210mm !important;
     min-height: 297mm !important;
     height: auto !important;
@@ -1586,4 +1590,4 @@ element.style {
     width: 50px;
     height: 30px;
     top: 1rem;
-} */
+} 

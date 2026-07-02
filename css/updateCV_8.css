@@ -125,21 +125,20 @@ header {
     justify-content: center;
     width: 210mm;
     height: auto;
-    min-height: 60vh;
     margin-top: 3rem;
     font-family: 'Montserrat', sans-serif;
 
 }
 
-.section_right h3{
+.section_right h3 {
     font-size: 30px;
     margin-left: -11rem;
+    font-weight: 900;
 }
 
 .section_right_top {
     width: 100%;
-    min-height: 10rem;
-    height: auto;
+    height: 297mm;
     display: flex;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
     position: relative;
@@ -156,7 +155,7 @@ header {
 
 .section_right_l_side {
     width: 40%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     background: #80BC9D;
@@ -167,8 +166,6 @@ header {
     margin: 0.5rem 1rem;
     width: 75%;
 }
-
-
 
 .section_right_r_side {
     width: 60%;
@@ -191,8 +188,8 @@ header {
 
 .input_h1,
 .input_h1::placeholder {
-    width: 100%;
-    min-height: 50px;
+   width: 100%;
+    min-height: 100px;
     height: auto;
     resize: none;
     border: none;
@@ -263,7 +260,6 @@ header {
     line-height: 1.1;
     margin-bottom: 1px;
     padding: 0 !important;
-
     resize: none;
     border: none;
     outline: none;
@@ -314,26 +310,6 @@ header {
     outline: none;
     background: #E9FFF1;
     width: 100%;
-}
-
-.language_form_range {
-    display: flex;
-    width: 90%;
-    background: #E9FFF1;
-}
-
-.language_input {
-    border: none;
-    outline: none;
-    width: 48%;
-    font-size: 10px;
-
-}
-
-.language_input::placeholder {
-    font-size: 10px;
-    background: #E9FFF1;
-
 }
 
 
@@ -449,21 +425,19 @@ header {
     background: #E9FFF1;
     border-radius: 6px;
     width: 90%;
-    height: auto;
     margin: 0 auto;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
-
-.allSkills_Certificate_Language {
-    margin-top: 5rem;
-}
-
-.rightSideContainer {
-    margin-top: 1rem;
+.allSkills_Certificate_Language{
+    height: 50%;
+ margin-top: 5rem;}
+.rightSideContainer{
+    height: 30%;
+    margin-top: 2rem;
     text-align: center;
-
 }
+
 
 #sendList1 {
     list-style-type: none;
@@ -476,50 +450,6 @@ header {
     margin: 0.5rem;
 }
 
-.language-item {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    width: 90%;
-    gap: 6px;
-    font-size: 8px;
-    background-color: #E9FFF1;
-    border-radius: 6px;
-
-}
-
-.language-name {
-    flex: 0 0 40%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.language-range {
-    -webkit-appearance: none;
-    width: 50%;
-    height: 3px;
-    margin-top: 7px;
-    background: #868693;
-    border-radius: 10px;
-    outline: none;
-}
-
-.language-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 5px;
-    height: 5px;
-    background: #000;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.language-remove {
-    flex: 0 0 10%;
-    text-align: center;
-    cursor: pointer;
-    width: 10px;
-}
 
 .section_right_side_2 p {
     color: #4F7349;
@@ -623,13 +553,23 @@ header {
     transform: translateY(-1px);
 }
 
+@media(max-width:1280px) {
+
+    .profile_label,
+    .profile_input {
+        width: 90%;
+        margin-left: 1rem;
+    }
+
+}
+
 @media(max-width:1024px) {
     .section_right {
         margin-top: -11rem;
     }
 
     .section_right h3 {
-        margin-top: 1rem;
+        margin-top: 15rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
     }
@@ -641,8 +581,8 @@ header {
     }
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 15rem;
+        margin-left: -2rem;
         margin-bottom: 1rem;
     }
 }
@@ -653,29 +593,100 @@ header {
     }
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 15rem;
+        margin-left: 0rem;
         margin-bottom: 1rem;
     }
 }
 
-@media (max-width: 600px) {
-    .container {
-        width: 100%;
-        justify-items: center;
+
+
+@media screen and (max-width: 768px) {
+
+    /* Reset fixed A4 print widths to responsive viewport widths */
+    .section_right,
+    .section_right_top_corner,
+    .section_right_top {
+        width: 100% !important;
+        max-width: 100%;
+        padding: 10px;
     }
 
-    .header {
-        width: 80%;
+    .section_right_l_side {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 20px;
     }
 
-    .card {
-        width: 70%;
+    .info_input,
+    .textarea_part {
+        width: 95% !important;
+        align-items: flex-start !important;
     }
 
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR {
+        text-align: left !important;
+        margin-left: 0 !important;
+    }
+
+    .section_right_r_side {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section_right_r_side_l,
+    .section_right_r_side_r {
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        border-left: none !important;
+        /* Removes the vertical dividing line */
+    }
+
+    .section__right_l_side_1 img {
+        display: block;
+        margin: 0 auto 20px auto !important;
+        width: 50% !important;
+        max-width: 150px;
+    }
+
+    .section_right_top_skills,
+    .section_right_top_language,
+    .work_experience_right,
+    .rightSideContainer,
+    .section_right_side_2 {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    /* Fix header alignments inside sections for a uniform look */
+    .section_right_top_skills h2,
+    .section_right_top_language h2,
+    .section_right_top_certificat h2,
+    .work_experience_right h2,
+    .rightSideContainer h2 {
+        text-align: left !important;
+        margin-left: 0 !important;
+    }
+
+    /* Fix form alignments inside containers */
+    .work_experience_right form,
+    .education_right form {
+        margin-left: 0 !important;
+    }
+
+    .button-container {
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
 }
 
-@media(max-width: 430px) {
+
+@media (max-width: 600px) {
     header {
         flex-direction: column;
         text-align: center;
@@ -716,79 +727,223 @@ header {
         justify-content: center;
     }
 
-    .section_right,
-    .info_input {
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        height: auto !important;
+    .section_right h3 {
+        margin-top: 18rem;
+    }
+
+    .container {
+        width: 100%;
+        justify-items: center;
+    }
+
+    .header {
+        width: 80%;
+    }
+
+    .card {
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
     }
 
     .section_right h3 {
-        margin-left: 0 !important;
-        margin-top: 10rem;
-        font-size: 22px;
-        text-align: center;
+        margin-top: 18rem;
+    }
+
+    .section_right_top_corner {
+        padding: 15px 10px !important;
+        margin-top: 1rem !important;
+    }
+
+    .input_h1,
+    .input_h1::placeholder {
+        font-size: 18px !important;
+        width: 100% !important;
+        margin-left: 3rem;
+    }
+
+    .section_right_l_side {
+        position: relative;
     }
 
     .info_input {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0 !important;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        left: 5rem;
     }
 
     .phoneR,
     .emailR,
     .adressR,
-    .linkedinR {
-        width: 90% !important;
-        font-size: 12px !important;
-        margin-bottom: 5px;
+    .linkedinR,
+    .phoneR::placeholder,
+    .emailR::placeholder {
+        width: 20%;
     }
 
-    .button-container {
-        margin-left: 0 !important;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR,
+    .phoneR::placeholder,
+    .emailR::placeholder,
+    #itemListLanguage_right1 li,
+    #sendList li,
+    #entry_list li,
+    #itemListCertificate_right1 li,
+    #sendList1 {
+        font-size: 11px !important;
+        height: auto !important;
     }
 
-    .btn {
-        width: 80%;
-        padding: 10px 20px;
-        font-size: 14px;
+    .section_right_side_2 .outputArea,
+    .section_right_side_2 .outputArea::placeholder {
+        font-size: 11px !important;
+        padding-left: 0 !important;
     }
 
-    .place,
-    .situation,
-    .position {
-        width: 90% !important;
-        margin-left: 0 !important;
+    .section__right_l_side_1 img {
+        width: 60% !important;
+        max-width: 130px !important;
+        margin-left: auto !important;
     }
 
-    .section_right_r {
-        margin-left: 0 !important;
+    .work_experience_right form,
+    .education_right form {
+        flex-direction: column !important;
+        gap: 8px;
+    }
+
+    #sendTitle,
+    #sendTitle1,
+    .section_right_top_skills h2,
+    .section_right_top_language h2,
+    .section_right_top_certificat h2,
+    .work_experience_right h2,
+    .rightSideContainer h2 {
+        font-size: 13px !important;
+        letter-spacing: 1px !important;
+        margin-top: 1.5rem !important;
+        margin-bottom: 5px !important;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .header_middle ul {
+        gap: 0.25rem;
+        flex-wrap: wrap;
+    }
+
+    .header_middle ul li {
+        font-size: 12px;
+        margin-left: 0.25rem;
+    }
+
+    .section_right h3 {
+        margin-top: 18rem !important;
+        font-size: 20px;
+    }
+
+    .input_h1,
+    .input_h1::placeholder {
+        font-size: 16px !important;
+        margin-left: 10rem !important;
+        text-align: center;
+    }
+
+    .info_input {
+        position: static !important;
         width: 100% !important;
-        padding: 0 10px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 4px;
     }
 
-    hr.vertical_for_left_right {
-        display: none;
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR,
+    .phoneR::placeholder,
+    .emailR::placeholder {
+        width: 100% !important;
+        text-align: center !important;
     }
 
-    .container {
-        width: 90%;
-        justify-items: center;
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR,
+    .phoneR::placeholder,
+    .emailR::placeholder,
+    #itemListLanguage_right1 li,
+    #sendList li,
+    #entry_list li,
+    #itemListCertificate_right1 li,
+    #sendList1,
+    .section_right_side_2 .outputArea,
+    .section_right_side_2 .outputArea::placeholder {
+        font-size: 10.5px !important;
     }
 
-    .header {
-        width: 50%;
-        margin-top: 4rem;
+    .section__right_l_side_1 img {
+        width: 50% !important;
+        max-width: 110px !important;
+        margin: 0 auto !important;
     }
 
-    .card {
-        width: 50%;
+    #sendTitle,
+    #sendTitle1,
+    .section_right_top_skills h2,
+    .section_right_top_language h2,
+    .section_right_top_certificat h2,
+    .work_experience_right h2,
+    .rightSideContainer h2 {
+        font-size: 12px !important;
+        margin-top: 1rem !important;
     }
 }
 
@@ -834,37 +989,46 @@ header {
     overflow: visible !important;
     display: block !important;
 }
-.html2pdf__container .input_h1{
+
+.html2pdf__container .input_h1 {
     font-size: 16px;
 }
+
 .html2pdf__container .outputArea,
-.html2pdf__container ul li{
+.html2pdf__container ul li {
     font-size: 12px;
 }
-.html2pdf__container h2{
-font-size: 14px;
+
+.html2pdf__container h2 {
+    font-size: 14px;
 }
-.html2pdf__container .info_input{
+
+.html2pdf__container .info_input {
     margin-left: 2rem;
     z-index: 11111;
     width: 100%;
 }
-.html2pdf__container .info_input textarea{
+
+.html2pdf__container .info_input textarea {
     font-size: 11px;
 }
+
 .html2pdf__container .info_input_hr {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
     box-shadow: none !important;
     height: 1px !important;
 }
+
 div.outputArea {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
 }
-.html2pdf__container #qr-result-container{
+
+.html2pdf__container #qr-result-container {
     position: absolute;
     top: 1rem;
-   
+
 }
+
 /* end */

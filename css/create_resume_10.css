@@ -818,7 +818,6 @@ h3 {
     justify-content: center;
     width: 210mm;
     margin-top: 3rem;
-    min-height: 20vh;
     height: auto;
     position: relative;
     flex-direction: column;
@@ -838,6 +837,7 @@ h3 {
 
 .section_right_top {
     width: 100%;
+    height: 297mm;
     height: auto;
     background: #EEFBFF;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
@@ -884,6 +884,7 @@ h3 {
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 .section_right_r_side {
@@ -897,10 +898,11 @@ h3 {
 .top_form {
     background-color: #447F98;
     padding-top: 1rem;
-
+    
 }
 
 .top_form input {
+    text-align: center;
     border: none;
     outline: none;
     color: #fff;

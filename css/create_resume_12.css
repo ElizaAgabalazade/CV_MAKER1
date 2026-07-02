@@ -471,7 +471,7 @@ h3 {
 
 #qr-result-container {
     position: absolute;
-    right: 15rem;
+    right: 20rem;
     top: 4rem;
     width: 30px;
     z-index: 11111;
@@ -823,7 +823,6 @@ h3 {
     justify-content: center;
     width: 210mm;
     margin-top: 6rem;
-    height: 70vh;
     position: relative;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
@@ -842,7 +841,7 @@ h3 {
 
 .section_right_top {
     width: 100%;
-    height: auto;
+    height: 297mm;
     display: flex;
     background: #ffff;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
@@ -1757,7 +1756,6 @@ h3 {
 
 .html2pdf__container h2 {
     font-size: 13px !important;
-    border-bottom: 1px solid #000000 !important;
     padding-bottom: 3px !important;
     margin-bottom: 8px !important;
 }

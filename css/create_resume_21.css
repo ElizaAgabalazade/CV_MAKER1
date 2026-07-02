@@ -486,7 +486,7 @@ h3 {
 #qr-result-container {
     position: absolute;
     right: 2rem;
-    top: -0.5rem;
+    top: 0.5rem;
     width: 30px;
 }
 
@@ -799,7 +799,6 @@ h3 {
     justify-content: center;
     width: 210mm;
     height: auto;
-    min-height: 60vh;
     margin-top: 3rem;
     font-family: 'Montserrat', sans-serif;
 
@@ -816,8 +815,7 @@ h3 {
 
 .section_right_top {
     width: 100%;
-    min-height: 10rem;
-    height: auto;
+    height: 297mm;
     display: flex;
     background: #F0F0F0;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
@@ -833,32 +831,25 @@ h3 {
     width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     background: #F0F0F0;
 
-}
-
-.section_right_side_2 {
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-
-}
-
-.section_right_side_2 p {
-    font-size: 12px;
 }
 
 .section_right_r_side {
     width: 50%;
     position: relative;
+      display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .section_right_r_side_r img {
-    width: 40%;
+    width: 45%;
     border-radius: 30px;
     position: absolute;
-    left: 8.3rem;
-    top: 3rem;
+    left: 12rem;
+    top: 1rem;
     z-index: 111;
 }
 
@@ -880,9 +871,10 @@ h3 {
     border: none;
     outline: none;
     width: 60%;
+    border: none;
     text-align: right;
-    color: #000000;
     background: #F0F0F0;
+    color: #000000;
     padding-bottom: 1rem;
     resize: none;
 
@@ -891,24 +883,28 @@ h3 {
 
 .input_h1,
 .input_h1::placeholder {
-    width: 10rem;
+    width: 98%;
     height: 100%;
     resize: none;
     white-space: pre-wrap;
     word-wrap: break-word;
     border: none;
-    background: #F0F0F0;
     outline: none;
     color: #000000;
+    background: #F0F0F0;
     font-size: 15px;
-    ;
 
 
 
 }
 
+#preview2 {
+    width: 30%;
+    height: fit-content;
+    margin: 10px 5px;
+    border-radius: 50px;
 
-
+}
 
 .top_form {
     display: flex;
@@ -958,8 +954,9 @@ h3 {
     outline: none;
     overflow: hidden;
     display: block;
-    margin-left: 8rem;
+    margin-left: auto;
     margin-right: auto;
+
 
 }
 
@@ -974,15 +971,17 @@ h3 {
 
 }
 
-
-
-
-
-
 .seperate {
     min-height: 20%;
     height: auto;
     margin-top: 3rem;
+}
+
+.section_right_side_2 {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+
 }
 
 .section_right_side_2 {
@@ -1034,13 +1033,7 @@ h3 {
 }
 
 
-.skill_list_right {
-    list-style-type: none;
-}
 
-.skill_list_right li {
-    font-size: 8px;
-}
 
 #itemListLanguage_right1 {
     list-style: none;
@@ -1049,14 +1042,15 @@ h3 {
 }
 
 
-.section_right_top_certificat,
+
 .section_right_top_skills,
 .section_right_top_language,
 .rightSideContainer {
-    padding-left: 1rem;
+    padding-left: 2rem;
     margin-top: 3rem;
     width: 80%;
     height: auto;
+    padding-bottom: 10px;
 }
 
 .section_right_top_skills h2,
@@ -1068,10 +1062,43 @@ h3 {
 }
 
 
-.section_right_top_skills i {
-    margin: 0.5rem 1rem;
+
+.skill_list_right {
+    list-style-type: none;
 }
 
+.skill_list_right li {
+    font-size: 8px;
+
+}
+
+#entry_list {
+    font-size: 8px;
+
+}
+
+.language_form_range {
+    display: flex;
+    width: 90%;
+    background: #F0F0F0;
+
+
+}
+
+.language_input {
+    border: none;
+    outline: none;
+    width: 48%;
+    font-size: 10px;
+
+}
+
+.language_input::placeholder {
+    font-size: 10px;
+    background: #F0F0F0;
+
+
+}
 
 
 
@@ -1080,16 +1107,23 @@ h3 {
     font-size: 12px;
 }
 
+#itemListCertificate_right1 {
+    list-style-type: none;
+}
+
+#itemListCertificate_right1 li {
+    font-size: 8px;
+}
 
 #sendTitle1 {
     white-space: pre-wrap;
     word-wrap: break-word;
     width: 70%;
-    list-style-type: none;
 }
 
 #sendList {
     font-size: 8px;
+    list-style-type: none;
 }
 
 .rightSideContainer {
@@ -1108,15 +1142,11 @@ h3 {
     list-style-type: none;
 }
 
-
-
-
 #sendList1 {
     font-size: 8px;
     margin: 0.5rem;
     list-style-type: none;
 }
-
 
 #itemListLanguage_right1 {
     list-style: none;
@@ -1125,37 +1155,33 @@ h3 {
 }
 
 
+
 .work_experience_right {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 15px;
+    padding-left: 2rem;
 }
 
 
-
-
-.work_experience_right h2,
-.right_skills h2,
-.language_right h2 {
-    margin-top: 1rem;
-
-
+.section_right_top_certificat {
+    padding-left: 2rem;
 }
 
 .section_right_top_certificat h2,
+.work_experience_right h2,
+.right_skills h2,
+.language_right h2,
 .rightSideContainer h2 {
+    margin-top: 1rem;
     font-size: 12px;
     font-weight: 700;
 }
 
-#itemListCertificate_right1 {
-    list-style-type: none;
-}
 
-#itemListCertificate_right1 li {
-    font-size: 8px;
-}
+
+
 
 .work_experience_right form,
 .education_right form {
@@ -1166,7 +1192,6 @@ h3 {
     margin-left: 1rem;
 
 }
-
 
 .button-container {
     display: flex;
@@ -1216,12 +1241,12 @@ h3 {
 }
 
 
-@media(max-width:1280px) {
 
-    .name_form,
-    .top_form {
-        width: 100px;
-        left: 1.5rem;
+@media(max-width:1280px) {
+    #sendTitle1 {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        width: 62%;
     }
 }
 
@@ -1373,17 +1398,14 @@ h3 {
     width: 100%;
 }
     /* Absolute mövqedə olan formaları mobil üçün sıfırlayırıq */
-    .top_form,
-    .name_form {
+    .name_form,
+    .top_form {
         position: static !important;
         transform: none !important;
         margin-top: 15px;
         padding: 15px;
     }
-.name_form textarea{
-width: 100%;
-margin: 0;
-}
+
     /* Giriş xanaları (Inputs) */
     .input_h1,
     .input_h1::placeholder {
@@ -1599,9 +1621,11 @@ margin: 0;
 .html2pdf__container .section_right_top_skills {
     margin-top: 2rem;
 }
+
 div.outputArea {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
 }
+
 /* end */

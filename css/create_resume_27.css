@@ -135,6 +135,7 @@ header {
     align-items: center;
     margin-bottom: 20px;
 }
+
 .back-btn {
     background: none;
     border: none;
@@ -142,7 +143,8 @@ header {
     cursor: pointer;
     font-size: 16px;
 }
-.back-btn a{
+
+.back-btn a {
     text-decoration: none;
     color: #444;
 
@@ -798,7 +800,6 @@ h3 {
     justify-content: center;
     width: 210mm;
     height: auto;
-    min-height: 60vh;
     margin-top: 3rem;
     font-family: 'Montserrat', sans-serif;
 
@@ -815,11 +816,11 @@ h3 {
 
 .section_right_top {
     width: 100%;
-    min-height: 10rem;
-    height: auto;
+    height: 297mm;
     background: #FFFF;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
 
 }
@@ -830,12 +831,15 @@ h3 {
 
 
 .section_right_l_side {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     margin: 0 auto;
     width: 90%;
-    min-height: 70%;
-    height: auto;
+    height: 90%;
     margin: 1rem;
+    padding-left: 1rem;
+    margin-top: 2rem;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
 
 }
@@ -859,6 +863,7 @@ h3 {
 .info_input {
     width: 100%;
     display: flex;
+    justify-content: space-around;
 }
 
 .top_form {
@@ -1037,8 +1042,14 @@ h3 {
     margin: 0.5rem 1rem;
 }
 
-
-
+.cert-lang{
+    display: flex;
+    width: 100%;
+}
+.ection_right_top_certificat,
+.section_right_top_language{
+width: 50%;
+}
 
 #sendedParts h2 {
     margin: 5px;
@@ -1200,7 +1211,7 @@ h3 {
 
 
     .section_right h3 {
-        margin-top: 2rem;
+        margin-top: -2rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
     }
@@ -1210,7 +1221,7 @@ h3 {
 
 
     .section_right h3 {
-        margin-top: 2rem;
+        margin-top: -2rem;
         margin-left: -2rem;
         margin-bottom: 1rem;
     }

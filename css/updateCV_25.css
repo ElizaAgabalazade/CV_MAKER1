@@ -125,12 +125,10 @@ header {
     justify-content: center;
     width: 210mm;
     height: auto;
-    min-height: 60vh;
     margin-top: 3rem;
     font-family: 'Montserrat', sans-serif;
 
 }
-
 
 .section_right h3 {
     font-size: 30px;
@@ -139,8 +137,7 @@ header {
 
 .section_right_top {
     width: 100%;
-    min-height: 10rem;
-    height: auto;
+    height: 297mm;
     background: #FFFF;
     display: flex;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
@@ -154,14 +151,20 @@ header {
 .section_right_top_left {
     position: relative;
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
 }
 
 .section_right_r_side {
     width: 50%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .section_right_r_side_r img {
@@ -275,12 +278,6 @@ header {
 
 }
 
-
-
-
-
-
-
 .seperate {
     min-height: 20%;
     height: auto;
@@ -373,6 +370,9 @@ header {
 .section_right_top_skills h2 {
     text-align: right;
 }
+
+
+
 #sendTitle1 {
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -428,7 +428,6 @@ header {
 }
 
 
-
 .work_experience_right {
     display: flex;
     flex-direction: column;
@@ -439,6 +438,7 @@ header {
 
 .section_right_top_certificat {
     padding-left: 1rem;
+    padding-bottom: 1rem;
 }
 
 .section_right_top_certificat h2,
@@ -524,42 +524,97 @@ header {
 }
 
 @media(max-width:1024px) {
-    .section_right {
-        margin-top: -11rem;
-    }
+
 
     .section_right h3 {
-        margin-top: 1rem;
+        margin-top: -2rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
     }
 }
 
 @media(max-width:912px) {
-    .section_right {
-        margin-top: -11rem;
-    }
+
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: -2rem;
+        margin-left: -2rem;
         margin-bottom: 1rem;
     }
 }
 
 @media(max-width:853px) {
-    .section_right {
-        margin-top: -11rem;
-    }
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 2rem;
+        margin-left: 0rem;
         margin-bottom: 1rem;
     }
 }
 
-@media (max-width: 600px) {
+@media(max-width:768px) {
+
+    .section_right h3 {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: 26px;
+    }
+
+    .section_right_top {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .section_right_top {
+        width: 95%;
+        margin: 0 auto;
+    }
+
     .container {
         width: 100%;
         justify-items: center;
@@ -573,6 +628,139 @@ header {
         width: 70%;
     }
 
+    .section_right {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto !important;
+        margin-top: 2rem;
+        margin-top: 6rem;
+        padding: 10px;
+    }
+
+    .section_right h3 {
+        margin-left: 0;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .section_right_top {
+        width: 100%;
+    }
+
+    .education-certificat {
+        flex-direction: column !important;
+        height: auto;
+    }
+
+    .section_right_top_left,
+    .section_right_r_side,
+    .name_form,
+    .top_form,
+    .section_right_top_skills,
+    .section_right_top_language,
+    .section_right_top_certificat,
+    .rightSideContainer,
+    .section_right_side_2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .namesTop {
+        width: 100%;
+    }
+
+    .top_form,
+    .name_form {
+        position: static !important;
+        transform: none !important;
+        padding: 15px;
+        width: 300px;
+        margin-top: 3rem;
+    }
+
+    .name_form textarea {
+        width: 100%;
+        margin: 0;
+        font-size: 8px;
+    }
+
+    .usersName {
+        margin-right: 3rem;
+        width: 80%;
+    }
+
+    .input_h1,
+    .input_h1::placeholder {
+        width: 100% !important;
+        min-height: 60px;
+    }
+
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR {
+        max-width: 100% !important;
+        text-align: center;
+        font-size: 12px;
+        /* Mobildə oxunurluq üçün bir az böyüdüldü */
+        padding: 5px !important;
+    }
+
+    .section_right_r_side_inside,
+    .info_input {
+        padding: 20px;
+        min-height: auto;
+        background-size: cover;
+    }
+
+    .section_right_side_2 .outputArea,
+    .section_right_side_2 .outputArea::placeholder {
+        text-align: left;
+        font-size: 11px;
+        min-height: 120px;
+        width: 80%;
+    }
+
+    .section_right_top_certificat h2,
+    .section_right_top_skills h2,
+    .section_right_top_language h2,
+    .rightSideContainer h2,
+    #sendTitle1,
+    .work_experience_right h2,
+    .education_right h2,
+    .right_skills h2,
+    .language_right h2,
+    .section_right_side_2 p {
+        font-size: 14px !important;
+    }
+
+    #itemListLanguage_right1 li,
+    #sendList li,
+    #itemListCertificate_right1 li,
+    .skill_list_right li,
+    #sendList1 {
+        font-size: 11px !important;
+    }
+
+    .work_experience_right,
+    .work_experience_right form,
+    .education_right form {
+        margin-left: 0 !important;
+        padding-left: 10px;
+    }
+
+    #preview2 {
+        width: 20% !important;
+        margin: 0 40px;
+    }
+
+    .button-container {
+        margin: 0;
+        margin-top: 1rem;
+    }
 }
 
 @media(max-width: 430px) {
@@ -629,6 +817,18 @@ header {
         margin-top: 10rem;
         font-size: 22px;
         text-align: center;
+    }
+
+    .namesTop {
+        width: 100%;
+        margin-right: 2rem;
+    }
+
+    .input_h1 {
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+
     }
 
     .info_input {
@@ -692,6 +892,8 @@ header {
     }
 }
 
+
+
 .html2pdf__container div {
     max-width: 100% !important;
     margin: 0;
@@ -700,18 +902,22 @@ header {
 .html2pdf__container .section_right_top {
     height: 297mm;
 }
-.html2pdf__container .section_right_top h2{
+
+.html2pdf__container .section_right_top h2 {
     font-size: 14px;
 }
-.html2pdf__container .section_right_top ul li{
+
+.html2pdf__container .section_right_top ul li {
     font-size: 12px;
 }
-.html2pdf__container .section_right_top .input_h1{
+
+.html2pdf__container .section_right_top .input_h1 {
     font-size: 16px;
     width: 100%;
-     white-space: pre-wrap;
+    white-space: pre-wrap;
     word-wrap: break-word;
 }
+
 .html2pdf__container .section_right_top_left,
 .html2pdf__container .rightSideContainer,
 .html2pdf__container .section_right_top_certificat,
@@ -755,9 +961,11 @@ header {
     align-items: flex-start;
     margin-top: 6rem;
 }
+
 div.outputArea {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
 }
+
 /* end */

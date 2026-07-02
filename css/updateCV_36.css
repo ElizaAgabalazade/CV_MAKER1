@@ -124,8 +124,7 @@ header {
     display: flex;
     flex-direction: row;
     width: 210mm;
-    min-height: 70vh;
-    height: fit-content;
+    height: 297mm;
     background: #fff;
     box-sizing: border-box;
     font-family: 'Georgia', serif;
@@ -202,15 +201,15 @@ header {
     resize: none;
     background: transparent;
     font-family: 'Arial', sans-serif;
-    font-size: 6px;
+    font-size: 10px;
     color: #555;
     line-height: 1.2;
     overflow: hidden;
     padding: 0;
     margin: 0;
-    width: 10px;
+    width: 100%;
     height: auto;
-    text-align: center;
+    text-align: left;
     white-space: nowrap;
 }
 

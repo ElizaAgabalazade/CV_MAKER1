@@ -130,9 +130,12 @@ header {
 .section_right_top {
     font-family: 'Arial', sans-serif;
     color: #333;
-    max-width: 800px;
-    background: #fff;box-shadow: 4px 4px 4px 5px #9e9898;
+    max-width: 210mm;
+    height: 297mm;
+    background: #fff;
+    box-shadow: 4px 4px 4px 5px #c9c2c2;
 }
+
 
 .section_right_top_header {
     width: 100%;

@@ -801,7 +801,7 @@ h3 {
 .section_right.active {
     display: block !important;
     width: 210mm;
-    
+
 }
 
 .section_right h3 {
@@ -814,8 +814,10 @@ h3 {
 .section_right_top {
     font-family: 'Arial', sans-serif;
     color: #333;
-    max-width: 800px;
-    background: #fff;box-shadow: 4px 4px 4px 5px #9e9898;
+    max-width: 210mm;
+    height: 297mm;
+    background: #fff;
+    box-shadow: 4px 4px 4px 5px #c9c2c2;
 }
 
 .section_right_top_header {
@@ -839,9 +841,11 @@ h3 {
 
 
 }
-#qr-result-container{
+
+#qr-result-container {
     position: absolute;
 }
+
 .input_h1 {
     font-size: 32px;
     font-weight: bold;
@@ -857,8 +861,8 @@ h3 {
     font-size: 13px;
     text-align: right;
     width: 100%;
-   position: absolute;
-  top: 5rem;
+    position: absolute;
+    top: 5rem;
 }
 
 .contact-info textarea {
@@ -941,8 +945,10 @@ textarea {
     outline: none;
     font-family: inherit;
 }
-    
-ul li{padding-left: 30px;}
+
+ul li {
+    padding-left: 30px;
+}
 
 
 
@@ -992,6 +998,7 @@ ul li{padding-left: 30px;}
 .btn:active {
     transform: translateY(-1px);
 }
+
 /* =============================================
    RESPONSIVE — create_resume_39.css əlavəsi
    Mövcud stillər üzərindən override edir
@@ -1005,10 +1012,22 @@ ul li{padding-left: 30px;}
     }
 
     /* Header */
-    .header_left  { width: 20%; }
-    .header_middle { width: 55%; }
-    .header_right  { width: 25%; }
-    .header_middle ul li { font-size: 15px; margin-left: 0.5rem; }
+    .header_left {
+        width: 20%;
+    }
+
+    .header_middle {
+        width: 55%;
+    }
+
+    .header_right {
+        width: 25%;
+    }
+
+    .header_middle ul li {
+        font-size: 15px;
+        margin-left: 0.5rem;
+    }
 
     /* Main layout: form + preview stacked */
     section {
@@ -1060,32 +1079,39 @@ ul li{padding-left: 30px;}
     .step5-proficiency-box {
         width: 100%;
     }
-    .section_right_top_header{
+
+    .section_right_top_header {
         margin: -1rem;
         width: 251mm;
     }
-    .section_right_top_header_inside{
+
+    .section_right_top_header_inside {
         width: 91%;
     }
 }
-@media (max-width: 912px){
-   .section_right_top_header{
+
+@media (max-width: 912px) {
+    .section_right_top_header {
         margin: -0.9rem;
         width: 224mm;
     }
-    .section_right_top_header_inside{
+
+    .section_right_top_header_inside {
         width: 90%;
     }
 }
-@media (max-width: 853px){
-   .section_right_top_header{
+
+@media (max-width: 853px) {
+    .section_right_top_header {
         margin: -0.9rem;
         width: 207mm;
     }
-    .section_right_top_header_inside{
+
+    .section_right_top_header_inside {
         width: 90%;
     }
 }
+
 /* ── Mobile: ≤768px ── */
 @media (max-width: 768px) {
 
@@ -1093,11 +1119,20 @@ ul li{padding-left: 30px;}
     header {
         flex-wrap: wrap;
         padding: 10px 12px;
-        position: relative;         /* scroll ile kalkar, sabit kalmaz */
+        position: relative;
+        /* scroll ile kalkar, sabit kalmaz */
     }
 
-    .header_left  { width: 50%; }
-    .header_right { width: 50%; justify-content: flex-end; margin-left: 0; }
+    .header_left {
+        width: 50%;
+    }
+
+    .header_right {
+        width: 50%;
+        justify-content: flex-end;
+        margin-left: 0;
+    }
+
     .header_middle {
         width: 100%;
         padding-left: 0;
@@ -1123,7 +1158,9 @@ ul li{padding-left: 30px;}
     }
 
     /* ---- Containers ---- */
-    body { padding: 10px 6px; }
+    body {
+        padding: 10px 6px;
+    }
 
     .container,
     #step3.container,
@@ -1202,7 +1239,8 @@ ul li{padding-left: 30px;}
     .section_right,
     .section_right.active {
         width: 100% !important;
-        overflow-x: auto;           /* A4 genişliyini scroll ile gör */
+        overflow-x: auto;
+        /* A4 genişliyini scroll ile gör */
     }
 
     .section_right h3 {
@@ -1269,31 +1307,58 @@ ul li{padding-left: 30px;}
     }
 
     /* Steps footer */
-    .footer { justify-content: center; }
+    .footer {
+        justify-content: center;
+    }
 
     .next-btn {
         width: 100%;
         padding: 12px 0;
     }
 
-    .step5-footer { text-align: center; }
-    .step5-done-btn { width: 80%; }
+    .step5-footer {
+        text-align: center;
+    }
+
+    .step5-done-btn {
+        width: 80%;
+    }
 }
 
 /* ── Small mobile: ≤420px ── */
 @media (max-width: 420px) {
 
-    .header_middle ul li { font-size: 12px; }
-    .sign_part, .log_in { font-size: 13px; padding: 6px 12px; }
+    .header_middle ul li {
+        font-size: 12px;
+    }
 
-    h3 { font-size: 18px; }
+    .sign_part,
+    .log_in {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
 
-    .card { padding: 16px; border-radius: 14px; }
+    h3 {
+        font-size: 18px;
+    }
 
-    .action-box { padding: 10px; }
-    .action-box p { font-size: 10px; }
+    .card {
+        padding: 16px;
+        border-radius: 14px;
+    }
 
-    .step5-tag { font-size: 12px; padding: 5px 10px; }
+    .action-box {
+        padding: 10px;
+    }
+
+    .action-box p {
+        font-size: 10px;
+    }
+
+    .step5-tag {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
 
     /* CV scroll içinde daha küçük yazı */
     .section_right_top {
@@ -1301,7 +1366,11 @@ ul li{padding-left: 30px;}
         font-size: 11px;
     }
 
-    .input_h1 { font-size: 18px; }
+    .input_h1 {
+        font-size: 18px;
+    }
 
-    h2 { font-size: 14px; }
+    h2 {
+        font-size: 14px;
+    }
 }

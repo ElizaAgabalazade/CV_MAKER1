@@ -485,7 +485,7 @@ h3 {
 
 #qr-result-container {
     position: absolute;
-    right: 2rem;
+    right: -3rem;
     top: -0.5rem;
     width: 30px;
 }
@@ -799,7 +799,6 @@ h3 {
     justify-content: center;
     width: 210mm;
     margin-top: 3rem;
-    min-height: 70vh;
     position: relative;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
@@ -818,7 +817,7 @@ h3 {
 
 .section_right_top {
     width: 100%;
-    height: auto;
+    height: 297mm;
     display: flex;
     background: #ffff;
     display: flex;

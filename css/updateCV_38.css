@@ -131,10 +131,12 @@ header {
     font-family: 'Arial', sans-serif;
     color: #333;
     width: 100%;
-    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background: #FFFF;
+    max-width: 210mm;
+    height: 297mm;
+    box-shadow: 4px 4px 4px 5px #c9c2c2;
 }
 
 .section_right_r_side_r {

@@ -131,20 +131,19 @@ header {
 
 }
 
-
 .section_right h3 {
     font-size: 30px;
     margin-left: -11rem;
+
 }
+
 
 .section_right_top {
     width: 100%;
-    height: auto;
-    display: flex;
+    height: 297mm;
     background: #F0F0F0;
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
     box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.3);
 
 }
@@ -154,32 +153,39 @@ header {
 }
 
 .section_right_top_header {
-    position: relative;
     width: 100%;
-    height: auto;
+    height: 20%;
+    margin-top: 0;
     display: flex;
     background: #F0F0F0;
     box-shadow: 2px 2px 14px 0px rgba(0, 0, 0, 0.3);
-
+    position: relative;
 }
 
 .namesTop {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin-top: 6rem;
+    margin-left: 6rem;
+    margin-top: 9rem;
 }
 
 .section_right_top_left {
     position: relative;
     width: 40%;
+    height: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     background: #F0F0F0;
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.3);
 
 }
-
+.section_right_r_side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .section_right_r_side_r {
     margin-left: 1.8rem;
     margin-top: 1rem;
@@ -188,8 +194,9 @@ header {
 
 .section_right_r_side_r img {
     width: 80%;
+    min-height: 130px;
     position: absolute;
-    top: -2.5rem;
+    top: -3rem;
     left: 1rem;
 }
 
@@ -215,30 +222,34 @@ header {
     resize: none;
     background: #F0F0F0;
     width: 40%;
+    height: 40px;
 
 
 }
 
 .input_h1,
-.input_h1::placeholder {
-    width: 100%;
-    height: auto;
+.input_h1::placeholder{
+    width: 10rem;
+    height: 30px;
     resize: none;
-    text-align: left;
     white-space: pre-wrap;
     word-wrap: break-word;
     border: none;
     outline: none;
     color: #000000;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 900;
     background: #F0F0F0;
     margin: 0;
+    
+    
+    
 }
 
 .top_form {
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
     width: 100%;
     min-height: 100px;
     height: auto;
@@ -269,6 +280,7 @@ header {
     font-size: 8px;
     background: #F0F0F0;
     text-align: center;
+    font-size: 8px;
     line-height: 1.1;
     margin-bottom: 1px;
     padding: 0 !important;
@@ -294,16 +306,24 @@ header {
 
 
 .section_right_top_hr {
-    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .section_right_r_side {
     position: relative;
     width: 60%;
-    padding-left: 2rem;
+    z-index: 0;
     background: #ffff;
 }
 
+.right_hr {
+    width: 70%;
+    border: none;
+    border-top: 2px solid black;
+    opacity: 0.6;
+    margin-left: 4rem;
+
+}
 
 .input_h1,
 .input_h2 {
@@ -325,11 +345,10 @@ header {
     margin-left: 0.5rem;
     text-align: center;
     width: 90%;
-    margin-top: 7rem;
+    margin-top: 14rem;
     height: auto !important;
     max-height: none !important;
     overflow: visible !important;
-
 }
 
 .section_right_side_2 p {
@@ -346,6 +365,12 @@ header {
     font-size: 8px;
     color: #000;
     background: #F0F0F0;
+    display: block !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    overflow: hidden !important;
+    height: auto;
+    min-height: 100px;
 
 }
 
@@ -367,18 +392,14 @@ header {
 
 #itemListLanguage_right1 {
     list-style: none;
-    text-align: right;
     padding-left: 0;
-    margin: 0;
+    margin: 0 1rem;
 }
 
 
 
 
-
-
-
-
+.section_right_top_language,
 .rightSideContainer {
     margin-left: 0.5rem;
     margin-top: 2rem;
@@ -393,27 +414,6 @@ header {
     height: auto;
 }
 
-.right_hr {
-    width: 70%;
-    border: none;
-    border-top: 2px solid black;
-    opacity: 0.6;
-    margin-left: 4rem;
-
-}
-
-.section_right_top_language,
-.section_right_top_certificat {
-    padding-right: 1rem;
-    margin-top: 1rem;
-}
-
-.section_right_top_certificat h2,
-.section_right_top_language h2 {
-    text-align: right;
-}
-
-.section_right_top_certificat h2,
 .section_right_top_skills h2,
 .section_right_top_language h2,
 #sendedParts h2 {
@@ -423,40 +423,51 @@ header {
 
 }
 
-.skill_list_right {
-    list-style-type: none;
-    padding-bottom: 0.5rem;
-}
-
-.skill_list_right li {
-    font-size: 8px;
-}
-
-#itemListCertificate_right1 {
-    list-style-type: none;
-    text-align: right;
-}
-
-#itemListCertificate_right1 li {
-    font-size: 8px;
-}
-
 #sendTitle1 {
     display: block;
     word-break: break-word;
     white-space: normal;
+    list-style-type: none;
     max-width: 90%;
+}
+
+#sendTitle1 li {
+    font-size: 8px;
 }
 
 .section_right_top_skills i {
     margin: 0.5rem 1rem;
 }
 
+#itemListCertificate_right1 {
+    list-style-type: none;
+    text-align: center;
+}
+
+#itemListCertificate_right1 li {
+    font-size: 8px;
+}
+
+
+.language_input {
+    border: none;
+    outline: none;
+    width: 48%;
+    font-size: 10px;
+
+}
+
+
+
 
 
 
 
 #sendList {
+    list-style-type: none;
+}
+
+#sendList li {
     font-size: 8px;
 }
 
@@ -477,25 +488,39 @@ header {
 }
 
 
-
 #sendList1 {
-    list-style-type: none;
-    text-align: center;
-}
-
-#sendList1 li {
     font-size: 8px;
     margin: 0.5rem;
+    text-align: center;
 }
 
 
 #itemListLanguage_right1 {
-    list-style-type: none;
+    list-style: none;
     padding-left: 0;
     margin: 0;
 }
 
-#itemListLanguage_right1 li {
+.language_form_range {
+    display: flex;
+    width: 90%;
+}
+
+.language_input {
+    border: none;
+    outline: none;
+    width: 48%;
+    font-size: 10px;
+
+}
+
+.skill_list_right,
+#sendList1 {
+    list-style-type: none;
+}
+
+.skill_list_right li,
+#sendList1 li {
     font-size: 8px;
 }
 
@@ -510,8 +535,6 @@ header {
 
 
 
-
-
 .work_experience_right {
     display: flex;
     flex-direction: column;
@@ -519,20 +542,20 @@ header {
     margin-top: 15px;
 }
 
+
+
+.section_right_top_certificat h2,
 .work_experience_right h2,
 .right_skills h2,
-.language_right h2 {
+.language_right h2,
+.rightSideContainer h2,
+.section_right_top_certificat h2 {
     margin-top: 1rem;
-
-
-
-}
-
-.rightSideContainer h2 {
     font-size: 12px;
-    text-align: center;
     font-weight: 700;
+    text-align: center;
 }
+
 
 
 
@@ -546,7 +569,6 @@ header {
     margin-left: 1rem;
 
 }
-
 
 .button-container {
     display: flex;
@@ -569,7 +591,6 @@ header {
     color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-
 
 .btn-change {
     background: linear-gradient(to right, #5C17FC, #0D5EFF);
@@ -596,43 +617,99 @@ header {
     transform: translateY(-1px);
 }
 
+
 @media(max-width:1024px) {
-    .section_right {
-        margin-top: -11rem;
-    }
+
 
     .section_right h3 {
-        margin-top: 1rem;
+        margin-top: -13rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
     }
 }
 
 @media(max-width:912px) {
-    .section_right {
-        margin-top: -11rem;
-    }
+
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: -16rem;
+        margin-left: -2rem;
         margin-bottom: 1rem;
     }
 }
 
 @media(max-width:853px) {
-    .section_right {
-        margin-top: -11rem;
-    }
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 2rem;
+        margin-left: 0rem;
         margin-bottom: 1rem;
     }
 }
 
-@media (max-width: 600px) {
+@media(max-width:768px) {
+
+    .section_right h3 {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: 26px;
+    }
+
+    .section_right_top {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .section_right_top {
+        width: 95%;
+        margin: 0 auto;
+    }
+
     .container {
         width: 100%;
         justify-items: center;
@@ -646,6 +723,125 @@ header {
         width: 70%;
     }
 
+    /* Əsas konteyner tənzimləmələri */
+    .section_right {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto !important;
+        margin-top: 2rem;
+        margin-top: 6rem;
+        padding: 10px;
+    }
+
+    .section_right h3 {
+        margin-left: 0;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .section_right_top,
+    .education-certificat {
+        flex-direction: column !important;
+        height: auto;
+    }
+
+    /* Blokların enini tam ekran edirik */
+    .section_right_top_left,
+    .section_right_r_side,
+    .name_form,
+    .top_form,
+    .section_right_top_skills,
+    .section_right_top_language,
+    .section_right_top_certificat,
+    .rightSideContainer,
+    .section_right_side_2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+.namesTop{
+    width: 100%;
+}
+    /* Absolute mövqedə olan formaları mobil üçün sıfırlayırıq */
+    .name_form,
+    .top_form {
+        position: static !important;
+        transform: none !important;
+        margin-top: 15px;
+        padding: 15px;
+    }
+
+    /* Giriş xanaları (Inputs) */
+    .input_h1,
+    .input_h1::placeholder {
+        width: 100% !important;
+        min-height: 60px;
+    }
+
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR {
+        max-width: 100% !important;
+        text-align: center;
+        font-size: 12px;
+        /* Mobildə oxunurluq üçün bir az böyüdüldü */
+        padding: 5px !important;
+    }
+
+    .section_right_r_side_inside,
+    .info_input {
+        padding: 20px;
+        min-height: auto;
+        background-size: cover;
+    }
+
+    .section_right_side_2 .outputArea,
+    .section_right_side_2 .outputArea::placeholder {
+        text-align: left;
+        font-size: 11px;
+        min-height: 120px;
+    }
+
+    .section_right_top_certificat h2,
+    .section_right_top_skills h2,
+    .section_right_top_language h2,
+    .rightSideContainer h2,
+    #sendTitle1,
+    .work_experience_right h2,
+    .education_right h2,
+    .right_skills h2,
+    .language_right h2,
+    .section_right_side_2 p {
+        font-size: 14px !important;
+    }
+
+    #itemListLanguage_right1 li,
+    #sendList li,
+    #itemListCertificate_right1 li,
+    .skill_list_right li,
+    #sendList1 {
+        font-size: 11px !important;
+    }
+
+    .work_experience_right,
+    .work_experience_right form,
+    .education_right form {
+        margin-left: 0 !important;
+        padding-left: 10px;
+    }
+
+    #preview2 {
+        width: 50% !important;
+        margin: 10px 60px;
+    }
+
+    .button-container {
+        margin: 0;
+        margin-top: 1rem;
+    }
 }
 
 @media(max-width: 430px) {
@@ -703,7 +899,16 @@ header {
         font-size: 22px;
         text-align: center;
     }
+.namesTop{
+    width: 100%;
+    margin-right: 2rem;
+}
+.input_h1{
+    width: 100%;
+    min-height: 100%;
+    height: auto;
 
+}
     .info_input {
         flex-direction: column;
         align-items: center;
@@ -775,26 +980,27 @@ header {
 
 .html2pdf__container .section_right_top {
     width: 210mm !important;
-    margin: 0 !important;
-    padding: 0 !important;
     height: auto !important;
     min-height: 297mm !important;
     display: flex !important;
     flex-wrap: wrap !important;
     align-items: flex-start !important;
 }
+.html2pdf__container #preview2 {
+    width: 60%;
+    position: absolute;
+    height: fit-content;
+    top: -3rem;
+    border-radius: 30px;
+}
 .html2pdf__container .section_right_side_2{
 margin-top: 20rem;
-}
-.html2pdf__container  .section_right_top_header{
-    background: #F0F0F0;
-   
-    border-bottom: 4px solid rgba(0, 0, 0, 0.3);
 }
 .html2pdf__container #qr-result-container {
     display: block;
     position: absolute;
     right: 40rem;
+    top: 0.5rem;
     width: 30px;
 }
 div.outputArea {

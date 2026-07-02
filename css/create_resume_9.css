@@ -821,10 +821,8 @@ h3 {
     flex-direction: column;
     justify-content: center;
     width: 210mm;
-    min-height: 297mm;
     height: auto;
     margin-top: 3rem;
-    min-height: 70vh;
     position: relative;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
@@ -843,7 +841,7 @@ h3 {
 
 .section_right_top {
     width: 210mm !important;
-    height: auto !important;
+    min-height: 297mm;
     background: #EEFBFF;
     position: relative;
     margin: 0 auto;
@@ -950,6 +948,7 @@ h3 {
 
 .section_right_r_side {
     width: 100% !important;
+    height: 290mm;
     display: grid;
     grid-template-columns: 47% 53%;
     gap: 12px;
@@ -959,9 +958,11 @@ h3 {
 
 .section_right_r_side_l,
 .section_right_r_side_r {
-    width: 100% !important;
+    height: 100%;
+    width: 95% !important;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     gap: 10px;
     margin-top: 0;
 }
@@ -969,7 +970,7 @@ h3 {
 .section_right_side_2 {
     margin: 0 !important;
     width: 100% !important;
-    height: 96px;
+    height: 30%;
     background: #447F98;
     border-radius: 4px;
     padding: 8px;
@@ -1006,25 +1007,27 @@ h3 {
 .rightSideContainer {
     background: #FBFEFF;
     width: 100% !important;
-    min-height: 56px;
     margin: 0 !important;
     padding: 9px 10px;
     border-radius: 5px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.18);
     box-sizing: border-box;
 }
-
-.work_experience_right {
-    min-height: 73px;
+.section_right_top_skills{
+    height: 60%;
 }
-
-.rightSideContainer {
-    min-height: 70px;
+.section_right_top_language{
+    margin-top: 2rem;
+    height: 20%;
 }
-
+.work_experience_right,
+.rightSideContainer,
 .section_right_top_certificat {
-    min-height: 58px;
+    height: 20%;
+    width: 90%;
 }
+
+
 
 .section_right_r_side h2,
 #sendTitle,
@@ -1189,12 +1192,14 @@ h3 {
         padding: 0 !important;
         height: auto !important;
     }
-        .section_right h3{
-            margin-top: 9rem;
-        }
-    .section_right_top{
+
+    .section_right h3 {
+        margin-top: 9rem;
+    }
+
+    .section_right_top {
         margin-left: 7rem;
-         width: 100% !important;
+        width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
         height: auto !important;
@@ -1219,7 +1224,8 @@ h3 {
     .card {
         width: 70%;
     }
-      .button-container {
+
+    .button-container {
         margin-left: 0 !important;
         justify-content: center;
         flex-direction: column;
@@ -1277,8 +1283,9 @@ h3 {
         padding: 0 !important;
         height: auto !important;
     }
-    .section_right_top{
-         width: 80% !important;
+
+    .section_right_top {
+        width: 80% !important;
         margin: 0 !important;
         padding: 0 !important;
         height: auto !important;

@@ -482,7 +482,7 @@ h3 {
 
 #qr-result-container {
     position: absolute;
-    left: 16rem;
+    left: 30rem;
     width: 30px;
 }
 
@@ -830,13 +830,16 @@ h3 {
     height: fit-content;
 }
 
+.section_right_top{
+    height: 297mm;
+
+}
 .section_right_top_corner {
     display: flex;
     flex-direction: column;
     background: #FFF9E3;
     width: 210mm;
-    height: fit-content;
-    min-height: 70vh;
+    height: 290mm;
     margin-top: 2rem;
     margin: 10px 0;
     box-sizing: border-box;
@@ -847,7 +850,7 @@ h3 {
 
 .section_right_top {
     width: 210mm;
-    height: auto;
+    height: 297mm;
     background: #946C18;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
 

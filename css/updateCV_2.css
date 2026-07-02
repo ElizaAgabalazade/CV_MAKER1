@@ -133,15 +133,10 @@ header {
     margin-left: -11rem;
 }
 
-.section_right h3 {
-    font-size: 30px;
-    margin-left: -11rem;
-}
-
 .section_right_top {
     display: flex;
     width: 100%;
-    height: auto;
+    height: 297mm;
     background: #ffff;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
@@ -265,16 +260,18 @@ header {
     overflow-y: hidden;
     justify-content: center;
     margin: 0 auto;
-    border-radius: 6px;
 
 
 }
-
+.info_input form{
+    width: 100%;
+}
 .info_input form textarea {
     overflow-y: hidden;
     background: transparent;
     border: none;
     outline: none;
+    width: 20%;
 
 }
 
@@ -375,8 +372,8 @@ header {
 
 #qr-cv-display {
     position: absolute;
-    right: 2.5rem;
-    top: -2.5rem;
+    left: 27rem;
+    top: 1rem;
     background: white;
     border: 1px solid #eee;
     z-index: 100;
@@ -595,6 +592,14 @@ header {
     }
 }
 
+@media(max-width:1024px) and (max-height:1366px) {
+    .section_right h3 {
+        margin-top: 15rem;
+        margin-left: -6rem;
+        margin-bottom: 1rem;
+    }
+}
+
 @media(max-width:912px) {
     .section_right {
         margin-top: -11rem;
@@ -603,6 +608,18 @@ header {
     .section_right h3 {
         margin-top: 1rem;
         margin-left: -6rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media(max-width:912px) and (max-height:1368px) {
+    .section_right {
+        margin-top: -11rem;
+    }
+
+    .section_right h3 {
+        margin-top: 15rem;
+        margin-left: 0rem;
         margin-bottom: 1rem;
     }
 }
@@ -616,6 +633,19 @@ header {
         margin-top: 1rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
+    }
+}
+
+@media(max-width:853px) {
+    .section_right {
+        width: 95%;
+    }
+
+    .section_right h3 {
+        margin-top: 15rem;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        font-size: 20px;
     }
 }
 
@@ -633,6 +663,60 @@ header {
         width: 70%;
     }
 
+}
+@media(max-width: 540px){
+        header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    .section_right h3 {
+        margin-top: 20rem;
+    }
+#preview2 {
+    width: 60%;
+    height: fit-content;
+    margin: 1rem 2rem;
+    border-radius: 50px;
+}
+.button-container{
+   margin-top: 1rem;
+   margin-left: 0;
+}
 }
 
 @media(max-width: 430px) {
@@ -772,11 +856,15 @@ header {
 .html2pdf__container .section_right_r_side {
     page-break-inside: auto !important;
 }
-.html2pdf__container .section_right_l_side{
+
+.html2pdf__container .section_right_l_side {
     width: 30%;
 }
+
 .html2pdf__container .section_right_r_side {
-   width: 70%;}
+    width: 70%;
+}
+
 .html2pdf__container #preview2 {
     width: 60%;
     height: fit-content;
@@ -794,6 +882,7 @@ div.outputArea {
 .html2pdf__container .outputArea,
 .html2pdf__container .input_h1 {
     height: auto !important;
+    width: 100%;
     overflow: visible !important;
     display: block !important;
 }

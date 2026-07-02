@@ -138,13 +138,13 @@ header {
 }
 
 .section_right_top {
-    width: 100%;
-    height: auto;
+    width: 210mm;
+    height: 297mm;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
+    background: #FFFF;
+    box-shadow: 2px 2px 3px 5px rgba(0, 0, 0, 0.3);
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     position: relative;
@@ -182,7 +182,7 @@ header {
 .section_right_r {
     width: 100%;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
 
 }
@@ -208,6 +208,7 @@ element.style {
 
 .rightSideContainer {
     margin-bottom: 5px;
+    
 }
 
 
@@ -273,8 +274,6 @@ element.style {
     line-height: 1.1;
     margin-bottom: 1px;
     padding: 0 !important;
-
-
 }
 
 .phoneR::placeholder,
@@ -305,6 +304,7 @@ element.style {
 .section_right_side_2 {
     text-align: center;
     background: #ffff;
+    margin-top: 5%;
 
 }
 
@@ -319,11 +319,12 @@ element.style {
     width: 100%;
     height: auto;
 
+
 }
 
 .section_right_top_skills,
 .section_right_top_language {
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 .section_right_top_skills h2,
@@ -422,7 +423,9 @@ element.style {
     font-size: 12px;
     font-weight: 700;
 }
-
+.section_right_top_certificat h2{
+    margin-top: 5rem;
+}
 .section_right_side_2 .outputArea::placeholder {
     color: #000000;
     font-size: 8px;
@@ -465,7 +468,7 @@ element.style {
 .right_skills h2,
 .language_right h2 {
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 5rem;
     margin-left: 1rem;
     font-size: 12px;
     margin-left: 1rem;
@@ -551,7 +554,6 @@ element.style {
     transform: translateY(-1px);
 }
 
-
 @media(max-width:1024px) {
     .section_right {
         margin-top: -11rem;
@@ -585,6 +587,70 @@ element.style {
         margin-top: 1rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .section_right {
+        width: 210mm !important;
+        transform: scale(0.7);
+        transform-origin: top center;
+        margin: 0 auto;
+        margin-bottom: -80mm;
+    }
+    .section_right h3{
+        margin-top: 30rem;
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        justify-items: center;
+    }
+
+    .header {
+        width: 80%;
+    }
+
+    .card {
+        width: 70%;
+    }
+
+    .section_right {
+        transform: scale(0.5);
+        margin-bottom: -130mm;
+    }
+
+    .info_input {
+        flex-direction: column !important;
+        align-items: center;
+        width: 100% !important;
+    }
+
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR {
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
+
+@media print {
+    .section_right {
+        transform: none !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        page-break-after: always;
+    }
+
+    .button-container {
+        display: none !important;
     }
 }
 
@@ -720,8 +786,9 @@ element.style {
         width: 50%;
     }
 }
+/* end */
 
-.html2pdf__container .section_right_top {
+ .html2pdf__container .section_right_top {
     width: 210mm !important;
     min-height: 297mm !important;
     height: auto !important;
@@ -774,6 +841,7 @@ element.style {
     overflow: visible !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
+    padding-left: 1rem;
 }
 
 .html2pdf__container ul,
@@ -808,7 +876,6 @@ element.style {
     height: auto !important;
     min-height: 0 !important;
     overflow: visible !important;
-    padding-left: 1rem;
 }
 .html2pdf__container #qr-result-container {
     position: absolute;
@@ -816,5 +883,4 @@ element.style {
     width: 50px;
     height: 30px;
     top: 1rem;
-}
-/* end */
+} 

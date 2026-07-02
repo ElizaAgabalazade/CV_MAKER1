@@ -126,12 +126,10 @@ header {
     justify-content: center;
     width: 210mm;
     height: auto;
-    min-height: 60vh;
     margin-top: 3rem;
     font-family: 'Montserrat', sans-serif;
 
 }
-
 
 
 .section_right h3 {
@@ -141,11 +139,11 @@ header {
 
 .section_right_top {
     width: 100%;
-    min-height: 10rem;
-    height: auto;
+    height: 297mm;
     background: #ffff;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
 
 }
@@ -187,6 +185,7 @@ header {
     flex-direction: column;
     padding-left: 14rem;
     width: 70%;
+    padding-bottom: 1rem;
 }
 
 .name_form {
@@ -195,7 +194,7 @@ header {
     align-items: center;
     position: absolute;
     top: 11rem;
-    left: 0;
+    margin-left: 2rem;
     width: 100%;
     background: transparent;
     border: none;
@@ -255,7 +254,7 @@ header {
 .names {
     width: 100%;
     position: absolute;
-    top: 8rem;
+    top: 7rem;
     right: 0rem;
     background: transparent;
 }
@@ -566,55 +565,553 @@ header {
 }
 
 @media(max-width:1024px) {
-    .section_right {
-        margin-top: -11rem;
-    }
-
     .section_right h3 {
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
     }
 }
 
 @media(max-width:912px) {
-    .section_right {
-        margin-top: -11rem;
-    }
-
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 2rem;
+        margin-left: -2rem;
         margin-bottom: 1rem;
     }
 }
 
-@media(max-width:853px) {
+@media screen and (max-width: 853px) {
+
     .section_right {
-        margin-top: -11rem;
+        width: 100% !important;
+        max-width: 853px;
+        margin: 2rem auto;
+        padding: 0 15px;
+        box-shadow: none;
     }
 
-    .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
-        margin-bottom: 1rem;
+    .section_right_top {
+        flex-direction: column;
     }
-}
 
-@media (max-width: 600px) {
-    .container {
+    .section_right_r_side_r {
+        width: 100% !important;
+        min-height: 320px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .section_right_r_side_r img {
+        width: 45%;
+        top: 1.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section_right_r_side_111 {
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding: 1.5rem 1rem;
+        margin-top: -30px;
+        background: #fff;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .name_form {
+        position: relative;
+        top: 6rem;
+        left: 5rem;
+        margin-top: 10px;
+        z-index: 10;
+    }
+
+    .names {
+        position: relative;
+        top: 8rem;
+        right: auto;
+    }
+
+    .input_h1,
+    .input_h1::placeholder {
+        font-size: 18px;
+    }
+
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR {
+        font-size: 9.5px;
+        width: 95% !important;
+    }
+
+    .section_right_side_2 {
+        margin-left: 0;
+        margin-right: 0;
         width: 100%;
-        justify-items: center;
+        padding: 0 10px;
     }
 
-    .header {
-        width: 80%;
+    .section_right_top_skills,
+    .section_right_top_certificat,
+    .section_right_top_language {
+        margin-left: 0;
+        padding-right: 0;
+        text-align: left;
     }
 
-    .card {
-        width: 70%;
+    .section_right_top_skills h2,
+    .section_right_top_language h2,
+    .section_right_top_certificat h2,
+    .rightSideContainer h2 {
+        text-align: left;
+        font-size: 13px;
     }
 
+    #itemListCertificate_right1 {
+        text-align: left;
+        padding-right: 0;
+    }
+
+    .work_experience_right,
+    .education_right {
+        margin-left: 0;
+        padding: 0 10px;
+    }
+
+    #preview2 {
+        width: 40%;
+        margin: 0rem auto;
+        display: block;
+    }
+
+    .section_right_side_2 .outputArea,
+    #entry_list li,
+    #sendList li,
+    #sendList1 li,
+    #itemListLanguage_right1 li,
+    #itemListCertificate_right1 li {
+        font-size: 9.5px;
+    }
+
+    .section_right h3 {
+        font-size: 26px;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media(max-width:768px) {
+    .section_right h3 {
+        margin-left: 2rem;
+    }
+
+    .section_right_top {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .section_right {
+        width: 100% !important;
+        max-width: 600px;
+        margin: 1.5rem auto;
+        padding: 0 10px;
+        box-shadow: none;
+    }
+
+    .section_top_bottom_side {
+        flex-direction: crow !important;
+        gap: 0;
+    }
+
+    .section_right_r_side_r {
+        width: 30% !important;
+        min-height: 250px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px 15px 0 0;
+        position: relative;
+    }
+
+    .section_right_r_side_r img#preview2 {
+        width: 48%;
+        top: 1.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    /* Name (LARS BERGSTRÖM) */
+    .names {
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        z-index: 5;
+    }
+
+    .name_form {
+        position: absolute;
+        top: 9rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background: transparent;
+        z-index: 10;
+        padding: 0 10px;
+    }
+
+    .input_h1,
+    .input_h1::placeholder {
+        font-size: 16.5px;
+        text-align: center;
+    }
+
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR {
+        font-size: 9.2px;
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 2px;
+        line-height: 1.25;
+    }
+
+    /* ===================== SAĞ HİSSƏ (70% olan) ===================== */
+    .section_right_r_side_111 {
+        width: 100% !important;
+        border-radius: 0 0 15px 15px;
+        align-items: flex-start;
+        /* mobil-də sola keçir */
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-top: -35px;
+    }
+
+    /* Mobil-də mətni sola təyin edirik (oxunaqlılıq üçün) */
+    .section_right_r_side_111 h2,
+    .section_right_r_side_111 ul,
+    .rightSideContainer,
+    .section_right_top_certificat,
+    .section_right_top_language {
+        text-align: left !important;
+    }
+
+    #sendList1,
+    #itemListCertificate_right1,
+    #itemListLanguage_right1 {
+        text-align: left;
+    }
+
+    /* Digər bölmələr */
+    .section_right_side_2 {
+        margin: 10px 0;
+        padding: 0 8px;
+        width: 100%;
+    }
+
+    .section_right_top_skills,
+    .section_right_top_certificat,
+    .rightSideContainer {
+        margin-left: 0;
+        padding: 0 5px;
+        text-align: left;
+    }
+
+    .section_right_top_skills h2,
+    .section_right_top_certificat h2,
+    .rightSideContainer h2 {
+        font-size: 13.5px;
+        text-align: left;
+        padding: 8px 0 4px;
+    }
+
+    #itemListCertificate_right1 {
+        text-align: left;
+        padding-right: 0;
+    }
+
+    .work_experience_right,
+    .education_right {
+        margin-left: 0;
+        padding: 0 10px;
+    }
+
+    #preview2 {
+        margin: 0 auto;
+    }
+
+    /* Kiçik mətnlərin oxunaqlığı */
+    .section_right_side_2 .outputArea,
+    #entry_list li,
+    #sendList li,
+    #sendList1 li,
+    #itemListLanguage_right1 li,
+    #itemListCertificate_right1 li {
+        font-size: 9.8px;
+        line-height: 1.4;
+    }
+
+    .section_right h3 {
+        font-size: 24px;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .section_right {
+        width: 100% !important;
+        max-width: 600px;
+        margin: 1.5rem auto;
+        padding: 0 10px;
+        box-shadow: none;
+    }
+
+    .section_top_bottom_side {
+        flex-direction: crow !important;
+        gap: 0;
+    }
+
+    .section_right_r_side_r {
+        width: 30% !important;
+        min-height: 250px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px 15px 0 0;
+        position: relative;
+    }
+
+    .section_right_r_side_r img#preview2 {
+        width: 48%;
+        top: 1.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    .names {
+        position: absolute;
+        top: 3rem;
+        left: 5rem;
+        width: 100%;
+        text-align: center;
+        z-index: 5;
+
+    }
+
+    .name_form {
+        position: absolute;
+        top: 8rem;
+        left: 15rem;
+        width: 100%;
+        background: transparent;
+
+    }
+
+    .input_h1,
+    .input_h1::placeholder {
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR {
+        font-size: 9.2px;
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 2px;
+        line-height: 1.25;
+    }
+
+    .section_right_r_side_111 {
+        width: 100% !important;
+        border-radius: 0 0 15px 15px;
+        align-items: flex-start;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-top: -35px;
+    }
+
+    .section_right_r_side_111 h2,
+    .section_right_r_side_111 ul,
+    .rightSideContainer,
+    .section_right_top_certificat,
+    .section_right_top_language {
+        text-align: left !important;
+    }
+
+    #sendList1,
+    #itemListCertificate_right1,
+    #itemListLanguage_right1 {
+        text-align: left;
+    }
+
+    /* Digər bölmələr */
+    .section_right_side_2 {
+        margin: 10px 0;
+        padding: 0 8px;
+        width: 100%;
+    }
+
+    .section_right_top_skills,
+    .section_right_top_certificat,
+    .rightSideContainer {
+        margin-left: 0;
+        padding: 0 5px;
+        text-align: left;
+    }
+
+    .section_right_top_skills h2,
+    .section_right_top_certificat h2,
+    .rightSideContainer h2 {
+        font-size: 13.5px;
+        text-align: left;
+        padding: 8px 0 4px;
+    }
+
+    #itemListCertificate_right1 {
+        text-align: left;
+        padding-right: 0;
+    }
+
+    .work_experience_right,
+    .education_right {
+        margin-left: 0;
+        padding: 0 10px;
+    }
+
+    #preview2 {
+        margin: 0 auto;
+    }
+
+    .section_right_side_2 .outputArea,
+    #entry_list li,
+    #sendList li,
+    #sendList1 li,
+    #itemListLanguage_right1 li,
+    #itemListCertificate_right1 li {
+        font-size: 9.8px;
+        line-height: 1.4;
+    }
+
+    .section_right h3 {
+        font-size: 24px;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media(max-width: 540px) {
+    .names {
+        left: 1rem;
+        background: transparent;
+        width: 50%;
+
+    }
+
+    .input_h1 {
+        background: transparent;
+        width: 100%;
+    }
+
+    .name_form {
+        left: -1rem;
+    }
+
+    .button-container {
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
 }
 
 @media(max-width: 430px) {
@@ -673,10 +1170,21 @@ header {
         text-align: center;
     }
 
-    .info_input {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0 !important;
+    .names {
+        width: 50%;
+        z-index: 1111;
+        height: auto;
+        min-height: 40px;
+    }
+
+    .input_h1 {
+        width: 100%;
+        height: 100%;
+        margin-left: -1rem;
+    }
+
+    .name_form {
+        left: -3rem;
     }
 
     .phoneR,
@@ -684,7 +1192,7 @@ header {
     .adressR,
     .linkedinR {
         width: 90% !important;
-        font-size: 12px !important;
+        font-size: 8px !important;
         margin-bottom: 5px;
     }
 

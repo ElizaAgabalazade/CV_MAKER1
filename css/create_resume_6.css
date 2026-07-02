@@ -833,10 +833,13 @@ h3 {
     margin-left: -11rem;
 }
 
+.section_right_top{
+    height: 297mm;
+
+}
 .section_right_top {
     width: 100%;
-    min-height: 30rem;
-    height: auto;
+    height: 290mm;
     background-color: #FFF9E3;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: flex;

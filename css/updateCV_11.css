@@ -126,7 +126,6 @@ header {
     justify-content: center;
     width: 210mm;
     margin-top: 7rem;
-    height: 70vh;
     position: relative;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
@@ -135,16 +134,14 @@ header {
 }
 
 
-
 .section_right h3 {
     font-size: 30px;
     margin-left: -11rem;
-    margin-top: 14rem;
 }
 
 .section_right_top {
     width: 100%;
-    height: auto;
+    height: 297mm;
     display: flex;
     background: #ffff;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
@@ -160,7 +157,6 @@ header {
     height: auto;
     background: #FFFF;
 }
-
 
 
 
@@ -213,7 +209,6 @@ header {
 
 .section_right_r_side {
     width: 50%;
-    height: 100%;
 }
 
 .section_right_r_side_inside,
@@ -225,8 +220,7 @@ header {
     padding: 40px;
     width: 100%;
     height: auto;
-    min-height: 200px;
-    position: relative;
+    min-height: 100mm;
 }
 
 #peview2 {
@@ -249,12 +243,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75%;
+    width: 100%;
     top: 50%;
-    left: 15rem;
-    transform: translate(-50%, -50%);
-    margin-left: 10rem;
-
+    margin-left:5rem;
+    transform: translate(50%, -50%);
     background: #D9D9D9;
     border: none;
     gap: 10px;
@@ -305,6 +297,7 @@ header {
     height: auto !important;
     max-height: none !important;
     overflow: visible !important;
+
 }
 
 .section_right_side_2 .outputArea,
@@ -324,9 +317,6 @@ header {
     height: auto;
     min-height: 100px;
 }
-
-
-
 
 .section_right_side_2 p {
     padding: 5px;
@@ -381,13 +371,10 @@ header {
 }
 
 
-
-#preview2 {
-    width: 90%;
-    height: fit-content;
-    margin: 10px 5px;
-
+.section_right_top_skills i {
+    margin: 0.5rem 1rem;
 }
+
 
 
 #sendedParts h2 {
@@ -556,7 +543,6 @@ header {
 }
 
 
-
 @media(max-width:1280px) {
 
     .name_form,
@@ -567,42 +553,104 @@ header {
 }
 
 @media(max-width:1024px) {
-    .section_right {
-        margin-top: -11rem;
-    }
+
 
     .section_right h3 {
-        margin-top: 1rem;
+        margin-top: 10rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
     }
 }
 
 @media(max-width:912px) {
-    .section_right {
-        margin-top: -11rem;
-    }
+
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 10rem;
+        margin-left: -2rem;
         margin-bottom: 1rem;
     }
 }
 
 @media(max-width:853px) {
-    .section_right {
-        margin-top: -11rem;
-    }
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 23rem;
+        margin-left: 0rem;
         margin-bottom: 1rem;
     }
 }
 
-@media (max-width: 600px) {
+@media(max-width:768px) {
+
+    .section_right h3 {
+        margin-top: 23rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: 26px;
+    }
+
+    .section_right_top {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .section_right h3 {
+        margin-top: 23rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: 26px;
+    }
+
+    .section_right_top {
+        width: 95%;
+        margin: 0 auto;
+    }
+
     .container {
         width: 100%;
         justify-items: center;
@@ -615,7 +663,122 @@ header {
     .card {
         width: 70%;
     }
+    /* Əsas konteyner tənzimləmələri */
+    .section_right {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto !important;
+        margin-top: 2rem;
+        padding: 10px;
+    }
 
+    .section_right h3 {
+        margin-left: 0;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    /* Yan-yana olan strukturları alt-alta gətiririk */
+    .section_right_top,
+    .education-certificat {
+        flex-direction: column !important;
+        height: auto;
+    }
+
+    /* Blokların enini tam ekran edirik */
+    .section_right_top_left,
+    .section_right_r_side,
+    .name_form,
+    .top_form,
+    .section_right_top_skills,
+    .section_right_top_language,
+    .section_right_top_certificat,
+    .rightSideContainer,
+    .section_right_side_2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Absolute mövqedə olan formaları mobil üçün sıfırlayırıq */
+    .name_form,
+    .top_form {
+        position: static !important;
+        transform: none !important;
+        margin-top: 15px;
+        padding: 15px;
+    }
+
+    /* Giriş xanaları (Inputs) */
+    .input_h1,
+    .input_h1::placeholder {
+        width: 100% !important;
+        min-height: 60px;
+    }
+
+    .phoneR,
+    .emailR,
+    .adressR,
+    .linkedinR {
+        max-width: 100% !important;
+        text-align: center;
+        font-size: 12px;
+        /* Mobildə oxunurluq üçün bir az böyüdüldü */
+        padding: 5px !important;
+    }
+
+    .section_right_r_side_inside,
+    .info_input {
+        padding: 20px;
+        min-height: auto;
+        background-size: cover;
+    }
+
+    .section_right_side_2 .outputArea,
+    .section_right_side_2 .outputArea::placeholder {
+        text-align: left;
+        font-size: 11px;
+        min-height: 120px;
+    }
+
+    .section_right_top_certificat h2,
+    .section_right_top_skills h2,
+    .section_right_top_language h2,
+    .rightSideContainer h2,
+    #sendTitle1,
+    .work_experience_right h2,
+    .education_right h2,
+    .right_skills h2,
+    .language_right h2,
+    .section_right_side_2 p {
+        font-size: 14px !important;
+    }
+
+    #itemListLanguage_right1 li,
+    #sendList li,
+    #itemListCertificate_right1 li,
+    .skill_list_right li,
+    #sendList1 {
+        font-size: 11px !important;
+    }
+
+    .work_experience_right,
+    .work_experience_right form,
+    .education_right form {
+        margin-left: 0 !important;
+        padding-left: 10px;
+    }
+
+    #preview2 {
+        width: 100% !important;
+        margin: 10px 0;
+    }
+    .button-container{
+        margin: 0;
+        margin-top: 1rem;
+    }
 }
 
 @media(max-width: 430px) {
@@ -734,8 +897,6 @@ header {
         width: 50%;
     }
 }
-
-
 .html2pdf__container {
     width: 210mm !important;
     height: 297mm !important;
@@ -773,19 +934,23 @@ header {
     background: #FFFFFF !important;
 }
 
+
 .html2pdf__container .section_right_r_side_inside {
     background-image: url("../img/UpdateCv/bacground_Resume_11-13.png") !important;
     background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
+
     width: 100% !important;
-    height: 650px !important;
-    min-height: unset !important;
+    height: 50% !important;
+    min-height: 50% !important;
+
     position: relative !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     padding: 0 !important;
+    box-sizing: border-box !important;
 }
 
 .html2pdf__container .name_form {
@@ -794,12 +959,10 @@ header {
     left: auto !important;
     transform: none !important;
     width: 80% !important;
-    height: 50%;
-    padding-bottom: 5rem;
+    height: auto !important;
     margin: 0 auto !important;
     display: block !important;
     background: #D9D9D9 !important;
-
 }
 
 .html2pdf__container .input_h1 {
@@ -812,21 +975,15 @@ header {
     border: none !important;
     overflow: visible !important;
     height: auto !important;
-    min-height: 30px;
+    min-height: 30px !important;
 }
 
-.html2pdf__container .section_right_r_side_r {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    margin: 15px 0 !important;
-}
-
+.html2pdf__container .section_right_r_side_r,
 .html2pdf__container #preview2 {
-    width: 80% !important;
-    height: fit-content !important;
-    border-radius: 4px !important;
-    object-fit: cover !important;
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .html2pdf__container .info_input {
@@ -834,16 +991,18 @@ header {
     background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
+
     width: 100% !important;
-    height: auto !important;
-    min-height: 450px !important;
+    height: 50% !important;
+    min-height: 50% !important;
+
     position: relative !important;
-    margin-top: auto !important;
+    margin-top: 0 !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     box-sizing: border-box !important;
-
+    padding: 20px !important;
 }
 
 .html2pdf__container .top_form {
@@ -856,8 +1015,9 @@ header {
     background: #D9D9D9 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 8px !important;
+    gap: 12px !important;
 }
+
 
 .html2pdf__container #phoneR,
 .html2pdf__container #emailR,
@@ -870,25 +1030,20 @@ header {
     opacity: 1 !important;
     appearance: none !important;
     -webkit-appearance: none !important;
-
     border: none !important;
     outline: none !important;
     background: transparent !important;
     background-color: transparent !important;
-
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-
     color: #000000 !important;
     font-size: 11px !important;
     font-family: inherit !important;
     text-align: center !important;
-
     white-space: pre-wrap !important;
     word-break: break-word !important;
     overflow: visible !important;
-
     text-shadow: none !important;
     -webkit-text-fill-color: #000000 !important;
 }
@@ -901,7 +1056,6 @@ header {
 
 .html2pdf__container h2 {
     font-size: 13px !important;
-    border-bottom: 1px solid #000000 !important;
     padding-bottom: 3px !important;
     margin-bottom: 8px !important;
 }

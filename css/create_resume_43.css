@@ -803,8 +803,8 @@ h3 {
 }
 
 .section_right_top {
-    width: 100%;
-    height: auto;
+    width: 210mm;
+    height: 297mm;
     background: #fff;
     font-family: 'Montserrat', sans-serif;
     display: flex;
@@ -854,13 +854,11 @@ h3 {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* ── Body: sol + sağ ── */
 .section_right_top_sides {
     display: flex;
     flex: 1;
 }
 
-/* ── Sol sütun ── */
 .section_right_top_left {
     flex: 1.5;
     padding: 16px 16px 16px 20px;
@@ -877,7 +875,7 @@ h3 {
 }
 
 #aboutMeTextarea {
-    font-size: 9px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -905,7 +903,7 @@ h3 {
 /* Work Experience */
 .work_experience_right h2,
 .section_right_top_certificat h2 {
-    font-size: 9px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;

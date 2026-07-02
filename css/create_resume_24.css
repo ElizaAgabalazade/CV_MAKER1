@@ -135,6 +135,7 @@ header {
     align-items: center;
     margin-bottom: 20px;
 }
+
 .back-btn {
     background: none;
     border: none;
@@ -142,7 +143,8 @@ header {
     cursor: pointer;
     font-size: 16px;
 }
-.back-btn a{
+
+.back-btn a {
     text-decoration: none;
     color: #444;
 
@@ -799,7 +801,6 @@ h3 {
     justify-content: center;
     width: 210mm;
     height: auto;
-    min-height: 60vh;
     margin-top: 3rem;
     font-family: 'Montserrat', sans-serif;
 
@@ -823,8 +824,7 @@ h3 {
 
 .section_right_top {
     width: 100%;
-    min-height: 10rem;
-    height: auto;
+    height: 297mm;
     background: #FFFF;
     display: flex;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
@@ -838,21 +838,27 @@ h3 {
 .section_right_top_left {
     position: relative;
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
 }
 
 .section_right_r_side {
     width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
 }
 
 .section_right_r_side_r img {
     width: 50%;
     position: absolute;
-    left: 11.5rem;
-    top: 1rem;
+    left: 18rem;
+    top: 6rem;
     z-index: 111;
     border-radius: 10px;
 }
@@ -988,9 +994,10 @@ h3 {
 .section_right_side_2 {
     margin: 0 auto;
     margin-left: 0.5rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 80%;
     align-items: stretch;
+    min-height: 30%;
     height: auto;
     border: 1px solid #000;
     border-radius: 15px;
@@ -1065,17 +1072,6 @@ h3 {
     margin-top: 3rem;
     width: 80%;
     height: auto;
-}
-
-
-
-
-
-.language_form_range {
-    display: flex;
-    width: 90%;
-
-
 }
 
 .language_input {
@@ -1172,6 +1168,7 @@ h3 {
 
 .section_right_top_certificat {
     padding-left: 1rem;
+    padding-bottom: 1rem;
 }
 
 .section_right_top_certificat h2,
@@ -1421,10 +1418,12 @@ h3 {
         margin: 0;
         font-size: 8px;
     }
-.usersName{
-    margin-right: 3rem;
-    width: 80%;
-}
+
+    .usersName {
+        margin-right: 3rem;
+        width: 80%;
+    }
+
     .input_h1,
     .input_h1::placeholder {
         width: 100% !important;
@@ -1684,9 +1683,11 @@ h3 {
     align-items: flex-start;
     margin-top: 6rem;
 }
+
 div.outputArea {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
 }
+
 /* end */

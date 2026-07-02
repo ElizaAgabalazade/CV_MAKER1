@@ -127,6 +127,8 @@ header {
 
 .section_right_top {
     display: flex;
+    width: 210mm;
+    height: 297mm;
     flex-direction: column;
     padding: 20px;
     background: #fff;
@@ -171,6 +173,8 @@ header {
 
 .work_experience_right {
     padding-left: 1rem;
+    margin-top: 2rem;
+
 }
 
 
@@ -190,6 +194,8 @@ header {
     flex-direction: row;
     gap: 20px;
     margin-top: 20px;
+    margin-top: 2rem;
+
 }
 
 .section_right_top_certificat,
@@ -198,6 +204,8 @@ header {
 .section_right_top_language {
     flex: 1;
     padding-left: 2rem;
+    margin-top: 2rem;
+
 }
 
 textarea {
@@ -210,6 +218,7 @@ textarea {
 
 .photo-section {
     margin-top: 40px;
+    margin-top: 20rem;
     border-top: 4px solid #73AFF3;
     padding-top: 15px;
 }
@@ -217,6 +226,7 @@ textarea {
 .contact-info {
     display: flex;
     justify-content: space-between;
+
 }
 
 .contact-info textarea {

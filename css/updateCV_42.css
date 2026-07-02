@@ -132,7 +132,7 @@ header {
 
 .section_right_top {
     width: 100%;
-    height: auto;
+    height: 297mm;
     background: #fff;
     font-family: 'Montserrat', sans-serif;
     display: flex;

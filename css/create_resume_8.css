@@ -822,7 +822,6 @@ h3 {
     justify-content: center;
     width: 210mm;
     height: auto;
-    min-height: 60vh;
     margin-top: 3rem;
     font-family: 'Montserrat', sans-serif;
 
@@ -835,12 +834,12 @@ h3 {
 .section_right h3 {
     font-size: 30px;
     margin-left: -11rem;
+    font-weight: 900;
 }
 
 .section_right_top {
     width: 100%;
-    min-height: 10rem;
-    height: auto;
+    height: 297mm;
     display: flex;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
     position: relative;
@@ -857,7 +856,7 @@ h3 {
 
 .section_right_l_side {
     width: 40%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     background: #80BC9D;
@@ -868,8 +867,6 @@ h3 {
     margin: 0.5rem 1rem;
     width: 75%;
 }
-
-
 
 .section_right_r_side {
     width: 60%;
@@ -892,8 +889,8 @@ h3 {
 
 .input_h1,
 .input_h1::placeholder {
-    width: 100%;
-    min-height: 50px;
+   width: 100%;
+    min-height: 100px;
     height: auto;
     resize: none;
     border: none;
@@ -1129,21 +1126,19 @@ h3 {
     background: #E9FFF1;
     border-radius: 6px;
     width: 90%;
-    height: auto;
     margin: 0 auto;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
-
-.allSkills_Certificate_Language {
-    margin-top: 5rem;
-}
-
-.rightSideContainer {
-    margin-top: 1rem;
+.allSkills_Certificate_Language{
+    height: 50%;
+ margin-top: 5rem;}
+.rightSideContainer{
+    height: 30%;
+    margin-top: 2rem;
     text-align: center;
-
 }
+
 
 #sendList1 {
     list-style-type: none;

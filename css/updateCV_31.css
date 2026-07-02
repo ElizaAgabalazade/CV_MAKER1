@@ -124,7 +124,6 @@ header {
     flex-direction: column;
     justify-content: center;
     width: 210mm;
-    height: 70vh;
     position: relative;
     flex-direction: column;
     margin-top: 1rem;
@@ -133,14 +132,14 @@ header {
 
 }
 
-.section_right h3{
+.section_right h3 {
     font-size: 30px;
     margin-left: -11rem;
 }
 
 .section_right_top {
     width: 100%;
-    height: auto;
+    height: 297mm;
     display: flex;
     background: #ffff;
     display: flex;
@@ -400,7 +399,6 @@ header {
 }
 
 
-
 .work_experience_right {
     width: 100%;
     padding-left: 1rem;
@@ -443,11 +441,6 @@ header {
 #sendList {
     list-style-type: none;
 }
-
-
-
-
-
 #sendList1 {
     margin: 0.5rem;
     display: flex;
@@ -561,42 +554,74 @@ header {
 }
 
 @media(max-width:1024px) {
-    .section_right {
-        margin-top: -11rem;
-    }
-
     .section_right h3 {
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-left: -6rem;
         margin-bottom: 1rem;
     }
 }
 
 @media(max-width:912px) {
-    .section_right {
-        margin-top: -11rem;
-    }
-
-    .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+   .section_right h3 {
+        margin-top: 2rem;
+        margin-left: -2rem;
         margin-bottom: 1rem;
     }
 }
-
-@media(max-width:853px) {
-    .section_right {
-        margin-top: -11rem;
-    }
-
-    .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
-        margin-bottom: 1rem;
+@media(max-width:768px){
+  .section_right h3 {  margin-left: 2rem;}
+    .section_right_top {
+        width: 90%;
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .section_right_top {
+        width: 95%;
+        margin: 0 auto;
+    }
+
     .container {
         width: 100%;
         justify-items: center;
@@ -610,8 +635,65 @@ header {
         width: 70%;
     }
 
-}
+    .section_right {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto !important;
+        margin-top: 2rem;
+        margin-top: 6rem;
+        padding: 10px;
+    }
 
+    .section_right h3 {
+        margin-left: 0;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .section_right_top {
+        width: 100%;
+    }
+.name_form{
+    margin-left: 12rem;
+    margin-top: 0rem;
+}
+    .container {
+        width: 100%;
+        justify-items: center;
+    }
+
+    .header {
+        width: 80%;
+    }
+
+    .card {
+        width: 70%;
+    }
+      .button-container {
+        margin-left: 0 !important;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+}
+@media(max-width: 540px){
+.names{
+    left: 1rem;
+    background:transparent;
+    width: 50%;
+
+}
+.input_h1{
+    background: transparent;
+    width: 100%;
+}
+.name_form{
+    left: -1rem;
+}
+}
 @media(max-width: 430px) {
     header {
         flex-direction: column;
@@ -667,19 +749,26 @@ header {
         font-size: 22px;
         text-align: center;
     }
-
-    .info_input {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0 !important;
+    .names{
+        width: 50%;
+        z-index: 1111;
+        height: auto;
+        min-height: 40px;
     }
-
+    .input_h1{
+        width: 100%;
+        height: 100%;
+        margin-left: -1rem;
+    }
+.name_form{
+    left: -3rem;
+}
     .phoneR,
     .emailR,
     .adressR,
     .linkedinR {
         width: 90% !important;
-        font-size: 12px !important;
+        font-size: 8px !important;
         margin-bottom: 5px;
     }
 

@@ -486,7 +486,7 @@ h3 {
 #qr-result-container {
     position: absolute;
     right: 2rem;
-    top: -0.5rem;
+    top: 0.5rem;
     width: 30px;
 }
 
@@ -798,7 +798,6 @@ h3 {
     justify-content: center;
     width: 210mm;
     margin-top: 5rem;
-    height: 70vh;
     position: relative;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
@@ -818,7 +817,7 @@ h3 {
 
 .section_right_top {
     width: 100%;
-    height: auto;
+    height: 297mm;
     display: flex;
     align-items: stretch;
     box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.3);
@@ -833,6 +832,10 @@ h3 {
 
 .section_right_top_left {
     width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background: #F0F0F0;
 }
 
@@ -963,6 +966,10 @@ h3 {
 .section_right_r_side {
     z-index: 0;
     position: relative;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .section_right_r_side_names {

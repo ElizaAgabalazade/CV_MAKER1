@@ -10,7 +10,6 @@
     <script src="./js/storage.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="./js/create_2.js" defer></script>
-
     <title>Reality</title>
 </head>
 
@@ -37,7 +36,7 @@
     </header>
     <section>
         <div class="container">
-           <div class="header">
+            <div class="header">
                 <button class="back-btn"><a href="./Resume_templates.html">← Back</a></button>
                 <span class="step-indicator">Step 2/5</span>
             </div>
@@ -139,7 +138,7 @@
                     </div>
                 </div>
 
-                  <div class="action-buttons">
+                <div class="action-buttons">
                     <input type="file" id="qrFileInput" style="display: none;" accept="image/*">
                     <button type="button" class="btn-qr btn-upload" id="uploadQrBtn">Upload</button>
                     <button type="button" class="btn-qr btn-remove" id="removeQrBtn">Remove</button>
@@ -252,40 +251,42 @@
         <div class="section_right">
             <h3>Document preview & Editor</h3>
             <div class="section_right_top">
-                <div class="section_right_r_side_r" id="uploadBox2">
-                    <form class="names">
-                        <textarea id="nameToCV" class="input_h1"
-                            placeholder="Mathilde Gauthier Senior UX Designer"></textarea>
-                    </form>
-
-                    <img id="preview2" src="./img/UpdateCv/Presume30.png" alt="upload icon">
-
-                    <input type="file" id="fileInput2" accept="image/*">
-                    <form method="post" class="name_form">
-                        <textarea name="" id="phoneR" placeholder="+123-456-7890"
-                            pattern="^\+[0-9]{1,3}\s?[0-9]{1,14}(\s[0-9]{1,13})?$"
-                            title="Daxil edin: +<CountryCode> <PhoneNumber>" class="phoneR" required></textarea>
-                        <textarea id="emailR" name="email" placeholder="hello@greatsite.com" required
-                            class="emailR"></textarea>
-                        <textarea id="adressR" name="address" placeholder="123 Anywhere St.,Any City" required
-                            class="adressR"></textarea>
-                        <textarea id="linkedinR" name="linkedin" placeholder="linkedin.com/in/username"
-                            class="linkedinR"></textarea>
-                    </form>
-                </div>
-                <div class="section_1">
-                    <div class="section_right_side_2">
-                        <p id="aboutMeTextarea"> Profile</p>
-                        <textarea class="outputArea" id="autoTextarea" placeholder=" Write here"></textarea>
-                    </div>
-                    <div id="qr-result-container">
-                        <div id="qr-cv-display"> </div>
-                    </div>
-                    <div class="work_experience_right" id="sendedParts">
-                        <h2 id="sendTitle">Professional experience</h2>
-                        <form method="post">
-                            <ul class="place" id="sendList"></ul>
+                <div class="top_side">
+                    <div class="section_right_r_side_r" id="uploadBox2">
+                        <form class="names">
+                            <textarea id="nameToCV" class="input_h1"
+                                placeholder="Mathilde Gauthier Senior UX Designer"></textarea>
                         </form>
+
+                        <img id="preview2" src="./img/UpdateCv/Presume30.png" alt="upload icon">
+
+                        <input type="file" id="fileInput2" accept="image/*">
+                        <form method="post" class="name_form">
+                            <textarea name="" id="phoneR" placeholder="+123-456-7890"
+                                pattern="^\+[0-9]{1,3}\s?[0-9]{1,14}(\s[0-9]{1,13})?$"
+                                title="Daxil edin: +<CountryCode> <PhoneNumber>" class="phoneR" required></textarea>
+                            <textarea id="emailR" name="email" placeholder="hello@greatsite.com" required
+                                class="emailR"></textarea>
+                            <textarea id="adressR" name="address" placeholder="123 Anywhere St.,Any City" required
+                                class="adressR"></textarea>
+                            <textarea id="linkedinR" name="linkedin" placeholder="linkedin.com/in/username"
+                                class="linkedinR"></textarea>
+                        </form>
+                    </div>
+                    <div class="section_1">
+                        <div class="section_right_side_2">
+                            <p id="aboutMeTextarea"> Profile</p>
+                            <textarea class="outputArea" id="autoTextarea" placeholder=" Write here"></textarea>
+                        </div>
+                        <div id="qr-result-container">
+                            <div id="qr-cv-display"> </div>
+                        </div>
+                        <div class="work_experience_right" id="sendedParts">
+                            <h2 id="sendTitle">Professional experience</h2>
+                            <form method="post">
+                                <ul class="place" id="sendList"></ul>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="section_right_top_skills" id="skills_container">
@@ -314,11 +315,12 @@
 
             </div>
             <div class="button-container">
-                <button class="btn btn-change" id="changeFormat"><a href="./Resume_templates.html">Change Format</a></button>
+                <button class="btn btn-change" id="changeFormat"><a href="./Resume_templates.html">Change
+                        Format</a></button>
                 <button id="download-pdf" class="btn btn-download">Download</button>
             </div>
         </div>
-<!-- end -->
+        <!-- end -->
     </section>
 </body>
 

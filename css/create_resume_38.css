@@ -811,12 +811,13 @@ h3 {
     font-family: 'Arial', sans-serif;
     color: #333;
     width: 100%;
-    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background: #FFFF;
+    max-width: 210mm;
+    height: 297mm;
+    box-shadow: 4px 4px 4px 5px #c9c2c2;
 }
-
 .section_right_r_side_r {
     display: flex;
 }
@@ -839,7 +840,7 @@ h3 {
     color: #73AFF3;
     display: block;
     overflow: visible;
-    white-space:normal;
+    white-space: normal;
     background: transparent;
     -webkit-appearance: none;
     appearance: none;
@@ -1112,6 +1113,7 @@ textarea {
 .html2pdf__container .section_right_top {
     height: 297mm;
 }
+
 .html2pdf__container .section_right_top .input_h1 {
     width: 100% !important;
     display: block !important;

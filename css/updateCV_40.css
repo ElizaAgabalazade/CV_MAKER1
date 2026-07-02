@@ -125,14 +125,16 @@ header {
     margin-top: 3rem;
 }
 
-/* Əsas Konteyner */
-.section_right_top {
-    max-width: 100%;
+.section_right_top{
+    background: #F6F4F4;
     margin: 20px auto;
     padding: 40px;
     font-family: 'Helvetica', 'Arial', sans-serif;
     color: #333;
-    background: #F6F4F4;
+    width: 210mm;
+    height: 297mm;
+    box-shadow: 4px 4px 4px 5px #beb5b5;
+
 }
 
 /* Header və Kontakt */

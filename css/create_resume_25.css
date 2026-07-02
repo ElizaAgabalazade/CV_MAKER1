@@ -135,6 +135,7 @@ header {
     align-items: center;
     margin-bottom: 20px;
 }
+
 .back-btn {
     background: none;
     border: none;
@@ -142,7 +143,8 @@ header {
     cursor: pointer;
     font-size: 16px;
 }
-.back-btn a{
+
+.back-btn a {
     text-decoration: none;
     color: #444;
 
@@ -798,7 +800,6 @@ h3 {
     justify-content: center;
     width: 210mm;
     height: auto;
-    min-height: 60vh;
     margin-top: 3rem;
     font-family: 'Montserrat', sans-serif;
 
@@ -815,8 +816,7 @@ h3 {
 
 .section_right_top {
     width: 100%;
-    min-height: 10rem;
-    height: auto;
+    height: 297mm;
     background: #FFFF;
     display: flex;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
@@ -830,14 +830,20 @@ h3 {
 .section_right_top_left {
     position: relative;
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
 }
 
 .section_right_r_side {
     width: 50%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .section_right_r_side_r img {
@@ -950,6 +956,7 @@ h3 {
     margin-right: auto;
 
 }
+
 .seperate {
     min-height: 20%;
     height: auto;
@@ -1110,6 +1117,7 @@ h3 {
 
 .section_right_top_certificat {
     padding-left: 1rem;
+    padding-bottom: 1rem;
 }
 
 .section_right_top_certificat h2,
@@ -1357,10 +1365,12 @@ h3 {
         margin: 0;
         font-size: 8px;
     }
-.usersName{
-    margin-right: 3rem;
-    width: 80%;
-}
+
+    .usersName {
+        margin-right: 3rem;
+        width: 80%;
+    }
+
     .input_h1,
     .input_h1::placeholder {
         width: 100% !important;
@@ -1571,18 +1581,22 @@ h3 {
 .html2pdf__container .section_right_top {
     height: 297mm;
 }
-.html2pdf__container .section_right_top h2{
+
+.html2pdf__container .section_right_top h2 {
     font-size: 14px;
 }
-.html2pdf__container .section_right_top ul li{
+
+.html2pdf__container .section_right_top ul li {
     font-size: 12px;
 }
-.html2pdf__container .section_right_top .input_h1{
+
+.html2pdf__container .section_right_top .input_h1 {
     font-size: 16px;
     width: 100%;
-     white-space: pre-wrap;
+    white-space: pre-wrap;
     word-wrap: break-word;
 }
+
 .html2pdf__container .section_right_top_left,
 .html2pdf__container .rightSideContainer,
 .html2pdf__container .section_right_top_certificat,
@@ -1626,9 +1640,11 @@ h3 {
     align-items: flex-start;
     margin-top: 6rem;
 }
+
 div.outputArea {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
 }
+
 /* end */

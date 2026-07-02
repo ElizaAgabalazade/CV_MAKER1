@@ -805,7 +805,7 @@ h3 {
 
 .section_right_top {
     width: 100%;
-    height: auto;
+    height: 297mm;
     background: #fff;
     font-family: 'Montserrat', sans-serif;
     display: flex;
@@ -963,6 +963,7 @@ h3 {
     padding: 0 20px 16px 16px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     gap: 14px;
 }
 
@@ -1357,3 +1358,4 @@ h3 {
         padding: 30px;
     }
 }
+/* end111 */

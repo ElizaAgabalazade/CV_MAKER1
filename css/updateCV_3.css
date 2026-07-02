@@ -132,9 +132,15 @@ header {
 }
 
 
+.section_right h3 {
+    margin-top: 1rem;
+    margin-left: -6rem;
+    margin-bottom: 1rem;
+}
+
 .section_right_top {
-     width: 210mm;
-    min-height: auto;
+    width: 210mm;
+    height: 297mm;
     margin: 0 auto;
     background: #fff;
     box-sizing: border-box;
@@ -184,13 +190,15 @@ header {
     border: none;
     outline: none;
     color: white;
+    height: 50px;
     font-size: 10px;
     text-align: center;
 }
 
 .section_right_side_2 {
-    margin: 20px 0;
- padding-left: 1rem;}
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
 
 #aboutMeTextarea {
     font-weight: bold;
@@ -201,18 +209,22 @@ header {
     width: 100%;
     border: none;
     resize: none;
+    margin-top: 1rem;
 }
 
 .section_left_right {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    margin-top: 10px;
+    margin-top: 1rem;
+
 }
 
 .section_right_l_side {
     flex: 2;
- padding-left: 1rem;}
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
 
 .section_right_r {
     flex: 1;
@@ -223,6 +235,7 @@ header {
     border-left: 1px solid #ccc;
     height: auto;
     margin: 0;
+    
 }
 
 .section_right_top h2 {
@@ -230,17 +243,23 @@ header {
     font-size: 12px;
     text-transform: uppercase;
     border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+    padding-bottom: 1rem;
+    margin-top: 5rem;
+
 }
 
 .place,
 .skill_list_right {
     list-style: none;
     padding: 0;
+    margin-top: 1rem;
 }
 
 .section_right_top * {
     box-sizing: border-box;
+}
+#itemListLanguage_right1 li{
+font-size: 13px;
 }
 
 .button-container {
@@ -301,9 +320,14 @@ header {
     }
 
     .section_right h3 {
-        margin-top: 1rem;
+        margin-top: 15rem;
+        font-size: 30px;
         margin-left: -6rem;
         margin-bottom: 1rem;
+    }
+
+    .input_h1 {
+        font-size: 26px;
     }
 }
 
@@ -313,8 +337,8 @@ header {
     }
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 15rem;
+        margin-left: -1rem;
         margin-bottom: 1rem;
     }
 }
@@ -325,8 +349,20 @@ header {
     }
 
     .section_right h3 {
-        margin-top: 1rem;
-        margin-left: -6rem;
+        margin-top: 15rem;
+        margin-left: -1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media(max-width:768px) {
+    .section_right_top {
+        width: 95%;
+    }
+
+    .section_right h3 {
+        margin-top: 15rem;
+        margin-left: 1rem;
         margin-bottom: 1rem;
     }
 }
@@ -345,6 +381,61 @@ header {
         width: 70%;
     }
 
+}
+
+@media(max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header_left {
+        width: 100%;
+        height: 60px;
+    }
+
+    .site_name {
+        position: static;
+        padding-top: 15px;
+        display: block;
+    }
+
+    .header_middle {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header_middle ul {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .header_middle ul li {
+        font-size: 14px;
+        margin-left: 0.5rem;
+    }
+
+    .header_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .section_right h3 {
+        margin-top: 20rem;
+        font-size: 20px;
+    }
+
+    .top_form {
+        margin: 0 auto;
+    }
+
+    .section_right_top {
+        width: 80%;
+    }
 }
 
 @media(max-width: 430px) {
@@ -463,17 +554,18 @@ header {
         width: 50%;
     }
 }
+
 .html2pdf__container .section_right_top {
     display: flex !important;
-    flex-direction: column !important; /* Dikey dizilimi geri getir */
-    width: 210mm !important; 
+    flex-direction: column !important;
+    width: 210mm !important;
     height: auto !important;
     min-height: 297mm !important;
 }
 
 .html2pdf__container .section_left_right {
     display: flex !important;
-    flex-direction: row !important; /* Burası yan yana olmalı */
+    flex-direction: row !important;
     width: 100% !important;
 }
 
@@ -498,8 +590,9 @@ header {
     border-left: 1px solid #ccc !important;
 }
 
-.html2pdf__container #qr-result-container{
+.html2pdf__container #qr-result-container {
     position: absolute;
     top: 1rem;
 }
+
 /* end */

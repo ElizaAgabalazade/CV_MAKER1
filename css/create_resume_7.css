@@ -473,7 +473,8 @@ h3 {
 
 #qr-result-container {
     position: absolute;
-    right: 20rem;
+    left: -4rem;
+    top: 1rem;
     width: 30px;
 }
 
@@ -824,7 +825,6 @@ h3 {
     justify-content: center;
     width: 210mm;
     height: auto;
-    min-height: 60vh;
     font-family: 'Montserrat', sans-serif;
     margin-top: 3rem;
 }
@@ -833,10 +833,14 @@ h3 {
     display: flex !important;
 }
 
+.section_right h3 {
+    font-size: 30px;
+    margin-left: -11rem;
+    font-weight: 900;
+}
 .section_right_top {
     width: 100%;
-    min-height: 10rem;
-    height: auto !important;
+    height: 297mm;
     display: flex;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
     position: relative;
@@ -923,8 +927,8 @@ h3 {
 
 .input_h1,
 .input_h1::placeholder {
-    width: 10rem;
-    min-height: 50px;
+    width: 100%;
+    min-height: 100px;
     height: auto;
     resize: none;
     border: none;
@@ -1672,8 +1676,9 @@ div.outputArea {
     opacity: 1 !important;
 }
 .html2pdf__container #qr-result-container {
-    position: absolute;
+   position: absolute;
+    left: -4rem;
     top: 1rem;
-    right: 28rem;
+    width: 30px;
 }
 /* end */

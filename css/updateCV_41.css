@@ -134,9 +134,11 @@ header {
     margin-left: -11rem;
 }
 
-.section_right_top {
+.section_right_top{
     background: #F6F4F4;
     width: 210mm;
+    height: 297mm;
+    box-shadow: 4px 4px 4px 5px #beb5b5;
 
 }
 

@@ -481,10 +481,7 @@ h3 {
     transform: scale(1);
 }
 
-#qr-result-container {
-    position: absolute;
-    right: 20rem;
-}
+
 
 .qr-display-area {
     border: 2px dashed #6366f1;
@@ -815,7 +812,6 @@ h3 {
     display: none;
     flex-direction: column;
     width: 210mm;
-    height: 70vh;
     flex-direction: column;
     margin-top: 4rem;
     font-family: 'Montserrat', sans-serif;
@@ -833,7 +829,7 @@ h3 {
 .section_right_top {
     display: flex;
     width: 100%;
-    height: auto;
+    height: 297mm;
     background: #ffff;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
@@ -957,16 +953,18 @@ h3 {
     overflow-y: hidden;
     justify-content: center;
     margin: 0 auto;
-    border-radius: 6px;
 
 
 }
-
+.info_input form{
+    width: 100%;
+}
 .info_input form textarea {
     overflow-y: hidden;
     background: transparent;
     border: none;
     outline: none;
+    width: 20%;
 
 }
 
@@ -1067,8 +1065,8 @@ h3 {
 
 #qr-cv-display {
     position: absolute;
-    right: 2.5rem;
-    top: -2.5rem;
+    left: 27rem;
+    top: 1rem;
     background: white;
     border: 1px solid #eee;
     z-index: 100;
